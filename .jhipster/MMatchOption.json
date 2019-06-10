@@ -1,0 +1,82 @@
+{
+    "name": "MMatchOption",
+    "fields": [
+        {
+            "fieldName": "passiveEffectId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "passiveEffectValue",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "activateFullPowerType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "attributeMagnification",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "useStaminaMagnification",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isIgnoreTeamSkill",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "staminaInfinityType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mPassiveEffectRange",
+            "otherEntityRelationshipName": "mMatchOption",
+            "relationshipValidateRules": "required",
+            "relationshipName": "id",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mLeagueRegulation",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mLeagueRegulation"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mPvpRegulation",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mPvpRegulation"
+        }
+    ],
+    "changelogDate": "20190610224907",
+    "entityTableName": "m_match_option",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

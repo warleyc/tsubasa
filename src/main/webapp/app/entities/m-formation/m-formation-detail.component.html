@@ -1,0 +1,89 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mFormation">
+            <h2><span>M Formation</span> {{mFormation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Effect Value</span></dt>
+                <dd>
+                    <span>{{mFormation.effectValue}}</span>
+                </dd>
+                <dt><span>Effect Probability</span></dt>
+                <dd>
+                    <span>{{mFormation.effectProbability}}</span>
+                </dd>
+                <dt><span>Formation Arrangement Fw</span></dt>
+                <dd>
+                    <span>{{mFormation.formationArrangementFw}}</span>
+                </dd>
+                <dt><span>Formation Arrangement Omf</span></dt>
+                <dd>
+                    <span>{{mFormation.formationArrangementOmf}}</span>
+                </dd>
+                <dt><span>Formation Arrangement Dmf</span></dt>
+                <dd>
+                    <span>{{mFormation.formationArrangementDmf}}</span>
+                </dd>
+                <dt><span>Formation Arrangement Df</span></dt>
+                <dd>
+                    <span>{{mFormation.formationArrangementDf}}</span>
+                </dd>
+                <dt><span>Effect Id</span></dt>
+                <dd>
+                    <span>{{mFormation.effectId}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mFormation.description}}</span>
+                </dd>
+                <dt><span>Short Description</span></dt>
+                <dd>
+                    <span>{{mFormation.shortDescription}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mFormation.name}}</span>
+                </dd>
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mFormation.thumbnailAssetName}}</span>
+                </dd>
+                <dt><span>Starting Uniform Nos</span></dt>
+                <dd>
+                    <span>{{mFormation.startingUniformNos}}</span>
+                </dd>
+                <dt><span>Sub Uniform Nos</span></dt>
+                <dd>
+                    <span>{{mFormation.subUniformNos}}</span>
+                </dd>
+                <dt><span>Ex Type</span></dt>
+                <dd>
+                    <span>{{mFormation.exType}}</span>
+                </dd>
+                <dt><span>Match Formation Id</span></dt>
+                <dd>
+                    <span>{{mFormation.matchFormationId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mFormation.idId">
+                        <a [routerLink]="['/m-passive-effect-range', mFormation.idId, 'view']">{{mFormation.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-formation', mFormation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

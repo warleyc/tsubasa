@@ -1,0 +1,109 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-dummy-emblem-heading">Create or edit a M Dummy Emblem</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mDummyEmblem.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_backgroundId">Background Id</label>
+                    <input type="number" class="form-control" name="backgroundId" id="field_backgroundId"
+                           formControlName="backgroundId"/>
+                    <div *ngIf="editForm.get('backgroundId').invalid && (editForm.get('backgroundId').dirty || editForm.get('backgroundId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('backgroundId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('backgroundId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_backgroundColor">Background Color</label>
+                    <textarea class="form-control" name="backgroundColor" id="field_backgroundColor"
+                              formControlName="backgroundColor"></textarea>
+                    <div *ngIf="editForm.get('backgroundColor').invalid && (editForm.get('backgroundColor').dirty || editForm.get('backgroundColor').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('backgroundColor').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_upperId">Upper Id</label>
+                    <input type="number" class="form-control" name="upperId" id="field_upperId"
+                           formControlName="upperId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_upperColor">Upper Color</label>
+                    <textarea class="form-control" name="upperColor" id="field_upperColor"
+                              formControlName="upperColor"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_middleId">Middle Id</label>
+                    <input type="number" class="form-control" name="middleId" id="field_middleId"
+                           formControlName="middleId"/>
+                    <div *ngIf="editForm.get('middleId').invalid && (editForm.get('middleId').dirty || editForm.get('middleId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('middleId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('middleId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_middleColor">Middle Color</label>
+                    <textarea class="form-control" name="middleColor" id="field_middleColor"
+                              formControlName="middleColor"></textarea>
+                    <div *ngIf="editForm.get('middleColor').invalid && (editForm.get('middleColor').dirty || editForm.get('middleColor').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('middleColor').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_lowerId">Lower Id</label>
+                    <input type="number" class="form-control" name="lowerId" id="field_lowerId"
+                           formControlName="lowerId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_lowerColor">Lower Color</label>
+                    <textarea class="form-control" name="lowerColor" id="field_lowerColor"
+                              formControlName="lowerColor"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mEmblemPartsOption.id" *ngFor="let mEmblemPartsOption of memblemparts; trackBy: trackMEmblemPartsById">{{mEmblemPartsOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

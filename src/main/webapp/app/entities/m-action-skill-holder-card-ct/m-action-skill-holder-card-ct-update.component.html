@@ -1,0 +1,104 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-action-skill-holder-card-ct-heading">Create or edit a M Action Skill Holder Card Ct</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mActionSkillHolderCardCt.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharaId">Target Chara Id</label>
+                    <input type="number" class="form-control" name="targetCharaId" id="field_targetCharaId"
+                           formControlName="targetCharaId"/>
+                    <div *ngIf="editForm.get('targetCharaId').invalid && (editForm.get('targetCharaId').dirty || editForm.get('targetCharaId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetCharaId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetCharaId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionMasterId">Action Master Id</label>
+                    <input type="number" class="form-control" name="actionMasterId" id="field_actionMasterId"
+                           formControlName="actionMasterId"/>
+                    <div *ngIf="editForm.get('actionMasterId').invalid && (editForm.get('actionMasterId').dirty || editForm.get('actionMasterId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionMasterId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionMasterId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionSkillExp">Action Skill Exp</label>
+                    <input type="number" class="form-control" name="actionSkillExp" id="field_actionSkillExp"
+                           formControlName="actionSkillExp"/>
+                    <div *ngIf="editForm.get('actionSkillExp').invalid && (editForm.get('actionSkillExp').dirty || editForm.get('actionSkillExp').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionSkillExp').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionSkillExp')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <textarea class="form-control" name="name" id="field_name"
+                              formControlName="name"></textarea>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <textarea class="form-control" name="description" id="field_description"
+                              formControlName="description"></textarea>
+                    <div *ngIf="editForm.get('description').invalid && (editForm.get('description').dirty || editForm.get('description').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('description').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mCharacterOption.id" *ngFor="let mCharacterOption of mcharacters; trackBy: trackMCharacterById">{{mCharacterOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

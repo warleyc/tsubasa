@@ -1,0 +1,108 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-announce-text-heading">Create or edit a M Announce Text</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mAnnounceText.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_groupId">Group Id</label>
+                    <input type="number" class="form-control" name="groupId" id="field_groupId"
+                           formControlName="groupId"/>
+                    <div *ngIf="editForm.get('groupId').invalid && (editForm.get('groupId').dirty || editForm.get('groupId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('groupId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('groupId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_seqNo">Seq No</label>
+                    <input type="number" class="form-control" name="seqNo" id="field_seqNo"
+                           formControlName="seqNo"/>
+                    <div *ngIf="editForm.get('seqNo').invalid && (editForm.get('seqNo').dirty || editForm.get('seqNo').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('seqNo').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('seqNo')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_normalAnnounce">Normal Announce</label>
+                    <textarea class="form-control" name="normalAnnounce" id="field_normalAnnounce"
+                              formControlName="normalAnnounce"></textarea>
+                    <div *ngIf="editForm.get('normalAnnounce').invalid && (editForm.get('normalAnnounce').dirty || editForm.get('normalAnnounce').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('normalAnnounce').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_criticalSAnnounce">Critical S Announce</label>
+                    <textarea class="form-control" name="criticalSAnnounce" id="field_criticalSAnnounce"
+                              formControlName="criticalSAnnounce"></textarea>
+                    <div *ngIf="editForm.get('criticalSAnnounce').invalid && (editForm.get('criticalSAnnounce').dirty || editForm.get('criticalSAnnounce').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('criticalSAnnounce').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_criticalMAnnounce">Critical M Announce</label>
+                    <textarea class="form-control" name="criticalMAnnounce" id="field_criticalMAnnounce"
+                              formControlName="criticalMAnnounce"></textarea>
+                    <div *ngIf="editForm.get('criticalMAnnounce').invalid && (editForm.get('criticalMAnnounce').dirty || editForm.get('criticalMAnnounce').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('criticalMAnnounce').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_criticalLAnnounce">Critical L Announce</label>
+                    <textarea class="form-control" name="criticalLAnnounce" id="field_criticalLAnnounce"
+                              formControlName="criticalLAnnounce"></textarea>
+                    <div *ngIf="editForm.get('criticalLAnnounce').invalid && (editForm.get('criticalLAnnounce').dirty || editForm.get('criticalLAnnounce').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('criticalLAnnounce').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_delayTime">Delay Time</label>
+                    <input type="number" class="form-control" name="delayTime" id="field_delayTime"
+                           formControlName="delayTime"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_continueTime">Continue Time</label>
+                    <input type="number" class="form-control" name="continueTime" id="field_continueTime"
+                           formControlName="continueTime"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

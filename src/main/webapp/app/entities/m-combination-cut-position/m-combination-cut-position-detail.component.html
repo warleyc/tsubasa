@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCombinationCutPosition">
+            <h2><span>M Combination Cut Position</span> {{mCombinationCutPosition.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Action Cut Id</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.actionCutId}}</span>
+                </dd>
+                <dt><span>Character Id</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.characterId}}</span>
+                </dd>
+                <dt><span>Activator Position</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.activatorPosition}}</span>
+                </dd>
+                <dt><span>Participant Position 1</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.participantPosition1}}</span>
+                </dd>
+                <dt><span>Participant Position 2</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.participantPosition2}}</span>
+                </dd>
+                <dt><span>Participant Position 3</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.participantPosition3}}</span>
+                </dd>
+                <dt><span>Participant Position 4</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.participantPosition4}}</span>
+                </dd>
+                <dt><span>Participant Position 5</span></dt>
+                <dd>
+                    <span>{{mCombinationCutPosition.participantPosition5}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mCombinationCutPosition.idId">
+                        <a [routerLink]="['/m-character', mCombinationCutPosition.idId, 'view']">{{mCombinationCutPosition.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-combination-cut-position', mCombinationCutPosition.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

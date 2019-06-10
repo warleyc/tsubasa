@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mChallengeQuestAchievementReward">
+            <h2><span>M Challenge Quest Achievement Reward</span> {{mChallengeQuestAchievementReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>World Id</span></dt>
+                <dd>
+                    <span>{{mChallengeQuestAchievementReward.worldId}}</span>
+                </dd>
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mChallengeQuestAchievementReward.stageId}}</span>
+                </dd>
+                <dt><span>Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mChallengeQuestAchievementReward.rewardGroupId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-challenge-quest-achievement-reward', mChallengeQuestAchievementReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

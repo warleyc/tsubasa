@@ -1,0 +1,88 @@
+{
+    "name": "MTriggerEffectRange",
+    "fields": [
+        {
+            "fieldName": "effectType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionGk",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionFw",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionOmf",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionDmf",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionDf",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetAttribute",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetNationalityGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTeamGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetCharacterGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetFormationGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetActionCommand",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mTriggerEffectBase",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mTriggerEffectBase"
+        }
+    ],
+    "changelogDate": "20190610225034",
+    "entityTableName": "m_trigger_effect_range",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

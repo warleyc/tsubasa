@@ -1,0 +1,82 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Dummy Emblems</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-dummy-emblem" [routerLink]="['/m-dummy-emblem/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Dummy Emblem
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mDummyEmblems">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="backgroundId"><span>Background Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="backgroundColor"><span>Background Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="upperId"><span>Upper Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="upperColor"><span>Upper Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="middleId"><span>Middle Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="middleColor"><span>Middle Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lowerId"><span>Lower Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lowerColor"><span>Lower Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mDummyEmblem of mDummyEmblems ;trackBy: trackId">
+                <td><a [routerLink]="['/m-dummy-emblem', mDummyEmblem.id, 'view' ]">{{mDummyEmblem.id}}</a></td>
+                <td>{{mDummyEmblem.backgroundId}}</td>
+                <td>{{mDummyEmblem.backgroundColor}}</td>
+                <td>{{mDummyEmblem.upperId}}</td>
+                <td>{{mDummyEmblem.upperColor}}</td>
+                <td>{{mDummyEmblem.middleId}}</td>
+                <td>{{mDummyEmblem.middleColor}}</td>
+                <td>{{mDummyEmblem.lowerId}}</td>
+                <td>{{mDummyEmblem.lowerColor}}</td>
+                <td>
+                    <div *ngIf="mDummyEmblem.idId">
+                        <a [routerLink]="['../m-emblem-parts', mDummyEmblem.idId , 'view' ]" >{{mDummyEmblem.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-dummy-emblem', mDummyEmblem.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-dummy-emblem', mDummyEmblem.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-dummy-emblem', { outlets: { popup: mDummyEmblem.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mDummyEmblems && mDummyEmblems.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

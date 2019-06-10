@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mContentableCard">
+            <h2><span>M Contentable Card</span> {{mContentableCard.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Playable Card Id</span></dt>
+                <dd>
+                    <span>{{mContentableCard.playableCardId}}</span>
+                </dd>
+                <dt><span>Level</span></dt>
+                <dd>
+                    <span>{{mContentableCard.level}}</span>
+                </dd>
+                <dt><span>Action Main Level</span></dt>
+                <dd>
+                    <span>{{mContentableCard.actionMainLevel}}</span>
+                </dd>
+                <dt><span>Action Sub 1 Level</span></dt>
+                <dd>
+                    <span>{{mContentableCard.actionSub1Level}}</span>
+                </dd>
+                <dt><span>Action Sub 2 Level</span></dt>
+                <dd>
+                    <span>{{mContentableCard.actionSub2Level}}</span>
+                </dd>
+                <dt><span>Action Sub 3 Level</span></dt>
+                <dd>
+                    <span>{{mContentableCard.actionSub3Level}}</span>
+                </dd>
+                <dt><span>Action Sub 4 Level</span></dt>
+                <dd>
+                    <span>{{mContentableCard.actionSub4Level}}</span>
+                </dd>
+                <dt><span>Plus Rate</span></dt>
+                <dd>
+                    <span>{{mContentableCard.plusRate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-contentable-card', mContentableCard.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

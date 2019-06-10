@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mEventTitleEffect">
+            <h2><span>M Event Title Effect</span> {{mEventTitleEffect.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Effect Path</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.effectPath}}</span>
+                </dd>
+                <dt><span>Bgm Sound Event</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.bgmSoundEvent}}</span>
+                </dd>
+                <dt><span>Se Sound Event</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.seSoundEvent}}</span>
+                </dd>
+                <dt><span>Voice Sound Event Suffixes</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.voiceSoundEventSuffixes}}</span>
+                </dd>
+                <dt><span>Copyright Text</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.copyrightText}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mEventTitleEffect.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-event-title-effect', mEventTitleEffect.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

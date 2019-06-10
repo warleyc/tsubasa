@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-gacha-rendition-extra-cutin-heading">Create or edit a M Gacha Rendition Extra Cutin</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mGachaRenditionExtraCutin.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_renditionId">Rendition Id</label>
+                    <input type="number" class="form-control" name="renditionId" id="field_renditionId"
+                           formControlName="renditionId"/>
+                    <div *ngIf="editForm.get('renditionId').invalid && (editForm.get('renditionId').dirty || editForm.get('renditionId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('renditionId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('renditionId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_mainPrefabName">Main Prefab Name</label>
+                    <textarea class="form-control" name="mainPrefabName" id="field_mainPrefabName"
+                              formControlName="mainPrefabName"></textarea>
+                    <div *ngIf="editForm.get('mainPrefabName').invalid && (editForm.get('mainPrefabName').dirty || editForm.get('mainPrefabName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('mainPrefabName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_voiceStartCutIn">Voice Start Cut In</label>
+                    <textarea class="form-control" name="voiceStartCutIn" id="field_voiceStartCutIn"
+                              formControlName="voiceStartCutIn"></textarea>
+                    <div *ngIf="editForm.get('voiceStartCutIn').invalid && (editForm.get('voiceStartCutIn').dirty || editForm.get('voiceStartCutIn').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('voiceStartCutIn').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_serif">Serif</label>
+                    <textarea class="form-control" name="serif" id="field_serif"
+                              formControlName="serif"></textarea>
+                    <div *ngIf="editForm.get('serif').invalid && (editForm.get('serif').dirty || editForm.get('serif').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serif').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

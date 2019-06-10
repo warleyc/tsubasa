@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCutShootOrbit">
+            <h2><span>M Cut Shoot Orbit</span> {{mCutShootOrbit.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Shoot Orbit</span></dt>
+                <dd>
+                    <span>{{mCutShootOrbit.shootOrbit}}</span>
+                </dd>
+                <dt><span>Shoot Result</span></dt>
+                <dd>
+                    <span>{{mCutShootOrbit.shootResult}}</span>
+                </dd>
+                <dt><span>Offense Sequence Text</span></dt>
+                <dd>
+                    <span>{{mCutShootOrbit.offenseSequenceText}}</span>
+                </dd>
+                <dt><span>Defense Sequence Text</span></dt>
+                <dd>
+                    <span>{{mCutShootOrbit.defenseSequenceText}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-cut-shoot-orbit', mCutShootOrbit.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

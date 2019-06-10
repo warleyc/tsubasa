@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCommonBanner">
+            <h2><span>M Common Banner</span> {{mCommonBanner.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Asset Name</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.assetName}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.endAt}}</span>
+                </dd>
+                <dt><span>Label End At</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.labelEndAt}}</span>
+                </dd>
+                <dt><span>Scene Transition</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.sceneTransition}}</span>
+                </dd>
+                <dt><span>Scene Transition Param</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.sceneTransitionParam}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.orderNum}}</span>
+                </dd>
+                <dt><span>Appeal Type</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.appealType}}</span>
+                </dd>
+                <dt><span>Appeal Content Id</span></dt>
+                <dd>
+                    <span>{{mCommonBanner.appealContentId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-common-banner', mCommonBanner.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

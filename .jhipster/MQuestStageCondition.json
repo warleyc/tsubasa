@@ -1,0 +1,41 @@
+{
+    "name": "MQuestStageCondition",
+    "fields": [
+        {
+            "fieldName": "successConditionType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "successConditionDetailType",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "successConditionValue",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetCharacterGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "failureConditionType",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610224945",
+    "entityTableName": "m_quest_stage_condition",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

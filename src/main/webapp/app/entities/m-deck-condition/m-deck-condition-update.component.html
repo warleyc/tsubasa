@@ -1,0 +1,519 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-deck-condition-heading">Create or edit a M Deck Condition</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mDeckCondition.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetFormationGroupId">Target Formation Group Id</label>
+                    <input type="number" class="form-control" name="targetFormationGroupId" id="field_targetFormationGroupId"
+                           formControlName="targetFormationGroupId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterGroupMinId">Target Character Group Min Id</label>
+                    <input type="number" class="form-control" name="targetCharacterGroupMinId" id="field_targetCharacterGroupMinId"
+                           formControlName="targetCharacterGroupMinId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterGroupMaxId">Target Character Group Max Id</label>
+                    <input type="number" class="form-control" name="targetCharacterGroupMaxId" id="field_targetCharacterGroupMaxId"
+                           formControlName="targetCharacterGroupMaxId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPlayableCardGroupMinId">Target Playable Card Group Min Id</label>
+                    <input type="number" class="form-control" name="targetPlayableCardGroupMinId" id="field_targetPlayableCardGroupMinId"
+                           formControlName="targetPlayableCardGroupMinId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPlayableCardGroupMaxId">Target Playable Card Group Max Id</label>
+                    <input type="number" class="form-control" name="targetPlayableCardGroupMaxId" id="field_targetPlayableCardGroupMaxId"
+                           formControlName="targetPlayableCardGroupMaxId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetRarityGroupId">Target Rarity Group Id</label>
+                    <input type="number" class="form-control" name="targetRarityGroupId" id="field_targetRarityGroupId"
+                           formControlName="targetRarityGroupId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetAttribute">Target Attribute</label>
+                    <input type="number" class="form-control" name="targetAttribute" id="field_targetAttribute"
+                           formControlName="targetAttribute"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityGroupMinId">Target Nationality Group Min Id</label>
+                    <input type="number" class="form-control" name="targetNationalityGroupMinId" id="field_targetNationalityGroupMinId"
+                           formControlName="targetNationalityGroupMinId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityGroupMaxId">Target Nationality Group Max Id</label>
+                    <input type="number" class="form-control" name="targetNationalityGroupMaxId" id="field_targetNationalityGroupMaxId"
+                           formControlName="targetNationalityGroupMaxId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamGroupMinId">Target Team Group Min Id</label>
+                    <input type="number" class="form-control" name="targetTeamGroupMinId" id="field_targetTeamGroupMinId"
+                           formControlName="targetTeamGroupMinId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamGroupMaxId">Target Team Group Max Id</label>
+                    <input type="number" class="form-control" name="targetTeamGroupMaxId" id="field_targetTeamGroupMaxId"
+                           formControlName="targetTeamGroupMaxId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionGroupMinId">Target Action Group Min Id</label>
+                    <input type="number" class="form-control" name="targetActionGroupMinId" id="field_targetActionGroupMinId"
+                           formControlName="targetActionGroupMinId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionGroupMaxId">Target Action Group Max Id</label>
+                    <input type="number" class="form-control" name="targetActionGroupMaxId" id="field_targetActionGroupMaxId"
+                           formControlName="targetActionGroupMaxId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTriggerEffectGroupMinId">Target Trigger Effect Group Min Id</label>
+                    <input type="number" class="form-control" name="targetTriggerEffectGroupMinId" id="field_targetTriggerEffectGroupMinId"
+                           formControlName="targetTriggerEffectGroupMinId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTriggerEffectGroupMaxId">Target Trigger Effect Group Max Id</label>
+                    <input type="number" class="form-control" name="targetTriggerEffectGroupMaxId" id="field_targetTriggerEffectGroupMaxId"
+                           formControlName="targetTriggerEffectGroupMaxId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterMinCount">Target Character Min Count</label>
+                    <input type="number" class="form-control" name="targetCharacterMinCount" id="field_targetCharacterMinCount"
+                           formControlName="targetCharacterMinCount"/>
+                    <div *ngIf="editForm.get('targetCharacterMinCount').invalid && (editForm.get('targetCharacterMinCount').dirty || editForm.get('targetCharacterMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetCharacterMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetCharacterMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterMaxCount">Target Character Max Count</label>
+                    <input type="number" class="form-control" name="targetCharacterMaxCount" id="field_targetCharacterMaxCount"
+                           formControlName="targetCharacterMaxCount"/>
+                    <div *ngIf="editForm.get('targetCharacterMaxCount').invalid && (editForm.get('targetCharacterMaxCount').dirty || editForm.get('targetCharacterMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetCharacterMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetCharacterMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPlayableCardMinCount">Target Playable Card Min Count</label>
+                    <input type="number" class="form-control" name="targetPlayableCardMinCount" id="field_targetPlayableCardMinCount"
+                           formControlName="targetPlayableCardMinCount"/>
+                    <div *ngIf="editForm.get('targetPlayableCardMinCount').invalid && (editForm.get('targetPlayableCardMinCount').dirty || editForm.get('targetPlayableCardMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPlayableCardMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPlayableCardMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPlayableCardMaxCount">Target Playable Card Max Count</label>
+                    <input type="number" class="form-control" name="targetPlayableCardMaxCount" id="field_targetPlayableCardMaxCount"
+                           formControlName="targetPlayableCardMaxCount"/>
+                    <div *ngIf="editForm.get('targetPlayableCardMaxCount').invalid && (editForm.get('targetPlayableCardMaxCount').dirty || editForm.get('targetPlayableCardMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPlayableCardMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPlayableCardMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetRarityMaxCount">Target Rarity Max Count</label>
+                    <input type="number" class="form-control" name="targetRarityMaxCount" id="field_targetRarityMaxCount"
+                           formControlName="targetRarityMaxCount"/>
+                    <div *ngIf="editForm.get('targetRarityMaxCount').invalid && (editForm.get('targetRarityMaxCount').dirty || editForm.get('targetRarityMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetRarityMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetRarityMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetAttributeMinCount">Target Attribute Min Count</label>
+                    <input type="number" class="form-control" name="targetAttributeMinCount" id="field_targetAttributeMinCount"
+                           formControlName="targetAttributeMinCount"/>
+                    <div *ngIf="editForm.get('targetAttributeMinCount').invalid && (editForm.get('targetAttributeMinCount').dirty || editForm.get('targetAttributeMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetAttributeMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetAttributeMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityMinCount">Target Nationality Min Count</label>
+                    <input type="number" class="form-control" name="targetNationalityMinCount" id="field_targetNationalityMinCount"
+                           formControlName="targetNationalityMinCount"/>
+                    <div *ngIf="editForm.get('targetNationalityMinCount').invalid && (editForm.get('targetNationalityMinCount').dirty || editForm.get('targetNationalityMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetNationalityMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetNationalityMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityMaxCount">Target Nationality Max Count</label>
+                    <input type="number" class="form-control" name="targetNationalityMaxCount" id="field_targetNationalityMaxCount"
+                           formControlName="targetNationalityMaxCount"/>
+                    <div *ngIf="editForm.get('targetNationalityMaxCount').invalid && (editForm.get('targetNationalityMaxCount').dirty || editForm.get('targetNationalityMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetNationalityMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetNationalityMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamMinCount">Target Team Min Count</label>
+                    <input type="number" class="form-control" name="targetTeamMinCount" id="field_targetTeamMinCount"
+                           formControlName="targetTeamMinCount"/>
+                    <div *ngIf="editForm.get('targetTeamMinCount').invalid && (editForm.get('targetTeamMinCount').dirty || editForm.get('targetTeamMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTeamMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTeamMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamMaxCount">Target Team Max Count</label>
+                    <input type="number" class="form-control" name="targetTeamMaxCount" id="field_targetTeamMaxCount"
+                           formControlName="targetTeamMaxCount"/>
+                    <div *ngIf="editForm.get('targetTeamMaxCount').invalid && (editForm.get('targetTeamMaxCount').dirty || editForm.get('targetTeamMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTeamMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTeamMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionMinCount">Target Action Min Count</label>
+                    <input type="number" class="form-control" name="targetActionMinCount" id="field_targetActionMinCount"
+                           formControlName="targetActionMinCount"/>
+                    <div *ngIf="editForm.get('targetActionMinCount').invalid && (editForm.get('targetActionMinCount').dirty || editForm.get('targetActionMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetActionMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetActionMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionMaxCount">Target Action Max Count</label>
+                    <input type="number" class="form-control" name="targetActionMaxCount" id="field_targetActionMaxCount"
+                           formControlName="targetActionMaxCount"/>
+                    <div *ngIf="editForm.get('targetActionMaxCount').invalid && (editForm.get('targetActionMaxCount').dirty || editForm.get('targetActionMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetActionMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetActionMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTriggerEffectMinCount">Target Trigger Effect Min Count</label>
+                    <input type="number" class="form-control" name="targetTriggerEffectMinCount" id="field_targetTriggerEffectMinCount"
+                           formControlName="targetTriggerEffectMinCount"/>
+                    <div *ngIf="editForm.get('targetTriggerEffectMinCount').invalid && (editForm.get('targetTriggerEffectMinCount').dirty || editForm.get('targetTriggerEffectMinCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTriggerEffectMinCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTriggerEffectMinCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTriggerEffectMaxCount">Target Trigger Effect Max Count</label>
+                    <input type="number" class="form-control" name="targetTriggerEffectMaxCount" id="field_targetTriggerEffectMaxCount"
+                           formControlName="targetTriggerEffectMaxCount"/>
+                    <div *ngIf="editForm.get('targetTriggerEffectMaxCount').invalid && (editForm.get('targetTriggerEffectMaxCount').dirty || editForm.get('targetTriggerEffectMaxCount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTriggerEffectMaxCount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTriggerEffectMaxCount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterIsStartingMin">Target Character Is Starting Min</label>
+                    <input type="number" class="form-control" name="targetCharacterIsStartingMin" id="field_targetCharacterIsStartingMin"
+                           formControlName="targetCharacterIsStartingMin"/>
+                    <div *ngIf="editForm.get('targetCharacterIsStartingMin').invalid && (editForm.get('targetCharacterIsStartingMin').dirty || editForm.get('targetCharacterIsStartingMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetCharacterIsStartingMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetCharacterIsStartingMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterIsStartingMax">Target Character Is Starting Max</label>
+                    <input type="number" class="form-control" name="targetCharacterIsStartingMax" id="field_targetCharacterIsStartingMax"
+                           formControlName="targetCharacterIsStartingMax"/>
+                    <div *ngIf="editForm.get('targetCharacterIsStartingMax').invalid && (editForm.get('targetCharacterIsStartingMax').dirty || editForm.get('targetCharacterIsStartingMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetCharacterIsStartingMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetCharacterIsStartingMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPlayableCardIsStartingMin">Target Playable Card Is Starting Min</label>
+                    <input type="number" class="form-control" name="targetPlayableCardIsStartingMin" id="field_targetPlayableCardIsStartingMin"
+                           formControlName="targetPlayableCardIsStartingMin"/>
+                    <div *ngIf="editForm.get('targetPlayableCardIsStartingMin').invalid && (editForm.get('targetPlayableCardIsStartingMin').dirty || editForm.get('targetPlayableCardIsStartingMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPlayableCardIsStartingMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPlayableCardIsStartingMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPlayableCardIsStartingMax">Target Playable Card Is Starting Max</label>
+                    <input type="number" class="form-control" name="targetPlayableCardIsStartingMax" id="field_targetPlayableCardIsStartingMax"
+                           formControlName="targetPlayableCardIsStartingMax"/>
+                    <div *ngIf="editForm.get('targetPlayableCardIsStartingMax').invalid && (editForm.get('targetPlayableCardIsStartingMax').dirty || editForm.get('targetPlayableCardIsStartingMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPlayableCardIsStartingMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPlayableCardIsStartingMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetRarityIsStarting">Target Rarity Is Starting</label>
+                    <input type="number" class="form-control" name="targetRarityIsStarting" id="field_targetRarityIsStarting"
+                           formControlName="targetRarityIsStarting"/>
+                    <div *ngIf="editForm.get('targetRarityIsStarting').invalid && (editForm.get('targetRarityIsStarting').dirty || editForm.get('targetRarityIsStarting').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetRarityIsStarting').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetRarityIsStarting')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetAttributeIsStarting">Target Attribute Is Starting</label>
+                    <input type="number" class="form-control" name="targetAttributeIsStarting" id="field_targetAttributeIsStarting"
+                           formControlName="targetAttributeIsStarting"/>
+                    <div *ngIf="editForm.get('targetAttributeIsStarting').invalid && (editForm.get('targetAttributeIsStarting').dirty || editForm.get('targetAttributeIsStarting').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetAttributeIsStarting').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetAttributeIsStarting')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityIsStartingMin">Target Nationality Is Starting Min</label>
+                    <input type="number" class="form-control" name="targetNationalityIsStartingMin" id="field_targetNationalityIsStartingMin"
+                           formControlName="targetNationalityIsStartingMin"/>
+                    <div *ngIf="editForm.get('targetNationalityIsStartingMin').invalid && (editForm.get('targetNationalityIsStartingMin').dirty || editForm.get('targetNationalityIsStartingMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetNationalityIsStartingMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetNationalityIsStartingMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityIsStartingMax">Target Nationality Is Starting Max</label>
+                    <input type="number" class="form-control" name="targetNationalityIsStartingMax" id="field_targetNationalityIsStartingMax"
+                           formControlName="targetNationalityIsStartingMax"/>
+                    <div *ngIf="editForm.get('targetNationalityIsStartingMax').invalid && (editForm.get('targetNationalityIsStartingMax').dirty || editForm.get('targetNationalityIsStartingMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetNationalityIsStartingMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetNationalityIsStartingMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamIsStartingMin">Target Team Is Starting Min</label>
+                    <input type="number" class="form-control" name="targetTeamIsStartingMin" id="field_targetTeamIsStartingMin"
+                           formControlName="targetTeamIsStartingMin"/>
+                    <div *ngIf="editForm.get('targetTeamIsStartingMin').invalid && (editForm.get('targetTeamIsStartingMin').dirty || editForm.get('targetTeamIsStartingMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTeamIsStartingMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTeamIsStartingMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamIsStartingMax">Target Team Is Starting Max</label>
+                    <input type="number" class="form-control" name="targetTeamIsStartingMax" id="field_targetTeamIsStartingMax"
+                           formControlName="targetTeamIsStartingMax"/>
+                    <div *ngIf="editForm.get('targetTeamIsStartingMax').invalid && (editForm.get('targetTeamIsStartingMax').dirty || editForm.get('targetTeamIsStartingMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTeamIsStartingMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTeamIsStartingMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionIsStartingMin">Target Action Is Starting Min</label>
+                    <input type="number" class="form-control" name="targetActionIsStartingMin" id="field_targetActionIsStartingMin"
+                           formControlName="targetActionIsStartingMin"/>
+                    <div *ngIf="editForm.get('targetActionIsStartingMin').invalid && (editForm.get('targetActionIsStartingMin').dirty || editForm.get('targetActionIsStartingMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetActionIsStartingMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetActionIsStartingMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionIsStartingMax">Target Action Is Starting Max</label>
+                    <input type="number" class="form-control" name="targetActionIsStartingMax" id="field_targetActionIsStartingMax"
+                           formControlName="targetActionIsStartingMax"/>
+                    <div *ngIf="editForm.get('targetActionIsStartingMax').invalid && (editForm.get('targetActionIsStartingMax').dirty || editForm.get('targetActionIsStartingMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetActionIsStartingMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetActionIsStartingMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTriggerEffectIsStartingMin">Target Trigger Effect Is Starting Min</label>
+                    <input type="number" class="form-control" name="targetTriggerEffectIsStartingMin" id="field_targetTriggerEffectIsStartingMin"
+                           formControlName="targetTriggerEffectIsStartingMin"/>
+                    <div *ngIf="editForm.get('targetTriggerEffectIsStartingMin').invalid && (editForm.get('targetTriggerEffectIsStartingMin').dirty || editForm.get('targetTriggerEffectIsStartingMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTriggerEffectIsStartingMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTriggerEffectIsStartingMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTriggerEffectIsStartingMax">Target Trigger Effect Is Starting Max</label>
+                    <input type="number" class="form-control" name="targetTriggerEffectIsStartingMax" id="field_targetTriggerEffectIsStartingMax"
+                           formControlName="targetTriggerEffectIsStartingMax"/>
+                    <div *ngIf="editForm.get('targetTriggerEffectIsStartingMax').invalid && (editForm.get('targetTriggerEffectIsStartingMax').dirty || editForm.get('targetTriggerEffectIsStartingMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetTriggerEffectIsStartingMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetTriggerEffectIsStartingMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

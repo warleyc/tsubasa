@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mEncountersCut">
+            <h2><span>M Encounters Cut</span> {{mEncountersCut.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Condition</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.condition}}</span>
+                </dd>
+                <dt><span>Ball Float Condition</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.ballFloatCondition}}</span>
+                </dd>
+                <dt><span>Command 1 Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.command1Type}}</span>
+                </dd>
+                <dt><span>Command 1 Is Skill</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.command1IsSkill}}</span>
+                </dd>
+                <dt><span>Command 2 Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.command2Type}}</span>
+                </dd>
+                <dt><span>Command 2 Is Skill</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.command2IsSkill}}</span>
+                </dd>
+                <dt><span>Result</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.result}}</span>
+                </dd>
+                <dt><span>Shoot Result</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.shootResult}}</span>
+                </dd>
+                <dt><span>Is Thrown</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.isThrown}}</span>
+                </dd>
+                <dt><span>Offense Sequence Text</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.offenseSequenceText}}</span>
+                </dd>
+                <dt><span>Defense Sequence Text</span></dt>
+                <dd>
+                    <span>{{mEncountersCut.defenseSequenceText}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-encounters-cut', mEncountersCut.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

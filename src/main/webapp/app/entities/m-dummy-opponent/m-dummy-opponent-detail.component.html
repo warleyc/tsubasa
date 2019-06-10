@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mDummyOpponent">
+            <h2><span>M Dummy Opponent</span> {{mDummyOpponent.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.npcDeckId}}</span>
+                </dd>
+                <dt><span>Total Parameter</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.totalParameter}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.name}}</span>
+                </dd>
+                <dt><span>Rank</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.rank}}</span>
+                </dd>
+                <dt><span>Emblem Id</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.emblemId}}</span>
+                </dd>
+                <dt><span>Fp Uniform Up Id</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.fpUniformUpId}}</span>
+                </dd>
+                <dt><span>Fp Uniform Up Color</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.fpUniformUpColor}}</span>
+                </dd>
+                <dt><span>Fp Uniform Bottom Id</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.fpUniformBottomId}}</span>
+                </dd>
+                <dt><span>Fp Uniform Bottom Color</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.fpUniformBottomColor}}</span>
+                </dd>
+                <dt><span>Gk Uniform Up Id</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.gkUniformUpId}}</span>
+                </dd>
+                <dt><span>Gk Uniform Up Color</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.gkUniformUpColor}}</span>
+                </dd>
+                <dt><span>Gk Uniform Bottom Id</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.gkUniformBottomId}}</span>
+                </dd>
+                <dt><span>Gk Uniform Bottom Color</span></dt>
+                <dd>
+                    <span>{{mDummyOpponent.gkUniformBottomColor}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mDummyOpponent.idId">
+                        <a [routerLink]="['/m-npc-deck', mDummyOpponent.idId, 'view']">{{mDummyOpponent.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-dummy-opponent', mDummyOpponent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

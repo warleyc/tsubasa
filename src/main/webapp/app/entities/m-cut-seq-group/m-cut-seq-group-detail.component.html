@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCutSeqGroup">
+            <h2><span>M Cut Seq Group</span> {{mCutSeqGroup.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Key</span></dt>
+                <dd>
+                    <span>{{mCutSeqGroup.key}}</span>
+                </dd>
+                <dt><span>Param</span></dt>
+                <dd>
+                    <span>{{mCutSeqGroup.param}}</span>
+                </dd>
+                <dt><span>Cut Sequence Text</span></dt>
+                <dd>
+                    <span>{{mCutSeqGroup.cutSequenceText}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-cut-seq-group', mCutSeqGroup.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

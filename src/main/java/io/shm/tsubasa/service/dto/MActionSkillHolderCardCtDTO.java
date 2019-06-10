@@ -1,0 +1,123 @@
+package io.shm.tsubasa.service.dto;
+import javax.validation.constraints.*;
+import java.io.Serializable;
+import java.util.Objects;
+import javax.persistence.Lob;
+
+/**
+ * A DTO for the {@link io.shm.tsubasa.domain.MActionSkillHolderCardCt} entity.
+ */
+public class MActionSkillHolderCardCtDTO implements Serializable {
+
+    private Long id;
+
+    @NotNull
+    private Integer targetCharaId;
+
+    @NotNull
+    private Integer actionMasterId;
+
+    @NotNull
+    private Integer actionSkillExp;
+
+    
+    @Lob
+    private String name;
+
+    
+    @Lob
+    private String description;
+
+
+    private Long idId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getTargetCharaId() {
+        return targetCharaId;
+    }
+
+    public void setTargetCharaId(Integer targetCharaId) {
+        this.targetCharaId = targetCharaId;
+    }
+
+    public Integer getActionMasterId() {
+        return actionMasterId;
+    }
+
+    public void setActionMasterId(Integer actionMasterId) {
+        this.actionMasterId = actionMasterId;
+    }
+
+    public Integer getActionSkillExp() {
+        return actionSkillExp;
+    }
+
+    public void setActionSkillExp(Integer actionSkillExp) {
+        this.actionSkillExp = actionSkillExp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Long getIdId() {
+        return idId;
+    }
+
+    public void setIdId(Long mCharacterId) {
+        this.idId = mCharacterId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        MActionSkillHolderCardCtDTO mActionSkillHolderCardCtDTO = (MActionSkillHolderCardCtDTO) o;
+        if (mActionSkillHolderCardCtDTO.getId() == null || getId() == null) {
+            return false;
+        }
+        return Objects.equals(getId(), mActionSkillHolderCardCtDTO.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getId());
+    }
+
+    @Override
+    public String toString() {
+        return "MActionSkillHolderCardCtDTO{" +
+            "id=" + getId() +
+            ", targetCharaId=" + getTargetCharaId() +
+            ", actionMasterId=" + getActionMasterId() +
+            ", actionSkillExp=" + getActionSkillExp() +
+            ", name='" + getName() + "'" +
+            ", description='" + getDescription() + "'" +
+            ", id=" + getIdId() +
+            "}";
+    }
+}

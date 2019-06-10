@@ -1,0 +1,117 @@
+{
+    "name": "MInitUserDeck",
+    "fields": [
+        {
+            "fieldName": "deckId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "formationId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "captainCardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "gkCardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp1CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp2CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp3CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp4CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp5CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp6CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp7CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp8CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp9CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fp10CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sub1CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sub2CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sub3CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sub4CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sub5CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "teamEffect1CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "teamEffect2CardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "teamEffect3CardId",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610224835",
+    "entityTableName": "m_init_user_deck",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,75 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mAreaActionWeight">
+            <h2><span>M Area Action Weight</span> {{mAreaActionWeight.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Area Type</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.areaType}}</span>
+                </dd>
+                <dt><span>Dribble Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.dribbleRate}}</span>
+                </dd>
+                <dt><span>Passing Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.passingRate}}</span>
+                </dd>
+                <dt><span>Onetwo Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.onetwoRate}}</span>
+                </dd>
+                <dt><span>Shoot Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.shootRate}}</span>
+                </dd>
+                <dt><span>Volley Shoot Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.volleyShootRate}}</span>
+                </dd>
+                <dt><span>Heading Shoot Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.headingShootRate}}</span>
+                </dd>
+                <dt><span>Tackle Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.tackleRate}}</span>
+                </dd>
+                <dt><span>Block Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.blockRate}}</span>
+                </dd>
+                <dt><span>Pass Cut Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.passCutRate}}</span>
+                </dd>
+                <dt><span>Clear Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.clearRate}}</span>
+                </dd>
+                <dt><span>Compete Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.competeRate}}</span>
+                </dd>
+                <dt><span>Trap Rate</span></dt>
+                <dd>
+                    <span>{{mAreaActionWeight.trapRate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-area-action-weight', mAreaActionWeight.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

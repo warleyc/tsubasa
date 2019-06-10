@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCoopRoomStamp">
+            <h2><span>M Coop Room Stamp</span> {{mCoopRoomStamp.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Role</span></dt>
+                <dd>
+                    <span>{{mCoopRoomStamp.role}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mCoopRoomStamp.orderNum}}</span>
+                </dd>
+                <dt><span>Master Id</span></dt>
+                <dd>
+                    <span>{{mCoopRoomStamp.masterId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-coop-room-stamp', mCoopRoomStamp.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

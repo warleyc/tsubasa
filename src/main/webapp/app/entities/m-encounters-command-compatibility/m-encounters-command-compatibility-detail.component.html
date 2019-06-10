@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mEncountersCommandCompatibility">
+            <h2><span>M Encounters Command Compatibility</span> {{mEncountersCommandCompatibility.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Encounters Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandCompatibility.encountersType}}</span>
+                </dd>
+                <dt><span>Offense Command Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandCompatibility.offenseCommandType}}</span>
+                </dd>
+                <dt><span>Defense Command Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandCompatibility.defenseCommandType}}</span>
+                </dd>
+                <dt><span>Offense Magnification</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandCompatibility.offenseMagnification}}</span>
+                </dd>
+                <dt><span>Defense Magnification</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandCompatibility.defenseMagnification}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-encounters-command-compatibility', mEncountersCommandCompatibility.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

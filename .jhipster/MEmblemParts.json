@@ -1,0 +1,37 @@
+{
+    "name": "MEmblemParts",
+    "fields": [
+        {
+            "fieldName": "assetName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "partsType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mDummyEmblem",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mDummyEmblem"
+        }
+    ],
+    "changelogDate": "20190610224752",
+    "entityTableName": "m_emblem_parts",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCardPlayableAssets">
+            <h2><span>M Card Playable Assets</span> {{mCardPlayableAssets.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Cutin Image Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardPlayableAssets.cutinImageAssetName}}</span>
+                </dd>
+                <dt><span>Sound Event Suffix</span></dt>
+                <dd>
+                    <span>{{mCardPlayableAssets.soundEventSuffix}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-card-playable-assets', mCardPlayableAssets.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

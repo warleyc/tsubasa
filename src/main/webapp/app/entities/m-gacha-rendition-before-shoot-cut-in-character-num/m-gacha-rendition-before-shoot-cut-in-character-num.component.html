@@ -1,0 +1,70 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Gacha Rendition Before Shoot Cut In Character Nums</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-gacha-rendition-before-shoot-cut-in-character-num" [routerLink]="['/m-gacha-rendition-before-shoot-cut-in-character-num/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Gacha Rendition Before Shoot Cut In Character Num
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mGachaRenditionBeforeShootCutInCharacterNums">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isManySsr"><span>Is Many Ssr</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isSsr"><span>Is Ssr</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="pattern"><span>Pattern</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="weight"><span>Weight</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="num"><span>Num</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mGachaRenditionBeforeShootCutInCharacterNum of mGachaRenditionBeforeShootCutInCharacterNums ;trackBy: trackId">
+                <td><a [routerLink]="['/m-gacha-rendition-before-shoot-cut-in-character-num', mGachaRenditionBeforeShootCutInCharacterNum.id, 'view' ]">{{mGachaRenditionBeforeShootCutInCharacterNum.id}}</a></td>
+                <td>{{mGachaRenditionBeforeShootCutInCharacterNum.isManySsr}}</td>
+                <td>{{mGachaRenditionBeforeShootCutInCharacterNum.isSsr}}</td>
+                <td>{{mGachaRenditionBeforeShootCutInCharacterNum.pattern}}</td>
+                <td>{{mGachaRenditionBeforeShootCutInCharacterNum.weight}}</td>
+                <td>{{mGachaRenditionBeforeShootCutInCharacterNum.num}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-gacha-rendition-before-shoot-cut-in-character-num', mGachaRenditionBeforeShootCutInCharacterNum.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-gacha-rendition-before-shoot-cut-in-character-num', mGachaRenditionBeforeShootCutInCharacterNum.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-gacha-rendition-before-shoot-cut-in-character-num', { outlets: { popup: mGachaRenditionBeforeShootCutInCharacterNum.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mGachaRenditionBeforeShootCutInCharacterNums && mGachaRenditionBeforeShootCutInCharacterNums.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

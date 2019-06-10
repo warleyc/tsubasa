@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mExtraNews">
+            <h2><span>M Extra News</span> {{mExtraNews.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mExtraNews.orderNum}}</span>
+                </dd>
+                <dt><span>Asset Name</span></dt>
+                <dd>
+                    <span>{{mExtraNews.assetName}}</span>
+                </dd>
+                <dt><span>Webview Id</span></dt>
+                <dd>
+                    <span>{{mExtraNews.webviewId}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mExtraNews.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mExtraNews.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-extra-news', mExtraNews.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mAdventQuestWorld">
+            <h2><span>M Advent Quest World</span> {{mAdventQuestWorld.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Set Id</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.setId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.name}}</span>
+                </dd>
+                <dt><span>Symbol Type</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.symbolType}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.imagePath}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.description}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Arousal Banner</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.arousalBanner}}</span>
+                </dd>
+                <dt><span>Special Reward Content Type</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.specialRewardContentType}}</span>
+                </dd>
+                <dt><span>Special Reward Content Id</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.specialRewardContentId}}</span>
+                </dd>
+                <dt><span>Is Enable Coop</span></dt>
+                <dd>
+                    <span>{{mAdventQuestWorld.isEnableCoop}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-advent-quest-world', mAdventQuestWorld.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

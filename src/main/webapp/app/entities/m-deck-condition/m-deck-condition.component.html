@@ -1,0 +1,146 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Deck Conditions</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-deck-condition" [routerLink]="['/m-deck-condition/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Deck Condition
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mDeckConditions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetFormationGroupId"><span>Target Formation Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterGroupMinId"><span>Target Character Group Min Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterGroupMaxId"><span>Target Character Group Max Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPlayableCardGroupMinId"><span>Target Playable Card Group Min Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPlayableCardGroupMaxId"><span>Target Playable Card Group Max Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetRarityGroupId"><span>Target Rarity Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetAttribute"><span>Target Attribute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityGroupMinId"><span>Target Nationality Group Min Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityGroupMaxId"><span>Target Nationality Group Max Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamGroupMinId"><span>Target Team Group Min Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamGroupMaxId"><span>Target Team Group Max Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionGroupMinId"><span>Target Action Group Min Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionGroupMaxId"><span>Target Action Group Max Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTriggerEffectGroupMinId"><span>Target Trigger Effect Group Min Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTriggerEffectGroupMaxId"><span>Target Trigger Effect Group Max Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterMinCount"><span>Target Character Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterMaxCount"><span>Target Character Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPlayableCardMinCount"><span>Target Playable Card Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPlayableCardMaxCount"><span>Target Playable Card Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetRarityMaxCount"><span>Target Rarity Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetAttributeMinCount"><span>Target Attribute Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityMinCount"><span>Target Nationality Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityMaxCount"><span>Target Nationality Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamMinCount"><span>Target Team Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamMaxCount"><span>Target Team Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionMinCount"><span>Target Action Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionMaxCount"><span>Target Action Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTriggerEffectMinCount"><span>Target Trigger Effect Min Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTriggerEffectMaxCount"><span>Target Trigger Effect Max Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterIsStartingMin"><span>Target Character Is Starting Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterIsStartingMax"><span>Target Character Is Starting Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPlayableCardIsStartingMin"><span>Target Playable Card Is Starting Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPlayableCardIsStartingMax"><span>Target Playable Card Is Starting Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetRarityIsStarting"><span>Target Rarity Is Starting</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetAttributeIsStarting"><span>Target Attribute Is Starting</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityIsStartingMin"><span>Target Nationality Is Starting Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityIsStartingMax"><span>Target Nationality Is Starting Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamIsStartingMin"><span>Target Team Is Starting Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamIsStartingMax"><span>Target Team Is Starting Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionIsStartingMin"><span>Target Action Is Starting Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionIsStartingMax"><span>Target Action Is Starting Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTriggerEffectIsStartingMin"><span>Target Trigger Effect Is Starting Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTriggerEffectIsStartingMax"><span>Target Trigger Effect Is Starting Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mDeckCondition of mDeckConditions ;trackBy: trackId">
+                <td><a [routerLink]="['/m-deck-condition', mDeckCondition.id, 'view' ]">{{mDeckCondition.id}}</a></td>
+                <td>{{mDeckCondition.targetFormationGroupId}}</td>
+                <td>{{mDeckCondition.targetCharacterGroupMinId}}</td>
+                <td>{{mDeckCondition.targetCharacterGroupMaxId}}</td>
+                <td>{{mDeckCondition.targetPlayableCardGroupMinId}}</td>
+                <td>{{mDeckCondition.targetPlayableCardGroupMaxId}}</td>
+                <td>{{mDeckCondition.targetRarityGroupId}}</td>
+                <td>{{mDeckCondition.targetAttribute}}</td>
+                <td>{{mDeckCondition.targetNationalityGroupMinId}}</td>
+                <td>{{mDeckCondition.targetNationalityGroupMaxId}}</td>
+                <td>{{mDeckCondition.targetTeamGroupMinId}}</td>
+                <td>{{mDeckCondition.targetTeamGroupMaxId}}</td>
+                <td>{{mDeckCondition.targetActionGroupMinId}}</td>
+                <td>{{mDeckCondition.targetActionGroupMaxId}}</td>
+                <td>{{mDeckCondition.targetTriggerEffectGroupMinId}}</td>
+                <td>{{mDeckCondition.targetTriggerEffectGroupMaxId}}</td>
+                <td>{{mDeckCondition.targetCharacterMinCount}}</td>
+                <td>{{mDeckCondition.targetCharacterMaxCount}}</td>
+                <td>{{mDeckCondition.targetPlayableCardMinCount}}</td>
+                <td>{{mDeckCondition.targetPlayableCardMaxCount}}</td>
+                <td>{{mDeckCondition.targetRarityMaxCount}}</td>
+                <td>{{mDeckCondition.targetAttributeMinCount}}</td>
+                <td>{{mDeckCondition.targetNationalityMinCount}}</td>
+                <td>{{mDeckCondition.targetNationalityMaxCount}}</td>
+                <td>{{mDeckCondition.targetTeamMinCount}}</td>
+                <td>{{mDeckCondition.targetTeamMaxCount}}</td>
+                <td>{{mDeckCondition.targetActionMinCount}}</td>
+                <td>{{mDeckCondition.targetActionMaxCount}}</td>
+                <td>{{mDeckCondition.targetTriggerEffectMinCount}}</td>
+                <td>{{mDeckCondition.targetTriggerEffectMaxCount}}</td>
+                <td>{{mDeckCondition.targetCharacterIsStartingMin}}</td>
+                <td>{{mDeckCondition.targetCharacterIsStartingMax}}</td>
+                <td>{{mDeckCondition.targetPlayableCardIsStartingMin}}</td>
+                <td>{{mDeckCondition.targetPlayableCardIsStartingMax}}</td>
+                <td>{{mDeckCondition.targetRarityIsStarting}}</td>
+                <td>{{mDeckCondition.targetAttributeIsStarting}}</td>
+                <td>{{mDeckCondition.targetNationalityIsStartingMin}}</td>
+                <td>{{mDeckCondition.targetNationalityIsStartingMax}}</td>
+                <td>{{mDeckCondition.targetTeamIsStartingMin}}</td>
+                <td>{{mDeckCondition.targetTeamIsStartingMax}}</td>
+                <td>{{mDeckCondition.targetActionIsStartingMin}}</td>
+                <td>{{mDeckCondition.targetActionIsStartingMax}}</td>
+                <td>{{mDeckCondition.targetTriggerEffectIsStartingMin}}</td>
+                <td>{{mDeckCondition.targetTriggerEffectIsStartingMax}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-deck-condition', mDeckCondition.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-deck-condition', mDeckCondition.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-deck-condition', { outlets: { popup: mDeckCondition.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mDeckConditions && mDeckConditions.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

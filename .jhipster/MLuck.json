@@ -1,0 +1,46 @@
+{
+    "name": "MLuck",
+    "fields": [
+        {
+            "fieldName": "targetAttribute",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetCharacterGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTeamGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetNationalityGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "luckRateGroupId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610224846",
+    "entityTableName": "m_luck",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

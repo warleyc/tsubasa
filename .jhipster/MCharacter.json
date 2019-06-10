@@ -1,0 +1,77 @@
+{
+    "name": "MCharacter",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "announceName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "shortName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "characterBookPriority",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mActionSkillHolderCardCt",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mActionSkillHolderCardCt"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mCombinationCutPosition",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mCombinationCutPosition"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mMatchResultCutin",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mMatchResultCutin"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mNpcCard",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mNpcCard"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mTargetCharacterGroup",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mTargetCharacterGroup"
+        }
+    ],
+    "changelogDate": "20190610224718",
+    "entityTableName": "m_character",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

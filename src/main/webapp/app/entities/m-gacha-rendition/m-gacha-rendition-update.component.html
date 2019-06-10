@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-gacha-rendition-heading">Create or edit a M Gacha Rendition</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mGachaRendition.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_mainPrefabName">Main Prefab Name</label>
+                    <textarea class="form-control" name="mainPrefabName" id="field_mainPrefabName"
+                              formControlName="mainPrefabName"></textarea>
+                    <div *ngIf="editForm.get('mainPrefabName').invalid && (editForm.get('mainPrefabName').dirty || editForm.get('mainPrefabName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('mainPrefabName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_resultExpectedUpPrefabName">Result Expected Up Prefab Name</label>
+                    <textarea class="form-control" name="resultExpectedUpPrefabName" id="field_resultExpectedUpPrefabName"
+                              formControlName="resultExpectedUpPrefabName"></textarea>
+                    <div *ngIf="editForm.get('resultExpectedUpPrefabName').invalid && (editForm.get('resultExpectedUpPrefabName').dirty || editForm.get('resultExpectedUpPrefabName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('resultExpectedUpPrefabName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_resultQuestionPrefabName">Result Question Prefab Name</label>
+                    <textarea class="form-control" name="resultQuestionPrefabName" id="field_resultQuestionPrefabName"
+                              formControlName="resultQuestionPrefabName"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_soundSwitchEventName">Sound Switch Event Name</label>
+                    <textarea class="form-control" name="soundSwitchEventName" id="field_soundSwitchEventName"
+                              formControlName="soundSwitchEventName"></textarea>
+                    <div *ngIf="editForm.get('soundSwitchEventName').invalid && (editForm.get('soundSwitchEventName').dirty || editForm.get('soundSwitchEventName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('soundSwitchEventName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

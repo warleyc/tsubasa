@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mEncountersCommandBranch">
+            <h2><span>M Encounters Command Branch</span> {{mEncountersCommandBranch.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Ball Float Condition</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.ballFloatCondition}}</span>
+                </dd>
+                <dt><span>Condition</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.condition}}</span>
+                </dd>
+                <dt><span>Encounters Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.encountersType}}</span>
+                </dd>
+                <dt><span>Is Success</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.isSuccess}}</span>
+                </dd>
+                <dt><span>Command Type</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.commandType}}</span>
+                </dd>
+                <dt><span>Success Rate</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.successRate}}</span>
+                </dd>
+                <dt><span>Loose Ball Rate</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.looseBallRate}}</span>
+                </dd>
+                <dt><span>Touch Lightly Rate</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.touchLightlyRate}}</span>
+                </dd>
+                <dt><span>Post Rate</span></dt>
+                <dd>
+                    <span>{{mEncountersCommandBranch.postRate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-encounters-command-branch', mEncountersCommandBranch.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

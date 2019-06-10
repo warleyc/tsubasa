@@ -1,0 +1,271 @@
+{
+    "name": "MDeckCondition",
+    "fields": [
+        {
+            "fieldName": "targetFormationGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetCharacterGroupMinId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetCharacterGroupMaxId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetPlayableCardGroupMinId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetPlayableCardGroupMaxId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetRarityGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetAttribute",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetNationalityGroupMinId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetNationalityGroupMaxId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTeamGroupMinId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTeamGroupMaxId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetActionGroupMinId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetActionGroupMaxId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTriggerEffectGroupMinId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTriggerEffectGroupMaxId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetCharacterMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetCharacterMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPlayableCardMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPlayableCardMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetRarityMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetAttributeMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetNationalityMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetNationalityMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTeamMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTeamMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetActionMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetActionMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTriggerEffectMinCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTriggerEffectMaxCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetCharacterIsStartingMin",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetCharacterIsStartingMax",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPlayableCardIsStartingMin",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPlayableCardIsStartingMax",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetRarityIsStarting",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetAttributeIsStarting",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetNationalityIsStartingMin",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetNationalityIsStartingMax",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTeamIsStartingMin",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTeamIsStartingMax",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetActionIsStartingMin",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetActionIsStartingMax",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTriggerEffectIsStartingMin",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetTriggerEffectIsStartingMax",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610224734",
+    "entityTableName": "m_deck_condition",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

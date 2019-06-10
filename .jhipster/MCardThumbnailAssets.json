@@ -1,0 +1,54 @@
+{
+    "name": "MCardThumbnailAssets",
+    "fields": [
+        {
+            "fieldName": "thumbnailAssetName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "thumbnailFrameName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "thumbnailBackgoundAssetName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "thumbnailEffectAssetName",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mCardPowerupActionSkill",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mCardPowerupActionSkill"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mTrainingCard",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mTrainingCard"
+        }
+    ],
+    "changelogDate": "20190610224712",
+    "entityTableName": "m_card_thumbnail_assets",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
