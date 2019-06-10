@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCardThumbnailAssets">
+            <h2><span>M Card Thumbnail Assets</span> {{mCardThumbnailAssets.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardThumbnailAssets.thumbnailAssetName}}</span>
+                </dd>
+                <dt><span>Thumbnail Frame Name</span></dt>
+                <dd>
+                    <span>{{mCardThumbnailAssets.thumbnailFrameName}}</span>
+                </dd>
+                <dt><span>Thumbnail Backgound Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardThumbnailAssets.thumbnailBackgoundAssetName}}</span>
+                </dd>
+                <dt><span>Thumbnail Effect Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardThumbnailAssets.thumbnailEffectAssetName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-card-thumbnail-assets', mCardThumbnailAssets.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

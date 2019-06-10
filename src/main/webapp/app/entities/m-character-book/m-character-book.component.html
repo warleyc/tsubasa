@@ -1,0 +1,92 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Character Books</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-character-book" [routerLink]="['/m-character-book/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Character Book
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mCharacterBooks">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cvName"><span>Cv Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="series"><span>Series</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="height"><span>Height</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="weight"><span>Weight</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="introduction"><span>Introduction</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="firstAppearedComic"><span>First Appeared Comic</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="firstAppearedComicLink"><span>First Appeared Comic Link</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill1"><span>Skill 1</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill1Comic"><span>Skill 1 Comic</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill1ComicLink"><span>Skill 1 Comic Link</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill2"><span>Skill 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill2Comic"><span>Skill 2 Comic</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill2ComicLink"><span>Skill 2 Comic Link</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill3"><span>Skill 3</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill3Comic"><span>Skill 3 Comic</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skill3ComicLink"><span>Skill 3 Comic Link</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mCharacterBook of mCharacterBooks ;trackBy: trackId">
+                <td><a [routerLink]="['/m-character-book', mCharacterBook.id, 'view' ]">{{mCharacterBook.id}}</a></td>
+                <td>{{mCharacterBook.cvName}}</td>
+                <td>{{mCharacterBook.series}}</td>
+                <td>{{mCharacterBook.height}}</td>
+                <td>{{mCharacterBook.weight}}</td>
+                <td>{{mCharacterBook.introduction}}</td>
+                <td>{{mCharacterBook.firstAppearedComic}}</td>
+                <td>{{mCharacterBook.firstAppearedComicLink}}</td>
+                <td>{{mCharacterBook.skill1}}</td>
+                <td>{{mCharacterBook.skill1Comic}}</td>
+                <td>{{mCharacterBook.skill1ComicLink}}</td>
+                <td>{{mCharacterBook.skill2}}</td>
+                <td>{{mCharacterBook.skill2Comic}}</td>
+                <td>{{mCharacterBook.skill2ComicLink}}</td>
+                <td>{{mCharacterBook.skill3}}</td>
+                <td>{{mCharacterBook.skill3Comic}}</td>
+                <td>{{mCharacterBook.skill3ComicLink}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-character-book', mCharacterBook.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-character-book', mCharacterBook.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-character-book', { outlets: { popup: mCharacterBook.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mCharacterBooks && mCharacterBooks.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

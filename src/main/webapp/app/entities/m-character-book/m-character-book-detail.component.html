@@ -1,0 +1,87 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCharacterBook">
+            <h2><span>M Character Book</span> {{mCharacterBook.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Cv Name</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.cvName}}</span>
+                </dd>
+                <dt><span>Series</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.series}}</span>
+                </dd>
+                <dt><span>Height</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.height}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.weight}}</span>
+                </dd>
+                <dt><span>Introduction</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.introduction}}</span>
+                </dd>
+                <dt><span>First Appeared Comic</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.firstAppearedComic}}</span>
+                </dd>
+                <dt><span>First Appeared Comic Link</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.firstAppearedComicLink}}</span>
+                </dd>
+                <dt><span>Skill 1</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill1}}</span>
+                </dd>
+                <dt><span>Skill 1 Comic</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill1Comic}}</span>
+                </dd>
+                <dt><span>Skill 1 Comic Link</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill1ComicLink}}</span>
+                </dd>
+                <dt><span>Skill 2</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill2}}</span>
+                </dd>
+                <dt><span>Skill 2 Comic</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill2Comic}}</span>
+                </dd>
+                <dt><span>Skill 2 Comic Link</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill2ComicLink}}</span>
+                </dd>
+                <dt><span>Skill 3</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill3}}</span>
+                </dd>
+                <dt><span>Skill 3 Comic</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill3Comic}}</span>
+                </dd>
+                <dt><span>Skill 3 Comic Link</span></dt>
+                <dd>
+                    <span>{{mCharacterBook.skill3ComicLink}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-character-book', mCharacterBook.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

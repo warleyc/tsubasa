@@ -1,0 +1,210 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-action-skill-cutin-heading">Create or edit a M Action Skill Cutin</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mActionSkillCutin.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionCutId">Action Cut Id</label>
+                    <input type="number" class="form-control" name="actionCutId" id="field_actionCutId"
+                           formControlName="actionCutId"/>
+                    <div *ngIf="editForm.get('actionCutId').invalid && (editForm.get('actionCutId').dirty || editForm.get('actionCutId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionCutId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionCutId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_characterId">Character Id</label>
+                    <input type="number" class="form-control" name="characterId" id="field_characterId"
+                           formControlName="characterId"/>
+                    <div *ngIf="editForm.get('characterId').invalid && (editForm.get('characterId').dirty || editForm.get('characterId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('characterId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('characterId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cutName">Cut Name</label>
+                    <textarea class="form-control" name="cutName" id="field_cutName"
+                              formControlName="cutName"></textarea>
+                    <div *ngIf="editForm.get('cutName').invalid && (editForm.get('cutName').dirty || editForm.get('cutName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cutName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_type">Type</label>
+                    <input type="number" class="form-control" name="type" id="field_type"
+                           formControlName="type"/>
+                    <div *ngIf="editForm.get('type').invalid && (editForm.get('type').dirty || editForm.get('type').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('type').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('type')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_startSynchronize">Start Synchronize</label>
+                    <input type="number" class="form-control" name="startSynchronize" id="field_startSynchronize"
+                           formControlName="startSynchronize"/>
+                    <div *ngIf="editForm.get('startSynchronize').invalid && (editForm.get('startSynchronize').dirty || editForm.get('startSynchronize').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('startSynchronize').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('startSynchronize')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_finishSynchronize">Finish Synchronize</label>
+                    <input type="number" class="form-control" name="finishSynchronize" id="field_finishSynchronize"
+                           formControlName="finishSynchronize"/>
+                    <div *ngIf="editForm.get('finishSynchronize').invalid && (editForm.get('finishSynchronize').dirty || editForm.get('finishSynchronize').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('finishSynchronize').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('finishSynchronize')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_startDelay">Start Delay</label>
+                    <input type="number" class="form-control" name="startDelay" id="field_startDelay"
+                           formControlName="startDelay"/>
+                    <div *ngIf="editForm.get('startDelay').invalid && (editForm.get('startDelay').dirty || editForm.get('startDelay').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('startDelay').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('startDelay')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter1Character">Chapter 1 Character</label>
+                    <input type="number" class="form-control" name="chapter1Character" id="field_chapter1Character"
+                           formControlName="chapter1Character"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter1Text">Chapter 1 Text</label>
+                    <textarea class="form-control" name="chapter1Text" id="field_chapter1Text"
+                              formControlName="chapter1Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter1SoundEvent">Chapter 1 Sound Event</label>
+                    <textarea class="form-control" name="chapter1SoundEvent" id="field_chapter1SoundEvent"
+                              formControlName="chapter1SoundEvent"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter2Character">Chapter 2 Character</label>
+                    <input type="number" class="form-control" name="chapter2Character" id="field_chapter2Character"
+                           formControlName="chapter2Character"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter2Text">Chapter 2 Text</label>
+                    <textarea class="form-control" name="chapter2Text" id="field_chapter2Text"
+                              formControlName="chapter2Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter2SoundEvent">Chapter 2 Sound Event</label>
+                    <textarea class="form-control" name="chapter2SoundEvent" id="field_chapter2SoundEvent"
+                              formControlName="chapter2SoundEvent"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter3Character">Chapter 3 Character</label>
+                    <input type="number" class="form-control" name="chapter3Character" id="field_chapter3Character"
+                           formControlName="chapter3Character"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter3Text">Chapter 3 Text</label>
+                    <textarea class="form-control" name="chapter3Text" id="field_chapter3Text"
+                              formControlName="chapter3Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter3SoundEvent">Chapter 3 Sound Event</label>
+                    <textarea class="form-control" name="chapter3SoundEvent" id="field_chapter3SoundEvent"
+                              formControlName="chapter3SoundEvent"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter4Character">Chapter 4 Character</label>
+                    <input type="number" class="form-control" name="chapter4Character" id="field_chapter4Character"
+                           formControlName="chapter4Character"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter4Text">Chapter 4 Text</label>
+                    <textarea class="form-control" name="chapter4Text" id="field_chapter4Text"
+                              formControlName="chapter4Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter4SoundEvent">Chapter 4 Sound Event</label>
+                    <textarea class="form-control" name="chapter4SoundEvent" id="field_chapter4SoundEvent"
+                              formControlName="chapter4SoundEvent"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter5Character">Chapter 5 Character</label>
+                    <input type="number" class="form-control" name="chapter5Character" id="field_chapter5Character"
+                           formControlName="chapter5Character"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter5Text">Chapter 5 Text</label>
+                    <textarea class="form-control" name="chapter5Text" id="field_chapter5Text"
+                              formControlName="chapter5Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter5SoundEvent">Chapter 5 Sound Event</label>
+                    <textarea class="form-control" name="chapter5SoundEvent" id="field_chapter5SoundEvent"
+                              formControlName="chapter5SoundEvent"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_synchronizeText">Synchronize Text</label>
+                    <textarea class="form-control" name="synchronizeText" id="field_synchronizeText"
+                              formControlName="synchronizeText"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_synchronizeSoundEvent">Synchronize Sound Event</label>
+                    <textarea class="form-control" name="synchronizeSoundEvent" id="field_synchronizeSoundEvent"
+                              formControlName="synchronizeSoundEvent"></textarea>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

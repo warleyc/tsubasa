@@ -1,0 +1,74 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Gacha Rendition Balls</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-gacha-rendition-ball" [routerLink]="['/m-gacha-rendition-ball/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Gacha Rendition Ball
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mGachaRenditionBalls">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="renditionId"><span>Rendition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isSsr"><span>Is Ssr</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="weight"><span>Weight</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ballTextureName"><span>Ball Texture Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="trajectoryNormalTextureName"><span>Trajectory Normal Texture Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="trajectoryGoldTextureName"><span>Trajectory Gold Texture Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="trajectoryRainbowTextureName"><span>Trajectory Rainbow Texture Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mGachaRenditionBall of mGachaRenditionBalls ;trackBy: trackId">
+                <td><a [routerLink]="['/m-gacha-rendition-ball', mGachaRenditionBall.id, 'view' ]">{{mGachaRenditionBall.id}}</a></td>
+                <td>{{mGachaRenditionBall.renditionId}}</td>
+                <td>{{mGachaRenditionBall.isSsr}}</td>
+                <td>{{mGachaRenditionBall.weight}}</td>
+                <td>{{mGachaRenditionBall.ballTextureName}}</td>
+                <td>{{mGachaRenditionBall.trajectoryNormalTextureName}}</td>
+                <td>{{mGachaRenditionBall.trajectoryGoldTextureName}}</td>
+                <td>{{mGachaRenditionBall.trajectoryRainbowTextureName}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-gacha-rendition-ball', mGachaRenditionBall.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-gacha-rendition-ball', mGachaRenditionBall.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-gacha-rendition-ball', { outlets: { popup: mGachaRenditionBall.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mGachaRenditionBalls && mGachaRenditionBalls.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

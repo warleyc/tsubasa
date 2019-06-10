@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mDummyEmblem">
+            <h2><span>M Dummy Emblem</span> {{mDummyEmblem.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Background Id</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.backgroundId}}</span>
+                </dd>
+                <dt><span>Background Color</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.backgroundColor}}</span>
+                </dd>
+                <dt><span>Upper Id</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.upperId}}</span>
+                </dd>
+                <dt><span>Upper Color</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.upperColor}}</span>
+                </dd>
+                <dt><span>Middle Id</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.middleId}}</span>
+                </dd>
+                <dt><span>Middle Color</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.middleColor}}</span>
+                </dd>
+                <dt><span>Lower Id</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.lowerId}}</span>
+                </dd>
+                <dt><span>Lower Color</span></dt>
+                <dd>
+                    <span>{{mDummyEmblem.lowerColor}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mDummyEmblem.idId">
+                        <a [routerLink]="['/m-emblem-parts', mDummyEmblem.idId, 'view']">{{mDummyEmblem.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-dummy-emblem', mDummyEmblem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

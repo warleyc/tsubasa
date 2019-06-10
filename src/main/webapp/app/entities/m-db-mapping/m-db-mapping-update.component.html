@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-db-mapping-heading">Create or edit a M Db Mapping</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mDbMapping.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fileName">File Name</label>
+                    <textarea class="form-control" name="fileName" id="field_fileName"
+                              formControlName="fileName"></textarea>
+                    <div *ngIf="editForm.get('fileName').invalid && (editForm.get('fileName').dirty || editForm.get('fileName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('fileName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dbName">Db Name</label>
+                    <textarea class="form-control" name="dbName" id="field_dbName"
+                              formControlName="dbName"></textarea>
+                    <div *ngIf="editForm.get('dbName').invalid && (editForm.get('dbName').dirty || editForm.get('dbName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dbName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_path">Path</label>
+                    <textarea class="form-control" name="path" id="field_path"
+                              formControlName="path"></textarea>
+                    <div *ngIf="editForm.get('path').invalid && (editForm.get('path').dirty || editForm.get('path').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('path').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

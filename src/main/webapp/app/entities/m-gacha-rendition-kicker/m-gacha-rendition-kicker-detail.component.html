@@ -1,0 +1,95 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGachaRenditionKicker">
+            <h2><span>M Gacha Rendition Kicker</span> {{mGachaRenditionKicker.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rendition Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.renditionId}}</span>
+                </dd>
+                <dt><span>Is Many Ssr</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.isManySsr}}</span>
+                </dd>
+                <dt><span>Is Ssr</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.isSsr}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.weight}}</span>
+                </dd>
+                <dt><span>Left Model Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.leftModelId}}</span>
+                </dd>
+                <dt><span>Left Uniform Up Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.leftUniformUpId}}</span>
+                </dd>
+                <dt><span>Left Uniform Bottom Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.leftUniformBottomId}}</span>
+                </dd>
+                <dt><span>Left Uniform Number</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.leftUniformNumber}}</span>
+                </dd>
+                <dt><span>Right Model Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.rightModelId}}</span>
+                </dd>
+                <dt><span>Right Uniform Up Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.rightUniformUpId}}</span>
+                </dd>
+                <dt><span>Right Uniform Bottom Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.rightUniformBottomId}}</span>
+                </dd>
+                <dt><span>Right Uniform Number</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.rightUniformNumber}}</span>
+                </dd>
+                <dt><span>Cut In Sprite Name</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.cutInSpriteName}}</span>
+                </dd>
+                <dt><span>Left Message</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.leftMessage}}</span>
+                </dd>
+                <dt><span>Right Message</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.rightMessage}}</span>
+                </dd>
+                <dt><span>Voice Trigger</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.voiceTrigger}}</span>
+                </dd>
+                <dt><span>Voice Start Cut In</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.voiceStartCutIn}}</span>
+                </dd>
+                <dt><span>Kicker Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionKicker.kickerId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-gacha-rendition-kicker', mGachaRenditionKicker.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

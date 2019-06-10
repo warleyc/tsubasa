@@ -1,0 +1,69 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-character-score-cut-heading">Create or edit a M Character Score Cut</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mCharacterScoreCut.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_characterId">Character Id</label>
+                    <input type="number" class="form-control" name="characterId" id="field_characterId"
+                           formControlName="characterId"/>
+                    <div *ngIf="editForm.get('characterId').invalid && (editForm.get('characterId').dirty || editForm.get('characterId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('characterId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('characterId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_teamId">Team Id</label>
+                    <input type="number" class="form-control" name="teamId" id="field_teamId"
+                           formControlName="teamId"/>
+                    <div *ngIf="editForm.get('teamId').invalid && (editForm.get('teamId').dirty || editForm.get('teamId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('teamId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('teamId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_scoreCutType">Score Cut Type</label>
+                    <input type="number" class="form-control" name="scoreCutType" id="field_scoreCutType"
+                           formControlName="scoreCutType"/>
+                    <div *ngIf="editForm.get('scoreCutType').invalid && (editForm.get('scoreCutType').dirty || editForm.get('scoreCutType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('scoreCutType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('scoreCutType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

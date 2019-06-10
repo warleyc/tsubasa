@@ -1,0 +1,75 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCut">
+            <h2><span>M Cut</span> {{mCut.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mCut.name}}</span>
+                </dd>
+                <dt><span>Fp A</span></dt>
+                <dd>
+                    <span>{{mCut.fpA}}</span>
+                </dd>
+                <dt><span>Fp B</span></dt>
+                <dd>
+                    <span>{{mCut.fpB}}</span>
+                </dd>
+                <dt><span>Fp C</span></dt>
+                <dd>
+                    <span>{{mCut.fpC}}</span>
+                </dd>
+                <dt><span>Fp D</span></dt>
+                <dd>
+                    <span>{{mCut.fpD}}</span>
+                </dd>
+                <dt><span>Fp E</span></dt>
+                <dd>
+                    <span>{{mCut.fpE}}</span>
+                </dd>
+                <dt><span>Fp F</span></dt>
+                <dd>
+                    <span>{{mCut.fpF}}</span>
+                </dd>
+                <dt><span>Gk A</span></dt>
+                <dd>
+                    <span>{{mCut.gkA}}</span>
+                </dd>
+                <dt><span>Gk B</span></dt>
+                <dd>
+                    <span>{{mCut.gkB}}</span>
+                </dd>
+                <dt><span>Show Environmental Effect</span></dt>
+                <dd>
+                    <span>{{mCut.showEnvironmentalEffect}}</span>
+                </dd>
+                <dt><span>Cut Type</span></dt>
+                <dd>
+                    <span>{{mCut.cutType}}</span>
+                </dd>
+                <dt><span>Group Id</span></dt>
+                <dd>
+                    <span>{{mCut.groupId}}</span>
+                </dd>
+                <dt><span>Is Combi Cut</span></dt>
+                <dd>
+                    <span>{{mCut.isCombiCut}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-cut', mCut.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

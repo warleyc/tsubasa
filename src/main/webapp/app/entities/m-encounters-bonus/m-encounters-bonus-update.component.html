@@ -1,0 +1,84 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-encounters-bonus-heading">Create or edit a M Encounters Bonus</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mEncountersBonus.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_encountersType">Encounters Type</label>
+                    <input type="number" class="form-control" name="encountersType" id="field_encountersType"
+                           formControlName="encountersType"/>
+                    <div *ngIf="editForm.get('encountersType').invalid && (editForm.get('encountersType').dirty || editForm.get('encountersType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('encountersType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('encountersType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isSkillSuccess">Is Skill Success</label>
+                    <input type="number" class="form-control" name="isSkillSuccess" id="field_isSkillSuccess"
+                           formControlName="isSkillSuccess"/>
+                    <div *ngIf="editForm.get('isSkillSuccess').invalid && (editForm.get('isSkillSuccess').dirty || editForm.get('isSkillSuccess').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('isSkillSuccess').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('isSkillSuccess')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_threshold">Threshold</label>
+                    <input type="number" class="form-control" name="threshold" id="field_threshold"
+                           formControlName="threshold"/>
+                    <div *ngIf="editForm.get('threshold').invalid && (editForm.get('threshold').dirty || editForm.get('threshold').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('threshold').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('threshold')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_probabilityBonusValue">Probability Bonus Value</label>
+                    <input type="number" class="form-control" name="probabilityBonusValue" id="field_probabilityBonusValue"
+                           formControlName="probabilityBonusValue"/>
+                    <div *ngIf="editForm.get('probabilityBonusValue').invalid && (editForm.get('probabilityBonusValue').dirty || editForm.get('probabilityBonusValue').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('probabilityBonusValue').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('probabilityBonusValue')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

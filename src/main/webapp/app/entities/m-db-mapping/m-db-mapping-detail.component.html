@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mDbMapping">
+            <h2><span>M Db Mapping</span> {{mDbMapping.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>File Name</span></dt>
+                <dd>
+                    <span>{{mDbMapping.fileName}}</span>
+                </dd>
+                <dt><span>Db Name</span></dt>
+                <dd>
+                    <span>{{mDbMapping.dbName}}</span>
+                </dd>
+                <dt><span>Path</span></dt>
+                <dd>
+                    <span>{{mDbMapping.path}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-db-mapping', mDbMapping.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGachaRenditionBall">
+            <h2><span>M Gacha Rendition Ball</span> {{mGachaRenditionBall.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rendition Id</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.renditionId}}</span>
+                </dd>
+                <dt><span>Is Ssr</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.isSsr}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.weight}}</span>
+                </dd>
+                <dt><span>Ball Texture Name</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.ballTextureName}}</span>
+                </dd>
+                <dt><span>Trajectory Normal Texture Name</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.trajectoryNormalTextureName}}</span>
+                </dd>
+                <dt><span>Trajectory Gold Texture Name</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.trajectoryGoldTextureName}}</span>
+                </dd>
+                <dt><span>Trajectory Rainbow Texture Name</span></dt>
+                <dd>
+                    <span>{{mGachaRenditionBall.trajectoryRainbowTextureName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-gacha-rendition-ball', mGachaRenditionBall.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

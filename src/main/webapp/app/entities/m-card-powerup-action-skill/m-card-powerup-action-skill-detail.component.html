@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCardPowerupActionSkill">
+            <h2><span>M Card Powerup Action Skill</span> {{mCardPowerupActionSkill.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.name}}</span>
+                </dd>
+                <dt><span>Short Name</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.shortName}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.description}}</span>
+                </dd>
+                <dt><span>Rarity</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.rarity}}</span>
+                </dd>
+                <dt><span>Attribute</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.attribute}}</span>
+                </dd>
+                <dt><span>Action Rarity</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.actionRarity}}</span>
+                </dd>
+                <dt><span>Gain Action Exp</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.gainActionExp}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.coin}}</span>
+                </dd>
+                <dt><span>Sell Medal Id</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.sellMedalId}}</span>
+                </dd>
+                <dt><span>Thumbnail Assets Id</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.thumbnailAssetsId}}</span>
+                </dd>
+                <dt><span>Card Illust Assets Id</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.cardIllustAssetsId}}</span>
+                </dd>
+                <dt><span>Target Action Command Type</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.targetActionCommandType}}</span>
+                </dd>
+                <dt><span>Target Character Id</span></dt>
+                <dd>
+                    <span>{{mCardPowerupActionSkill.targetCharacterId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mCardPowerupActionSkill.idId">
+                        <a [routerLink]="['/m-card-thumbnail-assets', mCardPowerupActionSkill.idId, 'view']">{{mCardPowerupActionSkill.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-card-powerup-action-skill', mCardPowerupActionSkill.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

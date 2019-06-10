@@ -1,0 +1,97 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-arousal-heading">Create or edit a M Arousal</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mArousal.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_beforeId">Before Id</label>
+                    <input type="number" class="form-control" name="beforeId" id="field_beforeId"
+                           formControlName="beforeId"/>
+                    <div *ngIf="editForm.get('beforeId').invalid && (editForm.get('beforeId').dirty || editForm.get('beforeId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('beforeId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('beforeId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_afterId">After Id</label>
+                    <input type="number" class="form-control" name="afterId" id="field_afterId"
+                           formControlName="afterId"/>
+                    <div *ngIf="editForm.get('afterId').invalid && (editForm.get('afterId').dirty || editForm.get('afterId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('afterId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('afterId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cost">Cost</label>
+                    <input type="number" class="form-control" name="cost" id="field_cost"
+                           formControlName="cost"/>
+                    <div *ngIf="editForm.get('cost').invalid && (editForm.get('cost').dirty || editForm.get('cost').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cost').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('cost')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_materialGroupId">Material Group Id</label>
+                    <input type="number" class="form-control" name="materialGroupId" id="field_materialGroupId"
+                           formControlName="materialGroupId"/>
+                    <div *ngIf="editForm.get('materialGroupId').invalid && (editForm.get('materialGroupId').dirty || editForm.get('materialGroupId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('materialGroupId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('materialGroupId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mPlayableCardOption.id" *ngFor="let mPlayableCardOption of mplayablecards; trackBy: trackMPlayableCardById">{{mPlayableCardOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

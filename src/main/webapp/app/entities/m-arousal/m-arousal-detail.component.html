@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mArousal">
+            <h2><span>M Arousal</span> {{mArousal.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Before Id</span></dt>
+                <dd>
+                    <span>{{mArousal.beforeId}}</span>
+                </dd>
+                <dt><span>After Id</span></dt>
+                <dd>
+                    <span>{{mArousal.afterId}}</span>
+                </dd>
+                <dt><span>Cost</span></dt>
+                <dd>
+                    <span>{{mArousal.cost}}</span>
+                </dd>
+                <dt><span>Material Group Id</span></dt>
+                <dd>
+                    <span>{{mArousal.materialGroupId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mArousal.idId">
+                        <a [routerLink]="['/m-playable-card', mArousal.idId, 'view']">{{mArousal.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-arousal', mArousal.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

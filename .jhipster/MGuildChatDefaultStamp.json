@@ -1,0 +1,22 @@
+{
+    "name": "MGuildChatDefaultStamp",
+    "fields": [
+        {
+            "fieldName": "masterId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610224824",
+    "entityTableName": "m_guild_chat_default_stamp",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

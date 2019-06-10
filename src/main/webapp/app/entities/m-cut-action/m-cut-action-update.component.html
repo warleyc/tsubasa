@@ -1,0 +1,65 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-cut-action-heading">Create or edit a M Cut Action</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mCutAction.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionCutId">Action Cut Id</label>
+                    <input type="number" class="form-control" name="actionCutId" id="field_actionCutId"
+                           formControlName="actionCutId"/>
+                    <div *ngIf="editForm.get('actionCutId').invalid && (editForm.get('actionCutId').dirty || editForm.get('actionCutId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionCutId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionCutId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cutActionType">Cut Action Type</label>
+                    <input type="number" class="form-control" name="cutActionType" id="field_cutActionType"
+                           formControlName="cutActionType"/>
+                    <div *ngIf="editForm.get('cutActionType').invalid && (editForm.get('cutActionType').dirty || editForm.get('cutActionType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cutActionType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('cutActionType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cutSequenceText">Cut Sequence Text</label>
+                    <textarea class="form-control" name="cutSequenceText" id="field_cutSequenceText"
+                              formControlName="cutSequenceText"></textarea>
+                    <div *ngIf="editForm.get('cutSequenceText').invalid && (editForm.get('cutSequenceText').dirty || editForm.get('cutSequenceText').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cutSequenceText').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

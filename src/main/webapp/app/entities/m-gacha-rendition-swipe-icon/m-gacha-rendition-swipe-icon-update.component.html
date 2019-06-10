@@ -1,0 +1,80 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-gacha-rendition-swipe-icon-heading">Create or edit a M Gacha Rendition Swipe Icon</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mGachaRenditionSwipeIcon.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isSsr">Is Ssr</label>
+                    <input type="number" class="form-control" name="isSsr" id="field_isSsr"
+                           formControlName="isSsr"/>
+                    <div *ngIf="editForm.get('isSsr').invalid && (editForm.get('isSsr').dirty || editForm.get('isSsr').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('isSsr').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('isSsr')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isROrLess">Is R Or Less</label>
+                    <input type="number" class="form-control" name="isROrLess" id="field_isROrLess"
+                           formControlName="isROrLess"/>
+                    <div *ngIf="editForm.get('isROrLess').invalid && (editForm.get('isROrLess').dirty || editForm.get('isROrLess').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('isROrLess').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('isROrLess')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_weight">Weight</label>
+                    <input type="number" class="form-control" name="weight" id="field_weight"
+                           formControlName="weight"/>
+                    <div *ngIf="editForm.get('weight').invalid && (editForm.get('weight').dirty || editForm.get('weight').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('weight').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('weight')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_swipeIconPrefabName">Swipe Icon Prefab Name</label>
+                    <textarea class="form-control" name="swipeIconPrefabName" id="field_swipeIconPrefabName"
+                              formControlName="swipeIconPrefabName"></textarea>
+                    <div *ngIf="editForm.get('swipeIconPrefabName').invalid && (editForm.get('swipeIconPrefabName').dirty || editForm.get('swipeIconPrefabName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('swipeIconPrefabName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

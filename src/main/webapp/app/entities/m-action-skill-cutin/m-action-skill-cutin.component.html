@@ -1,0 +1,108 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Action Skill Cutins</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-action-skill-cutin" [routerLink]="['/m-action-skill-cutin/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Action Skill Cutin
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mActionSkillCutins">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="actionCutId"><span>Action Cut Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterId"><span>Character Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cutName"><span>Cut Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="type"><span>Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startSynchronize"><span>Start Synchronize</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="finishSynchronize"><span>Finish Synchronize</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startDelay"><span>Start Delay</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter1Character"><span>Chapter 1 Character</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter1Text"><span>Chapter 1 Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter1SoundEvent"><span>Chapter 1 Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter2Character"><span>Chapter 2 Character</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter2Text"><span>Chapter 2 Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter2SoundEvent"><span>Chapter 2 Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter3Character"><span>Chapter 3 Character</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter3Text"><span>Chapter 3 Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter3SoundEvent"><span>Chapter 3 Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter4Character"><span>Chapter 4 Character</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter4Text"><span>Chapter 4 Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter4SoundEvent"><span>Chapter 4 Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter5Character"><span>Chapter 5 Character</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter5Text"><span>Chapter 5 Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="chapter5SoundEvent"><span>Chapter 5 Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="synchronizeText"><span>Synchronize Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="synchronizeSoundEvent"><span>Synchronize Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mActionSkillCutin of mActionSkillCutins ;trackBy: trackId">
+                <td><a [routerLink]="['/m-action-skill-cutin', mActionSkillCutin.id, 'view' ]">{{mActionSkillCutin.id}}</a></td>
+                <td>{{mActionSkillCutin.actionCutId}}</td>
+                <td>{{mActionSkillCutin.characterId}}</td>
+                <td>{{mActionSkillCutin.cutName}}</td>
+                <td>{{mActionSkillCutin.type}}</td>
+                <td>{{mActionSkillCutin.startSynchronize}}</td>
+                <td>{{mActionSkillCutin.finishSynchronize}}</td>
+                <td>{{mActionSkillCutin.startDelay}}</td>
+                <td>{{mActionSkillCutin.chapter1Character}}</td>
+                <td>{{mActionSkillCutin.chapter1Text}}</td>
+                <td>{{mActionSkillCutin.chapter1SoundEvent}}</td>
+                <td>{{mActionSkillCutin.chapter2Character}}</td>
+                <td>{{mActionSkillCutin.chapter2Text}}</td>
+                <td>{{mActionSkillCutin.chapter2SoundEvent}}</td>
+                <td>{{mActionSkillCutin.chapter3Character}}</td>
+                <td>{{mActionSkillCutin.chapter3Text}}</td>
+                <td>{{mActionSkillCutin.chapter3SoundEvent}}</td>
+                <td>{{mActionSkillCutin.chapter4Character}}</td>
+                <td>{{mActionSkillCutin.chapter4Text}}</td>
+                <td>{{mActionSkillCutin.chapter4SoundEvent}}</td>
+                <td>{{mActionSkillCutin.chapter5Character}}</td>
+                <td>{{mActionSkillCutin.chapter5Text}}</td>
+                <td>{{mActionSkillCutin.chapter5SoundEvent}}</td>
+                <td>{{mActionSkillCutin.synchronizeText}}</td>
+                <td>{{mActionSkillCutin.synchronizeSoundEvent}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-action-skill-cutin', mActionSkillCutin.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-action-skill-cutin', mActionSkillCutin.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-action-skill-cutin', { outlets: { popup: mActionSkillCutin.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mActionSkillCutins && mActionSkillCutins.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

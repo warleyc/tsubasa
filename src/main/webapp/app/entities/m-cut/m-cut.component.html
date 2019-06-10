@@ -1,0 +1,86 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Cuts</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-cut" [routerLink]="['/m-cut/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Cut
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mCuts">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fpA"><span>Fp A</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fpB"><span>Fp B</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fpC"><span>Fp C</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fpD"><span>Fp D</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fpE"><span>Fp E</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fpF"><span>Fp F</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gkA"><span>Gk A</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gkB"><span>Gk B</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="showEnvironmentalEffect"><span>Show Environmental Effect</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cutType"><span>Cut Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="groupId"><span>Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isCombiCut"><span>Is Combi Cut</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mCut of mCuts ;trackBy: trackId">
+                <td><a [routerLink]="['/m-cut', mCut.id, 'view' ]">{{mCut.id}}</a></td>
+                <td>{{mCut.name}}</td>
+                <td>{{mCut.fpA}}</td>
+                <td>{{mCut.fpB}}</td>
+                <td>{{mCut.fpC}}</td>
+                <td>{{mCut.fpD}}</td>
+                <td>{{mCut.fpE}}</td>
+                <td>{{mCut.fpF}}</td>
+                <td>{{mCut.gkA}}</td>
+                <td>{{mCut.gkB}}</td>
+                <td>{{mCut.showEnvironmentalEffect}}</td>
+                <td>{{mCut.cutType}}</td>
+                <td>{{mCut.groupId}}</td>
+                <td>{{mCut.isCombiCut}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-cut', mCut.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-cut', mCut.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-cut', { outlets: { popup: mCut.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mCuts && mCuts.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

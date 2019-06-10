@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mCardIllustAssets">
+            <h2><span>M Card Illust Assets</span> {{mCardIllustAssets.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardIllustAssets.assetName}}</span>
+                </dd>
+                <dt><span>Sub Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardIllustAssets.subAssetName}}</span>
+                </dd>
+                <dt><span>Offset</span></dt>
+                <dd>
+                    <span>{{mCardIllustAssets.offset}}</span>
+                </dd>
+                <dt><span>Background Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardIllustAssets.backgroundAssetName}}</span>
+                </dd>
+                <dt><span>Decoration Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardIllustAssets.decorationAssetName}}</span>
+                </dd>
+                <dt><span>Effect Asset Name</span></dt>
+                <dd>
+                    <span>{{mCardIllustAssets.effectAssetName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-card-illust-assets', mCardIllustAssets.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

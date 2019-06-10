@@ -1,0 +1,99 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-encounters-command-compatibility-heading">Create or edit a M Encounters Command Compatibility</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mEncountersCommandCompatibility.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_encountersType">Encounters Type</label>
+                    <input type="number" class="form-control" name="encountersType" id="field_encountersType"
+                           formControlName="encountersType"/>
+                    <div *ngIf="editForm.get('encountersType').invalid && (editForm.get('encountersType').dirty || editForm.get('encountersType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('encountersType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('encountersType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseCommandType">Offense Command Type</label>
+                    <input type="number" class="form-control" name="offenseCommandType" id="field_offenseCommandType"
+                           formControlName="offenseCommandType"/>
+                    <div *ngIf="editForm.get('offenseCommandType').invalid && (editForm.get('offenseCommandType').dirty || editForm.get('offenseCommandType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('offenseCommandType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('offenseCommandType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseCommandType">Defense Command Type</label>
+                    <input type="number" class="form-control" name="defenseCommandType" id="field_defenseCommandType"
+                           formControlName="defenseCommandType"/>
+                    <div *ngIf="editForm.get('defenseCommandType').invalid && (editForm.get('defenseCommandType').dirty || editForm.get('defenseCommandType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('defenseCommandType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('defenseCommandType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseMagnification">Offense Magnification</label>
+                    <input type="number" class="form-control" name="offenseMagnification" id="field_offenseMagnification"
+                           formControlName="offenseMagnification"/>
+                    <div *ngIf="editForm.get('offenseMagnification').invalid && (editForm.get('offenseMagnification').dirty || editForm.get('offenseMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('offenseMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('offenseMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseMagnification">Defense Magnification</label>
+                    <input type="number" class="form-control" name="defenseMagnification" id="field_defenseMagnification"
+                           formControlName="defenseMagnification"/>
+                    <div *ngIf="editForm.get('defenseMagnification').invalid && (editForm.get('defenseMagnification').dirty || editForm.get('defenseMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('defenseMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('defenseMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

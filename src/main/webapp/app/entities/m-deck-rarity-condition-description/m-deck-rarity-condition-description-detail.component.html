@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mDeckRarityConditionDescription">
+            <h2><span>M Deck Rarity Condition Description</span> {{mDeckRarityConditionDescription.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rarity Group Id</span></dt>
+                <dd>
+                    <span>{{mDeckRarityConditionDescription.rarityGroupId}}</span>
+                </dd>
+                <dt><span>Count Type</span></dt>
+                <dd>
+                    <span>{{mDeckRarityConditionDescription.countType}}</span>
+                </dd>
+                <dt><span>Is Starting</span></dt>
+                <dd>
+                    <span>{{mDeckRarityConditionDescription.isStarting}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mDeckRarityConditionDescription.description}}</span>
+                </dd>
+                <dt><span>Icon Name</span></dt>
+                <dd>
+                    <span>{{mDeckRarityConditionDescription.iconName}}</span>
+                </dd>
+                <dt><span>Small Icon Name</span></dt>
+                <dd>
+                    <span>{{mDeckRarityConditionDescription.smallIconName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-deck-rarity-condition-description', mDeckRarityConditionDescription.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

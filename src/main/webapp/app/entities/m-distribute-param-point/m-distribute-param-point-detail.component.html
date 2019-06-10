@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mDistributeParamPoint">
+            <h2><span>M Distribute Param Point</span> {{mDistributeParamPoint.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Target Attribute</span></dt>
+                <dd>
+                    <span>{{mDistributeParamPoint.targetAttribute}}</span>
+                </dd>
+                <dt><span>Target Nationality Group Id</span></dt>
+                <dd>
+                    <span>{{mDistributeParamPoint.targetNationalityGroupId}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mDistributeParamPoint.name}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mDistributeParamPoint.description}}</span>
+                </dd>
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mDistributeParamPoint.thumbnailAssetName}}</span>
+                </dd>
+                <dt><span>Icon Asset Name</span></dt>
+                <dd>
+                    <span>{{mDistributeParamPoint.iconAssetName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-distribute-param-point', mDistributeParamPoint.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

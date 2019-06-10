@@ -1,0 +1,96 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Gacha Rendition Kickers</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-gacha-rendition-kicker" [routerLink]="['/m-gacha-rendition-kicker/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Gacha Rendition Kicker
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mGachaRenditionKickers">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="renditionId"><span>Rendition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isManySsr"><span>Is Many Ssr</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isSsr"><span>Is Ssr</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="weight"><span>Weight</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="leftModelId"><span>Left Model Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="leftUniformUpId"><span>Left Uniform Up Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="leftUniformBottomId"><span>Left Uniform Bottom Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="leftUniformNumber"><span>Left Uniform Number</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rightModelId"><span>Right Model Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rightUniformUpId"><span>Right Uniform Up Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rightUniformBottomId"><span>Right Uniform Bottom Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rightUniformNumber"><span>Right Uniform Number</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cutInSpriteName"><span>Cut In Sprite Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="leftMessage"><span>Left Message</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rightMessage"><span>Right Message</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="voiceTrigger"><span>Voice Trigger</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="voiceStartCutIn"><span>Voice Start Cut In</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="kickerId"><span>Kicker Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mGachaRenditionKicker of mGachaRenditionKickers ;trackBy: trackId">
+                <td><a [routerLink]="['/m-gacha-rendition-kicker', mGachaRenditionKicker.id, 'view' ]">{{mGachaRenditionKicker.id}}</a></td>
+                <td>{{mGachaRenditionKicker.renditionId}}</td>
+                <td>{{mGachaRenditionKicker.isManySsr}}</td>
+                <td>{{mGachaRenditionKicker.isSsr}}</td>
+                <td>{{mGachaRenditionKicker.weight}}</td>
+                <td>{{mGachaRenditionKicker.leftModelId}}</td>
+                <td>{{mGachaRenditionKicker.leftUniformUpId}}</td>
+                <td>{{mGachaRenditionKicker.leftUniformBottomId}}</td>
+                <td>{{mGachaRenditionKicker.leftUniformNumber}}</td>
+                <td>{{mGachaRenditionKicker.rightModelId}}</td>
+                <td>{{mGachaRenditionKicker.rightUniformUpId}}</td>
+                <td>{{mGachaRenditionKicker.rightUniformBottomId}}</td>
+                <td>{{mGachaRenditionKicker.rightUniformNumber}}</td>
+                <td>{{mGachaRenditionKicker.cutInSpriteName}}</td>
+                <td>{{mGachaRenditionKicker.leftMessage}}</td>
+                <td>{{mGachaRenditionKicker.rightMessage}}</td>
+                <td>{{mGachaRenditionKicker.voiceTrigger}}</td>
+                <td>{{mGachaRenditionKicker.voiceStartCutIn}}</td>
+                <td>{{mGachaRenditionKicker.kickerId}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-gacha-rendition-kicker', mGachaRenditionKicker.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-gacha-rendition-kicker', mGachaRenditionKicker.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-gacha-rendition-kicker', { outlets: { popup: mGachaRenditionKicker.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mGachaRenditionKickers && mGachaRenditionKickers.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

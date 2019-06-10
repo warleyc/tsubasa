@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-card-thumbnail-assets-heading">Create or edit a M Card Thumbnail Assets</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mCardThumbnailAssets.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_thumbnailAssetName">Thumbnail Asset Name</label>
+                    <textarea class="form-control" name="thumbnailAssetName" id="field_thumbnailAssetName"
+                              formControlName="thumbnailAssetName"></textarea>
+                    <div *ngIf="editForm.get('thumbnailAssetName').invalid && (editForm.get('thumbnailAssetName').dirty || editForm.get('thumbnailAssetName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('thumbnailAssetName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_thumbnailFrameName">Thumbnail Frame Name</label>
+                    <textarea class="form-control" name="thumbnailFrameName" id="field_thumbnailFrameName"
+                              formControlName="thumbnailFrameName"></textarea>
+                    <div *ngIf="editForm.get('thumbnailFrameName').invalid && (editForm.get('thumbnailFrameName').dirty || editForm.get('thumbnailFrameName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('thumbnailFrameName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_thumbnailBackgoundAssetName">Thumbnail Backgound Asset Name</label>
+                    <textarea class="form-control" name="thumbnailBackgoundAssetName" id="field_thumbnailBackgoundAssetName"
+                              formControlName="thumbnailBackgoundAssetName"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_thumbnailEffectAssetName">Thumbnail Effect Asset Name</label>
+                    <textarea class="form-control" name="thumbnailEffectAssetName" id="field_thumbnailEffectAssetName"
+                              formControlName="thumbnailEffectAssetName"></textarea>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

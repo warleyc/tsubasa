@@ -1,0 +1,104 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Actions</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-action" [routerLink]="['/m-action/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Action
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mActions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shortName"><span>Short Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nameRuby"><span>Name Ruby</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="description"><span>Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectDescription"><span>Effect Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialCommand"><span>Initial Command</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rarity"><span>Rarity</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="commandType"><span>Command Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ballConditionGround"><span>Ball Condition Ground</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ballConditionLow"><span>Ball Condition Low</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ballConditionHigh"><span>Ball Condition High</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="staminaLvMin"><span>Stamina Lv Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="staminaLvMax"><span>Stamina Lv Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="powerLvMin"><span>Power Lv Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="powerLvMax"><span>Power Lv Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="blowOffCount"><span>Blow Off Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mShootId"><span>M Shoot Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="foulRate"><span>Foul Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="distanceDecayType"><span>Distance Decay Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="activateCharacterCount"><span>Activate Character Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="actionCutId"><span>Action Cut Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="powerupGroup"><span>Powerup Group</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mAction of mActions ;trackBy: trackId">
+                <td><a [routerLink]="['/m-action', mAction.id, 'view' ]">{{mAction.id}}</a></td>
+                <td>{{mAction.name}}</td>
+                <td>{{mAction.shortName}}</td>
+                <td>{{mAction.nameRuby}}</td>
+                <td>{{mAction.description}}</td>
+                <td>{{mAction.effectDescription}}</td>
+                <td>{{mAction.initialCommand}}</td>
+                <td>{{mAction.rarity}}</td>
+                <td>{{mAction.commandType}}</td>
+                <td>{{mAction.ballConditionGround}}</td>
+                <td>{{mAction.ballConditionLow}}</td>
+                <td>{{mAction.ballConditionHigh}}</td>
+                <td>{{mAction.staminaLvMin}}</td>
+                <td>{{mAction.staminaLvMax}}</td>
+                <td>{{mAction.powerLvMin}}</td>
+                <td>{{mAction.powerLvMax}}</td>
+                <td>{{mAction.blowOffCount}}</td>
+                <td>{{mAction.mShootId}}</td>
+                <td>{{mAction.foulRate}}</td>
+                <td>{{mAction.distanceDecayType}}</td>
+                <td>{{mAction.activateCharacterCount}}</td>
+                <td>{{mAction.actionCutId}}</td>
+                <td>{{mAction.powerupGroup}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-action', mAction.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-action', mAction.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-action', { outlets: { popup: mAction.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mActions && mActions.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

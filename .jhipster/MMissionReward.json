@@ -1,0 +1,46 @@
+{
+    "name": "MMissionReward",
+    "fields": [
+        {
+            "fieldName": "contentType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "contentId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "contentAmount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mGuildMission",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mGuildMission"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mMission",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mMission"
+        }
+    ],
+    "changelogDate": "20190610224911",
+    "entityTableName": "m_mission_reward",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-card-illust-assets-heading">Create or edit a M Card Illust Assets</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mCardIllustAssets.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_assetName">Asset Name</label>
+                    <textarea class="form-control" name="assetName" id="field_assetName"
+                              formControlName="assetName"></textarea>
+                    <div *ngIf="editForm.get('assetName').invalid && (editForm.get('assetName').dirty || editForm.get('assetName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('assetName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_subAssetName">Sub Asset Name</label>
+                    <textarea class="form-control" name="subAssetName" id="field_subAssetName"
+                              formControlName="subAssetName"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offset">Offset</label>
+                    <textarea class="form-control" name="offset" id="field_offset"
+                              formControlName="offset"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_backgroundAssetName">Background Asset Name</label>
+                    <textarea class="form-control" name="backgroundAssetName" id="field_backgroundAssetName"
+                              formControlName="backgroundAssetName"></textarea>
+                    <div *ngIf="editForm.get('backgroundAssetName').invalid && (editForm.get('backgroundAssetName').dirty || editForm.get('backgroundAssetName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('backgroundAssetName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_decorationAssetName">Decoration Asset Name</label>
+                    <textarea class="form-control" name="decorationAssetName" id="field_decorationAssetName"
+                              formControlName="decorationAssetName"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectAssetName">Effect Asset Name</label>
+                    <textarea class="form-control" name="effectAssetName" id="field_effectAssetName"
+                              formControlName="effectAssetName"></textarea>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

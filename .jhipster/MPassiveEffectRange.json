@@ -1,0 +1,111 @@
+{
+    "name": "MPassiveEffectRange",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "effectParamType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionGk",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionFw",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionOmf",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionDmf",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetPositionDf",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetAttribute",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "targetNationalityGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetTeamGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "targetPlayableCardGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mFormation",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mFormation"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mMatchOption",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mMatchOption"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mTeamEffectBase",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mTeamEffectBase"
+        }
+    ],
+    "changelogDate": "20190610224924",
+    "entityTableName": "m_passive_effect_range",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mApRecoveryItem">
+            <h2><span>M Ap Recovery Item</span> {{mApRecoveryItem.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Ap Recovery Item Type</span></dt>
+                <dd>
+                    <span>{{mApRecoveryItem.apRecoveryItemType}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mApRecoveryItem.name}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mApRecoveryItem.description}}</span>
+                </dd>
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mApRecoveryItem.thumbnailAssetName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-ap-recovery-item', mApRecoveryItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

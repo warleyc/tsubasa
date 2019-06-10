@@ -1,0 +1,29 @@
+{
+    "name": "MGachaRenditionTrajectoryPhoenix",
+    "fields": [
+        {
+            "fieldName": "isPhoenix",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610224816",
+    "entityTableName": "m_gacha_rendition_trajectory_phoenix",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

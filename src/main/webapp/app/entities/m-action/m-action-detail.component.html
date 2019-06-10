@@ -1,0 +1,111 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mAction">
+            <h2><span>M Action</span> {{mAction.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mAction.name}}</span>
+                </dd>
+                <dt><span>Short Name</span></dt>
+                <dd>
+                    <span>{{mAction.shortName}}</span>
+                </dd>
+                <dt><span>Name Ruby</span></dt>
+                <dd>
+                    <span>{{mAction.nameRuby}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mAction.description}}</span>
+                </dd>
+                <dt><span>Effect Description</span></dt>
+                <dd>
+                    <span>{{mAction.effectDescription}}</span>
+                </dd>
+                <dt><span>Initial Command</span></dt>
+                <dd>
+                    <span>{{mAction.initialCommand}}</span>
+                </dd>
+                <dt><span>Rarity</span></dt>
+                <dd>
+                    <span>{{mAction.rarity}}</span>
+                </dd>
+                <dt><span>Command Type</span></dt>
+                <dd>
+                    <span>{{mAction.commandType}}</span>
+                </dd>
+                <dt><span>Ball Condition Ground</span></dt>
+                <dd>
+                    <span>{{mAction.ballConditionGround}}</span>
+                </dd>
+                <dt><span>Ball Condition Low</span></dt>
+                <dd>
+                    <span>{{mAction.ballConditionLow}}</span>
+                </dd>
+                <dt><span>Ball Condition High</span></dt>
+                <dd>
+                    <span>{{mAction.ballConditionHigh}}</span>
+                </dd>
+                <dt><span>Stamina Lv Min</span></dt>
+                <dd>
+                    <span>{{mAction.staminaLvMin}}</span>
+                </dd>
+                <dt><span>Stamina Lv Max</span></dt>
+                <dd>
+                    <span>{{mAction.staminaLvMax}}</span>
+                </dd>
+                <dt><span>Power Lv Min</span></dt>
+                <dd>
+                    <span>{{mAction.powerLvMin}}</span>
+                </dd>
+                <dt><span>Power Lv Max</span></dt>
+                <dd>
+                    <span>{{mAction.powerLvMax}}</span>
+                </dd>
+                <dt><span>Blow Off Count</span></dt>
+                <dd>
+                    <span>{{mAction.blowOffCount}}</span>
+                </dd>
+                <dt><span>M Shoot Id</span></dt>
+                <dd>
+                    <span>{{mAction.mShootId}}</span>
+                </dd>
+                <dt><span>Foul Rate</span></dt>
+                <dd>
+                    <span>{{mAction.foulRate}}</span>
+                </dd>
+                <dt><span>Distance Decay Type</span></dt>
+                <dd>
+                    <span>{{mAction.distanceDecayType}}</span>
+                </dd>
+                <dt><span>Activate Character Count</span></dt>
+                <dd>
+                    <span>{{mAction.activateCharacterCount}}</span>
+                </dd>
+                <dt><span>Action Cut Id</span></dt>
+                <dd>
+                    <span>{{mAction.actionCutId}}</span>
+                </dd>
+                <dt><span>Powerup Group</span></dt>
+                <dd>
+                    <span>{{mAction.powerupGroup}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-action', mAction.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

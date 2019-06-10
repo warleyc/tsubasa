@@ -1,0 +1,82 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Encounters Cuts</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-encounters-cut" [routerLink]="['/m-encounters-cut/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Encounters Cut
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mEncountersCuts">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="condition"><span>Condition</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ballFloatCondition"><span>Ball Float Condition</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="command1Type"><span>Command 1 Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="command1IsSkill"><span>Command 1 Is Skill</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="command2Type"><span>Command 2 Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="command2IsSkill"><span>Command 2 Is Skill</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="result"><span>Result</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shootResult"><span>Shoot Result</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isThrown"><span>Is Thrown</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="offenseSequenceText"><span>Offense Sequence Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="defenseSequenceText"><span>Defense Sequence Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mEncountersCut of mEncountersCuts ;trackBy: trackId">
+                <td><a [routerLink]="['/m-encounters-cut', mEncountersCut.id, 'view' ]">{{mEncountersCut.id}}</a></td>
+                <td>{{mEncountersCut.condition}}</td>
+                <td>{{mEncountersCut.ballFloatCondition}}</td>
+                <td>{{mEncountersCut.command1Type}}</td>
+                <td>{{mEncountersCut.command1IsSkill}}</td>
+                <td>{{mEncountersCut.command2Type}}</td>
+                <td>{{mEncountersCut.command2IsSkill}}</td>
+                <td>{{mEncountersCut.result}}</td>
+                <td>{{mEncountersCut.shootResult}}</td>
+                <td>{{mEncountersCut.isThrown}}</td>
+                <td>{{mEncountersCut.offenseSequenceText}}</td>
+                <td>{{mEncountersCut.defenseSequenceText}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-encounters-cut', mEncountersCut.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-encounters-cut', mEncountersCut.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-encounters-cut', { outlets: { popup: mEncountersCut.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mEncountersCuts && mEncountersCuts.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

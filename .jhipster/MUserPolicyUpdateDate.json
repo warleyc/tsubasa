@@ -1,0 +1,22 @@
+{
+    "name": "MUserPolicyUpdateDate",
+    "fields": [
+        {
+            "fieldName": "updateDate",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190610225040",
+    "entityTableName": "m_user_policy_update_date",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

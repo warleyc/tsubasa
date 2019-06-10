@@ -1,0 +1,119 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mActionSkillCutin">
+            <h2><span>M Action Skill Cutin</span> {{mActionSkillCutin.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Action Cut Id</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.actionCutId}}</span>
+                </dd>
+                <dt><span>Character Id</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.characterId}}</span>
+                </dd>
+                <dt><span>Cut Name</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.cutName}}</span>
+                </dd>
+                <dt><span>Type</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.type}}</span>
+                </dd>
+                <dt><span>Start Synchronize</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.startSynchronize}}</span>
+                </dd>
+                <dt><span>Finish Synchronize</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.finishSynchronize}}</span>
+                </dd>
+                <dt><span>Start Delay</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.startDelay}}</span>
+                </dd>
+                <dt><span>Chapter 1 Character</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter1Character}}</span>
+                </dd>
+                <dt><span>Chapter 1 Text</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter1Text}}</span>
+                </dd>
+                <dt><span>Chapter 1 Sound Event</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter1SoundEvent}}</span>
+                </dd>
+                <dt><span>Chapter 2 Character</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter2Character}}</span>
+                </dd>
+                <dt><span>Chapter 2 Text</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter2Text}}</span>
+                </dd>
+                <dt><span>Chapter 2 Sound Event</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter2SoundEvent}}</span>
+                </dd>
+                <dt><span>Chapter 3 Character</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter3Character}}</span>
+                </dd>
+                <dt><span>Chapter 3 Text</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter3Text}}</span>
+                </dd>
+                <dt><span>Chapter 3 Sound Event</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter3SoundEvent}}</span>
+                </dd>
+                <dt><span>Chapter 4 Character</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter4Character}}</span>
+                </dd>
+                <dt><span>Chapter 4 Text</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter4Text}}</span>
+                </dd>
+                <dt><span>Chapter 4 Sound Event</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter4SoundEvent}}</span>
+                </dd>
+                <dt><span>Chapter 5 Character</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter5Character}}</span>
+                </dd>
+                <dt><span>Chapter 5 Text</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter5Text}}</span>
+                </dd>
+                <dt><span>Chapter 5 Sound Event</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.chapter5SoundEvent}}</span>
+                </dd>
+                <dt><span>Synchronize Text</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.synchronizeText}}</span>
+                </dd>
+                <dt><span>Synchronize Sound Event</span></dt>
+                <dd>
+                    <span>{{mActionSkillCutin.synchronizeSoundEvent}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-action-skill-cutin', mActionSkillCutin.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

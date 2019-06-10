@@ -1,0 +1,144 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-contentable-card-heading">Create or edit a M Contentable Card</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mContentableCard.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_playableCardId">Playable Card Id</label>
+                    <input type="number" class="form-control" name="playableCardId" id="field_playableCardId"
+                           formControlName="playableCardId"/>
+                    <div *ngIf="editForm.get('playableCardId').invalid && (editForm.get('playableCardId').dirty || editForm.get('playableCardId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('playableCardId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('playableCardId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_level">Level</label>
+                    <input type="number" class="form-control" name="level" id="field_level"
+                           formControlName="level"/>
+                    <div *ngIf="editForm.get('level').invalid && (editForm.get('level').dirty || editForm.get('level').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('level').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('level')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionMainLevel">Action Main Level</label>
+                    <input type="number" class="form-control" name="actionMainLevel" id="field_actionMainLevel"
+                           formControlName="actionMainLevel"/>
+                    <div *ngIf="editForm.get('actionMainLevel').invalid && (editForm.get('actionMainLevel').dirty || editForm.get('actionMainLevel').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionMainLevel').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionMainLevel')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionSub1Level">Action Sub 1 Level</label>
+                    <input type="number" class="form-control" name="actionSub1Level" id="field_actionSub1Level"
+                           formControlName="actionSub1Level"/>
+                    <div *ngIf="editForm.get('actionSub1Level').invalid && (editForm.get('actionSub1Level').dirty || editForm.get('actionSub1Level').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionSub1Level').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionSub1Level')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionSub2Level">Action Sub 2 Level</label>
+                    <input type="number" class="form-control" name="actionSub2Level" id="field_actionSub2Level"
+                           formControlName="actionSub2Level"/>
+                    <div *ngIf="editForm.get('actionSub2Level').invalid && (editForm.get('actionSub2Level').dirty || editForm.get('actionSub2Level').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionSub2Level').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionSub2Level')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionSub3Level">Action Sub 3 Level</label>
+                    <input type="number" class="form-control" name="actionSub3Level" id="field_actionSub3Level"
+                           formControlName="actionSub3Level"/>
+                    <div *ngIf="editForm.get('actionSub3Level').invalid && (editForm.get('actionSub3Level').dirty || editForm.get('actionSub3Level').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionSub3Level').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionSub3Level')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionSub4Level">Action Sub 4 Level</label>
+                    <input type="number" class="form-control" name="actionSub4Level" id="field_actionSub4Level"
+                           formControlName="actionSub4Level"/>
+                    <div *ngIf="editForm.get('actionSub4Level').invalid && (editForm.get('actionSub4Level').dirty || editForm.get('actionSub4Level').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionSub4Level').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionSub4Level')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_plusRate">Plus Rate</label>
+                    <input type="number" class="form-control" name="plusRate" id="field_plusRate"
+                           formControlName="plusRate"/>
+                    <div *ngIf="editForm.get('plusRate').invalid && (editForm.get('plusRate').dirty || editForm.get('plusRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('plusRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('plusRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

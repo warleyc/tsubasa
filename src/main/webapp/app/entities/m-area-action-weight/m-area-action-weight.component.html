@@ -1,0 +1,86 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Area Action Weights</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-area-action-weight" [routerLink]="['/m-area-action-weight/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Area Action Weight
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mAreaActionWeights">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="areaType"><span>Area Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="dribbleRate"><span>Dribble Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="passingRate"><span>Passing Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="onetwoRate"><span>Onetwo Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shootRate"><span>Shoot Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="volleyShootRate"><span>Volley Shoot Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="headingShootRate"><span>Heading Shoot Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="tackleRate"><span>Tackle Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="blockRate"><span>Block Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="passCutRate"><span>Pass Cut Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="clearRate"><span>Clear Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="competeRate"><span>Compete Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="trapRate"><span>Trap Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mAreaActionWeight of mAreaActionWeights ;trackBy: trackId">
+                <td><a [routerLink]="['/m-area-action-weight', mAreaActionWeight.id, 'view' ]">{{mAreaActionWeight.id}}</a></td>
+                <td>{{mAreaActionWeight.areaType}}</td>
+                <td>{{mAreaActionWeight.dribbleRate}}</td>
+                <td>{{mAreaActionWeight.passingRate}}</td>
+                <td>{{mAreaActionWeight.onetwoRate}}</td>
+                <td>{{mAreaActionWeight.shootRate}}</td>
+                <td>{{mAreaActionWeight.volleyShootRate}}</td>
+                <td>{{mAreaActionWeight.headingShootRate}}</td>
+                <td>{{mAreaActionWeight.tackleRate}}</td>
+                <td>{{mAreaActionWeight.blockRate}}</td>
+                <td>{{mAreaActionWeight.passCutRate}}</td>
+                <td>{{mAreaActionWeight.clearRate}}</td>
+                <td>{{mAreaActionWeight.competeRate}}</td>
+                <td>{{mAreaActionWeight.trapRate}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-area-action-weight', mAreaActionWeight.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-area-action-weight', mAreaActionWeight.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-area-action-weight', { outlets: { popup: mAreaActionWeight.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mAreaActionWeights && mAreaActionWeights.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>
