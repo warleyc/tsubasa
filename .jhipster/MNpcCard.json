@@ -272,7 +272,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224921",
+    "changelogDate": "20190611231306",
     "entityTableName": "m_npc_card",
     "dto": "mapstruct",
     "pagination": "pagination",

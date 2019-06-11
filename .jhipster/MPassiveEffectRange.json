@@ -99,7 +99,7 @@
             "relationshipName": "mTeamEffectBase"
         }
     ],
-    "changelogDate": "20190610224924",
+    "changelogDate": "20190611231309",
     "entityTableName": "m_passive_effect_range",
     "dto": "mapstruct",
     "pagination": "pagination",

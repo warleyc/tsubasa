@@ -33,7 +33,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225014",
+    "changelogDate": "20190611231359",
     "entityTableName": "m_target_playable_card_group",
     "dto": "mapstruct",
     "pagination": "pagination",

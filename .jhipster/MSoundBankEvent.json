@@ -27,7 +27,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225004",
+    "changelogDate": "20190611231349",
     "entityTableName": "m_sound_bank_event",
     "dto": "mapstruct",
     "pagination": "pagination",

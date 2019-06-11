@@ -130,7 +130,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224928",
+    "changelogDate": "20190611231313",
     "entityTableName": "m_pvp_grade",
     "dto": "mapstruct",
     "pagination": "pagination",

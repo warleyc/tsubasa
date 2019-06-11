@@ -13,6 +13,7 @@ public interface MAdventQuestWorldMapper extends EntityMapper<MAdventQuestWorldD
 
 
     @Mapping(target = "mAdventQuestStages", ignore = true)
+    @Mapping(target = "removeMAdventQuestStage", ignore = true)
     MAdventQuestWorld toEntity(MAdventQuestWorldDTO mAdventQuestWorldDTO);
 
     default MAdventQuestWorld fromId(Long id) {

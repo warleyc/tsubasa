@@ -45,7 +45,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224938",
+    "changelogDate": "20190611231323",
     "entityTableName": "m_quest_coop",
     "dto": "mapstruct",
     "pagination": "pagination",

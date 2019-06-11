@@ -19,7 +19,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224740",
+    "changelogDate": "20190611231125",
     "entityTableName": "m_dictionary_en",
     "dto": "mapstruct",
     "pagination": "pagination",

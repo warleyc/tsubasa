@@ -29,7 +29,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224945",
+    "changelogDate": "20190611231330",
     "entityTableName": "m_quest_stage_condition",
     "dto": "mapstruct",
     "pagination": "pagination",

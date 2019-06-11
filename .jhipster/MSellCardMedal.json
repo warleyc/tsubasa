@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224959",
+    "changelogDate": "20190611231344",
     "entityTableName": "m_sell_card_medal",
     "dto": "mapstruct",
     "pagination": "pagination",

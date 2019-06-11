@@ -80,7 +80,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224828",
+    "changelogDate": "20190611231213",
     "entityTableName": "m_guild_mission",
     "dto": "mapstruct",
     "pagination": "pagination",

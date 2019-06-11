@@ -12,7 +12,6 @@ import { MEmblemPartsService } from './m-emblem-parts.service';
   templateUrl: './m-emblem-parts-update.component.html'
 })
 export class MEmblemPartsUpdateComponent implements OnInit {
-  mEmblemParts: IMEmblemParts;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MEmblemPartsUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mEmblemParts }) => {
       this.updateForm(mEmblemParts);
-      this.mEmblemParts = mEmblemParts;
     });
   }
 

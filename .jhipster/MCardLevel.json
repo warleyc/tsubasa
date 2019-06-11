@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224708",
+    "changelogDate": "20190611231053",
     "entityTableName": "m_card_level",
     "dto": "mapstruct",
     "pagination": "pagination",

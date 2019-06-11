@@ -45,7 +45,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224819",
+    "changelogDate": "20190611231204",
     "entityTableName": "m_goal_judgement",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -15,7 +15,6 @@ import { MMissionService } from 'app/entities/m-mission';
   templateUrl: './m-achievement-update.component.html'
 })
 export class MAchievementUpdateComponent implements OnInit {
-  mAchievement: IMAchievement;
   isSaving: boolean;
 
   mmissions: IMMission[];
@@ -42,7 +41,6 @@ export class MAchievementUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAchievement }) => {
       this.updateForm(mAchievement);
-      this.mAchievement = mAchievement;
     });
     this.mMissionService
       .query()

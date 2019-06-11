@@ -12,7 +12,6 @@ import { MCutSeqGroupService } from './m-cut-seq-group.service';
   templateUrl: './m-cut-seq-group-update.component.html'
 })
 export class MCutSeqGroupUpdateComponent implements OnInit {
-  mCutSeqGroup: IMCutSeqGroup;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -34,7 +33,6 @@ export class MCutSeqGroupUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCutSeqGroup }) => {
       this.updateForm(mCutSeqGroup);
-      this.mCutSeqGroup = mCutSeqGroup;
     });
   }
 

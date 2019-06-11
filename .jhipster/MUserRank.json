@@ -55,7 +55,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225041",
+    "changelogDate": "20190611231426",
     "entityTableName": "m_user_rank",
     "dto": "mapstruct",
     "pagination": "pagination",

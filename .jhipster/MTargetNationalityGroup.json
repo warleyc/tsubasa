@@ -26,7 +26,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225013",
+    "changelogDate": "20190611231358",
     "entityTableName": "m_target_nationality_group",
     "dto": "mapstruct",
     "pagination": "pagination",

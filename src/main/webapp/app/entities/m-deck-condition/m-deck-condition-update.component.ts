@@ -11,7 +11,6 @@ import { MDeckConditionService } from './m-deck-condition.service';
   templateUrl: './m-deck-condition-update.component.html'
 })
 export class MDeckConditionUpdateComponent implements OnInit {
-  mDeckCondition: IMDeckCondition;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -67,7 +66,6 @@ export class MDeckConditionUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDeckCondition }) => {
       this.updateForm(mDeckCondition);
-      this.mDeckCondition = mDeckCondition;
     });
   }
 

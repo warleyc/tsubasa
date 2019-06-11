@@ -33,7 +33,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225003",
+    "changelogDate": "20190611231348",
     "entityTableName": "m_sound_bank",
     "dto": "mapstruct",
     "pagination": "pagination",

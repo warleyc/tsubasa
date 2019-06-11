@@ -133,7 +133,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224652",
+    "changelogDate": "20190611231037",
     "entityTableName": "m_action_skill_cutin",
     "dto": "mapstruct",
     "pagination": "pagination",

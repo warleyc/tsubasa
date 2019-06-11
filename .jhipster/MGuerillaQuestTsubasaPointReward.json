@@ -35,7 +35,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224822",
+    "changelogDate": "20190611231207",
     "entityTableName": "m_guerilla_quest_tsubasa_point_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

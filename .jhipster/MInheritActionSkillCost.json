@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224834",
+    "changelogDate": "20190611231219",
     "entityTableName": "m_inherit_action_skill_cost",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224831",
+    "changelogDate": "20190611231216",
     "entityTableName": "m_guild_top_banner",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -202,7 +202,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225021",
+    "changelogDate": "20190611231406",
     "entityTableName": "m_ticket_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

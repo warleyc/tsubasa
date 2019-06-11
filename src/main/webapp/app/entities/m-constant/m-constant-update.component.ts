@@ -12,7 +12,6 @@ import { MConstantService } from './m-constant.service';
   templateUrl: './m-constant-update.component.html'
 })
 export class MConstantUpdateComponent implements OnInit {
-  mConstant: IMConstant;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MConstantUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mConstant }) => {
       this.updateForm(mConstant);
-      this.mConstant = mConstant;
     });
   }
 

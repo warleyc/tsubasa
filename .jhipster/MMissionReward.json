@@ -34,7 +34,7 @@
             "relationshipName": "mMission"
         }
     ],
-    "changelogDate": "20190610224911",
+    "changelogDate": "20190611231256",
     "entityTableName": "m_mission_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

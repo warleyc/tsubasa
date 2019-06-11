@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224847",
+    "changelogDate": "20190611231232",
     "entityTableName": "m_luck_rate_group",
     "dto": "mapstruct",
     "pagination": "pagination",

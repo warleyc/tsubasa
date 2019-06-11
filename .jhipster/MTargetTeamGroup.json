@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225016",
+    "changelogDate": "20190611231401",
     "entityTableName": "m_target_team_group",
     "dto": "mapstruct",
     "pagination": "pagination",

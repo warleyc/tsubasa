@@ -203,7 +203,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224715",
+    "changelogDate": "20190611231100",
     "entityTableName": "m_challenge_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

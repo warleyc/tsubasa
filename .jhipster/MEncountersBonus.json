@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224754",
+    "changelogDate": "20190611231139",
     "entityTableName": "m_encounters_bonus",
     "dto": "mapstruct",
     "pagination": "pagination",

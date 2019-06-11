@@ -1,7 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -11,7 +8,6 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.Objects;
 
 /**
  * A MChallengeQuestWorld.
@@ -32,7 +28,7 @@ public class MChallengeQuestWorld implements Serializable {
     private Integer setId;
 
     @NotNull
-    @Column(name = "jhi_number", nullable = false)
+    @Column(name = "number", nullable = false)
     private Integer number;
 
     

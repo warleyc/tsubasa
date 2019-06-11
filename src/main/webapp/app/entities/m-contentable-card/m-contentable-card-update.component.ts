@@ -11,7 +11,6 @@ import { MContentableCardService } from './m-contentable-card.service';
   templateUrl: './m-contentable-card-update.component.html'
 })
 export class MContentableCardUpdateComponent implements OnInit {
-  mContentableCard: IMContentableCard;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -36,7 +35,6 @@ export class MContentableCardUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mContentableCard }) => {
       this.updateForm(mContentableCard);
-      this.mContentableCard = mContentableCard;
     });
   }
 

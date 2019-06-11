@@ -94,7 +94,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224700",
+    "changelogDate": "20190611231045",
     "entityTableName": "m_area_action_weight",
     "dto": "mapstruct",
     "pagination": "pagination",

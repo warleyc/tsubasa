@@ -38,7 +38,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224807",
+    "changelogDate": "20190611231152",
     "entityTableName": "m_gacha_rendition_before_shoot_cut_in_character_num",
     "dto": "mapstruct",
     "pagination": "pagination",

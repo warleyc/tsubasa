@@ -78,7 +78,7 @@
             "relationshipName": "mQuestStage"
         }
     ],
-    "changelogDate": "20190610224950",
+    "changelogDate": "20190611231335",
     "entityTableName": "m_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

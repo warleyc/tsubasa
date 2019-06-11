@@ -25,7 +25,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225020",
+    "changelogDate": "20190611231405",
     "entityTableName": "m_team_effect_rarity",
     "dto": "mapstruct",
     "pagination": "pagination",

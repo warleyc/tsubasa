@@ -27,7 +27,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224753",
+    "changelogDate": "20190611231138",
     "entityTableName": "m_emblem_set",
     "dto": "mapstruct",
     "pagination": "pagination",

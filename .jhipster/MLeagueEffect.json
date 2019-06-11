@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224839",
+    "changelogDate": "20190611231224",
     "entityTableName": "m_league_effect",
     "dto": "mapstruct",
     "pagination": "pagination",

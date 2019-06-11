@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225006",
+    "changelogDate": "20190611231351",
     "entityTableName": "m_stamp",
     "dto": "mapstruct",
     "pagination": "pagination",

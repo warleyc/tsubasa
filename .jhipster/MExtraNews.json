@@ -40,7 +40,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224800",
+    "changelogDate": "20190611231145",
     "entityTableName": "m_extra_news",
     "dto": "mapstruct",
     "pagination": "pagination",

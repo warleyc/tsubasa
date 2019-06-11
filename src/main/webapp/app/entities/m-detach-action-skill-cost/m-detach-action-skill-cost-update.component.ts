@@ -11,7 +11,6 @@ import { MDetachActionSkillCostService } from './m-detach-action-skill-cost.serv
   templateUrl: './m-detach-action-skill-cost-update.component.html'
 })
 export class MDetachActionSkillCostUpdateComponent implements OnInit {
-  mDetachActionSkillCost: IMDetachActionSkillCost;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -30,7 +29,6 @@ export class MDetachActionSkillCostUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDetachActionSkillCost }) => {
       this.updateForm(mDetachActionSkillCost);
-      this.mDetachActionSkillCost = mDetachActionSkillCost;
     });
   }
 

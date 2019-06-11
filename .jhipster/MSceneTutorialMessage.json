@@ -48,7 +48,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224957",
+    "changelogDate": "20190611231342",
     "entityTableName": "m_scene_tutorial_message",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225029",
+    "changelogDate": "20190611231414",
     "entityTableName": "m_timeattack_ranking_reward_group",
     "dto": "mapstruct",
     "pagination": "pagination",

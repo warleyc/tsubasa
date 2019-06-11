@@ -49,7 +49,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224653",
+    "changelogDate": "20190611231038",
     "entityTableName": "m_action_skill_holder_card_ct",
     "dto": "mapstruct",
     "pagination": "pagination",

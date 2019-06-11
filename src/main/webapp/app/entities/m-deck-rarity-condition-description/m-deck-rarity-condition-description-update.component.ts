@@ -15,7 +15,6 @@ import { MDeckRarityConditionDescriptionService } from './m-deck-rarity-conditio
   templateUrl: './m-deck-rarity-condition-description-update.component.html'
 })
 export class MDeckRarityConditionDescriptionUpdateComponent implements OnInit {
-  mDeckRarityConditionDescription: IMDeckRarityConditionDescription;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -40,7 +39,6 @@ export class MDeckRarityConditionDescriptionUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDeckRarityConditionDescription }) => {
       this.updateForm(mDeckRarityConditionDescription);
-      this.mDeckRarityConditionDescription = mDeckRarityConditionDescription;
     });
   }
 

@@ -259,7 +259,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224734",
+    "changelogDate": "20190611231119",
     "entityTableName": "m_deck_condition",
     "dto": "mapstruct",
     "pagination": "pagination",

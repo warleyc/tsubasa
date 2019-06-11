@@ -13,6 +13,7 @@ public interface MChallengeQuestWorldMapper extends EntityMapper<MChallengeQuest
 
 
     @Mapping(target = "mChallengeQuestStages", ignore = true)
+    @Mapping(target = "removeMChallengeQuestStage", ignore = true)
     MChallengeQuestWorld toEntity(MChallengeQuestWorldDTO mChallengeQuestWorldDTO);
 
     default MChallengeQuestWorld fromId(Long id) {

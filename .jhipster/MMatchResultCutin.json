@@ -49,7 +49,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224908",
+    "changelogDate": "20190611231253",
     "entityTableName": "m_match_result_cutin",
     "dto": "mapstruct",
     "pagination": "pagination",

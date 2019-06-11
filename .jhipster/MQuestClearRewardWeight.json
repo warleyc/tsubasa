@@ -38,7 +38,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224937",
+    "changelogDate": "20190611231322",
     "entityTableName": "m_quest_clear_reward_weight",
     "dto": "mapstruct",
     "pagination": "pagination",

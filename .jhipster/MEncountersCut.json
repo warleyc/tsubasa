@@ -82,7 +82,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224757",
+    "changelogDate": "20190611231142",
     "entityTableName": "m_encounters_cut",
     "dto": "mapstruct",
     "pagination": "pagination",

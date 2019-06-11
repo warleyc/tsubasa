@@ -26,7 +26,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225009",
+    "changelogDate": "20190611231354",
     "entityTableName": "m_target_action_group",
     "dto": "mapstruct",
     "pagination": "pagination",

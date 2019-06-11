@@ -33,7 +33,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224732",
+    "changelogDate": "20190611231117",
     "entityTableName": "m_cut_shoot_orbit",
     "dto": "mapstruct",
     "pagination": "pagination",

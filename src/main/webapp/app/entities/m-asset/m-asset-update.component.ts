@@ -12,7 +12,6 @@ import { MAssetService } from './m-asset.service';
   templateUrl: './m-asset-update.component.html'
 })
 export class MAssetUpdateComponent implements OnInit {
-  mAsset: IMAsset;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -41,7 +40,6 @@ export class MAssetUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAsset }) => {
       this.updateForm(mAsset);
-      this.mAsset = mAsset;
     });
   }
 

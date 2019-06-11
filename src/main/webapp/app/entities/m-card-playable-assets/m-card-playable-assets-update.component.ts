@@ -12,7 +12,6 @@ import { MCardPlayableAssetsService } from './m-card-playable-assets.service';
   templateUrl: './m-card-playable-assets-update.component.html'
 })
 export class MCardPlayableAssetsUpdateComponent implements OnInit {
-  mCardPlayableAssets: IMCardPlayableAssets;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MCardPlayableAssetsUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCardPlayableAssets }) => {
       this.updateForm(mCardPlayableAssets);
-      this.mCardPlayableAssets = mCardPlayableAssets;
     });
   }
 

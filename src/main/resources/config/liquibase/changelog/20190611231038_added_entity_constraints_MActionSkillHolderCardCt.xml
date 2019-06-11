@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity MActionSkillHolderCardCt.
+    -->
+    <changeSet id="20190611231038-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="id_id"
+                                 baseTableName="m_action_skill_holder_card_ct"
+                                 constraintName="fk_m_action_skill_holder_card_ct_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="m_character"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -50,7 +50,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224913",
+    "changelogDate": "20190611231258",
     "entityTableName": "m_model_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

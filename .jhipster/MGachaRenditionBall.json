@@ -56,7 +56,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224806",
+    "changelogDate": "20190611231151",
     "entityTableName": "m_gacha_rendition_ball",
     "dto": "mapstruct",
     "pagination": "pagination",

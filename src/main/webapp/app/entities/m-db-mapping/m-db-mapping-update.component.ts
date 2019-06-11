@@ -12,7 +12,6 @@ import { MDbMappingService } from './m-db-mapping.service';
   templateUrl: './m-db-mapping-update.component.html'
 })
 export class MDbMappingUpdateComponent implements OnInit {
-  mDbMapping: IMDbMapping;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -34,7 +33,6 @@ export class MDbMappingUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDbMapping }) => {
       this.updateForm(mDbMapping);
-      this.mDbMapping = mDbMapping;
     });
   }
 

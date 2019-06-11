@@ -12,7 +12,6 @@ import { MAssetTagMappingService } from './m-asset-tag-mapping.service';
   templateUrl: './m-asset-tag-mapping-update.component.html'
 })
 export class MAssetTagMappingUpdateComponent implements OnInit {
-  mAssetTagMapping: IMAssetTagMapping;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MAssetTagMappingUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAssetTagMapping }) => {
       this.updateForm(mAssetTagMapping);
-      this.mAssetTagMapping = mAssetTagMapping;
     });
   }
 

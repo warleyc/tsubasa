@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224720",
+    "changelogDate": "20190611231105",
     "entityTableName": "m_character_score_cut",
     "dto": "mapstruct",
     "pagination": "pagination",

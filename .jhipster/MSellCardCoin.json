@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224958",
+    "changelogDate": "20190611231343",
     "entityTableName": "m_sell_card_coin",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -92,7 +92,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224719",
+    "changelogDate": "20190611231104",
     "entityTableName": "m_character_book",
     "dto": "mapstruct",
     "pagination": "pagination",

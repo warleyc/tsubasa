@@ -12,7 +12,6 @@ import { MBadgeService } from './m-badge.service';
   templateUrl: './m-badge-update.component.html'
 })
 export class MBadgeUpdateComponent implements OnInit {
-  mBadge: IMBadge;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -35,7 +34,6 @@ export class MBadgeUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mBadge }) => {
       this.updateForm(mBadge);
-      this.mBadge = mBadge;
     });
   }
 

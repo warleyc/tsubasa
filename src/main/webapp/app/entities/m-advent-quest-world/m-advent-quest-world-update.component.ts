@@ -12,7 +12,6 @@ import { MAdventQuestWorldService } from './m-advent-quest-world.service';
   templateUrl: './m-advent-quest-world-update.component.html'
 })
 export class MAdventQuestWorldUpdateComponent implements OnInit {
-  mAdventQuestWorld: IMAdventQuestWorld;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -42,7 +41,6 @@ export class MAdventQuestWorldUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAdventQuestWorld }) => {
       this.updateForm(mAdventQuestWorld);
-      this.mAdventQuestWorld = mAdventQuestWorld;
     });
   }
 

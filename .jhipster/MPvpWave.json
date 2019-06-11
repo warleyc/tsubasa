@@ -31,7 +31,7 @@
             "relationshipName": "mPvpRankingReward"
         }
     ],
-    "changelogDate": "20190610224935",
+    "changelogDate": "20190611231320",
     "entityTableName": "m_pvp_wave",
     "dto": "mapstruct",
     "pagination": "pagination",

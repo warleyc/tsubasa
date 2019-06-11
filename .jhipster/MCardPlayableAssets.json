@@ -16,7 +16,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224709",
+    "changelogDate": "20190611231054",
     "entityTableName": "m_card_playable_assets",
     "dto": "mapstruct",
     "pagination": "pagination",

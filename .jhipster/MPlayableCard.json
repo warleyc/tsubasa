@@ -474,7 +474,7 @@
             "relationshipName": "mTargetPlayableCardGroup"
         }
     ],
-    "changelogDate": "20190610224926",
+    "changelogDate": "20190611231311",
     "entityTableName": "m_playable_card",
     "dto": "mapstruct",
     "pagination": "pagination",

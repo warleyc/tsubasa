@@ -4,7 +4,7 @@
             <h2 id="jhi-m-action-skill-cutin-heading">Create or edit a M Action Skill Cutin</h2>
             <div>
                 <jhi-alert-error></jhi-alert-error>
-                <div class="form-group" [hidden]="!mActionSkillCutin.id">
+                <div class="form-group" [hidden]="!editForm.get('id').value">
                     <label for="id">ID</label>
                     <input type="text" class="form-control" id="id" name="id" formControlName="id"
                         readonly />

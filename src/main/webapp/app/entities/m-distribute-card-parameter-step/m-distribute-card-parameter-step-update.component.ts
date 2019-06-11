@@ -11,7 +11,6 @@ import { MDistributeCardParameterStepService } from './m-distribute-card-paramet
   templateUrl: './m-distribute-card-parameter-step-update.component.html'
 })
 export class MDistributeCardParameterStepUpdateComponent implements OnInit {
-  mDistributeCardParameterStep: IMDistributeCardParameterStep;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -31,7 +30,6 @@ export class MDistributeCardParameterStepUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDistributeCardParameterStep }) => {
       this.updateForm(mDistributeCardParameterStep);
-      this.mDistributeCardParameterStep = mDistributeCardParameterStep;
     });
   }
 

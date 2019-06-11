@@ -80,7 +80,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224916",
+    "changelogDate": "20190611231301",
     "entityTableName": "m_model_uniform_up",
     "dto": "mapstruct",
     "pagination": "pagination",

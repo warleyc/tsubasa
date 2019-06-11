@@ -80,7 +80,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224906",
+    "changelogDate": "20190611231251",
     "entityTableName": "m_match_formation",
     "dto": "mapstruct",
     "pagination": "pagination",

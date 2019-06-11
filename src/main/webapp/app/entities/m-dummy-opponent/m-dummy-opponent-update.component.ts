@@ -15,7 +15,6 @@ import { MNpcDeckService } from 'app/entities/m-npc-deck';
   templateUrl: './m-dummy-opponent-update.component.html'
 })
 export class MDummyOpponentUpdateComponent implements OnInit {
-  mDummyOpponent: IMDummyOpponent;
   isSaving: boolean;
 
   mnpcdecks: IMNpcDeck[];
@@ -51,7 +50,6 @@ export class MDummyOpponentUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDummyOpponent }) => {
       this.updateForm(mDummyOpponent);
-      this.mDummyOpponent = mDummyOpponent;
     });
     this.mNpcDeckService
       .query()

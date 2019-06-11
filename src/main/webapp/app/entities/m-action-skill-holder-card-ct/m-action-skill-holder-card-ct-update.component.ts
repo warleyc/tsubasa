@@ -15,7 +15,6 @@ import { MCharacterService } from 'app/entities/m-character';
   templateUrl: './m-action-skill-holder-card-ct-update.component.html'
 })
 export class MActionSkillHolderCardCtUpdateComponent implements OnInit {
-  mActionSkillHolderCardCt: IMActionSkillHolderCardCt;
   isSaving: boolean;
 
   mcharacters: IMCharacter[];
@@ -43,7 +42,6 @@ export class MActionSkillHolderCardCtUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mActionSkillHolderCardCt }) => {
       this.updateForm(mActionSkillHolderCardCt);
-      this.mActionSkillHolderCardCt = mActionSkillHolderCardCt;
     });
     this.mCharacterService
       .query()

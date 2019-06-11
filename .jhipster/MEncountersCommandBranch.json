@@ -66,7 +66,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224755",
+    "changelogDate": "20190611231140",
     "entityTableName": "m_encounters_command_branch",
     "dto": "mapstruct",
     "pagination": "pagination",

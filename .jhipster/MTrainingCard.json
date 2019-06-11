@@ -159,7 +159,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225031",
+    "changelogDate": "20190611231416",
     "entityTableName": "m_training_card",
     "dto": "mapstruct",
     "pagination": "pagination",

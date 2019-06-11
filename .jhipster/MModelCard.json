@@ -99,7 +99,7 @@
             "relationshipName": "mPlayableCard"
         }
     ],
-    "changelogDate": "20190610224912",
+    "changelogDate": "20190611231257",
     "entityTableName": "m_model_card",
     "dto": "mapstruct",
     "pagination": "pagination",

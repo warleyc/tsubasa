@@ -74,7 +74,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224821",
+    "changelogDate": "20190611231206",
     "entityTableName": "m_guerilla_quest_stage_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

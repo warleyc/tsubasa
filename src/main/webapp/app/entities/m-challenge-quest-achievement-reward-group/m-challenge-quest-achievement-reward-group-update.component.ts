@@ -14,7 +14,6 @@ import { MChallengeQuestAchievementRewardGroupService } from './m-challenge-ques
   templateUrl: './m-challenge-quest-achievement-reward-group-update.component.html'
 })
 export class MChallengeQuestAchievementRewardGroupUpdateComponent implements OnInit {
-  mChallengeQuestAchievementRewardGroup: IMChallengeQuestAchievementRewardGroup;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -35,7 +34,6 @@ export class MChallengeQuestAchievementRewardGroupUpdateComponent implements OnI
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mChallengeQuestAchievementRewardGroup }) => {
       this.updateForm(mChallengeQuestAchievementRewardGroup);
-      this.mChallengeQuestAchievementRewardGroup = mChallengeQuestAchievementRewardGroup;
     });
   }
 

@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224714",
+    "changelogDate": "20190611231059",
     "entityTableName": "m_challenge_quest_achievement_reward_group",
     "dto": "mapstruct",
     "pagination": "pagination",

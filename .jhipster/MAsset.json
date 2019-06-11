@@ -78,7 +78,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224704",
+    "changelogDate": "20190611231049",
     "entityTableName": "m_asset",
     "dto": "mapstruct",
     "pagination": "pagination",

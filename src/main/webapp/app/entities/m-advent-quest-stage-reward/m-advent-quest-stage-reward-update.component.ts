@@ -11,7 +11,6 @@ import { MAdventQuestStageRewardService } from './m-advent-quest-stage-reward.se
   templateUrl: './m-advent-quest-stage-reward-update.component.html'
 })
 export class MAdventQuestStageRewardUpdateComponent implements OnInit {
-  mAdventQuestStageReward: IMAdventQuestStageReward;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -39,7 +38,6 @@ export class MAdventQuestStageRewardUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAdventQuestStageReward }) => {
       this.updateForm(mAdventQuestStageReward);
-      this.mAdventQuestStageReward = mAdventQuestStageReward;
     });
   }
 

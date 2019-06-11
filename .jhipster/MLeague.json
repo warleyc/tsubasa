@@ -71,7 +71,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224837",
+    "changelogDate": "20190611231222",
     "entityTableName": "m_league",
     "dto": "mapstruct",
     "pagination": "pagination",

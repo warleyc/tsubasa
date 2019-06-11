@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224940",
+    "changelogDate": "20190611231325",
     "entityTableName": "m_quest_drop_rate_campaign_content",
     "dto": "mapstruct",
     "pagination": "pagination",

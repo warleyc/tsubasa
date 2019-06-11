@@ -26,7 +26,7 @@
             "relationshipName": "mTargetNationalityGroup"
         }
     ],
-    "changelogDate": "20190610224919",
+    "changelogDate": "20190611231304",
     "entityTableName": "m_nationality",
     "dto": "mapstruct",
     "pagination": "pagination",

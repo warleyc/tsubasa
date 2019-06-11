@@ -76,7 +76,7 @@
             "relationshipName": "mTriggerEffectBase"
         }
     ],
-    "changelogDate": "20190610225034",
+    "changelogDate": "20190611231419",
     "entityTableName": "m_trigger_effect_range",
     "dto": "mapstruct",
     "pagination": "pagination",

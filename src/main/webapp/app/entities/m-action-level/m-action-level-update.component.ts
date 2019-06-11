@@ -11,7 +11,6 @@ import { MActionLevelService } from './m-action-level.service';
   templateUrl: './m-action-level-update.component.html'
 })
 export class MActionLevelUpdateComponent implements OnInit {
-  mActionLevel: IMActionLevel;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -27,7 +26,6 @@ export class MActionLevelUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mActionLevel }) => {
       this.updateForm(mActionLevel);
-      this.mActionLevel = mActionLevel;
     });
   }
 

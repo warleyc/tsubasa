@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224737",
+    "changelogDate": "20190611231122",
     "entityTableName": "m_detach_action_skill_cost",
     "dto": "mapstruct",
     "pagination": "pagination",

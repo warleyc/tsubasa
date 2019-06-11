@@ -12,7 +12,6 @@ import { MAnnounceTextService } from './m-announce-text.service';
   templateUrl: './m-announce-text-update.component.html'
 })
 export class MAnnounceTextUpdateComponent implements OnInit {
-  mAnnounceText: IMAnnounceText;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -39,7 +38,6 @@ export class MAnnounceTextUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAnnounceText }) => {
       this.updateForm(mAnnounceText);
-      this.mAnnounceText = mAnnounceText;
     });
   }
 

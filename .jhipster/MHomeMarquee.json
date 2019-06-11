@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224833",
+    "changelogDate": "20190611231218",
     "entityTableName": "m_home_marquee",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MDefine.
@@ -30,7 +27,7 @@ public class MDefine implements Serializable {
     private String key;
 
     @NotNull
-    @Column(name = "jhi_value", nullable = false)
+    @Column(name = "value", nullable = false)
     private Integer value;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

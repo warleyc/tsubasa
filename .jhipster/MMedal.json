@@ -49,7 +49,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224909",
+    "changelogDate": "20190611231254",
     "entityTableName": "m_medal",
     "dto": "mapstruct",
     "pagination": "pagination",

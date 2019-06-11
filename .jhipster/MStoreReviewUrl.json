@@ -18,7 +18,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225007",
+    "changelogDate": "20190611231352",
     "entityTableName": "m_store_review_url",
     "dto": "mapstruct",
     "pagination": "pagination",

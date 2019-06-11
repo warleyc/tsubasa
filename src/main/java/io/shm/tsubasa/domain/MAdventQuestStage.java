@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -9,7 +7,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MAdventQuestStage.
@@ -30,7 +27,7 @@ public class MAdventQuestStage implements Serializable {
     private Integer worldId;
 
     @NotNull
-    @Column(name = "jhi_number", nullable = false)
+    @Column(name = "number", nullable = false)
     private Integer number;
 
     

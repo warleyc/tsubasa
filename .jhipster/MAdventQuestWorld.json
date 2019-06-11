@@ -82,7 +82,7 @@
             "relationshipName": "mAdventQuestStage"
         }
     ],
-    "changelogDate": "20190610224657",
+    "changelogDate": "20190611231042",
     "entityTableName": "m_advent_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

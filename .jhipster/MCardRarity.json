@@ -18,7 +18,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224711",
+    "changelogDate": "20190611231056",
     "entityTableName": "m_card_rarity",
     "dto": "mapstruct",
     "pagination": "pagination",

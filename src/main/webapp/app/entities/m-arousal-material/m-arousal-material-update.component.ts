@@ -12,7 +12,6 @@ import { MArousalMaterialService } from './m-arousal-material.service';
   templateUrl: './m-arousal-material-update.component.html'
 })
 export class MArousalMaterialUpdateComponent implements OnInit {
-  mArousalMaterial: IMArousalMaterial;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -37,7 +36,6 @@ export class MArousalMaterialUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mArousalMaterial }) => {
       this.updateForm(mArousalMaterial);
-      this.mArousalMaterial = mArousalMaterial;
     });
   }
 

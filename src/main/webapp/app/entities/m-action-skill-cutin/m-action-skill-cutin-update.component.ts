@@ -12,7 +12,6 @@ import { MActionSkillCutinService } from './m-action-skill-cutin.service';
   templateUrl: './m-action-skill-cutin-update.component.html'
 })
 export class MActionSkillCutinUpdateComponent implements OnInit {
-  mActionSkillCutin: IMActionSkillCutin;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -55,7 +54,6 @@ export class MActionSkillCutinUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mActionSkillCutin }) => {
       this.updateForm(mActionSkillCutin);
-      this.mActionSkillCutin = mActionSkillCutin;
     });
   }
 

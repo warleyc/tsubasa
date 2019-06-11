@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -9,7 +7,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MAchievement.
@@ -36,7 +33,7 @@ public class MAchievement implements Serializable {
     private String name;
 
     @NotNull
-    @Column(name = "jhi_type", nullable = false)
+    @Column(name = "type", nullable = false)
     private Integer type;
 
     @NotNull

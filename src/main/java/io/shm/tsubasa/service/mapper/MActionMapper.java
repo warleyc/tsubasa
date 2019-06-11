@@ -13,6 +13,7 @@ public interface MActionMapper extends EntityMapper<MActionDTO, MAction> {
 
 
     @Mapping(target = "mTargetActionGroups", ignore = true)
+    @Mapping(target = "removeMTargetActionGroup", ignore = true)
     MAction toEntity(MActionDTO mActionDTO);
 
     default MAction fromId(Long id) {

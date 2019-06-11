@@ -65,7 +65,7 @@
             "relationshipName": "mTargetCharacterGroup"
         }
     ],
-    "changelogDate": "20190610224718",
+    "changelogDate": "20190611231103",
     "entityTableName": "m_character",
     "dto": "mapstruct",
     "pagination": "pagination",

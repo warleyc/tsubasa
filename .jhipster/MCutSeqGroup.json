@@ -27,7 +27,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224731",
+    "changelogDate": "20190611231116",
     "entityTableName": "m_cut_seq_group",
     "dto": "mapstruct",
     "pagination": "pagination",

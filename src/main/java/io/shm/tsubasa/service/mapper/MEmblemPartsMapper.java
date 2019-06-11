@@ -13,6 +13,7 @@ public interface MEmblemPartsMapper extends EntityMapper<MEmblemPartsDTO, MEmble
 
 
     @Mapping(target = "mDummyEmblems", ignore = true)
+    @Mapping(target = "removeMDummyEmblem", ignore = true)
     MEmblemParts toEntity(MEmblemPartsDTO mEmblemPartsDTO);
 
     default MEmblemParts fromId(Long id) {

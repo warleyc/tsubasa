@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MCardIllustAssets.
@@ -34,7 +31,7 @@ public class MCardIllustAssets implements Serializable {
     private String subAssetName;
 
     @Lob
-    @Column(name = "jhi_offset")
+    @Column(name = "offset")
     private String offset;
 
     

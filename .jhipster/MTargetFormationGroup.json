@@ -26,7 +26,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225012",
+    "changelogDate": "20190611231357",
     "entityTableName": "m_target_formation_group",
     "dto": "mapstruct",
     "pagination": "pagination",

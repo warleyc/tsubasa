@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MCardLevel.
@@ -29,7 +26,7 @@ public class MCardLevel implements Serializable {
     private Integer rarity;
 
     @NotNull
-    @Column(name = "jhi_level", nullable = false)
+    @Column(name = "level", nullable = false)
     private Integer level;
 
     @NotNull

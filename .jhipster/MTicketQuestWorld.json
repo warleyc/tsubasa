@@ -77,7 +77,7 @@
             "relationshipName": "mTicketQuestStage"
         }
     ],
-    "changelogDate": "20190610225024",
+    "changelogDate": "20190611231409",
     "entityTableName": "m_ticket_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -50,7 +50,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224843",
+    "changelogDate": "20190611231228",
     "entityTableName": "m_login_bonus_incentive",
     "dto": "mapstruct",
     "pagination": "pagination",

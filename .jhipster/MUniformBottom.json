@@ -71,7 +71,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225037",
+    "changelogDate": "20190611231422",
     "entityTableName": "m_uniform_bottom",
     "dto": "mapstruct",
     "pagination": "pagination",

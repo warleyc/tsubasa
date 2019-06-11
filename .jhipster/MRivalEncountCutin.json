@@ -52,7 +52,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224956",
+    "changelogDate": "20190611231341",
     "entityTableName": "m_rival_encount_cutin",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -62,7 +62,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225030",
+    "changelogDate": "20190611231415",
     "entityTableName": "m_tips",
     "dto": "mapstruct",
     "pagination": "pagination",

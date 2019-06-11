@@ -68,7 +68,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224724",
+    "changelogDate": "20190611231109",
     "entityTableName": "m_combination_cut_position",
     "dto": "mapstruct",
     "pagination": "pagination",

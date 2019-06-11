@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224830",
+    "changelogDate": "20190611231215",
     "entityTableName": "m_guild_roulette_prize",
     "dto": "mapstruct",
     "pagination": "pagination",

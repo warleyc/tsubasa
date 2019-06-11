@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MAsset.
@@ -58,7 +55,7 @@ public class MAsset implements Serializable {
     private Integer head;
 
     @NotNull
-    @Column(name = "jhi_size", nullable = false)
+    @Column(name = "size", nullable = false)
     private Integer size;
 
     @NotNull

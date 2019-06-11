@@ -13,7 +13,9 @@ public interface MCardThumbnailAssetsMapper extends EntityMapper<MCardThumbnailA
 
 
     @Mapping(target = "mCardPowerupActionSkills", ignore = true)
+    @Mapping(target = "removeMCardPowerupActionSkill", ignore = true)
     @Mapping(target = "mTrainingCards", ignore = true)
+    @Mapping(target = "removeMTrainingCard", ignore = true)
     MCardThumbnailAssets toEntity(MCardThumbnailAssetsDTO mCardThumbnailAssetsDTO);
 
     default MCardThumbnailAssets fromId(Long id) {

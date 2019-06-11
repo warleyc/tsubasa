@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224838",
+    "changelogDate": "20190611231223",
     "entityTableName": "m_league_affiliate_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

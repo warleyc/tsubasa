@@ -49,7 +49,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224749",
+    "changelogDate": "20190611231134",
     "entityTableName": "m_distribute_param_point",
     "dto": "mapstruct",
     "pagination": "pagination",

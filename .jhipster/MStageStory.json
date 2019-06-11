@@ -37,7 +37,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225005",
+    "changelogDate": "20190611231350",
     "entityTableName": "m_stage_story",
     "dto": "mapstruct",
     "pagination": "pagination",

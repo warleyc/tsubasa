@@ -173,7 +173,7 @@
             "relationshipName": "mDummyOpponent"
         }
     ],
-    "changelogDate": "20190610224922",
+    "changelogDate": "20190611231307",
     "entityTableName": "m_npc_deck",
     "dto": "mapstruct",
     "pagination": "pagination",

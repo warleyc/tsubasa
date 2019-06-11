@@ -12,7 +12,6 @@ import { MCutService } from './m-cut.service';
   templateUrl: './m-cut-update.component.html'
 })
 export class MCutUpdateComponent implements OnInit {
-  mCut: IMCut;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -44,7 +43,6 @@ export class MCutUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCut }) => {
       this.updateForm(mCut);
-      this.mCut = mCut;
     });
   }
 
