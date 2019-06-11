@@ -57,7 +57,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224758",
+    "changelogDate": "20190611230935",
     "entityTableName": "m_event_title_effect",
     "dto": "mapstruct",
     "pagination": "pagination",

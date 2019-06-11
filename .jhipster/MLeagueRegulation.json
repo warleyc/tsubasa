@@ -47,7 +47,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224842",
+    "changelogDate": "20190611231019",
     "entityTableName": "m_league_regulation",
     "dto": "mapstruct",
     "pagination": "pagination",

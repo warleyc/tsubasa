@@ -188,7 +188,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225042",
+    "changelogDate": "20190611231219",
     "entityTableName": "m_weekly_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -12,7 +12,6 @@ import { MEmblemSetService } from './m-emblem-set.service';
   templateUrl: './m-emblem-set-update.component.html'
 })
 export class MEmblemSetUpdateComponent implements OnInit {
-  mEmblemSet: IMEmblemSet;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -34,7 +33,6 @@ export class MEmblemSetUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mEmblemSet }) => {
       this.updateForm(mEmblemSet);
-      this.mEmblemSet = mEmblemSet;
     });
   }
 

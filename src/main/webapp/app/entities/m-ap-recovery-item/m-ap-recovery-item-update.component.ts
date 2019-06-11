@@ -12,7 +12,6 @@ import { MApRecoveryItemService } from './m-ap-recovery-item.service';
   templateUrl: './m-ap-recovery-item-update.component.html'
 })
 export class MApRecoveryItemUpdateComponent implements OnInit {
-  mApRecoveryItem: IMApRecoveryItem;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -35,7 +34,6 @@ export class MApRecoveryItemUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mApRecoveryItem }) => {
       this.updateForm(mApRecoveryItem);
-      this.mApRecoveryItem = mApRecoveryItem;
     });
   }
 

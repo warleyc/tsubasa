@@ -188,7 +188,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224820",
+    "changelogDate": "20190611230957",
     "entityTableName": "m_guerilla_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

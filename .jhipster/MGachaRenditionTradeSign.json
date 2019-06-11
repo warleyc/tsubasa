@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224813",
+    "changelogDate": "20190611230950",
     "entityTableName": "m_gacha_rendition_trade_sign",
     "dto": "mapstruct",
     "pagination": "pagination",

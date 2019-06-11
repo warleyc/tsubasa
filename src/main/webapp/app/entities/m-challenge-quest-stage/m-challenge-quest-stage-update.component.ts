@@ -15,7 +15,6 @@ import { MChallengeQuestWorldService } from 'app/entities/m-challenge-quest-worl
   templateUrl: './m-challenge-quest-stage-update.component.html'
 })
 export class MChallengeQuestStageUpdateComponent implements OnInit {
-  mChallengeQuestStage: IMChallengeQuestStage;
   isSaving: boolean;
 
   mchallengequestworlds: IMChallengeQuestWorld[];
@@ -66,7 +65,6 @@ export class MChallengeQuestStageUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mChallengeQuestStage }) => {
       this.updateForm(mChallengeQuestStage);
-      this.mChallengeQuestStage = mChallengeQuestStage;
     });
     this.mChallengeQuestWorldService
       .query()

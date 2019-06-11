@@ -18,7 +18,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224721",
+    "changelogDate": "20190611230858",
     "entityTableName": "m_chat_system_message",
     "dto": "mapstruct",
     "pagination": "pagination",

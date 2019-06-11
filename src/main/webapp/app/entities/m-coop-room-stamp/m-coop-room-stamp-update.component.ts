@@ -11,7 +11,6 @@ import { MCoopRoomStampService } from './m-coop-room-stamp.service';
   templateUrl: './m-coop-room-stamp-update.component.html'
 })
 export class MCoopRoomStampUpdateComponent implements OnInit {
-  mCoopRoomStamp: IMCoopRoomStamp;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -27,7 +26,6 @@ export class MCoopRoomStampUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCoopRoomStamp }) => {
       this.updateForm(mCoopRoomStamp);
-      this.mCoopRoomStamp = mCoopRoomStamp;
     });
   }
 

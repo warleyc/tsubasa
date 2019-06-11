@@ -60,7 +60,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224750",
+    "changelogDate": "20190611230927",
     "entityTableName": "m_dummy_emblem",
     "dto": "mapstruct",
     "pagination": "pagination",

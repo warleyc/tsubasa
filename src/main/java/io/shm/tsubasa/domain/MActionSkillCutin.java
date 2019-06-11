@@ -1,6 +1,4 @@
 package io.shm.tsubasa.domain;
-
-
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A MActionSkillCutin.
@@ -38,7 +35,7 @@ public class MActionSkillCutin implements Serializable {
     private String cutName;
 
     @NotNull
-    @Column(name = "jhi_type", nullable = false)
+    @Column(name = "type", nullable = false)
     private Integer type;
 
     @NotNull

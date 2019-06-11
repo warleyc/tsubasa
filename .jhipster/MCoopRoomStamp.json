@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224728",
+    "changelogDate": "20190611230905",
     "entityTableName": "m_coop_room_stamp",
     "dto": "mapstruct",
     "pagination": "pagination",

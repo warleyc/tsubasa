@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224818",
+    "changelogDate": "20190611230955",
     "entityTableName": "m_goal_effective_card",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -96,7 +96,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224751",
+    "changelogDate": "20190611230928",
     "entityTableName": "m_dummy_opponent",
     "dto": "mapstruct",
     "pagination": "pagination",

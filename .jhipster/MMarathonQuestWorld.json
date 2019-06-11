@@ -75,7 +75,7 @@
             "relationshipName": "mMarathonQuestStage"
         }
     ],
-    "changelogDate": "20190610224901",
+    "changelogDate": "20190611231038",
     "entityTableName": "m_marathon_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

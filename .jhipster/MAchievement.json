@@ -42,7 +42,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224648",
+    "changelogDate": "20190611230825",
     "entityTableName": "m_achievement",
     "dto": "mapstruct",
     "pagination": "pagination",

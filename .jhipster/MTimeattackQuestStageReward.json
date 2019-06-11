@@ -74,7 +74,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225026",
+    "changelogDate": "20190611231203",
     "entityTableName": "m_timeattack_quest_stage_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

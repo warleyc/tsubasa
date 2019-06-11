@@ -12,7 +12,6 @@ import { MActionService } from './m-action.service';
   templateUrl: './m-action-update.component.html'
 })
 export class MActionUpdateComponent implements OnInit {
-  mAction: IMAction;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -53,7 +52,6 @@ export class MActionUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAction }) => {
       this.updateForm(mAction);
-      this.mAction = mAction;
     });
   }
 

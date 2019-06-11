@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224855",
+    "changelogDate": "20190611231032",
     "entityTableName": "m_marathon_effective_card",
     "dto": "mapstruct",
     "pagination": "pagination",

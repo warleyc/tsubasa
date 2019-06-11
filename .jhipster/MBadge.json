@@ -34,7 +34,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224706",
+    "changelogDate": "20190611230843",
     "entityTableName": "m_badge",
     "dto": "mapstruct",
     "pagination": "pagination",

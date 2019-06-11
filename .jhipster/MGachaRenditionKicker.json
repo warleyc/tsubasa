@@ -134,7 +134,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224811",
+    "changelogDate": "20190611230948",
     "entityTableName": "m_gacha_rendition_kicker",
     "dto": "mapstruct",
     "pagination": "pagination",

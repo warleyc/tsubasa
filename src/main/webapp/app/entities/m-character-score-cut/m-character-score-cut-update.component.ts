@@ -11,7 +11,6 @@ import { MCharacterScoreCutService } from './m-character-score-cut.service';
   templateUrl: './m-character-score-cut-update.component.html'
 })
 export class MCharacterScoreCutUpdateComponent implements OnInit {
-  mCharacterScoreCut: IMCharacterScoreCut;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -31,7 +30,6 @@ export class MCharacterScoreCutUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCharacterScoreCut }) => {
       this.updateForm(mCharacterScoreCut);
-      this.mCharacterScoreCut = mCharacterScoreCut;
     });
   }
 

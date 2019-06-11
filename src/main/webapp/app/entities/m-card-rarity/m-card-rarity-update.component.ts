@@ -12,7 +12,6 @@ import { MCardRarityService } from './m-card-rarity.service';
   templateUrl: './m-card-rarity-update.component.html'
 })
 export class MCardRarityUpdateComponent implements OnInit {
-  mCardRarity: IMCardRarity;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MCardRarityUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCardRarity }) => {
       this.updateForm(mCardRarity);
-      this.mCardRarity = mCardRarity;
     });
   }
 

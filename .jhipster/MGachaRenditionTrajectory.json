@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224814",
+    "changelogDate": "20190611230951",
     "entityTableName": "m_gacha_rendition_trajectory",
     "dto": "mapstruct",
     "pagination": "pagination",

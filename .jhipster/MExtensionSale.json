@@ -36,7 +36,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224759",
+    "changelogDate": "20190611230936",
     "entityTableName": "m_extension_sale",
     "dto": "mapstruct",
     "pagination": "pagination",

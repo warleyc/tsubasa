@@ -50,7 +50,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224702",
+    "changelogDate": "20190611230839",
     "entityTableName": "m_arousal_item",
     "dto": "mapstruct",
     "pagination": "pagination",

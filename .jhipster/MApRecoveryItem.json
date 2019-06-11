@@ -34,7 +34,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224659",
+    "changelogDate": "20190611230836",
     "entityTableName": "m_ap_recovery_item",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -59,7 +59,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224727",
+    "changelogDate": "20190611230904",
     "entityTableName": "m_contentable_card",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -15,7 +15,6 @@ import { MEmblemPartsService } from 'app/entities/m-emblem-parts';
   templateUrl: './m-dummy-emblem-update.component.html'
 })
 export class MDummyEmblemUpdateComponent implements OnInit {
-  mDummyEmblem: IMDummyEmblem;
   isSaving: boolean;
 
   memblemparts: IMEmblemParts[];
@@ -46,7 +45,6 @@ export class MDummyEmblemUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDummyEmblem }) => {
       this.updateForm(mDummyEmblem);
-      this.mDummyEmblem = mDummyEmblem;
     });
     this.mEmblemPartsService
       .query()

@@ -12,7 +12,6 @@ import { MDefineService } from './m-define.service';
   templateUrl: './m-define-update.component.html'
 })
 export class MDefineUpdateComponent implements OnInit {
-  mDefine: IMDefine;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MDefineUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDefine }) => {
       this.updateForm(mDefine);
-      this.mDefine = mDefine;
     });
   }
 

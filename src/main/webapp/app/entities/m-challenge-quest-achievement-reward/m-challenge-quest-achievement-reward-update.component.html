@@ -4,7 +4,7 @@
             <h2 id="jhi-m-challenge-quest-achievement-reward-heading">Create or edit a M Challenge Quest Achievement Reward</h2>
             <div>
                 <jhi-alert-error></jhi-alert-error>
-                <div class="form-group" [hidden]="!mChallengeQuestAchievementReward.id">
+                <div class="form-group" [hidden]="!editForm.get('id').value">
                     <label for="id">ID</label>
                     <input type="text" class="form-control" id="id" name="id" formControlName="id"
                         readonly />

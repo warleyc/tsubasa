@@ -192,7 +192,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224848",
+    "changelogDate": "20190611231025",
     "entityTableName": "m_luck_weekly_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

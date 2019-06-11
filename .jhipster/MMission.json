@@ -128,7 +128,7 @@
             "relationshipName": "mAchievement"
         }
     ],
-    "changelogDate": "20190610224910",
+    "changelogDate": "20190611231047",
     "entityTableName": "m_mission",
     "dto": "mapstruct",
     "pagination": "pagination",

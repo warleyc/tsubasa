@@ -74,7 +74,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225043",
+    "changelogDate": "20190611231220",
     "entityTableName": "m_weekly_quest_stage_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

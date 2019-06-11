@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224852",
+    "changelogDate": "20190611231029",
     "entityTableName": "m_marathon_achievement_reward_group",
     "dto": "mapstruct",
     "pagination": "pagination",

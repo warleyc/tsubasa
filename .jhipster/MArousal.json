@@ -40,7 +40,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224701",
+    "changelogDate": "20190611230838",
     "entityTableName": "m_arousal",
     "dto": "mapstruct",
     "pagination": "pagination",

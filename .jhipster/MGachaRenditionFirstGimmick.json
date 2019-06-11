@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224810",
+    "changelogDate": "20190611230947",
     "entityTableName": "m_gacha_rendition_first_gimmick",
     "dto": "mapstruct",
     "pagination": "pagination",

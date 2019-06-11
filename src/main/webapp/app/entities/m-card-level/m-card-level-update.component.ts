@@ -11,7 +11,6 @@ import { MCardLevelService } from './m-card-level.service';
   templateUrl: './m-card-level-update.component.html'
 })
 export class MCardLevelUpdateComponent implements OnInit {
-  mCardLevel: IMCardLevel;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -28,7 +27,6 @@ export class MCardLevelUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCardLevel }) => {
       this.updateForm(mCardLevel);
-      this.mCardLevel = mCardLevel;
     });
   }
 

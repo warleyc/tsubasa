@@ -26,7 +26,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224722",
+    "changelogDate": "20190611230859",
     "entityTableName": "m_cheat_caution",
     "dto": "mapstruct",
     "pagination": "pagination",

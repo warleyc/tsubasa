@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224927",
+    "changelogDate": "20190611231104",
     "entityTableName": "m_powerup_action_skill_cost",
     "dto": "mapstruct",
     "pagination": "pagination",

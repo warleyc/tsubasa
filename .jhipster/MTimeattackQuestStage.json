@@ -215,7 +215,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225025",
+    "changelogDate": "20190611231202",
     "entityTableName": "m_timeattack_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -12,7 +12,6 @@ import { MDistributeParamPointService } from './m-distribute-param-point.service
   templateUrl: './m-distribute-param-point-update.component.html'
 })
 export class MDistributeParamPointUpdateComponent implements OnInit {
-  mDistributeParamPoint: IMDistributeParamPoint;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -37,7 +36,6 @@ export class MDistributeParamPointUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDistributeParamPoint }) => {
       this.updateForm(mDistributeParamPoint);
-      this.mDistributeParamPoint = mDistributeParamPoint;
     });
   }
 

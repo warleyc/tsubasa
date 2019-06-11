@@ -70,7 +70,7 @@
             "relationshipName": "mPvpRegulation"
         }
     ],
-    "changelogDate": "20190610224907",
+    "changelogDate": "20190611231044",
     "entityTableName": "m_match_option",
     "dto": "mapstruct",
     "pagination": "pagination",

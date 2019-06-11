@@ -49,7 +49,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224817",
+    "changelogDate": "20190611230954",
     "entityTableName": "m_gacha_ticket",
     "dto": "mapstruct",
     "pagination": "pagination",

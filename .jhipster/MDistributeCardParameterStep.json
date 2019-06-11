@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224748",
+    "changelogDate": "20190611230925",
     "entityTableName": "m_distribute_card_parameter_step",
     "dto": "mapstruct",
     "pagination": "pagination",

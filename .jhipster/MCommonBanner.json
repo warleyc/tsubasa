@@ -59,7 +59,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224725",
+    "changelogDate": "20190611230902",
     "entityTableName": "m_common_banner",
     "dto": "mapstruct",
     "pagination": "pagination",

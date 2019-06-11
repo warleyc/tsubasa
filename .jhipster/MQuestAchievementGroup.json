@@ -49,7 +49,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224936",
+    "changelogDate": "20190611231113",
     "entityTableName": "m_quest_achievement_group",
     "dto": "mapstruct",
     "pagination": "pagination",

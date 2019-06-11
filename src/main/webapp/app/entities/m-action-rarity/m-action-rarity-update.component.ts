@@ -12,7 +12,6 @@ import { MActionRarityService } from './m-action-rarity.service';
   templateUrl: './m-action-rarity-update.component.html'
 })
 export class MActionRarityUpdateComponent implements OnInit {
-  mActionRarity: IMActionRarity;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MActionRarityUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mActionRarity }) => {
       this.updateForm(mActionRarity);
-      this.mActionRarity = mActionRarity;
     });
   }
 

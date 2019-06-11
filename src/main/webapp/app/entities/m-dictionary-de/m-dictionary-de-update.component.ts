@@ -12,7 +12,6 @@ import { MDictionaryDeService } from './m-dictionary-de.service';
   templateUrl: './m-dictionary-de-update.component.html'
 })
 export class MDictionaryDeUpdateComponent implements OnInit {
-  mDictionaryDe: IMDictionaryDe;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MDictionaryDeUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mDictionaryDe }) => {
       this.updateForm(mDictionaryDe);
-      this.mDictionaryDe = mDictionaryDe;
     });
   }
 

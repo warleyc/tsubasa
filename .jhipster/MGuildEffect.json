@@ -30,7 +30,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224825",
+    "changelogDate": "20190611231002",
     "entityTableName": "m_guild_effect",
     "dto": "mapstruct",
     "pagination": "pagination",

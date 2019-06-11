@@ -163,7 +163,7 @@
             "relationshipName": "mTargetActionGroup"
         }
     ],
-    "changelogDate": "20190610224649",
+    "changelogDate": "20190611230826",
     "entityTableName": "m_action",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -47,7 +47,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224929",
+    "changelogDate": "20190611231106",
     "entityTableName": "m_pvp_grade_requirement",
     "dto": "mapstruct",
     "pagination": "pagination",

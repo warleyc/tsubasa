@@ -39,7 +39,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224707",
+    "changelogDate": "20190611230844",
     "entityTableName": "m_card_illust_assets",
     "dto": "mapstruct",
     "pagination": "pagination",

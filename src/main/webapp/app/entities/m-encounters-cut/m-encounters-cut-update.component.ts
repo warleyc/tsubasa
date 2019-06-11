@@ -12,7 +12,6 @@ import { MEncountersCutService } from './m-encounters-cut.service';
   templateUrl: './m-encounters-cut-update.component.html'
 })
 export class MEncountersCutUpdateComponent implements OnInit {
-  mEncountersCut: IMEncountersCut;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -42,7 +41,6 @@ export class MEncountersCutUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mEncountersCut }) => {
       this.updateForm(mEncountersCut);
-      this.mEncountersCut = mEncountersCut;
     });
   }
 

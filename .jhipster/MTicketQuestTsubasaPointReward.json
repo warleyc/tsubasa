@@ -35,7 +35,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225023",
+    "changelogDate": "20190611231200",
     "entityTableName": "m_ticket_quest_tsubasa_point_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

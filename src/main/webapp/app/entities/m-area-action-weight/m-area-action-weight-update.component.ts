@@ -11,7 +11,6 @@ import { MAreaActionWeightService } from './m-area-action-weight.service';
   templateUrl: './m-area-action-weight-update.component.html'
 })
 export class MAreaActionWeightUpdateComponent implements OnInit {
-  mAreaActionWeight: IMAreaActionWeight;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -41,7 +40,6 @@ export class MAreaActionWeightUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAreaActionWeight }) => {
       this.updateForm(mAreaActionWeight);
-      this.mAreaActionWeight = mAreaActionWeight;
     });
   }
 

@@ -25,7 +25,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224836",
+    "changelogDate": "20190611231013",
     "entityTableName": "m_keeper_cut_action",
     "dto": "mapstruct",
     "pagination": "pagination",

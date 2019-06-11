@@ -11,7 +11,6 @@ import { MEncountersCommandBranchService } from './m-encounters-command-branch.s
   templateUrl: './m-encounters-command-branch-update.component.html'
 })
 export class MEncountersCommandBranchUpdateComponent implements OnInit {
-  mEncountersCommandBranch: IMEncountersCommandBranch;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -37,7 +36,6 @@ export class MEncountersCommandBranchUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mEncountersCommandBranch }) => {
       this.updateForm(mEncountersCommandBranch);
-      this.mEncountersCommandBranch = mEncountersCommandBranch;
     });
   }
 

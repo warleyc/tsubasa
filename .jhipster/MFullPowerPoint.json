@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224802",
+    "changelogDate": "20190611230939",
     "entityTableName": "m_full_power_point",
     "dto": "mapstruct",
     "pagination": "pagination",

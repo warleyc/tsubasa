@@ -10,7 +10,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225040",
+    "changelogDate": "20190611231217",
     "entityTableName": "m_user_policy_update_date",
     "dto": "mapstruct",
     "pagination": "pagination",

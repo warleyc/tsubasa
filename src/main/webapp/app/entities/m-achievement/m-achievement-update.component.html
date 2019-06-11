@@ -4,7 +4,7 @@
             <h2 id="jhi-m-achievement-heading">Create or edit a M Achievement</h2>
             <div>
                 <jhi-alert-error></jhi-alert-error>
-                <div class="form-group" [hidden]="!mAchievement.id">
+                <div class="form-group" [hidden]="!editForm.get('id').value">
                     <label for="id">ID</label>
                     <input type="text" class="form-control" id="id" name="id" formControlName="id"
                         readonly />
@@ -65,13 +65,13 @@
                 <div class="form-group">
                     <label class="form-control-label" for="field_id">Id</label>
                     <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option *ngIf="!editForm.get('idId').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mMissionOption.id" *ngFor="let mMissionOption of mmissions; trackBy: trackMMissionById">{{mMissionOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('idId').invalid && (editForm.get('idId').dirty || editForm.get('idId').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('idId').errors.required">
                         This field is required.
                     </small>
                 </div>

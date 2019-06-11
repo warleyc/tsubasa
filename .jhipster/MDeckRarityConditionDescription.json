@@ -48,7 +48,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224735",
+    "changelogDate": "20190611230912",
     "entityTableName": "m_deck_rarity_condition_description",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -11,7 +11,6 @@ import { MChallengeQuestStageRewardService } from './m-challenge-quest-stage-rew
   templateUrl: './m-challenge-quest-stage-reward-update.component.html'
 })
 export class MChallengeQuestStageRewardUpdateComponent implements OnInit {
-  mChallengeQuestStageReward: IMChallengeQuestStageReward;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -39,7 +38,6 @@ export class MChallengeQuestStageRewardUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mChallengeQuestStageReward }) => {
       this.updateForm(mChallengeQuestStageReward);
-      this.mChallengeQuestStageReward = mChallengeQuestStageReward;
     });
   }
 

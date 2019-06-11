@@ -188,7 +188,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224654",
+    "changelogDate": "20190611230831",
     "entityTableName": "m_advent_quest_stage",
     "dto": "mapstruct",
     "pagination": "pagination",

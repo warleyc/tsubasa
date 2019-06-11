@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224934",
+    "changelogDate": "20190611231111",
     "entityTableName": "m_pvp_watcher_stamp",
     "dto": "mapstruct",
     "pagination": "pagination",

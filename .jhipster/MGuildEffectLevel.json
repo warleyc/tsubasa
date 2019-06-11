@@ -53,7 +53,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224826",
+    "changelogDate": "20190611231003",
     "entityTableName": "m_guild_effect_level",
     "dto": "mapstruct",
     "pagination": "pagination",

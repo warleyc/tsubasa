@@ -83,7 +83,7 @@
             "relationshipName": "mTimeattackQuestStage"
         }
     ],
-    "changelogDate": "20190610225027",
+    "changelogDate": "20190611231204",
     "entityTableName": "m_timeattack_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

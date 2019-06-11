@@ -10,7 +10,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224824",
+    "changelogDate": "20190611231001",
     "entityTableName": "m_guild_chat_default_stamp",
     "dto": "mapstruct",
     "pagination": "pagination",

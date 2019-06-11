@@ -48,7 +48,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224955",
+    "changelogDate": "20190611231132",
     "entityTableName": "m_regulation_match_tutorial_message",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -15,7 +15,6 @@ import { MCharacterService } from 'app/entities/m-character';
   templateUrl: './m-combination-cut-position-update.component.html'
 })
 export class MCombinationCutPositionUpdateComponent implements OnInit {
-  mCombinationCutPosition: IMCombinationCutPosition;
   isSaving: boolean;
 
   mcharacters: IMCharacter[];
@@ -45,7 +44,6 @@ export class MCombinationCutPositionUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCombinationCutPosition }) => {
       this.updateForm(mCombinationCutPosition);
-      this.mCombinationCutPosition = mCombinationCutPosition;
     });
     this.mCharacterService
       .query()

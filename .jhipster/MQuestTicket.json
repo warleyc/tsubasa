@@ -35,7 +35,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224948",
+    "changelogDate": "20190611231125",
     "entityTableName": "m_quest_ticket",
     "dto": "mapstruct",
     "pagination": "pagination",

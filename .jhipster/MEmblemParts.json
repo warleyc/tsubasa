@@ -25,7 +25,7 @@
             "relationshipName": "mDummyEmblem"
         }
     ],
-    "changelogDate": "20190610224752",
+    "changelogDate": "20190611230929",
     "entityTableName": "m_emblem_parts",
     "dto": "mapstruct",
     "pagination": "pagination",

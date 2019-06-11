@@ -39,7 +39,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224918",
+    "changelogDate": "20190611231055",
     "entityTableName": "m_movie_asset",
     "dto": "mapstruct",
     "pagination": "pagination",

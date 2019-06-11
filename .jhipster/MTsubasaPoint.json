@@ -45,7 +45,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225035",
+    "changelogDate": "20190611231212",
     "entityTableName": "m_tsubasa_point",
     "dto": "mapstruct",
     "pagination": "pagination",

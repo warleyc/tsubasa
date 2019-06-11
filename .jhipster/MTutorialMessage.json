@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225036",
+    "changelogDate": "20190611231213",
     "entityTableName": "m_tutorial_message",
     "dto": "mapstruct",
     "pagination": "pagination",

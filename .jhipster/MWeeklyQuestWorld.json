@@ -75,7 +75,7 @@
             "relationshipName": "mWeeklyQuestStage"
         }
     ],
-    "changelogDate": "20190610225045",
+    "changelogDate": "20190611231222",
     "entityTableName": "m_weekly_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

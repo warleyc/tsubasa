@@ -12,7 +12,6 @@ import { MChatSystemMessageService } from './m-chat-system-message.service';
   templateUrl: './m-chat-system-message-update.component.html'
 })
 export class MChatSystemMessageUpdateComponent implements OnInit {
-  mChatSystemMessage: IMChatSystemMessage;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MChatSystemMessageUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mChatSystemMessage }) => {
       this.updateForm(mChatSystemMessage);
-      this.mChatSystemMessage = mChatSystemMessage;
     });
   }
 

@@ -105,7 +105,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224844",
+    "changelogDate": "20190611231021",
     "entityTableName": "m_login_bonus_round",
     "dto": "mapstruct",
     "pagination": "pagination",

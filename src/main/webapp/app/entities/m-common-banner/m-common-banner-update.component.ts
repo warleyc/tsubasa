@@ -12,7 +12,6 @@ import { MCommonBannerService } from './m-common-banner.service';
   templateUrl: './m-common-banner-update.component.html'
 })
 export class MCommonBannerUpdateComponent implements OnInit {
-  mCommonBanner: IMCommonBanner;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -40,7 +39,6 @@ export class MCommonBannerUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCommonBanner }) => {
       this.updateForm(mCommonBanner);
-      this.mCommonBanner = mCommonBanner;
     });
   }
 

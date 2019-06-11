@@ -34,7 +34,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224809",
+    "changelogDate": "20190611230946",
     "entityTableName": "m_gacha_rendition_extra_cutin",
     "dto": "mapstruct",
     "pagination": "pagination",

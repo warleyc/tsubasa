@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224902",
+    "changelogDate": "20190611231039",
     "entityTableName": "m_marathon_ranking_reward",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -24,7 +24,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225000",
+    "changelogDate": "20190611231137",
     "entityTableName": "m_shoot",
     "dto": "mapstruct",
     "pagination": "pagination",

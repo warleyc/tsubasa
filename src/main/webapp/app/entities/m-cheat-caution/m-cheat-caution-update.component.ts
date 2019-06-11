@@ -12,7 +12,6 @@ import { MCheatCautionService } from './m-cheat-caution.service';
   templateUrl: './m-cheat-caution-update.component.html'
 })
 export class MCheatCautionUpdateComponent implements OnInit {
-  mCheatCaution: IMCheatCaution;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -34,7 +33,6 @@ export class MCheatCautionUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCheatCaution }) => {
       this.updateForm(mCheatCaution);
-      this.mCheatCaution = mCheatCaution;
     });
   }
 

@@ -47,7 +47,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610224933",
+    "changelogDate": "20190611231110",
     "entityTableName": "m_pvp_regulation",
     "dto": "mapstruct",
     "pagination": "pagination",

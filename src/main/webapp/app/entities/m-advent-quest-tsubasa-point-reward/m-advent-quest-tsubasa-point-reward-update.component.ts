@@ -14,7 +14,6 @@ import { MAdventQuestTsubasaPointRewardService } from './m-advent-quest-tsubasa-
   templateUrl: './m-advent-quest-tsubasa-point-reward-update.component.html'
 })
 export class MAdventQuestTsubasaPointRewardUpdateComponent implements OnInit {
-  mAdventQuestTsubasaPointReward: IMAdventQuestTsubasaPointReward;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -36,7 +35,6 @@ export class MAdventQuestTsubasaPointRewardUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAdventQuestTsubasaPointReward }) => {
       this.updateForm(mAdventQuestTsubasaPointReward);
-      this.mAdventQuestTsubasaPointReward = mAdventQuestTsubasaPointReward;
     });
   }
 

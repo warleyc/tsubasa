@@ -83,7 +83,7 @@
             "relationshipName": "mChallengeQuestStage"
         }
     ],
-    "changelogDate": "20190610224717",
+    "changelogDate": "20190611230854",
     "entityTableName": "m_challenge_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

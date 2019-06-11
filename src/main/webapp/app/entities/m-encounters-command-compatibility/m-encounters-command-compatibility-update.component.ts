@@ -14,7 +14,6 @@ import { MEncountersCommandCompatibilityService } from './m-encounters-command-c
   templateUrl: './m-encounters-command-compatibility-update.component.html'
 })
 export class MEncountersCommandCompatibilityUpdateComponent implements OnInit {
-  mEncountersCommandCompatibility: IMEncountersCommandCompatibility;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -36,7 +35,6 @@ export class MEncountersCommandCompatibilityUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mEncountersCommandCompatibility }) => {
       this.updateForm(mEncountersCommandCompatibility);
-      this.mEncountersCommandCompatibility = mEncountersCommandCompatibility;
     });
   }
 

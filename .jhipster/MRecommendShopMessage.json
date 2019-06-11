@@ -18,7 +18,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224953",
+    "changelogDate": "20190611231130",
     "entityTableName": "m_recommend_shop_message",
     "dto": "mapstruct",
     "pagination": "pagination",

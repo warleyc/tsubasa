@@ -102,7 +102,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190610225018",
+    "changelogDate": "20190611231155",
     "entityTableName": "m_team_effect_base",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -42,7 +42,7 @@
             "relationshipName": "mTrainingCard"
         }
     ],
-    "changelogDate": "20190610224712",
+    "changelogDate": "20190611230849",
     "entityTableName": "m_card_thumbnail_assets",
     "dto": "mapstruct",
     "pagination": "pagination",

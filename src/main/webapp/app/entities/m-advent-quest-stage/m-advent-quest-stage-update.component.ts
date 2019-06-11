@@ -15,7 +15,6 @@ import { MAdventQuestWorldService } from 'app/entities/m-advent-quest-world';
   templateUrl: './m-advent-quest-stage-update.component.html'
 })
 export class MAdventQuestStageUpdateComponent implements OnInit {
-  mAdventQuestStage: IMAdventQuestStage;
   isSaving: boolean;
 
   madventquestworlds: IMAdventQuestWorld[];
@@ -64,7 +63,6 @@ export class MAdventQuestStageUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mAdventQuestStage }) => {
       this.updateForm(mAdventQuestStage);
-      this.mAdventQuestStage = mAdventQuestStage;
     });
     this.mAdventQuestWorldService
       .query()

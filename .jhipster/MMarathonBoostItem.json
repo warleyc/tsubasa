@@ -46,7 +46,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224853",
+    "changelogDate": "20190611231030",
     "entityTableName": "m_marathon_boost_item",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -101,7 +101,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224923",
+    "changelogDate": "20190611231100",
     "entityTableName": "m_npc_personality",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -12,7 +12,6 @@ import { MColorPaletteService } from './m-color-palette.service';
   templateUrl: './m-color-palette-update.component.html'
 })
 export class MColorPaletteUpdateComponent implements OnInit {
-  mColorPalette: IMColorPalette;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -33,7 +32,6 @@ export class MColorPaletteUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mColorPalette }) => {
       this.updateForm(mColorPalette);
-      this.mColorPalette = mColorPalette;
     });
   }
 

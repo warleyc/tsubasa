@@ -12,7 +12,6 @@ import { MCutShootOrbitService } from './m-cut-shoot-orbit.service';
   templateUrl: './m-cut-shoot-orbit-update.component.html'
 })
 export class MCutShootOrbitUpdateComponent implements OnInit {
-  mCutShootOrbit: IMCutShootOrbit;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -35,7 +34,6 @@ export class MCutShootOrbitUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCutShootOrbit }) => {
       this.updateForm(mCutShootOrbit);
-      this.mCutShootOrbit = mCutShootOrbit;
     });
   }
 

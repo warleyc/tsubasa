@@ -12,7 +12,6 @@ import { MCardThumbnailAssetsService } from './m-card-thumbnail-assets.service';
   templateUrl: './m-card-thumbnail-assets-update.component.html'
 })
 export class MCardThumbnailAssetsUpdateComponent implements OnInit {
-  mCardThumbnailAssets: IMCardThumbnailAssets;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -35,7 +34,6 @@ export class MCardThumbnailAssetsUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCardThumbnailAssets }) => {
       this.updateForm(mCardThumbnailAssets);
-      this.mCardThumbnailAssets = mCardThumbnailAssets;
     });
   }
 

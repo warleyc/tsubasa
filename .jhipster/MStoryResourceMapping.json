@@ -26,7 +26,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610225008",
+    "changelogDate": "20190611231145",
     "entityTableName": "m_story_resource_mapping",
     "dto": "mapstruct",
     "pagination": "pagination",

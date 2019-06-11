@@ -11,7 +11,6 @@ import { MEncountersBonusService } from './m-encounters-bonus.service';
   templateUrl: './m-encounters-bonus-update.component.html'
 })
 export class MEncountersBonusUpdateComponent implements OnInit {
-  mEncountersBonus: IMEncountersBonus;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -32,7 +31,6 @@ export class MEncountersBonusUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mEncountersBonus }) => {
       this.updateForm(mEncountersBonus);
-      this.mEncountersBonus = mEncountersBonus;
     });
   }
 

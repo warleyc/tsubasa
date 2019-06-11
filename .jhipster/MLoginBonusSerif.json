@@ -20,7 +20,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224845",
+    "changelogDate": "20190611231022",
     "entityTableName": "m_login_bonus_serif",
     "dto": "mapstruct",
     "pagination": "pagination",

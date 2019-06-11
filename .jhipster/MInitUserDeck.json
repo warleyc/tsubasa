@@ -105,7 +105,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224835",
+    "changelogDate": "20190611231012",
     "entityTableName": "m_init_user_deck",
     "dto": "mapstruct",
     "pagination": "pagination",

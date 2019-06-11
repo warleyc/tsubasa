@@ -15,7 +15,6 @@ import { MPlayableCardService } from 'app/entities/m-playable-card';
   templateUrl: './m-arousal-update.component.html'
 })
 export class MArousalUpdateComponent implements OnInit {
-  mArousal: IMArousal;
   isSaving: boolean;
 
   mplayablecards: IMPlayableCard[];
@@ -41,7 +40,6 @@ export class MArousalUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mArousal }) => {
       this.updateForm(mArousal);
-      this.mArousal = mArousal;
     });
     this.mPlayableCardService
       .query()

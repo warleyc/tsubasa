@@ -11,7 +11,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224829",
+    "changelogDate": "20190611231006",
     "entityTableName": "m_guild_negative_word",
     "dto": "mapstruct",
     "pagination": "pagination",

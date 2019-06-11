@@ -28,7 +28,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224841",
+    "changelogDate": "20190611231018",
     "entityTableName": "m_league_ranking_reward_group",
     "dto": "mapstruct",
     "pagination": "pagination",

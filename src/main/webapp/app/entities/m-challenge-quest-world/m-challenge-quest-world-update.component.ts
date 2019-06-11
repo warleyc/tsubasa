@@ -12,7 +12,6 @@ import { MChallengeQuestWorldService } from './m-challenge-quest-world.service';
   templateUrl: './m-challenge-quest-world-update.component.html'
 })
 export class MChallengeQuestWorldUpdateComponent implements OnInit {
-  mChallengeQuestWorld: IMChallengeQuestWorld;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -42,7 +41,6 @@ export class MChallengeQuestWorldUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mChallengeQuestWorld }) => {
       this.updateForm(mChallengeQuestWorld);
-      this.mChallengeQuestWorld = mChallengeQuestWorld;
     });
   }
 

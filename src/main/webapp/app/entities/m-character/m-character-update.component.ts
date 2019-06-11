@@ -12,7 +12,6 @@ import { MCharacterService } from './m-character.service';
   templateUrl: './m-character-update.component.html'
 })
 export class MCharacterUpdateComponent implements OnInit {
-  mCharacter: IMCharacter;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -35,7 +34,6 @@ export class MCharacterUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCharacter }) => {
       this.updateForm(mCharacter);
-      this.mCharacter = mCharacter;
     });
   }
 

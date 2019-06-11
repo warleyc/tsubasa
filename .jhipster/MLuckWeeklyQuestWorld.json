@@ -82,7 +82,7 @@
             "relationshipName": "mLuckWeeklyQuestStage"
         }
     ],
-    "changelogDate": "20190610224850",
+    "changelogDate": "20190611231027",
     "entityTableName": "m_luck_weekly_quest_world",
     "dto": "mapstruct",
     "pagination": "pagination",

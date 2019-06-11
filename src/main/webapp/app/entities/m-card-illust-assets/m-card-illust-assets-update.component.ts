@@ -12,7 +12,6 @@ import { MCardIllustAssetsService } from './m-card-illust-assets.service';
   templateUrl: './m-card-illust-assets-update.component.html'
 })
 export class MCardIllustAssetsUpdateComponent implements OnInit {
-  mCardIllustAssets: IMCardIllustAssets;
   isSaving: boolean;
 
   editForm = this.fb.group({
@@ -37,7 +36,6 @@ export class MCardIllustAssetsUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCardIllustAssets }) => {
       this.updateForm(mCardIllustAssets);
-      this.mCardIllustAssets = mCardIllustAssets;
     });
   }
 

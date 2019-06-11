@@ -15,7 +15,6 @@ import { MCardThumbnailAssetsService } from 'app/entities/m-card-thumbnail-asset
   templateUrl: './m-card-powerup-action-skill-update.component.html'
 })
 export class MCardPowerupActionSkillUpdateComponent implements OnInit {
-  mCardPowerupActionSkill: IMCardPowerupActionSkill;
   isSaving: boolean;
 
   mcardthumbnailassets: IMCardThumbnailAssets[];
@@ -51,7 +50,6 @@ export class MCardPowerupActionSkillUpdateComponent implements OnInit {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ mCardPowerupActionSkill }) => {
       this.updateForm(mCardPowerupActionSkill);
-      this.mCardPowerupActionSkill = mCardPowerupActionSkill;
     });
     this.mCardThumbnailAssetsService
       .query()

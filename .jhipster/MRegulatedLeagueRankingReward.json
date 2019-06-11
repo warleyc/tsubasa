@@ -31,7 +31,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190610224954",
+    "changelogDate": "20190611231131",
     "entityTableName": "m_regulated_league_ranking_reward",
     "dto": "mapstruct",
     "pagination": "pagination",
