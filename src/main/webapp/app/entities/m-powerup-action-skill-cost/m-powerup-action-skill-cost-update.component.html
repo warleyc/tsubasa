@@ -1,0 +1,69 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-powerup-action-skill-cost-heading">Create or edit a M Powerup Action Skill Cost</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mPowerupActionSkillCost.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionRarity">Action Rarity</label>
+                    <input type="number" class="form-control" name="actionRarity" id="field_actionRarity"
+                           formControlName="actionRarity"/>
+                    <div *ngIf="editForm.get('actionRarity').invalid && (editForm.get('actionRarity').dirty || editForm.get('actionRarity').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionRarity').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionRarity')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionLevel">Action Level</label>
+                    <input type="number" class="form-control" name="actionLevel" id="field_actionLevel"
+                           formControlName="actionLevel"/>
+                    <div *ngIf="editForm.get('actionLevel').invalid && (editForm.get('actionLevel').dirty || editForm.get('actionLevel').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionLevel').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionLevel')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cost">Cost</label>
+                    <input type="number" class="form-control" name="cost" id="field_cost"
+                           formControlName="cost"/>
+                    <div *ngIf="editForm.get('cost').invalid && (editForm.get('cost').dirty || editForm.get('cost').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cost').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('cost')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

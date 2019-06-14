@@ -1,0 +1,202 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Playable Cards</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-playable-card" [routerLink]="['/m-playable-card/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Playable Card
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mPlayableCards">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="modelId"><span>Model Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="properPositionGk"><span>Proper Position Gk</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="properPositionFw"><span>Proper Position Fw</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="properPositionOmf"><span>Proper Position Omf</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="properPositionDmf"><span>Proper Position Dmf</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="properPositionDf"><span>Proper Position Df</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterId"><span>Character Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nickName"><span>Nick Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="teamId"><span>Team Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nationalityId"><span>Nationality Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rarity"><span>Rarity</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="attribute"><span>Attribute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="thumbnailAssetsId"><span>Thumbnail Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cardIllustAssetsId"><span>Card Illust Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="playableAssetsId"><span>Playable Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="teamEffectId"><span>Team Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerEffectId"><span>Trigger Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxActionSlot"><span>Max Action Slot</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialActionId1"><span>Initial Action Id 1</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialActionId2"><span>Initial Action Id 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialActionId3"><span>Initial Action Id 3</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialActionId4"><span>Initial Action Id 4</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialActionId5"><span>Initial Action Id 5</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialStamina"><span>Initial Stamina</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialDribble"><span>Initial Dribble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialShoot"><span>Initial Shoot</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialPass"><span>Initial Pass</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialTackle"><span>Initial Tackle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialBlock"><span>Initial Block</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialIntercept"><span>Initial Intercept</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialSpeed"><span>Initial Speed</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialPower"><span>Initial Power</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialTechnique"><span>Initial Technique</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialPunching"><span>Initial Punching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="initialCatching"><span>Initial Catching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxStamina"><span>Max Stamina</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxDribble"><span>Max Dribble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxShoot"><span>Max Shoot</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPass"><span>Max Pass</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxTackle"><span>Max Tackle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxBlock"><span>Max Block</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxIntercept"><span>Max Intercept</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxSpeed"><span>Max Speed</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPower"><span>Max Power</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxTechnique"><span>Max Technique</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPunching"><span>Max Punching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxCatching"><span>Max Catching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusDribble"><span>Max Plus Dribble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusShoot"><span>Max Plus Shoot</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusPass"><span>Max Plus Pass</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusTackle"><span>Max Plus Tackle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusBlock"><span>Max Plus Block</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusIntercept"><span>Max Plus Intercept</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusSpeed"><span>Max Plus Speed</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusPower"><span>Max Plus Power</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusTechnique"><span>Max Plus Technique</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusPunching"><span>Max Plus Punching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxPlusCatching"><span>Max Plus Catching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="highBallBonus"><span>High Ball Bonus</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lowBallBonus"><span>Low Ball Bonus</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isDropOnly"><span>Is Drop Only</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sellCoinGroupNum"><span>Sell Coin Group Num</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sellMedalId"><span>Sell Medal Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterBookId"><span>Character Book Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="bookNo"><span>Book No</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isShowBook"><span>Is Show Book</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="levelGroupId"><span>Level Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startAt"><span>Start At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mPlayableCard of mPlayableCards ;trackBy: trackId">
+                <td><a [routerLink]="['/m-playable-card', mPlayableCard.id, 'view' ]">{{mPlayableCard.id}}</a></td>
+                <td>{{mPlayableCard.modelId}}</td>
+                <td>{{mPlayableCard.properPositionGk}}</td>
+                <td>{{mPlayableCard.properPositionFw}}</td>
+                <td>{{mPlayableCard.properPositionOmf}}</td>
+                <td>{{mPlayableCard.properPositionDmf}}</td>
+                <td>{{mPlayableCard.properPositionDf}}</td>
+                <td>{{mPlayableCard.characterId}}</td>
+                <td>{{mPlayableCard.nickName}}</td>
+                <td>{{mPlayableCard.teamId}}</td>
+                <td>{{mPlayableCard.nationalityId}}</td>
+                <td>{{mPlayableCard.rarity}}</td>
+                <td>{{mPlayableCard.attribute}}</td>
+                <td>{{mPlayableCard.thumbnailAssetsId}}</td>
+                <td>{{mPlayableCard.cardIllustAssetsId}}</td>
+                <td>{{mPlayableCard.playableAssetsId}}</td>
+                <td>{{mPlayableCard.teamEffectId}}</td>
+                <td>{{mPlayableCard.triggerEffectId}}</td>
+                <td>{{mPlayableCard.maxActionSlot}}</td>
+                <td>{{mPlayableCard.initialActionId1}}</td>
+                <td>{{mPlayableCard.initialActionId2}}</td>
+                <td>{{mPlayableCard.initialActionId3}}</td>
+                <td>{{mPlayableCard.initialActionId4}}</td>
+                <td>{{mPlayableCard.initialActionId5}}</td>
+                <td>{{mPlayableCard.initialStamina}}</td>
+                <td>{{mPlayableCard.initialDribble}}</td>
+                <td>{{mPlayableCard.initialShoot}}</td>
+                <td>{{mPlayableCard.initialPass}}</td>
+                <td>{{mPlayableCard.initialTackle}}</td>
+                <td>{{mPlayableCard.initialBlock}}</td>
+                <td>{{mPlayableCard.initialIntercept}}</td>
+                <td>{{mPlayableCard.initialSpeed}}</td>
+                <td>{{mPlayableCard.initialPower}}</td>
+                <td>{{mPlayableCard.initialTechnique}}</td>
+                <td>{{mPlayableCard.initialPunching}}</td>
+                <td>{{mPlayableCard.initialCatching}}</td>
+                <td>{{mPlayableCard.maxStamina}}</td>
+                <td>{{mPlayableCard.maxDribble}}</td>
+                <td>{{mPlayableCard.maxShoot}}</td>
+                <td>{{mPlayableCard.maxPass}}</td>
+                <td>{{mPlayableCard.maxTackle}}</td>
+                <td>{{mPlayableCard.maxBlock}}</td>
+                <td>{{mPlayableCard.maxIntercept}}</td>
+                <td>{{mPlayableCard.maxSpeed}}</td>
+                <td>{{mPlayableCard.maxPower}}</td>
+                <td>{{mPlayableCard.maxTechnique}}</td>
+                <td>{{mPlayableCard.maxPunching}}</td>
+                <td>{{mPlayableCard.maxCatching}}</td>
+                <td>{{mPlayableCard.maxPlusDribble}}</td>
+                <td>{{mPlayableCard.maxPlusShoot}}</td>
+                <td>{{mPlayableCard.maxPlusPass}}</td>
+                <td>{{mPlayableCard.maxPlusTackle}}</td>
+                <td>{{mPlayableCard.maxPlusBlock}}</td>
+                <td>{{mPlayableCard.maxPlusIntercept}}</td>
+                <td>{{mPlayableCard.maxPlusSpeed}}</td>
+                <td>{{mPlayableCard.maxPlusPower}}</td>
+                <td>{{mPlayableCard.maxPlusTechnique}}</td>
+                <td>{{mPlayableCard.maxPlusPunching}}</td>
+                <td>{{mPlayableCard.maxPlusCatching}}</td>
+                <td>{{mPlayableCard.highBallBonus}}</td>
+                <td>{{mPlayableCard.lowBallBonus}}</td>
+                <td>{{mPlayableCard.isDropOnly}}</td>
+                <td>{{mPlayableCard.sellCoinGroupNum}}</td>
+                <td>{{mPlayableCard.sellMedalId}}</td>
+                <td>{{mPlayableCard.characterBookId}}</td>
+                <td>{{mPlayableCard.bookNo}}</td>
+                <td>{{mPlayableCard.isShowBook}}</td>
+                <td>{{mPlayableCard.levelGroupId}}</td>
+                <td>{{mPlayableCard.startAt}}</td>
+                <td>
+                    <div *ngIf="mPlayableCard.idId">
+                        <a [routerLink]="['../m-model-card', mPlayableCard.idId , 'view' ]" >{{mPlayableCard.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-playable-card', mPlayableCard.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-playable-card', mPlayableCard.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-playable-card', { outlets: { popup: mPlayableCard.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mPlayableCards && mPlayableCards.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

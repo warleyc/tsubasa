@@ -1,0 +1,204 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-model-card-heading">Create or edit a M Model Card</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mModelCard.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hairModel">Hair Model</label>
+                    <input type="number" class="form-control" name="hairModel" id="field_hairModel"
+                           formControlName="hairModel"/>
+                    <div *ngIf="editForm.get('hairModel').invalid && (editForm.get('hairModel').dirty || editForm.get('hairModel').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('hairModel').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('hairModel')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hairTexture">Hair Texture</label>
+                    <input type="number" class="form-control" name="hairTexture" id="field_hairTexture"
+                           formControlName="hairTexture"/>
+                    <div *ngIf="editForm.get('hairTexture').invalid && (editForm.get('hairTexture').dirty || editForm.get('hairTexture').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('hairTexture').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('hairTexture')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_headModel">Head Model</label>
+                    <input type="number" class="form-control" name="headModel" id="field_headModel"
+                           formControlName="headModel"/>
+                    <div *ngIf="editForm.get('headModel').invalid && (editForm.get('headModel').dirty || editForm.get('headModel').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('headModel').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('headModel')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_headTexture">Head Texture</label>
+                    <input type="number" class="form-control" name="headTexture" id="field_headTexture"
+                           formControlName="headTexture"/>
+                    <div *ngIf="editForm.get('headTexture').invalid && (editForm.get('headTexture').dirty || editForm.get('headTexture').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('headTexture').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('headTexture')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_skinTexture">Skin Texture</label>
+                    <input type="number" class="form-control" name="skinTexture" id="field_skinTexture"
+                           formControlName="skinTexture"/>
+                    <div *ngIf="editForm.get('skinTexture').invalid && (editForm.get('skinTexture').dirty || editForm.get('skinTexture').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('skinTexture').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('skinTexture')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_shoesModel">Shoes Model</label>
+                    <input type="number" class="form-control" name="shoesModel" id="field_shoesModel"
+                           formControlName="shoesModel"/>
+                    <div *ngIf="editForm.get('shoesModel').invalid && (editForm.get('shoesModel').dirty || editForm.get('shoesModel').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('shoesModel').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('shoesModel')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_shoesTexture">Shoes Texture</label>
+                    <input type="number" class="form-control" name="shoesTexture" id="field_shoesTexture"
+                           formControlName="shoesTexture"/>
+                    <div *ngIf="editForm.get('shoesTexture').invalid && (editForm.get('shoesTexture').dirty || editForm.get('shoesTexture').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('shoesTexture').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('shoesTexture')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_globeTexture">Globe Texture</label>
+                    <input type="number" class="form-control" name="globeTexture" id="field_globeTexture"
+                           formControlName="globeTexture"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_uniqueModel">Unique Model</label>
+                    <input type="number" class="form-control" name="uniqueModel" id="field_uniqueModel"
+                           formControlName="uniqueModel"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_uniqueTexture">Unique Texture</label>
+                    <input type="number" class="form-control" name="uniqueTexture" id="field_uniqueTexture"
+                           formControlName="uniqueTexture"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dressingTypeUp">Dressing Type Up</label>
+                    <input type="number" class="form-control" name="dressingTypeUp" id="field_dressingTypeUp"
+                           formControlName="dressingTypeUp"/>
+                    <div *ngIf="editForm.get('dressingTypeUp').invalid && (editForm.get('dressingTypeUp').dirty || editForm.get('dressingTypeUp').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dressingTypeUp').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('dressingTypeUp')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dressingTypeBottom">Dressing Type Bottom</label>
+                    <input type="number" class="form-control" name="dressingTypeBottom" id="field_dressingTypeBottom"
+                           formControlName="dressingTypeBottom"/>
+                    <div *ngIf="editForm.get('dressingTypeBottom').invalid && (editForm.get('dressingTypeBottom').dirty || editForm.get('dressingTypeBottom').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dressingTypeBottom').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('dressingTypeBottom')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_height">Height</label>
+                    <input type="number" class="form-control" name="height" id="field_height"
+                           formControlName="height"/>
+                    <div *ngIf="editForm.get('height').invalid && (editForm.get('height').dirty || editForm.get('height').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('height').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('height')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_width">Width</label>
+                    <input type="number" class="form-control" name="width" id="field_width"
+                           formControlName="width"/>
+                    <div *ngIf="editForm.get('width').invalid && (editForm.get('width').dirty || editForm.get('width').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('width').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('width')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

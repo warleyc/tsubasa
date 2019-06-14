@@ -1,0 +1,106 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-gacha-rendition-trajectory-cut-in-heading">Create or edit a M Gacha Rendition Trajectory Cut In</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mGachaRenditionTrajectoryCutIn.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_renditionId">Rendition Id</label>
+                    <input type="number" class="form-control" name="renditionId" id="field_renditionId"
+                           formControlName="renditionId"/>
+                    <div *ngIf="editForm.get('renditionId').invalid && (editForm.get('renditionId').dirty || editForm.get('renditionId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('renditionId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('renditionId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_trajectoryType">Trajectory Type</label>
+                    <input type="number" class="form-control" name="trajectoryType" id="field_trajectoryType"
+                           formControlName="trajectoryType"/>
+                    <div *ngIf="editForm.get('trajectoryType').invalid && (editForm.get('trajectoryType').dirty || editForm.get('trajectoryType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('trajectoryType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('trajectoryType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_spriteName">Sprite Name</label>
+                    <textarea class="form-control" name="spriteName" id="field_spriteName"
+                              formControlName="spriteName"></textarea>
+                    <div *ngIf="editForm.get('spriteName').invalid && (editForm.get('spriteName').dirty || editForm.get('spriteName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('spriteName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_weight">Weight</label>
+                    <input type="number" class="form-control" name="weight" id="field_weight"
+                           formControlName="weight"/>
+                    <div *ngIf="editForm.get('weight').invalid && (editForm.get('weight').dirty || editForm.get('weight').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('weight').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('weight')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_voice">Voice</label>
+                    <textarea class="form-control" name="voice" id="field_voice"
+                              formControlName="voice"></textarea>
+                    <div *ngIf="editForm.get('voice').invalid && (editForm.get('voice').dirty || editForm.get('voice').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('voice').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_exceptKickerId">Except Kicker Id</label>
+                    <input type="number" class="form-control" name="exceptKickerId" id="field_exceptKickerId"
+                           formControlName="exceptKickerId"/>
+                    <div *ngIf="editForm.get('exceptKickerId').invalid && (editForm.get('exceptKickerId').dirty || editForm.get('exceptKickerId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('exceptKickerId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('exceptKickerId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

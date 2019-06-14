@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mNpcPersonality">
+            <h2><span>M Npc Personality</span> {{mNpcPersonality.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Passing Target Rate</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.passingTargetRate}}</span>
+                </dd>
+                <dt><span>Action Skill Rate</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.actionSkillRate}}</span>
+                </dd>
+                <dt><span>Dribble Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.dribbleMagnification}}</span>
+                </dd>
+                <dt><span>Passing Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.passingMagnification}}</span>
+                </dd>
+                <dt><span>Onetwo Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.onetwoMagnification}}</span>
+                </dd>
+                <dt><span>Shoot Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.shootMagnification}}</span>
+                </dd>
+                <dt><span>Volley Shoot Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.volleyShootMagnification}}</span>
+                </dd>
+                <dt><span>Heading Shoot Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.headingShootMagnification}}</span>
+                </dd>
+                <dt><span>Tackle Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.tackleMagnification}}</span>
+                </dd>
+                <dt><span>Block Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.blockMagnification}}</span>
+                </dd>
+                <dt><span>Pass Cut Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.passCutMagnification}}</span>
+                </dd>
+                <dt><span>Clear Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.clearMagnification}}</span>
+                </dd>
+                <dt><span>Compete Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.competeMagnification}}</span>
+                </dd>
+                <dt><span>Trap Magnification</span></dt>
+                <dd>
+                    <span>{{mNpcPersonality.trapMagnification}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-npc-personality', mNpcPersonality.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

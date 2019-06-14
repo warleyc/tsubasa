@@ -28,7 +28,7 @@ public class MCharacterCriteria implements Serializable, Criteria {
 
     private IntegerFilter characterBookPriority;
 
-    private LongFilter mActionSkillHolderCardCtId;
+    private LongFilter mActionSkillHolderCardContentId;
 
     private LongFilter mCombinationCutPositionId;
 
@@ -44,7 +44,7 @@ public class MCharacterCriteria implements Serializable, Criteria {
     public MCharacterCriteria(MCharacterCriteria other){
         this.id = other.id == null ? null : other.id.copy();
         this.characterBookPriority = other.characterBookPriority == null ? null : other.characterBookPriority.copy();
-        this.mActionSkillHolderCardCtId = other.mActionSkillHolderCardCtId == null ? null : other.mActionSkillHolderCardCtId.copy();
+        this.mActionSkillHolderCardContentId = other.mActionSkillHolderCardContentId == null ? null : other.mActionSkillHolderCardContentId.copy();
         this.mCombinationCutPositionId = other.mCombinationCutPositionId == null ? null : other.mCombinationCutPositionId.copy();
         this.mMatchResultCutinId = other.mMatchResultCutinId == null ? null : other.mMatchResultCutinId.copy();
         this.mNpcCardId = other.mNpcCardId == null ? null : other.mNpcCardId.copy();
@@ -72,12 +72,12 @@ public class MCharacterCriteria implements Serializable, Criteria {
         this.characterBookPriority = characterBookPriority;
     }
 
-    public LongFilter getMActionSkillHolderCardCtId() {
-        return mActionSkillHolderCardCtId;
+    public LongFilter getMActionSkillHolderCardContentId() {
+        return mActionSkillHolderCardContentId;
     }
 
-    public void setMActionSkillHolderCardCtId(LongFilter mActionSkillHolderCardCtId) {
-        this.mActionSkillHolderCardCtId = mActionSkillHolderCardCtId;
+    public void setMActionSkillHolderCardContentId(LongFilter mActionSkillHolderCardContentId) {
+        this.mActionSkillHolderCardContentId = mActionSkillHolderCardContentId;
     }
 
     public LongFilter getMCombinationCutPositionId() {
@@ -125,7 +125,7 @@ public class MCharacterCriteria implements Serializable, Criteria {
         return
             Objects.equals(id, that.id) &&
             Objects.equals(characterBookPriority, that.characterBookPriority) &&
-            Objects.equals(mActionSkillHolderCardCtId, that.mActionSkillHolderCardCtId) &&
+            Objects.equals(mActionSkillHolderCardContentId, that.mActionSkillHolderCardContentId) &&
             Objects.equals(mCombinationCutPositionId, that.mCombinationCutPositionId) &&
             Objects.equals(mMatchResultCutinId, that.mMatchResultCutinId) &&
             Objects.equals(mNpcCardId, that.mNpcCardId) &&
@@ -137,7 +137,7 @@ public class MCharacterCriteria implements Serializable, Criteria {
         return Objects.hash(
         id,
         characterBookPriority,
-        mActionSkillHolderCardCtId,
+        mActionSkillHolderCardContentId,
         mCombinationCutPositionId,
         mMatchResultCutinId,
         mNpcCardId,
@@ -150,7 +150,7 @@ public class MCharacterCriteria implements Serializable, Criteria {
         return "MCharacterCriteria{" +
                 (id != null ? "id=" + id + ", " : "") +
                 (characterBookPriority != null ? "characterBookPriority=" + characterBookPriority + ", " : "") +
-                (mActionSkillHolderCardCtId != null ? "mActionSkillHolderCardCtId=" + mActionSkillHolderCardCtId + ", " : "") +
+                (mActionSkillHolderCardContentId != null ? "mActionSkillHolderCardContentId=" + mActionSkillHolderCardContentId + ", " : "") +
                 (mCombinationCutPositionId != null ? "mCombinationCutPositionId=" + mCombinationCutPositionId + ", " : "") +
                 (mMatchResultCutinId != null ? "mMatchResultCutinId=" + mMatchResultCutinId + ", " : "") +
                 (mNpcCardId != null ? "mNpcCardId=" + mNpcCardId + ", " : "") +

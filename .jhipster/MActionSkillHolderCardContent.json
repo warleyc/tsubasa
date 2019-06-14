@@ -1,0 +1,61 @@
+{
+    "name": "MActionSkillHolderCardContent",
+    "fields": [
+        {
+            "fieldName": "targetCharaId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "actionMasterId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "actionSkillExp",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mCharacter",
+            "otherEntityRelationshipName": "mActionSkillHolderCardContent",
+            "relationshipValidateRules": "required",
+            "relationshipName": "id",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190614054943",
+    "entityTableName": "m_action_skill_holder_card_content",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mHomeMarquee">
+            <h2><span>M Home Marquee</span> {{mHomeMarquee.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Priority</span></dt>
+                <dd>
+                    <span>{{mHomeMarquee.priority}}</span>
+                </dd>
+                <dt><span>Marquee Text</span></dt>
+                <dd>
+                    <span>{{mHomeMarquee.marqueeText}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mHomeMarquee.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mHomeMarquee.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-home-marquee', mHomeMarquee.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

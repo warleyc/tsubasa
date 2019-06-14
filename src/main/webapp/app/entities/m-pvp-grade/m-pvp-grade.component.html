@@ -1,0 +1,96 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Pvp Grades</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-pvp-grade" [routerLink]="['/m-pvp-grade/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Pvp Grade
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mPvpGrades">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="waveId"><span>Wave Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="grade"><span>Grade</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isHigher"><span>Is Higher</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isLower"><span>Is Lower</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeName"><span>Grade Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="look"><span>Look</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="upRequirementId"><span>Up Requirement Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="downRequirementId"><span>Down Requirement Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="winPoint"><span>Win Point</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="losePoint"><span>Lose Point</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeUpSerif"><span>Grade Up Serif</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeDownSerif"><span>Grade Down Serif</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeUpCharaAssetName"><span>Grade Up Chara Asset Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeDownCharaAssetName"><span>Grade Down Chara Asset Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeUpVoiceCharaId"><span>Grade Up Voice Chara Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gradeDownVoiceCharaId"><span>Grade Down Voice Chara Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="totalParameterRangeUpper"><span>Total Parameter Range Upper</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="totalParameterRangeLower"><span>Total Parameter Range Lower</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mPvpGrade of mPvpGrades ;trackBy: trackId">
+                <td><a [routerLink]="['/m-pvp-grade', mPvpGrade.id, 'view' ]">{{mPvpGrade.id}}</a></td>
+                <td>{{mPvpGrade.waveId}}</td>
+                <td>{{mPvpGrade.grade}}</td>
+                <td>{{mPvpGrade.isHigher}}</td>
+                <td>{{mPvpGrade.isLower}}</td>
+                <td>{{mPvpGrade.gradeName}}</td>
+                <td>{{mPvpGrade.look}}</td>
+                <td>{{mPvpGrade.upRequirementId}}</td>
+                <td>{{mPvpGrade.downRequirementId}}</td>
+                <td>{{mPvpGrade.winPoint}}</td>
+                <td>{{mPvpGrade.losePoint}}</td>
+                <td>{{mPvpGrade.gradeUpSerif}}</td>
+                <td>{{mPvpGrade.gradeDownSerif}}</td>
+                <td>{{mPvpGrade.gradeUpCharaAssetName}}</td>
+                <td>{{mPvpGrade.gradeDownCharaAssetName}}</td>
+                <td>{{mPvpGrade.gradeUpVoiceCharaId}}</td>
+                <td>{{mPvpGrade.gradeDownVoiceCharaId}}</td>
+                <td>{{mPvpGrade.totalParameterRangeUpper}}</td>
+                <td>{{mPvpGrade.totalParameterRangeLower}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-pvp-grade', mPvpGrade.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-pvp-grade', mPvpGrade.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-pvp-grade', { outlets: { popup: mPvpGrade.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mPvpGrades && mPvpGrades.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

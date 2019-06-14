@@ -1,0 +1,106 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-penalty-kick-cut-heading">Create or edit a M Penalty Kick Cut</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mPenaltyKickCut.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_kickerCourse">Kicker Course</label>
+                    <input type="number" class="form-control" name="kickerCourse" id="field_kickerCourse"
+                           formControlName="kickerCourse"/>
+                    <div *ngIf="editForm.get('kickerCourse').invalid && (editForm.get('kickerCourse').dirty || editForm.get('kickerCourse').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('kickerCourse').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('kickerCourse')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_keeperCourse">Keeper Course</label>
+                    <input type="number" class="form-control" name="keeperCourse" id="field_keeperCourse"
+                           formControlName="keeperCourse"/>
+                    <div *ngIf="editForm.get('keeperCourse').invalid && (editForm.get('keeperCourse').dirty || editForm.get('keeperCourse').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('keeperCourse').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('keeperCourse')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_keeperCommand">Keeper Command</label>
+                    <input type="number" class="form-control" name="keeperCommand" id="field_keeperCommand"
+                           formControlName="keeperCommand"/>
+                    <div *ngIf="editForm.get('keeperCommand').invalid && (editForm.get('keeperCommand').dirty || editForm.get('keeperCommand').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('keeperCommand').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('keeperCommand')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_resultType">Result Type</label>
+                    <input type="number" class="form-control" name="resultType" id="field_resultType"
+                           formControlName="resultType"/>
+                    <div *ngIf="editForm.get('resultType').invalid && (editForm.get('resultType').dirty || editForm.get('resultType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('resultType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('resultType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseSequenceText">Offense Sequence Text</label>
+                    <textarea class="form-control" name="offenseSequenceText" id="field_offenseSequenceText"
+                              formControlName="offenseSequenceText"></textarea>
+                    <div *ngIf="editForm.get('offenseSequenceText').invalid && (editForm.get('offenseSequenceText').dirty || editForm.get('offenseSequenceText').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('offenseSequenceText').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseSequenceText">Defense Sequence Text</label>
+                    <textarea class="form-control" name="defenseSequenceText" id="field_defenseSequenceText"
+                              formControlName="defenseSequenceText"></textarea>
+                    <div *ngIf="editForm.get('defenseSequenceText').invalid && (editForm.get('defenseSequenceText').dirty || editForm.get('defenseSequenceText').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('defenseSequenceText').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

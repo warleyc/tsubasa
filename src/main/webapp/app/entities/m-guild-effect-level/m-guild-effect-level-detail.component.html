@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGuildEffectLevel">
+            <h2><span>M Guild Effect Level</span> {{mGuildEffectLevel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Effect Type</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.effectType}}</span>
+                </dd>
+                <dt><span>Level</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.level}}</span>
+                </dd>
+                <dt><span>Rate</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.rate}}</span>
+                </dd>
+                <dt><span>Rate Str</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.rateStr}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.coin}}</span>
+                </dd>
+                <dt><span>Guild Level</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.guildLevel}}</span>
+                </dd>
+                <dt><span>Guild Medal</span></dt>
+                <dd>
+                    <span>{{mGuildEffectLevel.guildMedal}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-guild-effect-level', mGuildEffectLevel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

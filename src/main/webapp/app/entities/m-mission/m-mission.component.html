@@ -1,0 +1,106 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Missions</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-mission" [routerLink]="['/m-mission/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Mission
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mMissions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="term"><span>Term</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="roundNum"><span>Round Num</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="title"><span>Title</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="description"><span>Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="missionType"><span>Mission Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="absolute"><span>Absolute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="param1"><span>Param 1</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="param2"><span>Param 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="param3"><span>Param 3</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="param4"><span>Param 4</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="param5"><span>Param 5</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="trigger"><span>Trigger</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerCondition"><span>Trigger Condition</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rewardId"><span>Reward Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startAt"><span>Start At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="endAt"><span>End At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="link"><span>Link</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sceneTransitionParam"><span>Scene Transition Param</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="pickup"><span>Pickup</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="orderNum"><span>Order Num</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mMission of mMissions ;trackBy: trackId">
+                <td><a [routerLink]="['/m-mission', mMission.id, 'view' ]">{{mMission.id}}</a></td>
+                <td>{{mMission.term}}</td>
+                <td>{{mMission.roundNum}}</td>
+                <td>{{mMission.title}}</td>
+                <td>{{mMission.description}}</td>
+                <td>{{mMission.missionType}}</td>
+                <td>{{mMission.absolute}}</td>
+                <td>{{mMission.param1}}</td>
+                <td>{{mMission.param2}}</td>
+                <td>{{mMission.param3}}</td>
+                <td>{{mMission.param4}}</td>
+                <td>{{mMission.param5}}</td>
+                <td>{{mMission.trigger}}</td>
+                <td>{{mMission.triggerCondition}}</td>
+                <td>{{mMission.rewardId}}</td>
+                <td>{{mMission.startAt}}</td>
+                <td>{{mMission.endAt}}</td>
+                <td>{{mMission.link}}</td>
+                <td>{{mMission.sceneTransitionParam}}</td>
+                <td>{{mMission.pickup}}</td>
+                <td>{{mMission.orderNum}}</td>
+                <td>
+                    <div *ngIf="mMission.idId">
+                        <a [routerLink]="['../m-mission-reward', mMission.idId , 'view' ]" >{{mMission.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-mission', mMission.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-mission', mMission.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-mission', { outlets: { popup: mMission.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mMissions && mMissions.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

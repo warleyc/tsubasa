@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mHomeBanner">
+            <h2><span>M Home Banner</span> {{mHomeBanner.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Banner Type</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.bannerType}}</span>
+                </dd>
+                <dt><span>Asset Name</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.assetName}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.endAt}}</span>
+                </dd>
+                <dt><span>Label End At</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.labelEndAt}}</span>
+                </dd>
+                <dt><span>Scene Transition</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.sceneTransition}}</span>
+                </dd>
+                <dt><span>Scene Transition Param</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.sceneTransitionParam}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.orderNum}}</span>
+                </dd>
+                <dt><span>Appeal Type</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.appealType}}</span>
+                </dd>
+                <dt><span>Appeal Content Id</span></dt>
+                <dd>
+                    <span>{{mHomeBanner.appealContentId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-home-banner', mHomeBanner.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

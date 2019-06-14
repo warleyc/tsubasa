@@ -1,0 +1,70 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Weekly Quest Tsubasa Point Rewards</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-weekly-quest-tsubasa-point-reward" [routerLink]="['/m-weekly-quest-tsubasa-point-reward/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Weekly Quest Tsubasa Point Reward
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mWeeklyQuestTsubasaPointRewards">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="stageId"><span>Stage Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="tsubasaPoint"><span>Tsubasa Point</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="contentType"><span>Content Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="contentId"><span>Content Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="contentAmount"><span>Content Amount</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mWeeklyQuestTsubasaPointReward of mWeeklyQuestTsubasaPointRewards ;trackBy: trackId">
+                <td><a [routerLink]="['/m-weekly-quest-tsubasa-point-reward', mWeeklyQuestTsubasaPointReward.id, 'view' ]">{{mWeeklyQuestTsubasaPointReward.id}}</a></td>
+                <td>{{mWeeklyQuestTsubasaPointReward.stageId}}</td>
+                <td>{{mWeeklyQuestTsubasaPointReward.tsubasaPoint}}</td>
+                <td>{{mWeeklyQuestTsubasaPointReward.contentType}}</td>
+                <td>{{mWeeklyQuestTsubasaPointReward.contentId}}</td>
+                <td>{{mWeeklyQuestTsubasaPointReward.contentAmount}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-weekly-quest-tsubasa-point-reward', mWeeklyQuestTsubasaPointReward.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-weekly-quest-tsubasa-point-reward', mWeeklyQuestTsubasaPointReward.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-weekly-quest-tsubasa-point-reward', { outlets: { popup: mWeeklyQuestTsubasaPointReward.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mWeeklyQuestTsubasaPointRewards && mWeeklyQuestTsubasaPointRewards.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mSoundBank">
+            <h2><span>M Sound Bank</span> {{mSoundBank.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Path</span></dt>
+                <dd>
+                    <span>{{mSoundBank.path}}</span>
+                </dd>
+                <dt><span>Pf</span></dt>
+                <dd>
+                    <span>{{mSoundBank.pf}}</span>
+                </dd>
+                <dt><span>Version</span></dt>
+                <dd>
+                    <span>{{mSoundBank.version}}</span>
+                </dd>
+                <dt><span>File Size</span></dt>
+                <dd>
+                    <span>{{mSoundBank.fileSize}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-sound-bank', mSoundBank.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

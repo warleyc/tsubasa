@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMarathonBoostSchedule">
+            <h2><span>M Marathon Boost Schedule</span> {{mMarathonBoostSchedule.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Event Id</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostSchedule.eventId}}</span>
+                </dd>
+                <dt><span>Boost Ratio</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostSchedule.boostRatio}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostSchedule.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostSchedule.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-marathon-boost-schedule', mMarathonBoostSchedule.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

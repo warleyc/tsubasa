@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mModelUniformBottom">
+            <h2><span>M Model Uniform Bottom</span> {{mModelUniformBottom.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Uniform Bottom Id</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformBottomId}}</span>
+                </dd>
+                <dt><span>Default Dressing Type</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.defaultDressingType}}</span>
+                </dd>
+                <dt><span>Uniform Model</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformModel}}</span>
+                </dd>
+                <dt><span>Uniform Texture</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformTexture}}</span>
+                </dd>
+                <dt><span>Uniform No Texture</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformNoTexture}}</span>
+                </dd>
+                <dt><span>Default Color</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.defaultColor}}</span>
+                </dd>
+                <dt><span>Uniform No Color</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformNoColor}}</span>
+                </dd>
+                <dt><span>Number Right Leg</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.numberRightLeg}}</span>
+                </dd>
+                <dt><span>Number Left Leg</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.numberLeftLeg}}</span>
+                </dd>
+                <dt><span>Uniform No Position X</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformNoPositionX}}</span>
+                </dd>
+                <dt><span>Uniform No Position Y</span></dt>
+                <dd>
+                    <span>{{mModelUniformBottom.uniformNoPositionY}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-model-uniform-bottom', mModelUniformBottom.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

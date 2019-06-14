@@ -1,0 +1,110 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-quest-stage-condition-description-heading">Create or edit a M Quest Stage Condition Description</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mQuestStageConditionDescription.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_successConditionType">Success Condition Type</label>
+                    <input type="number" class="form-control" name="successConditionType" id="field_successConditionType"
+                           formControlName="successConditionType"/>
+                    <div *ngIf="editForm.get('successConditionType').invalid && (editForm.get('successConditionType').dirty || editForm.get('successConditionType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('successConditionType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('successConditionType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_successConditionDetailTypeValue">Success Condition Detail Type Value</label>
+                    <input type="number" class="form-control" name="successConditionDetailTypeValue" id="field_successConditionDetailTypeValue"
+                           formControlName="successConditionDetailTypeValue"/>
+                    <div *ngIf="editForm.get('successConditionDetailTypeValue').invalid && (editForm.get('successConditionDetailTypeValue').dirty || editForm.get('successConditionDetailTypeValue').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('successConditionDetailTypeValue').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('successConditionDetailTypeValue')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hasExistTargetCharacterGroup">Has Exist Target Character Group</label>
+                    <input type="number" class="form-control" name="hasExistTargetCharacterGroup" id="field_hasExistTargetCharacterGroup"
+                           formControlName="hasExistTargetCharacterGroup"/>
+                    <div *ngIf="editForm.get('hasExistTargetCharacterGroup').invalid && (editForm.get('hasExistTargetCharacterGroup').dirty || editForm.get('hasExistTargetCharacterGroup').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('hasExistTargetCharacterGroup').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('hasExistTargetCharacterGroup')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_hasSuccessConditionValueOneOnly">Has Success Condition Value One Only</label>
+                    <input type="number" class="form-control" name="hasSuccessConditionValueOneOnly" id="field_hasSuccessConditionValueOneOnly"
+                           formControlName="hasSuccessConditionValueOneOnly"/>
+                    <div *ngIf="editForm.get('hasSuccessConditionValueOneOnly').invalid && (editForm.get('hasSuccessConditionValueOneOnly').dirty || editForm.get('hasSuccessConditionValueOneOnly').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('hasSuccessConditionValueOneOnly').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('hasSuccessConditionValueOneOnly')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_failureConditionTypeValue">Failure Condition Type Value</label>
+                    <input type="number" class="form-control" name="failureConditionTypeValue" id="field_failureConditionTypeValue"
+                           formControlName="failureConditionTypeValue"/>
+                    <div *ngIf="editForm.get('failureConditionTypeValue').invalid && (editForm.get('failureConditionTypeValue').dirty || editForm.get('failureConditionTypeValue').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('failureConditionTypeValue').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('failureConditionTypeValue')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <textarea class="form-control" name="description" id="field_description"
+                              formControlName="description"></textarea>
+                    <div *ngIf="editForm.get('description').invalid && (editForm.get('description').dirty || editForm.get('description').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('description').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

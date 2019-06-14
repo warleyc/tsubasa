@@ -1,0 +1,92 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Team Effect Bases</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-team-effect-base" [routerLink]="['/m-team-effect-base/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Team Effect Base
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mTeamEffectBases">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rarity"><span>Rarity</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectValueMin"><span>Effect Value Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectValueMax"><span>Effect Value Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerProbabilityMin"><span>Trigger Probability Min</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerProbabilityMax"><span>Trigger Probability Max</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectId"><span>Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectValueMin2"><span>Effect Value Min 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectValueMax2"><span>Effect Value Max 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerProbabilityMin2"><span>Trigger Probability Min 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerProbabilityMax2"><span>Trigger Probability Max 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectId2"><span>Effect Id 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="description"><span>Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mTeamEffectBase of mTeamEffectBases ;trackBy: trackId">
+                <td><a [routerLink]="['/m-team-effect-base', mTeamEffectBase.id, 'view' ]">{{mTeamEffectBase.id}}</a></td>
+                <td>{{mTeamEffectBase.name}}</td>
+                <td>{{mTeamEffectBase.rarity}}</td>
+                <td>{{mTeamEffectBase.effectValueMin}}</td>
+                <td>{{mTeamEffectBase.effectValueMax}}</td>
+                <td>{{mTeamEffectBase.triggerProbabilityMin}}</td>
+                <td>{{mTeamEffectBase.triggerProbabilityMax}}</td>
+                <td>{{mTeamEffectBase.effectId}}</td>
+                <td>{{mTeamEffectBase.effectValueMin2}}</td>
+                <td>{{mTeamEffectBase.effectValueMax2}}</td>
+                <td>{{mTeamEffectBase.triggerProbabilityMin2}}</td>
+                <td>{{mTeamEffectBase.triggerProbabilityMax2}}</td>
+                <td>{{mTeamEffectBase.effectId2}}</td>
+                <td>{{mTeamEffectBase.description}}</td>
+                <td>
+                    <div *ngIf="mTeamEffectBase.idId">
+                        <a [routerLink]="['../m-passive-effect-range', mTeamEffectBase.idId , 'view' ]" >{{mTeamEffectBase.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-team-effect-base', mTeamEffectBase.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-team-effect-base', mTeamEffectBase.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-team-effect-base', { outlets: { popup: mTeamEffectBase.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mTeamEffectBases && mTeamEffectBases.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

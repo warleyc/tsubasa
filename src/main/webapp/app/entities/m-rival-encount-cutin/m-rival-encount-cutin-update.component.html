@@ -1,0 +1,99 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-rival-encount-cutin-heading">Create or edit a M Rival Encount Cutin</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mRivalEncountCutin.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseCharacterId">Offense Character Id</label>
+                    <input type="number" class="form-control" name="offenseCharacterId" id="field_offenseCharacterId"
+                           formControlName="offenseCharacterId"/>
+                    <div *ngIf="editForm.get('offenseCharacterId').invalid && (editForm.get('offenseCharacterId').dirty || editForm.get('offenseCharacterId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('offenseCharacterId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('offenseCharacterId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseTeamId">Offense Team Id</label>
+                    <input type="number" class="form-control" name="offenseTeamId" id="field_offenseTeamId"
+                           formControlName="offenseTeamId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseCharacterId">Defense Character Id</label>
+                    <input type="number" class="form-control" name="defenseCharacterId" id="field_defenseCharacterId"
+                           formControlName="defenseCharacterId"/>
+                    <div *ngIf="editForm.get('defenseCharacterId').invalid && (editForm.get('defenseCharacterId').dirty || editForm.get('defenseCharacterId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('defenseCharacterId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('defenseCharacterId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseTeamId">Defense Team Id</label>
+                    <input type="number" class="form-control" name="defenseTeamId" id="field_defenseTeamId"
+                           formControlName="defenseTeamId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cutinType">Cutin Type</label>
+                    <input type="number" class="form-control" name="cutinType" id="field_cutinType"
+                           formControlName="cutinType"/>
+                    <div *ngIf="editForm.get('cutinType').invalid && (editForm.get('cutinType').dirty || editForm.get('cutinType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cutinType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('cutinType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter1Text">Chapter 1 Text</label>
+                    <textarea class="form-control" name="chapter1Text" id="field_chapter1Text"
+                              formControlName="chapter1Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter1SoundEvent">Chapter 1 Sound Event</label>
+                    <textarea class="form-control" name="chapter1SoundEvent" id="field_chapter1SoundEvent"
+                              formControlName="chapter1SoundEvent"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter2Text">Chapter 2 Text</label>
+                    <textarea class="form-control" name="chapter2Text" id="field_chapter2Text"
+                              formControlName="chapter2Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_chapter2SoundEvent">Chapter 2 Sound Event</label>
+                    <textarea class="form-control" name="chapter2SoundEvent" id="field_chapter2SoundEvent"
+                              formControlName="chapter2SoundEvent"></textarea>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

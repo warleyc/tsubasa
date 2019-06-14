@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGuerillaQuestTsubasaPointReward">
+            <h2><span>M Guerilla Quest Tsubasa Point Reward</span> {{mGuerillaQuestTsubasaPointReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestTsubasaPointReward.stageId}}</span>
+                </dd>
+                <dt><span>Tsubasa Point</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestTsubasaPointReward.tsubasaPoint}}</span>
+                </dd>
+                <dt><span>Content Type</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestTsubasaPointReward.contentType}}</span>
+                </dd>
+                <dt><span>Content Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestTsubasaPointReward.contentId}}</span>
+                </dd>
+                <dt><span>Content Amount</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestTsubasaPointReward.contentAmount}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-guerilla-quest-tsubasa-point-reward', mGuerillaQuestTsubasaPointReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

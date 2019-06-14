@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMovieAsset">
+            <h2><span>M Movie Asset</span> {{mMovieAsset.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Lang</span></dt>
+                <dd>
+                    <span>{{mMovieAsset.lang}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mMovieAsset.name}}</span>
+                </dd>
+                <dt><span>Size</span></dt>
+                <dd>
+                    <span>{{mMovieAsset.size}}</span>
+                </dd>
+                <dt><span>Version</span></dt>
+                <dd>
+                    <span>{{mMovieAsset.version}}</span>
+                </dd>
+                <dt><span>Type</span></dt>
+                <dd>
+                    <span>{{mMovieAsset.type}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-movie-asset', mMovieAsset.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

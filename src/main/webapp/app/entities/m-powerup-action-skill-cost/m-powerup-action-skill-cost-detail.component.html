@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mPowerupActionSkillCost">
+            <h2><span>M Powerup Action Skill Cost</span> {{mPowerupActionSkillCost.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Action Rarity</span></dt>
+                <dd>
+                    <span>{{mPowerupActionSkillCost.actionRarity}}</span>
+                </dd>
+                <dt><span>Action Level</span></dt>
+                <dd>
+                    <span>{{mPowerupActionSkillCost.actionLevel}}</span>
+                </dd>
+                <dt><span>Cost</span></dt>
+                <dd>
+                    <span>{{mPowerupActionSkillCost.cost}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-powerup-action-skill-cost', mPowerupActionSkillCost.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

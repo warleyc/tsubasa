@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-medal-heading">Create or edit a M Medal</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mMedal.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_medalType">Medal Type</label>
+                    <input type="number" class="form-control" name="medalType" id="field_medalType"
+                           formControlName="medalType"/>
+                    <div *ngIf="editForm.get('medalType').invalid && (editForm.get('medalType').dirty || editForm.get('medalType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('medalType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('medalType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <textarea class="form-control" name="name" id="field_name"
+                              formControlName="name"></textarea>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <textarea class="form-control" name="description" id="field_description"
+                              formControlName="description"></textarea>
+                    <div *ngIf="editForm.get('description').invalid && (editForm.get('description').dirty || editForm.get('description').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('description').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_maxAmount">Max Amount</label>
+                    <input type="number" class="form-control" name="maxAmount" id="field_maxAmount"
+                           formControlName="maxAmount"/>
+                    <div *ngIf="editForm.get('maxAmount').invalid && (editForm.get('maxAmount').dirty || editForm.get('maxAmount').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('maxAmount').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('maxAmount')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iconAssetName">Icon Asset Name</label>
+                    <textarea class="form-control" name="iconAssetName" id="field_iconAssetName"
+                              formControlName="iconAssetName"></textarea>
+                    <div *ngIf="editForm.get('iconAssetName').invalid && (editForm.get('iconAssetName').dirty || editForm.get('iconAssetName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('iconAssetName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_thumbnailAssetName">Thumbnail Asset Name</label>
+                    <textarea class="form-control" name="thumbnailAssetName" id="field_thumbnailAssetName"
+                              formControlName="thumbnailAssetName"></textarea>
+                    <div *ngIf="editForm.get('thumbnailAssetName').invalid && (editForm.get('thumbnailAssetName').dirty || editForm.get('thumbnailAssetName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('thumbnailAssetName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

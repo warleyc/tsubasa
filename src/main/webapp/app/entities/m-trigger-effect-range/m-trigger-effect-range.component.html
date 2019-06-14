@@ -1,0 +1,84 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Trigger Effect Ranges</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-trigger-effect-range" [routerLink]="['/m-trigger-effect-range/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Trigger Effect Range
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mTriggerEffectRanges">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="effectType"><span>Effect Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPositionGk"><span>Target Position Gk</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPositionFw"><span>Target Position Fw</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPositionOmf"><span>Target Position Omf</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPositionDmf"><span>Target Position Dmf</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetPositionDf"><span>Target Position Df</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetAttribute"><span>Target Attribute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetNationalityGroupId"><span>Target Nationality Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetTeamGroupId"><span>Target Team Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterGroupId"><span>Target Character Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetFormationGroupId"><span>Target Formation Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetActionCommand"><span>Target Action Command</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mTriggerEffectRange of mTriggerEffectRanges ;trackBy: trackId">
+                <td><a [routerLink]="['/m-trigger-effect-range', mTriggerEffectRange.id, 'view' ]">{{mTriggerEffectRange.id}}</a></td>
+                <td>{{mTriggerEffectRange.effectType}}</td>
+                <td>{{mTriggerEffectRange.targetPositionGk}}</td>
+                <td>{{mTriggerEffectRange.targetPositionFw}}</td>
+                <td>{{mTriggerEffectRange.targetPositionOmf}}</td>
+                <td>{{mTriggerEffectRange.targetPositionDmf}}</td>
+                <td>{{mTriggerEffectRange.targetPositionDf}}</td>
+                <td>{{mTriggerEffectRange.targetAttribute}}</td>
+                <td>{{mTriggerEffectRange.targetNationalityGroupId}}</td>
+                <td>{{mTriggerEffectRange.targetTeamGroupId}}</td>
+                <td>{{mTriggerEffectRange.targetCharacterGroupId}}</td>
+                <td>{{mTriggerEffectRange.targetFormationGroupId}}</td>
+                <td>{{mTriggerEffectRange.targetActionCommand}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-trigger-effect-range', mTriggerEffectRange.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-trigger-effect-range', mTriggerEffectRange.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-trigger-effect-range', { outlets: { popup: mTriggerEffectRange.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mTriggerEffectRanges && mTriggerEffectRanges.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

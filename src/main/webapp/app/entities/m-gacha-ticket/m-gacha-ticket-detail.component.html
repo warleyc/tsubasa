@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGachaTicket">
+            <h2><span>M Gacha Ticket</span> {{mGachaTicket.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mGachaTicket.name}}</span>
+                </dd>
+                <dt><span>Short Name</span></dt>
+                <dd>
+                    <span>{{mGachaTicket.shortName}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mGachaTicket.description}}</span>
+                </dd>
+                <dt><span>Max Amount</span></dt>
+                <dd>
+                    <span>{{mGachaTicket.maxAmount}}</span>
+                </dd>
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mGachaTicket.thumbnailAssetName}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mGachaTicket.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-gacha-ticket', mGachaTicket.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

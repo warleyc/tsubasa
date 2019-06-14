@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestCoop">
+            <h2><span>M Quest Coop</span> {{mQuestCoop.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestCoop.groupId}}</span>
+                </dd>
+                <dt><span>Effect Rarity</span></dt>
+                <dd>
+                    <span>{{mQuestCoop.effectRarity}}</span>
+                </dd>
+                <dt><span>Effect Level From</span></dt>
+                <dd>
+                    <span>{{mQuestCoop.effectLevelFrom}}</span>
+                </dd>
+                <dt><span>Effect Level To</span></dt>
+                <dd>
+                    <span>{{mQuestCoop.effectLevelTo}}</span>
+                </dd>
+                <dt><span>Choose 1 Weight</span></dt>
+                <dd>
+                    <span>{{mQuestCoop.choose1Weight}}</span>
+                </dd>
+                <dt><span>Choose 2 Weight</span></dt>
+                <dd>
+                    <span>{{mQuestCoop.choose2Weight}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-coop', mQuestCoop.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

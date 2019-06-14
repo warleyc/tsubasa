@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMissionReward">
+            <h2><span>M Mission Reward</span> {{mMissionReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Content Type</span></dt>
+                <dd>
+                    <span>{{mMissionReward.contentType}}</span>
+                </dd>
+                <dt><span>Content Id</span></dt>
+                <dd>
+                    <span>{{mMissionReward.contentId}}</span>
+                </dd>
+                <dt><span>Content Amount</span></dt>
+                <dd>
+                    <span>{{mMissionReward.contentAmount}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-mission-reward', mMissionReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

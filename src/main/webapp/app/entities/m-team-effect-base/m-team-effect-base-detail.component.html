@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTeamEffectBase">
+            <h2><span>M Team Effect Base</span> {{mTeamEffectBase.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.name}}</span>
+                </dd>
+                <dt><span>Rarity</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.rarity}}</span>
+                </dd>
+                <dt><span>Effect Value Min</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.effectValueMin}}</span>
+                </dd>
+                <dt><span>Effect Value Max</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.effectValueMax}}</span>
+                </dd>
+                <dt><span>Trigger Probability Min</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.triggerProbabilityMin}}</span>
+                </dd>
+                <dt><span>Trigger Probability Max</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.triggerProbabilityMax}}</span>
+                </dd>
+                <dt><span>Effect Id</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.effectId}}</span>
+                </dd>
+                <dt><span>Effect Value Min 2</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.effectValueMin2}}</span>
+                </dd>
+                <dt><span>Effect Value Max 2</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.effectValueMax2}}</span>
+                </dd>
+                <dt><span>Trigger Probability Min 2</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.triggerProbabilityMin2}}</span>
+                </dd>
+                <dt><span>Trigger Probability Max 2</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.triggerProbabilityMax2}}</span>
+                </dd>
+                <dt><span>Effect Id 2</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.effectId2}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mTeamEffectBase.description}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mTeamEffectBase.idId">
+                        <a [routerLink]="['/m-passive-effect-range', mTeamEffectBase.idId, 'view']">{{mTeamEffectBase.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-team-effect-base', mTeamEffectBase.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

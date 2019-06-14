@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-target-trigger-effect-group-heading">Create or edit a M Target Trigger Effect Group</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mTargetTriggerEffectGroup.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_groupId">Group Id</label>
+                    <input type="number" class="form-control" name="groupId" id="field_groupId"
+                           formControlName="groupId"/>
+                    <div *ngIf="editForm.get('groupId').invalid && (editForm.get('groupId').dirty || editForm.get('groupId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('groupId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('groupId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_triggerEffectId">Trigger Effect Id</label>
+                    <input type="number" class="form-control" name="triggerEffectId" id="field_triggerEffectId"
+                           formControlName="triggerEffectId"/>
+                    <div *ngIf="editForm.get('triggerEffectId').invalid && (editForm.get('triggerEffectId').dirty || editForm.get('triggerEffectId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('triggerEffectId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('triggerEffectId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mTriggerEffectBaseOption.id" *ngFor="let mTriggerEffectBaseOption of mtriggereffectbases; trackBy: trackMTriggerEffectBaseById">{{mTriggerEffectBaseOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

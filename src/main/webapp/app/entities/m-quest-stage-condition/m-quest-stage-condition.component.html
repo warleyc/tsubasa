@@ -1,0 +1,70 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Quest Stage Conditions</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-quest-stage-condition" [routerLink]="['/m-quest-stage-condition/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Quest Stage Condition
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mQuestStageConditions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="successConditionType"><span>Success Condition Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="successConditionDetailType"><span>Success Condition Detail Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="successConditionValue"><span>Success Condition Value</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="targetCharacterGroupId"><span>Target Character Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="failureConditionType"><span>Failure Condition Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mQuestStageCondition of mQuestStageConditions ;trackBy: trackId">
+                <td><a [routerLink]="['/m-quest-stage-condition', mQuestStageCondition.id, 'view' ]">{{mQuestStageCondition.id}}</a></td>
+                <td>{{mQuestStageCondition.successConditionType}}</td>
+                <td>{{mQuestStageCondition.successConditionDetailType}}</td>
+                <td>{{mQuestStageCondition.successConditionValue}}</td>
+                <td>{{mQuestStageCondition.targetCharacterGroupId}}</td>
+                <td>{{mQuestStageCondition.failureConditionType}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-quest-stage-condition', mQuestStageCondition.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-quest-stage-condition', mQuestStageCondition.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-quest-stage-condition', { outlets: { popup: mQuestStageCondition.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mQuestStageConditions && mQuestStageConditions.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

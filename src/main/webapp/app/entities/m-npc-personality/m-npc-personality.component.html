@@ -1,0 +1,88 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Npc Personalities</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-npc-personality" [routerLink]="['/m-npc-personality/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Npc Personality
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mNpcPersonalities">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="passingTargetRate"><span>Passing Target Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="actionSkillRate"><span>Action Skill Rate</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="dribbleMagnification"><span>Dribble Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="passingMagnification"><span>Passing Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="onetwoMagnification"><span>Onetwo Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shootMagnification"><span>Shoot Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="volleyShootMagnification"><span>Volley Shoot Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="headingShootMagnification"><span>Heading Shoot Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="tackleMagnification"><span>Tackle Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="blockMagnification"><span>Block Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="passCutMagnification"><span>Pass Cut Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="clearMagnification"><span>Clear Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="competeMagnification"><span>Compete Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="trapMagnification"><span>Trap Magnification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mNpcPersonality of mNpcPersonalities ;trackBy: trackId">
+                <td><a [routerLink]="['/m-npc-personality', mNpcPersonality.id, 'view' ]">{{mNpcPersonality.id}}</a></td>
+                <td>{{mNpcPersonality.passingTargetRate}}</td>
+                <td>{{mNpcPersonality.actionSkillRate}}</td>
+                <td>{{mNpcPersonality.dribbleMagnification}}</td>
+                <td>{{mNpcPersonality.passingMagnification}}</td>
+                <td>{{mNpcPersonality.onetwoMagnification}}</td>
+                <td>{{mNpcPersonality.shootMagnification}}</td>
+                <td>{{mNpcPersonality.volleyShootMagnification}}</td>
+                <td>{{mNpcPersonality.headingShootMagnification}}</td>
+                <td>{{mNpcPersonality.tackleMagnification}}</td>
+                <td>{{mNpcPersonality.blockMagnification}}</td>
+                <td>{{mNpcPersonality.passCutMagnification}}</td>
+                <td>{{mNpcPersonality.clearMagnification}}</td>
+                <td>{{mNpcPersonality.competeMagnification}}</td>
+                <td>{{mNpcPersonality.trapMagnification}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-npc-personality', mNpcPersonality.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-npc-personality', mNpcPersonality.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-npc-personality', { outlets: { popup: mNpcPersonality.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mNpcPersonalities && mNpcPersonalities.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

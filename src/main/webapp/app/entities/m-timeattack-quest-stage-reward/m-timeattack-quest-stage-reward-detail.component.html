@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTimeattackQuestStageReward">
+            <h2><span>M Timeattack Quest Stage Reward</span> {{mTimeattackQuestStageReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.stageId}}</span>
+                </dd>
+                <dt><span>Exp</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.exp}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.coin}}</span>
+                </dd>
+                <dt><span>Guild Point</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.guildPoint}}</span>
+                </dd>
+                <dt><span>Clear Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.clearRewardGroupId}}</span>
+                </dd>
+                <dt><span>Clear Reward Weight Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.clearRewardWeightId}}</span>
+                </dd>
+                <dt><span>Achievement Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.achievementRewardGroupId}}</span>
+                </dd>
+                <dt><span>Coop Group Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.coopGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.specialRewardGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Amount</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.specialRewardAmount}}</span>
+                </dd>
+                <dt><span>Goal Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestStageReward.goalRewardGroupId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-timeattack-quest-stage-reward', mTimeattackQuestStageReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

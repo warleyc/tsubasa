@@ -1,0 +1,133 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGuerillaQuestStage">
+            <h2><span>M Guerilla Quest Stage</span> {{mGuerillaQuestStage.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>World Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.worldId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.name}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.imagePath}}</span>
+                </dd>
+                <dt><span>Character Thumbnail Path</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.characterThumbnailPath}}</span>
+                </dd>
+                <dt><span>Difficulty</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.difficulty}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Story Only</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.storyOnly}}</span>
+                </dd>
+                <dt><span>First Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.firstHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>First Half Environment Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.firstHalfEnvironmentId}}</span>
+                </dd>
+                <dt><span>Second Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.secondHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Second Half Environment Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.secondHalfEnvironmentId}}</span>
+                </dd>
+                <dt><span>Extra First Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.extraFirstHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Extra Second Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.extraSecondHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Consume Ap</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.consumeAp}}</span>
+                </dd>
+                <dt><span>Kick Off Type</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.kickOffType}}</span>
+                </dd>
+                <dt><span>Match Minute</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.matchMinute}}</span>
+                </dd>
+                <dt><span>Enable Extra</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.enableExtra}}</span>
+                </dd>
+                <dt><span>Enable Pk</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.enablePk}}</span>
+                </dd>
+                <dt><span>Ai Level</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.aiLevel}}</span>
+                </dd>
+                <dt><span>Start At Second Half</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.startAtSecondHalf}}</span>
+                </dd>
+                <dt><span>Start Score</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.startScore}}</span>
+                </dd>
+                <dt><span>Start Score Opponent</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.startScoreOpponent}}</span>
+                </dd>
+                <dt><span>Condition Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.conditionId}}</span>
+                </dd>
+                <dt><span>Option Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.optionId}}</span>
+                </dd>
+                <dt><span>Deck Condition Id</span></dt>
+                <dd>
+                    <span>{{mGuerillaQuestStage.deckConditionId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mGuerillaQuestStage.idId">
+                        <a [routerLink]="['/m-guerilla-quest-world', mGuerillaQuestStage.idId, 'view']">{{mGuerillaQuestStage.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-guerilla-quest-stage', mGuerillaQuestStage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

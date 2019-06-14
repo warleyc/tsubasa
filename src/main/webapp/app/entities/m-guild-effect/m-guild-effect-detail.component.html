@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGuildEffect">
+            <h2><span>M Guild Effect</span> {{mGuildEffect.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Effect Type</span></dt>
+                <dd>
+                    <span>{{mGuildEffect.effectType}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mGuildEffect.name}}</span>
+                </dd>
+                <dt><span>Effect Id</span></dt>
+                <dd>
+                    <span>{{mGuildEffect.effectId}}</span>
+                </dd>
+                <dt><span>Thumbnail Path</span></dt>
+                <dd>
+                    <span>{{mGuildEffect.thumbnailPath}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-guild-effect', mGuildEffect.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

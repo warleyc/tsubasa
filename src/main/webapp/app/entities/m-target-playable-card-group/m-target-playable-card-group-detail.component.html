@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTargetPlayableCardGroup">
+            <h2><span>M Target Playable Card Group</span> {{mTargetPlayableCardGroup.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Group Id</span></dt>
+                <dd>
+                    <span>{{mTargetPlayableCardGroup.groupId}}</span>
+                </dd>
+                <dt><span>Card Id</span></dt>
+                <dd>
+                    <span>{{mTargetPlayableCardGroup.cardId}}</span>
+                </dd>
+                <dt><span>Is Show Thumbnail</span></dt>
+                <dd>
+                    <span>{{mTargetPlayableCardGroup.isShowThumbnail}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mTargetPlayableCardGroup.idId">
+                        <a [routerLink]="['/m-playable-card', mTargetPlayableCardGroup.idId, 'view']">{{mTargetPlayableCardGroup.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-target-playable-card-group', mTargetPlayableCardGroup.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

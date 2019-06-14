@@ -1,0 +1,114 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-goal-judgement-heading">Create or edit a M Goal Judgement</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mGoalJudgement.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_judgementId">Judgement Id</label>
+                    <input type="number" class="form-control" name="judgementId" id="field_judgementId"
+                           formControlName="judgementId"/>
+                    <div *ngIf="editForm.get('judgementId').invalid && (editForm.get('judgementId').dirty || editForm.get('judgementId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('judgementId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('judgementId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_encountersType">Encounters Type</label>
+                    <input type="number" class="form-control" name="encountersType" id="field_encountersType"
+                           formControlName="encountersType"/>
+                    <div *ngIf="editForm.get('encountersType').invalid && (editForm.get('encountersType').dirty || editForm.get('encountersType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('encountersType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('encountersType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_successRate">Success Rate</label>
+                    <input type="number" class="form-control" name="successRate" id="field_successRate"
+                           formControlName="successRate"/>
+                    <div *ngIf="editForm.get('successRate').invalid && (editForm.get('successRate').dirty || editForm.get('successRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('successRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('successRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_goalPostRate">Goal Post Rate</label>
+                    <input type="number" class="form-control" name="goalPostRate" id="field_goalPostRate"
+                           formControlName="goalPostRate"/>
+                    <div *ngIf="editForm.get('goalPostRate').invalid && (editForm.get('goalPostRate').dirty || editForm.get('goalPostRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('goalPostRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('goalPostRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ballPushRate">Ball Push Rate</label>
+                    <input type="number" class="form-control" name="ballPushRate" id="field_ballPushRate"
+                           formControlName="ballPushRate"/>
+                    <div *ngIf="editForm.get('ballPushRate').invalid && (editForm.get('ballPushRate').dirty || editForm.get('ballPushRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('ballPushRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('ballPushRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_clearRate">Clear Rate</label>
+                    <input type="number" class="form-control" name="clearRate" id="field_clearRate"
+                           formControlName="clearRate"/>
+                    <div *ngIf="editForm.get('clearRate').invalid && (editForm.get('clearRate').dirty || editForm.get('clearRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('clearRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('clearRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

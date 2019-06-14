@@ -1,0 +1,150 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Npc Cards</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-npc-card" [routerLink]="['/m-npc-card/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Npc Card
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mNpcCards">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterId"><span>Character Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shortName"><span>Short Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nickName"><span>Nick Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="teamId"><span>Team Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nationalityId"><span>Nationality Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rarity"><span>Rarity</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="attribute"><span>Attribute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="modelId"><span>Model Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="level"><span>Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="thumbnailAssetsId"><span>Thumbnail Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cardIllustAssetsId"><span>Card Illust Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="playableAssetsId"><span>Playable Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="teamEffectId"><span>Team Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="teamEffectLevel"><span>Team Effect Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="triggerEffectId"><span>Trigger Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action1Id"><span>Action 1 Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action1Level"><span>Action 1 Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action2Id"><span>Action 2 Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action2Level"><span>Action 2 Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action3Id"><span>Action 3 Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action3Level"><span>Action 3 Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action4Id"><span>Action 4 Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action4Level"><span>Action 4 Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action5Id"><span>Action 5 Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="action5Level"><span>Action 5 Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="stamina"><span>Stamina</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="dribble"><span>Dribble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shoot"><span>Shoot</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ballPass"><span>Ball Pass</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="tackle"><span>Tackle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="block"><span>Block</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="intercept"><span>Intercept</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="speed"><span>Speed</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="power"><span>Power</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="technique"><span>Technique</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="punching"><span>Punching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="catching"><span>Catching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="highBallBonus"><span>High Ball Bonus</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lowBallBonus"><span>Low Ball Bonus</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="personalityId"><span>Personality Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformNo"><span>Uniform No</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="levelGroupId"><span>Level Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mNpcCard of mNpcCards ;trackBy: trackId">
+                <td><a [routerLink]="['/m-npc-card', mNpcCard.id, 'view' ]">{{mNpcCard.id}}</a></td>
+                <td>{{mNpcCard.characterId}}</td>
+                <td>{{mNpcCard.shortName}}</td>
+                <td>{{mNpcCard.nickName}}</td>
+                <td>{{mNpcCard.teamId}}</td>
+                <td>{{mNpcCard.nationalityId}}</td>
+                <td>{{mNpcCard.rarity}}</td>
+                <td>{{mNpcCard.attribute}}</td>
+                <td>{{mNpcCard.modelId}}</td>
+                <td>{{mNpcCard.level}}</td>
+                <td>{{mNpcCard.thumbnailAssetsId}}</td>
+                <td>{{mNpcCard.cardIllustAssetsId}}</td>
+                <td>{{mNpcCard.playableAssetsId}}</td>
+                <td>{{mNpcCard.teamEffectId}}</td>
+                <td>{{mNpcCard.teamEffectLevel}}</td>
+                <td>{{mNpcCard.triggerEffectId}}</td>
+                <td>{{mNpcCard.action1Id}}</td>
+                <td>{{mNpcCard.action1Level}}</td>
+                <td>{{mNpcCard.action2Id}}</td>
+                <td>{{mNpcCard.action2Level}}</td>
+                <td>{{mNpcCard.action3Id}}</td>
+                <td>{{mNpcCard.action3Level}}</td>
+                <td>{{mNpcCard.action4Id}}</td>
+                <td>{{mNpcCard.action4Level}}</td>
+                <td>{{mNpcCard.action5Id}}</td>
+                <td>{{mNpcCard.action5Level}}</td>
+                <td>{{mNpcCard.stamina}}</td>
+                <td>{{mNpcCard.dribble}}</td>
+                <td>{{mNpcCard.shoot}}</td>
+                <td>{{mNpcCard.ballPass}}</td>
+                <td>{{mNpcCard.tackle}}</td>
+                <td>{{mNpcCard.block}}</td>
+                <td>{{mNpcCard.intercept}}</td>
+                <td>{{mNpcCard.speed}}</td>
+                <td>{{mNpcCard.power}}</td>
+                <td>{{mNpcCard.technique}}</td>
+                <td>{{mNpcCard.punching}}</td>
+                <td>{{mNpcCard.catching}}</td>
+                <td>{{mNpcCard.highBallBonus}}</td>
+                <td>{{mNpcCard.lowBallBonus}}</td>
+                <td>{{mNpcCard.personalityId}}</td>
+                <td>{{mNpcCard.uniformNo}}</td>
+                <td>{{mNpcCard.levelGroupId}}</td>
+                <td>
+                    <div *ngIf="mNpcCard.idId">
+                        <a [routerLink]="['../m-character', mNpcCard.idId , 'view' ]" >{{mNpcCard.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-npc-card', mNpcCard.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-npc-card', mNpcCard.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-npc-card', { outlets: { popup: mNpcCard.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mNpcCards && mNpcCards.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

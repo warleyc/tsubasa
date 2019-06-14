@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mPvpRegulation">
+            <h2><span>M Pvp Regulation</span> {{mPvpRegulation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mPvpRegulation.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mPvpRegulation.endAt}}</span>
+                </dd>
+                <dt><span>Match Option Id</span></dt>
+                <dd>
+                    <span>{{mPvpRegulation.matchOptionId}}</span>
+                </dd>
+                <dt><span>Deck Condition Id</span></dt>
+                <dd>
+                    <span>{{mPvpRegulation.deckConditionId}}</span>
+                </dd>
+                <dt><span>Rule Tutorial Id</span></dt>
+                <dd>
+                    <span>{{mPvpRegulation.ruleTutorialId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mPvpRegulation.idId">
+                        <a [routerLink]="['/m-match-option', mPvpRegulation.idId, 'view']">{{mPvpRegulation.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-pvp-regulation', mPvpRegulation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

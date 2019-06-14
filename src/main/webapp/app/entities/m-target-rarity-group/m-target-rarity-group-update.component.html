@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-target-rarity-group-heading">Create or edit a M Target Rarity Group</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mTargetRarityGroup.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_groupId">Group Id</label>
+                    <input type="number" class="form-control" name="groupId" id="field_groupId"
+                           formControlName="groupId"/>
+                    <div *ngIf="editForm.get('groupId').invalid && (editForm.get('groupId').dirty || editForm.get('groupId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('groupId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('groupId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cardRarity">Card Rarity</label>
+                    <input type="number" class="form-control" name="cardRarity" id="field_cardRarity"
+                           formControlName="cardRarity"/>
+                    <div *ngIf="editForm.get('cardRarity').invalid && (editForm.get('cardRarity').dirty || editForm.get('cardRarity').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cardRarity').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('cardRarity')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

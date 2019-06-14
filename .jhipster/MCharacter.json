@@ -36,9 +36,9 @@
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "otherEntityName": "mActionSkillHolderCardCt",
+            "otherEntityName": "mActionSkillHolderCardContent",
             "otherEntityRelationshipName": "id",
-            "relationshipName": "mActionSkillHolderCardCt"
+            "relationshipName": "mActionSkillHolderCardContent"
         },
         {
             "relationshipType": "one-to-many",

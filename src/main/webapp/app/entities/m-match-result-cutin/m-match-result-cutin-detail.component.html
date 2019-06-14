@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMatchResultCutin">
+            <h2><span>M Match Result Cutin</span> {{mMatchResultCutin.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Character Id</span></dt>
+                <dd>
+                    <span>{{mMatchResultCutin.characterId}}</span>
+                </dd>
+                <dt><span>Team Id</span></dt>
+                <dd>
+                    <span>{{mMatchResultCutin.teamId}}</span>
+                </dd>
+                <dt><span>Is Win</span></dt>
+                <dd>
+                    <span>{{mMatchResultCutin.isWin}}</span>
+                </dd>
+                <dt><span>Text</span></dt>
+                <dd>
+                    <span>{{mMatchResultCutin.text}}</span>
+                </dd>
+                <dt><span>Sound Event</span></dt>
+                <dd>
+                    <span>{{mMatchResultCutin.soundEvent}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mMatchResultCutin.idId">
+                        <a [routerLink]="['/m-character', mMatchResultCutin.idId, 'view']">{{mMatchResultCutin.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-match-result-cutin', mMatchResultCutin.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

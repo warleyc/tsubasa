@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestSpecialReward">
+            <h2><span>M Quest Special Reward</span> {{mQuestSpecialReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestSpecialReward.groupId}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{mQuestSpecialReward.weight}}</span>
+                </dd>
+                <dt><span>Rank</span></dt>
+                <dd>
+                    <span>{{mQuestSpecialReward.rank}}</span>
+                </dd>
+                <dt><span>Content Type</span></dt>
+                <dd>
+                    <span>{{mQuestSpecialReward.contentType}}</span>
+                </dd>
+                <dt><span>Content Id</span></dt>
+                <dd>
+                    <span>{{mQuestSpecialReward.contentId}}</span>
+                </dd>
+                <dt><span>Content Amount</span></dt>
+                <dd>
+                    <span>{{mQuestSpecialReward.contentAmount}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-special-reward', mQuestSpecialReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

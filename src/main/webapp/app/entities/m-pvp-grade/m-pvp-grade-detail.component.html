@@ -1,0 +1,95 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mPvpGrade">
+            <h2><span>M Pvp Grade</span> {{mPvpGrade.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Wave Id</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.waveId}}</span>
+                </dd>
+                <dt><span>Grade</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.grade}}</span>
+                </dd>
+                <dt><span>Is Higher</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.isHigher}}</span>
+                </dd>
+                <dt><span>Is Lower</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.isLower}}</span>
+                </dd>
+                <dt><span>Grade Name</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeName}}</span>
+                </dd>
+                <dt><span>Look</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.look}}</span>
+                </dd>
+                <dt><span>Up Requirement Id</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.upRequirementId}}</span>
+                </dd>
+                <dt><span>Down Requirement Id</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.downRequirementId}}</span>
+                </dd>
+                <dt><span>Win Point</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.winPoint}}</span>
+                </dd>
+                <dt><span>Lose Point</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.losePoint}}</span>
+                </dd>
+                <dt><span>Grade Up Serif</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeUpSerif}}</span>
+                </dd>
+                <dt><span>Grade Down Serif</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeDownSerif}}</span>
+                </dd>
+                <dt><span>Grade Up Chara Asset Name</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeUpCharaAssetName}}</span>
+                </dd>
+                <dt><span>Grade Down Chara Asset Name</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeDownCharaAssetName}}</span>
+                </dd>
+                <dt><span>Grade Up Voice Chara Id</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeUpVoiceCharaId}}</span>
+                </dd>
+                <dt><span>Grade Down Voice Chara Id</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.gradeDownVoiceCharaId}}</span>
+                </dd>
+                <dt><span>Total Parameter Range Upper</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.totalParameterRangeUpper}}</span>
+                </dd>
+                <dt><span>Total Parameter Range Lower</span></dt>
+                <dd>
+                    <span>{{mPvpGrade.totalParameterRangeLower}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-pvp-grade', mPvpGrade.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

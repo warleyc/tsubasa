@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mShoot">
+            <h2><span>M Shoot</span> {{mShoot.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Angle Decay Type</span></dt>
+                <dd>
+                    <span>{{mShoot.angleDecayType}}</span>
+                </dd>
+                <dt><span>Shoot Orbit</span></dt>
+                <dd>
+                    <span>{{mShoot.shootOrbit}}</span>
+                </dd>
+                <dt><span>Judgement Id</span></dt>
+                <dd>
+                    <span>{{mShoot.judgementId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-shoot', mShoot.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

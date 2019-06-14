@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGoalJudgement">
+            <h2><span>M Goal Judgement</span> {{mGoalJudgement.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Judgement Id</span></dt>
+                <dd>
+                    <span>{{mGoalJudgement.judgementId}}</span>
+                </dd>
+                <dt><span>Encounters Type</span></dt>
+                <dd>
+                    <span>{{mGoalJudgement.encountersType}}</span>
+                </dd>
+                <dt><span>Success Rate</span></dt>
+                <dd>
+                    <span>{{mGoalJudgement.successRate}}</span>
+                </dd>
+                <dt><span>Goal Post Rate</span></dt>
+                <dd>
+                    <span>{{mGoalJudgement.goalPostRate}}</span>
+                </dd>
+                <dt><span>Ball Push Rate</span></dt>
+                <dd>
+                    <span>{{mGoalJudgement.ballPushRate}}</span>
+                </dd>
+                <dt><span>Clear Rate</span></dt>
+                <dd>
+                    <span>{{mGoalJudgement.clearRate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-goal-judgement', mGoalJudgement.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

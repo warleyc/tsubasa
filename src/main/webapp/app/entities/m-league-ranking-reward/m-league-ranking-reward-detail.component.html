@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLeagueRankingReward">
+            <h2><span>M League Ranking Reward</span> {{mLeagueRankingReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>League Hierarchy</span></dt>
+                <dd>
+                    <span>{{mLeagueRankingReward.leagueHierarchy}}</span>
+                </dd>
+                <dt><span>Rank To</span></dt>
+                <dd>
+                    <span>{{mLeagueRankingReward.rankTo}}</span>
+                </dd>
+                <dt><span>Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mLeagueRankingReward.rewardGroupId}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mLeagueRankingReward.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mLeagueRankingReward.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-league-ranking-reward', mLeagueRankingReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

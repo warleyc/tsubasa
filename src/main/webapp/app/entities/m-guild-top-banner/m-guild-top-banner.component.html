@@ -1,0 +1,68 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Guild Top Banners</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-guild-top-banner" [routerLink]="['/m-guild-top-banner/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Guild Top Banner
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mGuildTopBanners">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="assetPath"><span>Asset Path</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="guildBannerType"><span>Guild Banner Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startAt"><span>Start At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="endAt"><span>End At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mGuildTopBanner of mGuildTopBanners ;trackBy: trackId">
+                <td><a [routerLink]="['/m-guild-top-banner', mGuildTopBanner.id, 'view' ]">{{mGuildTopBanner.id}}</a></td>
+                <td>{{mGuildTopBanner.assetPath}}</td>
+                <td>{{mGuildTopBanner.guildBannerType}}</td>
+                <td>{{mGuildTopBanner.startAt}}</td>
+                <td>{{mGuildTopBanner.endAt}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-guild-top-banner', mGuildTopBanner.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-guild-top-banner', mGuildTopBanner.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-guild-top-banner', { outlets: { popup: mGuildTopBanner.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mGuildTopBanners && mGuildTopBanners.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

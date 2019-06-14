@@ -1,0 +1,123 @@
+import { browser, ExpectedConditions, element, by, ElementFinder } from 'protractor';
+
+export class MLeagueRegulationComponentsPage {
+  createButton = element(by.id('jh-create-entity'));
+  deleteButtons = element.all(by.css('jhi-m-league-regulation div table .btn-danger'));
+  title = element.all(by.css('jhi-m-league-regulation div h2#page-heading span')).first();
+
+  async clickOnCreateButton(timeout?: number) {
+    await this.createButton.click();
+  }
+
+  async clickOnLastDeleteButton(timeout?: number) {
+    await this.deleteButtons.last().click();
+  }
+
+  async countDeleteButtons() {
+    return this.deleteButtons.count();
+  }
+
+  async getTitle() {
+    return this.title.getText();
+  }
+}
+
+export class MLeagueRegulationUpdatePage {
+  pageTitle = element(by.id('jhi-m-league-regulation-heading'));
+  saveButton = element(by.id('save-entity'));
+  cancelButton = element(by.id('cancel-save'));
+  startAtInput = element(by.id('field_startAt'));
+  endAtInput = element(by.id('field_endAt'));
+  matchOptionIdInput = element(by.id('field_matchOptionId'));
+  deckConditionIdInput = element(by.id('field_deckConditionId'));
+  ruleTutorialIdInput = element(by.id('field_ruleTutorialId'));
+  idSelect = element(by.id('field_id'));
+
+  async getPageTitle() {
+    return this.pageTitle.getText();
+  }
+
+  async setStartAtInput(startAt) {
+    await this.startAtInput.sendKeys(startAt);
+  }
+
+  async getStartAtInput() {
+    return await this.startAtInput.getAttribute('value');
+  }
+
+  async setEndAtInput(endAt) {
+    await this.endAtInput.sendKeys(endAt);
+  }
+
+  async getEndAtInput() {
+    return await this.endAtInput.getAttribute('value');
+  }
+
+  async setMatchOptionIdInput(matchOptionId) {
+    await this.matchOptionIdInput.sendKeys(matchOptionId);
+  }
+
+  async getMatchOptionIdInput() {
+    return await this.matchOptionIdInput.getAttribute('value');
+  }
+
+  async setDeckConditionIdInput(deckConditionId) {
+    await this.deckConditionIdInput.sendKeys(deckConditionId);
+  }
+
+  async getDeckConditionIdInput() {
+    return await this.deckConditionIdInput.getAttribute('value');
+  }
+
+  async setRuleTutorialIdInput(ruleTutorialId) {
+    await this.ruleTutorialIdInput.sendKeys(ruleTutorialId);
+  }
+
+  async getRuleTutorialIdInput() {
+    return await this.ruleTutorialIdInput.getAttribute('value');
+  }
+
+  async idSelectLastOption(timeout?: number) {
+    await this.idSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async idSelectOption(option) {
+    await this.idSelect.sendKeys(option);
+  }
+
+  getIdSelect(): ElementFinder {
+    return this.idSelect;
+  }
+
+  async getIdSelectedOption() {
+    return await this.idSelect.element(by.css('option:checked')).getText();
+  }
+
+  async save(timeout?: number) {
+    await this.saveButton.click();
+  }
+
+  async cancel(timeout?: number) {
+    await this.cancelButton.click();
+  }
+
+  getSaveButton(): ElementFinder {
+    return this.saveButton;
+  }
+}
+
+export class MLeagueRegulationDeleteDialog {
+  private dialogTitle = element(by.id('jhi-delete-mLeagueRegulation-heading'));
+  private confirmButton = element(by.id('jhi-confirm-delete-mLeagueRegulation'));
+
+  async getDialogTitle() {
+    return this.dialogTitle.getText();
+  }
+
+  async clickOnConfirmButton(timeout?: number) {
+    await this.confirmButton.click();
+  }
+}

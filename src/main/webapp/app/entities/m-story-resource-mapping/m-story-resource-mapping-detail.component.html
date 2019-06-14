@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mStoryResourceMapping">
+            <h2><span>M Story Resource Mapping</span> {{mStoryResourceMapping.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Lang</span></dt>
+                <dd>
+                    <span>{{mStoryResourceMapping.lang}}</span>
+                </dd>
+                <dt><span>Script Name</span></dt>
+                <dd>
+                    <span>{{mStoryResourceMapping.scriptName}}</span>
+                </dd>
+                <dt><span>Ids</span></dt>
+                <dd>
+                    <span>{{mStoryResourceMapping.ids}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-story-resource-mapping', mStoryResourceMapping.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

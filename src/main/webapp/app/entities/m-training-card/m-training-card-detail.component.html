@@ -1,0 +1,113 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTrainingCard">
+            <h2><span>M Training Card</span> {{mTrainingCard.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.name}}</span>
+                </dd>
+                <dt><span>Short Name</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.shortName}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.description}}</span>
+                </dd>
+                <dt><span>Rarity</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.rarity}}</span>
+                </dd>
+                <dt><span>Attribute</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.attribute}}</span>
+                </dd>
+                <dt><span>Gain Exp</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.gainExp}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.coin}}</span>
+                </dd>
+                <dt><span>Sell Medal Id</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.sellMedalId}}</span>
+                </dd>
+                <dt><span>Plus Dribble</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusDribble}}</span>
+                </dd>
+                <dt><span>Plus Shoot</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusShoot}}</span>
+                </dd>
+                <dt><span>Plus Pass</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusPass}}</span>
+                </dd>
+                <dt><span>Plus Tackle</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusTackle}}</span>
+                </dd>
+                <dt><span>Plus Block</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusBlock}}</span>
+                </dd>
+                <dt><span>Plus Intercept</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusIntercept}}</span>
+                </dd>
+                <dt><span>Plus Speed</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusSpeed}}</span>
+                </dd>
+                <dt><span>Plus Power</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusPower}}</span>
+                </dd>
+                <dt><span>Plus Technique</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusTechnique}}</span>
+                </dd>
+                <dt><span>Plus Punching</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusPunching}}</span>
+                </dd>
+                <dt><span>Plus Catching</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.plusCatching}}</span>
+                </dd>
+                <dt><span>Thumbnail Assets Id</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.thumbnailAssetsId}}</span>
+                </dd>
+                <dt><span>Card Illust Assets Id</span></dt>
+                <dd>
+                    <span>{{mTrainingCard.cardIllustAssetsId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mTrainingCard.idId">
+                        <a [routerLink]="['/m-card-thumbnail-assets', mTrainingCard.idId, 'view']">{{mTrainingCard.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-training-card', mTrainingCard.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

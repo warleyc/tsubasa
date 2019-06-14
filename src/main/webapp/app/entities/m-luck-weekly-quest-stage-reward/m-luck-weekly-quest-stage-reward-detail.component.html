@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLuckWeeklyQuestStageReward">
+            <h2><span>M Luck Weekly Quest Stage Reward</span> {{mLuckWeeklyQuestStageReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.stageId}}</span>
+                </dd>
+                <dt><span>Exp</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.exp}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.coin}}</span>
+                </dd>
+                <dt><span>Guild Point</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.guildPoint}}</span>
+                </dd>
+                <dt><span>Clear Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.clearRewardGroupId}}</span>
+                </dd>
+                <dt><span>Clear Reward Weight Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.clearRewardWeightId}}</span>
+                </dd>
+                <dt><span>Achievement Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.achievementRewardGroupId}}</span>
+                </dd>
+                <dt><span>Coop Group Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.coopGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.specialRewardGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Amount</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.specialRewardAmount}}</span>
+                </dd>
+                <dt><span>Goal Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestStageReward.goalRewardGroupId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-luck-weekly-quest-stage-reward', mLuckWeeklyQuestStageReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

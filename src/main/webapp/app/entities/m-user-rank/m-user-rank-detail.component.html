@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mUserRank">
+            <h2><span>M User Rank</span> {{mUserRank.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rank</span></dt>
+                <dd>
+                    <span>{{mUserRank.rank}}</span>
+                </dd>
+                <dt><span>Exp</span></dt>
+                <dd>
+                    <span>{{mUserRank.exp}}</span>
+                </dd>
+                <dt><span>Quest Ap</span></dt>
+                <dd>
+                    <span>{{mUserRank.questAp}}</span>
+                </dd>
+                <dt><span>Max Friend Count</span></dt>
+                <dd>
+                    <span>{{mUserRank.maxFriendCount}}</span>
+                </dd>
+                <dt><span>Rankup Serif</span></dt>
+                <dd>
+                    <span>{{mUserRank.rankupSerif}}</span>
+                </dd>
+                <dt><span>Chara Asset Name</span></dt>
+                <dd>
+                    <span>{{mUserRank.charaAssetName}}</span>
+                </dd>
+                <dt><span>Voice Chara Id</span></dt>
+                <dd>
+                    <span>{{mUserRank.voiceCharaId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-user-rank', mUserRank.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,132 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-match-option-heading">Create or edit a M Match Option</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mMatchOption.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_passiveEffectId">Passive Effect Id</label>
+                    <input type="number" class="form-control" name="passiveEffectId" id="field_passiveEffectId"
+                           formControlName="passiveEffectId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_passiveEffectValue">Passive Effect Value</label>
+                    <input type="number" class="form-control" name="passiveEffectValue" id="field_passiveEffectValue"
+                           formControlName="passiveEffectValue"/>
+                    <div *ngIf="editForm.get('passiveEffectValue').invalid && (editForm.get('passiveEffectValue').dirty || editForm.get('passiveEffectValue').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('passiveEffectValue').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('passiveEffectValue')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_activateFullPowerType">Activate Full Power Type</label>
+                    <input type="number" class="form-control" name="activateFullPowerType" id="field_activateFullPowerType"
+                           formControlName="activateFullPowerType"/>
+                    <div *ngIf="editForm.get('activateFullPowerType').invalid && (editForm.get('activateFullPowerType').dirty || editForm.get('activateFullPowerType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('activateFullPowerType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('activateFullPowerType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_attributeMagnification">Attribute Magnification</label>
+                    <input type="number" class="form-control" name="attributeMagnification" id="field_attributeMagnification"
+                           formControlName="attributeMagnification"/>
+                    <div *ngIf="editForm.get('attributeMagnification').invalid && (editForm.get('attributeMagnification').dirty || editForm.get('attributeMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('attributeMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('attributeMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_useStaminaMagnification">Use Stamina Magnification</label>
+                    <input type="number" class="form-control" name="useStaminaMagnification" id="field_useStaminaMagnification"
+                           formControlName="useStaminaMagnification"/>
+                    <div *ngIf="editForm.get('useStaminaMagnification').invalid && (editForm.get('useStaminaMagnification').dirty || editForm.get('useStaminaMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('useStaminaMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('useStaminaMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isIgnoreTeamSkill">Is Ignore Team Skill</label>
+                    <input type="number" class="form-control" name="isIgnoreTeamSkill" id="field_isIgnoreTeamSkill"
+                           formControlName="isIgnoreTeamSkill"/>
+                    <div *ngIf="editForm.get('isIgnoreTeamSkill').invalid && (editForm.get('isIgnoreTeamSkill').dirty || editForm.get('isIgnoreTeamSkill').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('isIgnoreTeamSkill').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('isIgnoreTeamSkill')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_staminaInfinityType">Stamina Infinity Type</label>
+                    <input type="number" class="form-control" name="staminaInfinityType" id="field_staminaInfinityType"
+                           formControlName="staminaInfinityType"/>
+                    <div *ngIf="editForm.get('staminaInfinityType').invalid && (editForm.get('staminaInfinityType').dirty || editForm.get('staminaInfinityType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('staminaInfinityType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('staminaInfinityType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mPassiveEffectRangeOption.id" *ngFor="let mPassiveEffectRangeOption of mpassiveeffectranges; trackBy: trackMPassiveEffectRangeById">{{mPassiveEffectRangeOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

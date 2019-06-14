@@ -1,0 +1,136 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-match-environment-heading">Create or edit a M Match Environment</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mMatchEnvironment.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_category">Category</label>
+                    <input type="number" class="form-control" name="category" id="field_category"
+                           formControlName="category"/>
+                    <div *ngIf="editForm.get('category').invalid && (editForm.get('category').dirty || editForm.get('category').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('category').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('category')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_skyTex">Sky Tex</label>
+                    <textarea class="form-control" name="skyTex" id="field_skyTex"
+                              formControlName="skyTex"></textarea>
+                    <div *ngIf="editForm.get('skyTex').invalid && (editForm.get('skyTex').dirty || editForm.get('skyTex').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('skyTex').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ball">Ball</label>
+                    <textarea class="form-control" name="ball" id="field_ball"
+                              formControlName="ball"></textarea>
+                    <div *ngIf="editForm.get('ball').invalid && (editForm.get('ball').dirty || editForm.get('ball').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('ball').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_stadium">Stadium</label>
+                    <textarea class="form-control" name="stadium" id="field_stadium"
+                              formControlName="stadium"></textarea>
+                    <div *ngIf="editForm.get('stadium').invalid && (editForm.get('stadium').dirty || editForm.get('stadium').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('stadium').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_rainyAssetName">Rainy Asset Name</label>
+                    <textarea class="form-control" name="rainyAssetName" id="field_rainyAssetName"
+                              formControlName="rainyAssetName"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isPlayRainySound">Is Play Rainy Sound</label>
+                    <input type="number" class="form-control" name="isPlayRainySound" id="field_isPlayRainySound"
+                           formControlName="isPlayRainySound"/>
+                    <div *ngIf="editForm.get('isPlayRainySound').invalid && (editForm.get('isPlayRainySound').dirty || editForm.get('isPlayRainySound').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('isPlayRainySound').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('isPlayRainySound')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseStartBgm">Offense Start Bgm</label>
+                    <textarea class="form-control" name="offenseStartBgm" id="field_offenseStartBgm"
+                              formControlName="offenseStartBgm"></textarea>
+                    <div *ngIf="editForm.get('offenseStartBgm').invalid && (editForm.get('offenseStartBgm').dirty || editForm.get('offenseStartBgm').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('offenseStartBgm').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_offenseStopBgm">Offense Stop Bgm</label>
+                    <textarea class="form-control" name="offenseStopBgm" id="field_offenseStopBgm"
+                              formControlName="offenseStopBgm"></textarea>
+                    <div *ngIf="editForm.get('offenseStopBgm').invalid && (editForm.get('offenseStopBgm').dirty || editForm.get('offenseStopBgm').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('offenseStopBgm').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseStartBgm">Defense Start Bgm</label>
+                    <textarea class="form-control" name="defenseStartBgm" id="field_defenseStartBgm"
+                              formControlName="defenseStartBgm"></textarea>
+                    <div *ngIf="editForm.get('defenseStartBgm').invalid && (editForm.get('defenseStartBgm').dirty || editForm.get('defenseStartBgm').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('defenseStartBgm').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_defenseStopBgm">Defense Stop Bgm</label>
+                    <textarea class="form-control" name="defenseStopBgm" id="field_defenseStopBgm"
+                              formControlName="defenseStopBgm"></textarea>
+                    <div *ngIf="editForm.get('defenseStopBgm').invalid && (editForm.get('defenseStopBgm').dirty || editForm.get('defenseStopBgm').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('defenseStopBgm').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

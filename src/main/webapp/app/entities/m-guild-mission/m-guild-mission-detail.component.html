@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mGuildMission">
+            <h2><span>M Guild Mission</span> {{mGuildMission.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Term</span></dt>
+                <dd>
+                    <span>{{mGuildMission.term}}</span>
+                </dd>
+                <dt><span>Title</span></dt>
+                <dd>
+                    <span>{{mGuildMission.title}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mGuildMission.description}}</span>
+                </dd>
+                <dt><span>Mission Type</span></dt>
+                <dd>
+                    <span>{{mGuildMission.missionType}}</span>
+                </dd>
+                <dt><span>Param 1</span></dt>
+                <dd>
+                    <span>{{mGuildMission.param1}}</span>
+                </dd>
+                <dt><span>Reward Id</span></dt>
+                <dd>
+                    <span>{{mGuildMission.rewardId}}</span>
+                </dd>
+                <dt><span>Link</span></dt>
+                <dd>
+                    <span>{{mGuildMission.link}}</span>
+                </dd>
+                <dt><span>Scene Transition Param</span></dt>
+                <dd>
+                    <span>{{mGuildMission.sceneTransitionParam}}</span>
+                </dd>
+                <dt><span>Pickup</span></dt>
+                <dd>
+                    <span>{{mGuildMission.pickup}}</span>
+                </dd>
+                <dt><span>Trigger Mission Id</span></dt>
+                <dd>
+                    <span>{{mGuildMission.triggerMissionId}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mGuildMission.orderNum}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mGuildMission.idId">
+                        <a [routerLink]="['/m-mission-reward', mGuildMission.idId, 'view']">{{mGuildMission.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-guild-mission', mGuildMission.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

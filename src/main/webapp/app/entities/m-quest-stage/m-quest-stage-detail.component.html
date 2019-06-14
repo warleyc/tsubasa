@@ -1,0 +1,129 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestStage">
+            <h2><span>M Quest Stage</span> {{mQuestStage.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>World Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.worldId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mQuestStage.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mQuestStage.name}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mQuestStage.imagePath}}</span>
+                </dd>
+                <dt><span>Character Thumbnail Path</span></dt>
+                <dd>
+                    <span>{{mQuestStage.characterThumbnailPath}}</span>
+                </dd>
+                <dt><span>Difficulty</span></dt>
+                <dd>
+                    <span>{{mQuestStage.difficulty}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mQuestStage.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Story Only</span></dt>
+                <dd>
+                    <span>{{mQuestStage.storyOnly}}</span>
+                </dd>
+                <dt><span>First Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.firstHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>First Half Environment Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.firstHalfEnvironmentId}}</span>
+                </dd>
+                <dt><span>Second Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.secondHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Second Half Environment Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.secondHalfEnvironmentId}}</span>
+                </dd>
+                <dt><span>Extra First Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.extraFirstHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Consume Ap</span></dt>
+                <dd>
+                    <span>{{mQuestStage.consumeAp}}</span>
+                </dd>
+                <dt><span>Kick Off Type</span></dt>
+                <dd>
+                    <span>{{mQuestStage.kickOffType}}</span>
+                </dd>
+                <dt><span>Match Minute</span></dt>
+                <dd>
+                    <span>{{mQuestStage.matchMinute}}</span>
+                </dd>
+                <dt><span>Enable Extra</span></dt>
+                <dd>
+                    <span>{{mQuestStage.enableExtra}}</span>
+                </dd>
+                <dt><span>Enable Pk</span></dt>
+                <dd>
+                    <span>{{mQuestStage.enablePk}}</span>
+                </dd>
+                <dt><span>Ai Level</span></dt>
+                <dd>
+                    <span>{{mQuestStage.aiLevel}}</span>
+                </dd>
+                <dt><span>Start At Second Half</span></dt>
+                <dd>
+                    <span>{{mQuestStage.startAtSecondHalf}}</span>
+                </dd>
+                <dt><span>Start Score</span></dt>
+                <dd>
+                    <span>{{mQuestStage.startScore}}</span>
+                </dd>
+                <dt><span>Start Score Opponent</span></dt>
+                <dd>
+                    <span>{{mQuestStage.startScoreOpponent}}</span>
+                </dd>
+                <dt><span>Condition Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.conditionId}}</span>
+                </dd>
+                <dt><span>Option Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.optionId}}</span>
+                </dd>
+                <dt><span>Deck Condition Id</span></dt>
+                <dd>
+                    <span>{{mQuestStage.deckConditionId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mQuestStage.idId">
+                        <a [routerLink]="['/m-quest-world', mQuestStage.idId, 'view']">{{mQuestStage.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-stage', mQuestStage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

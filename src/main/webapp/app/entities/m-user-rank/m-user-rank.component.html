@@ -1,0 +1,74 @@
+<div>
+    <h2 id="page-heading">
+        <span>M User Ranks</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-user-rank" [routerLink]="['/m-user-rank/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M User Rank
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mUserRanks">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rank"><span>Rank</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="exp"><span>Exp</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="questAp"><span>Quest Ap</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="maxFriendCount"><span>Max Friend Count</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rankupSerif"><span>Rankup Serif</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="charaAssetName"><span>Chara Asset Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="voiceCharaId"><span>Voice Chara Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mUserRank of mUserRanks ;trackBy: trackId">
+                <td><a [routerLink]="['/m-user-rank', mUserRank.id, 'view' ]">{{mUserRank.id}}</a></td>
+                <td>{{mUserRank.rank}}</td>
+                <td>{{mUserRank.exp}}</td>
+                <td>{{mUserRank.questAp}}</td>
+                <td>{{mUserRank.maxFriendCount}}</td>
+                <td>{{mUserRank.rankupSerif}}</td>
+                <td>{{mUserRank.charaAssetName}}</td>
+                <td>{{mUserRank.voiceCharaId}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-user-rank', mUserRank.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-user-rank', mUserRank.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-user-rank', { outlets: { popup: mUserRank.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mUserRanks && mUserRanks.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

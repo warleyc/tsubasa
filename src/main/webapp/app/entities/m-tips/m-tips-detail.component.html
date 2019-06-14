@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTips">
+            <h2><span>M Tips</span> {{mTips.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Priority</span></dt>
+                <dd>
+                    <span>{{mTips.priority}}</span>
+                </dd>
+                <dt><span>Title</span></dt>
+                <dd>
+                    <span>{{mTips.title}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mTips.description}}</span>
+                </dd>
+                <dt><span>Image Asset Name</span></dt>
+                <dd>
+                    <span>{{mTips.imageAssetName}}</span>
+                </dd>
+                <dt><span>Color Type</span></dt>
+                <dd>
+                    <span>{{mTips.colorType}}</span>
+                </dd>
+                <dt><span>Is Tips</span></dt>
+                <dd>
+                    <span>{{mTips.isTips}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mTips.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mTips.endAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-tips', mTips.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

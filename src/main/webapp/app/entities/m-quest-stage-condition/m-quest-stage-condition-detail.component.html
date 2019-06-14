@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestStageCondition">
+            <h2><span>M Quest Stage Condition</span> {{mQuestStageCondition.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Success Condition Type</span></dt>
+                <dd>
+                    <span>{{mQuestStageCondition.successConditionType}}</span>
+                </dd>
+                <dt><span>Success Condition Detail Type</span></dt>
+                <dd>
+                    <span>{{mQuestStageCondition.successConditionDetailType}}</span>
+                </dd>
+                <dt><span>Success Condition Value</span></dt>
+                <dd>
+                    <span>{{mQuestStageCondition.successConditionValue}}</span>
+                </dd>
+                <dt><span>Target Character Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageCondition.targetCharacterGroupId}}</span>
+                </dd>
+                <dt><span>Failure Condition Type</span></dt>
+                <dd>
+                    <span>{{mQuestStageCondition.failureConditionType}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-stage-condition', mQuestStageCondition.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTriggerEffectRange">
+            <h2><span>M Trigger Effect Range</span> {{mTriggerEffectRange.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Effect Type</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.effectType}}</span>
+                </dd>
+                <dt><span>Target Position Gk</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetPositionGk}}</span>
+                </dd>
+                <dt><span>Target Position Fw</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetPositionFw}}</span>
+                </dd>
+                <dt><span>Target Position Omf</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetPositionOmf}}</span>
+                </dd>
+                <dt><span>Target Position Dmf</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetPositionDmf}}</span>
+                </dd>
+                <dt><span>Target Position Df</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetPositionDf}}</span>
+                </dd>
+                <dt><span>Target Attribute</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetAttribute}}</span>
+                </dd>
+                <dt><span>Target Nationality Group Id</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetNationalityGroupId}}</span>
+                </dd>
+                <dt><span>Target Team Group Id</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetTeamGroupId}}</span>
+                </dd>
+                <dt><span>Target Character Group Id</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetCharacterGroupId}}</span>
+                </dd>
+                <dt><span>Target Formation Group Id</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetFormationGroupId}}</span>
+                </dd>
+                <dt><span>Target Action Command</span></dt>
+                <dd>
+                    <span>{{mTriggerEffectRange.targetActionCommand}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-trigger-effect-range', mTriggerEffectRange.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

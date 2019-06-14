@@ -2,7 +2,7 @@ package io.shm.tsubasa.web.rest;
 
 import io.shm.tsubasa.TsubasaApp;
 import io.shm.tsubasa.domain.MCharacter;
-import io.shm.tsubasa.domain.MActionSkillHolderCardCt;
+import io.shm.tsubasa.domain.MActionSkillHolderCardContent;
 import io.shm.tsubasa.domain.MCombinationCutPosition;
 import io.shm.tsubasa.domain.MMatchResultCutin;
 import io.shm.tsubasa.domain.MNpcCard;
@@ -297,20 +297,20 @@ public class MCharacterResourceIT {
 
     @Test
     @Transactional
-    public void getAllMCharactersByMActionSkillHolderCardCtIsEqualToSomething() throws Exception {
+    public void getAllMCharactersByMActionSkillHolderCardContentIsEqualToSomething() throws Exception {
         // Initialize the database
-        MActionSkillHolderCardCt mActionSkillHolderCardCt = MActionSkillHolderCardCtResourceIT.createEntity(em);
-        em.persist(mActionSkillHolderCardCt);
+        MActionSkillHolderCardContent mActionSkillHolderCardContent = MActionSkillHolderCardContentResourceIT.createEntity(em);
+        em.persist(mActionSkillHolderCardContent);
         em.flush();
-        mCharacter.addMActionSkillHolderCardCt(mActionSkillHolderCardCt);
+        mCharacter.addMActionSkillHolderCardContent(mActionSkillHolderCardContent);
         mCharacterRepository.saveAndFlush(mCharacter);
-        Long mActionSkillHolderCardCtId = mActionSkillHolderCardCt.getId();
+        Long mActionSkillHolderCardContentId = mActionSkillHolderCardContent.getId();
 
-        // Get all the mCharacterList where mActionSkillHolderCardCt equals to mActionSkillHolderCardCtId
-        defaultMCharacterShouldBeFound("mActionSkillHolderCardCtId.equals=" + mActionSkillHolderCardCtId);
+        // Get all the mCharacterList where mActionSkillHolderCardContent equals to mActionSkillHolderCardContentId
+        defaultMCharacterShouldBeFound("mActionSkillHolderCardContentId.equals=" + mActionSkillHolderCardContentId);
 
-        // Get all the mCharacterList where mActionSkillHolderCardCt equals to mActionSkillHolderCardCtId + 1
-        defaultMCharacterShouldNotBeFound("mActionSkillHolderCardCtId.equals=" + (mActionSkillHolderCardCtId + 1));
+        // Get all the mCharacterList where mActionSkillHolderCardContent equals to mActionSkillHolderCardContentId + 1
+        defaultMCharacterShouldNotBeFound("mActionSkillHolderCardContentId.equals=" + (mActionSkillHolderCardContentId + 1));
     }
 
 

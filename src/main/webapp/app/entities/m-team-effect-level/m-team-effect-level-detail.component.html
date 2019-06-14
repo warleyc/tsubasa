@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTeamEffectLevel">
+            <h2><span>M Team Effect Level</span> {{mTeamEffectLevel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rarity</span></dt>
+                <dd>
+                    <span>{{mTeamEffectLevel.rarity}}</span>
+                </dd>
+                <dt><span>Level</span></dt>
+                <dd>
+                    <span>{{mTeamEffectLevel.level}}</span>
+                </dd>
+                <dt><span>Exp</span></dt>
+                <dd>
+                    <span>{{mTeamEffectLevel.exp}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-team-effect-level', mTeamEffectLevel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

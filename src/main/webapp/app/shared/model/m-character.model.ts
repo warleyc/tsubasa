@@ -1,4 +1,4 @@
-import { IMActionSkillHolderCardCt } from 'app/shared/model/m-action-skill-holder-card-ct.model';
+import { IMActionSkillHolderCardContent } from 'app/shared/model/m-action-skill-holder-card-content.model';
 import { IMCombinationCutPosition } from 'app/shared/model/m-combination-cut-position.model';
 import { IMMatchResultCutin } from 'app/shared/model/m-match-result-cutin.model';
 import { IMNpcCard } from 'app/shared/model/m-npc-card.model';
@@ -10,7 +10,7 @@ export interface IMCharacter {
   announceName?: any;
   shortName?: any;
   characterBookPriority?: number;
-  mActionSkillHolderCardCts?: IMActionSkillHolderCardCt[];
+  mActionSkillHolderCardContents?: IMActionSkillHolderCardContent[];
   mCombinationCutPositions?: IMCombinationCutPosition[];
   mMatchResultCutins?: IMMatchResultCutin[];
   mNpcCards?: IMNpcCard[];
@@ -24,7 +24,7 @@ export class MCharacter implements IMCharacter {
     public announceName?: any,
     public shortName?: any,
     public characterBookPriority?: number,
-    public mActionSkillHolderCardCts?: IMActionSkillHolderCardCt[],
+    public mActionSkillHolderCardContents?: IMActionSkillHolderCardContent[],
     public mCombinationCutPositions?: IMCombinationCutPosition[],
     public mMatchResultCutins?: IMMatchResultCutin[],
     public mNpcCards?: IMNpcCard[],

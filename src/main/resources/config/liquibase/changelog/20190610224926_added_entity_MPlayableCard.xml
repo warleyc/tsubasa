@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity MPlayableCard.
+    -->
+    <changeSet id="20190610224926-1" author="jhipster">
+        <createTable tableName="m_playable_card">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="model_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="proper_position_gk" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="proper_position_fw" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="proper_position_omf" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="proper_position_dmf" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="proper_position_df" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="character_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="nick_name" type="clob">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="team_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="nationality_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="rarity" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="attribute" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="thumbnail_assets_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="card_illust_assets_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="playable_assets_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="team_effect_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="trigger_effect_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="max_action_slot" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_action_id_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="initial_action_id_2" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="initial_action_id_3" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="initial_action_id_4" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="initial_action_id_5" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="initial_stamina" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_dribble" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_shoot" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_pass" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_tackle" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_block" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_intercept" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_speed" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_power" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_technique" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_punching" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="initial_catching" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_stamina" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_dribble" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_shoot" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_pass" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_tackle" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_block" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_intercept" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_speed" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_power" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_technique" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_punching" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_catching" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_dribble" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_shoot" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_pass" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_tackle" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_block" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_intercept" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_speed" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_power" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_technique" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_punching" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="max_plus_catching" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="high_ball_bonus" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="low_ball_bonus" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="is_drop_only" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="sell_coin_group_num" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="sell_medal_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="character_book_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="book_no" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="is_show_book" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="level_group_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="start_at" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+
+    </changeSet>
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20190610224926-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/data/m_playable_card.csv"
+                  separator=";"
+                  tableName="m_playable_card"
+                  context="dev">
+            <column name="id" type="numeric"/>
+            <column name="model_id" type="numeric"/>
+            <column name="proper_position_gk" type="numeric"/>
+            <column name="proper_position_fw" type="numeric"/>
+            <column name="proper_position_omf" type="numeric"/>
+            <column name="proper_position_dmf" type="numeric"/>
+            <column name="proper_position_df" type="numeric"/>
+            <column name="character_id" type="numeric"/>
+            <column name="nick_name" type="string"/>
+            <column name="team_id" type="numeric"/>
+            <column name="nationality_id" type="numeric"/>
+            <column name="rarity" type="numeric"/>
+            <column name="attribute" type="numeric"/>
+            <column name="thumbnail_assets_id" type="numeric"/>
+            <column name="card_illust_assets_id" type="numeric"/>
+            <column name="playable_assets_id" type="numeric"/>
+            <column name="team_effect_id" type="numeric"/>
+            <column name="trigger_effect_id" type="numeric"/>
+            <column name="max_action_slot" type="numeric"/>
+            <column name="initial_action_id_1" type="numeric"/>
+            <column name="initial_action_id_2" type="numeric"/>
+            <column name="initial_action_id_3" type="numeric"/>
+            <column name="initial_action_id_4" type="numeric"/>
+            <column name="initial_action_id_5" type="numeric"/>
+            <column name="initial_stamina" type="numeric"/>
+            <column name="initial_dribble" type="numeric"/>
+            <column name="initial_shoot" type="numeric"/>
+            <column name="initial_pass" type="numeric"/>
+            <column name="initial_tackle" type="numeric"/>
+            <column name="initial_block" type="numeric"/>
+            <column name="initial_intercept" type="numeric"/>
+            <column name="initial_speed" type="numeric"/>
+            <column name="initial_power" type="numeric"/>
+            <column name="initial_technique" type="numeric"/>
+            <column name="initial_punching" type="numeric"/>
+            <column name="initial_catching" type="numeric"/>
+            <column name="max_stamina" type="numeric"/>
+            <column name="max_dribble" type="numeric"/>
+            <column name="max_shoot" type="numeric"/>
+            <column name="max_pass" type="numeric"/>
+            <column name="max_tackle" type="numeric"/>
+            <column name="max_block" type="numeric"/>
+            <column name="max_intercept" type="numeric"/>
+            <column name="max_speed" type="numeric"/>
+            <column name="max_power" type="numeric"/>
+            <column name="max_technique" type="numeric"/>
+            <column name="max_punching" type="numeric"/>
+            <column name="max_catching" type="numeric"/>
+            <column name="max_plus_dribble" type="numeric"/>
+            <column name="max_plus_shoot" type="numeric"/>
+            <column name="max_plus_pass" type="numeric"/>
+            <column name="max_plus_tackle" type="numeric"/>
+            <column name="max_plus_block" type="numeric"/>
+            <column name="max_plus_intercept" type="numeric"/>
+            <column name="max_plus_speed" type="numeric"/>
+            <column name="max_plus_power" type="numeric"/>
+            <column name="max_plus_technique" type="numeric"/>
+            <column name="max_plus_punching" type="numeric"/>
+            <column name="max_plus_catching" type="numeric"/>
+            <column name="high_ball_bonus" type="numeric"/>
+            <column name="low_ball_bonus" type="numeric"/>
+            <column name="is_drop_only" type="numeric"/>
+            <column name="sell_coin_group_num" type="numeric"/>
+            <column name="sell_medal_id" type="numeric"/>
+            <column name="character_book_id" type="numeric"/>
+            <column name="book_no" type="numeric"/>
+            <column name="is_show_book" type="numeric"/>
+            <column name="level_group_id" type="numeric"/>
+            <column name="start_at" type="numeric"/>
+            <column name="id_id" type="numeric"/>
+        </loadData>
+    </changeSet>
+
+    <changeSet id="20190610224926-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mRecommendShopMessage">
+            <h2><span>M Recommend Shop Message</span> {{mRecommendShopMessage.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Message</span></dt>
+                <dd>
+                    <span>{{mRecommendShopMessage.message}}</span>
+                </dd>
+                <dt><span>Has Sales Period</span></dt>
+                <dd>
+                    <span>{{mRecommendShopMessage.hasSalesPeriod}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-recommend-shop-message', mRecommendShopMessage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

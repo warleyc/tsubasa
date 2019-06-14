@@ -1,0 +1,139 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-uniform-up-heading">Create or edit a M Uniform Up</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mUniformUp.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <textarea class="form-control" name="name" id="field_name"
+                              formControlName="name"></textarea>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_shortName">Short Name</label>
+                    <textarea class="form-control" name="shortName" id="field_shortName"
+                              formControlName="shortName"></textarea>
+                    <div *ngIf="editForm.get('shortName').invalid && (editForm.get('shortName').dirty || editForm.get('shortName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('shortName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_menuName">Menu Name</label>
+                    <textarea class="form-control" name="menuName" id="field_menuName"
+                              formControlName="menuName"></textarea>
+                    <div *ngIf="editForm.get('menuName').invalid && (editForm.get('menuName').dirty || editForm.get('menuName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('menuName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_modelId">Model Id</label>
+                    <input type="number" class="form-control" name="modelId" id="field_modelId"
+                           formControlName="modelId"/>
+                    <div *ngIf="editForm.get('modelId').invalid && (editForm.get('modelId').dirty || editForm.get('modelId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('modelId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('modelId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_thumbnailAssetName">Thumbnail Asset Name</label>
+                    <textarea class="form-control" name="thumbnailAssetName" id="field_thumbnailAssetName"
+                              formControlName="thumbnailAssetName"></textarea>
+                    <div *ngIf="editForm.get('thumbnailAssetName').invalid && (editForm.get('thumbnailAssetName').dirty || editForm.get('thumbnailAssetName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('thumbnailAssetName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_uniformType">Uniform Type</label>
+                    <input type="number" class="form-control" name="uniformType" id="field_uniformType"
+                           formControlName="uniformType"/>
+                    <div *ngIf="editForm.get('uniformType').invalid && (editForm.get('uniformType').dirty || editForm.get('uniformType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uniformType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('uniformType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_isDefault">Is Default</label>
+                    <input type="number" class="form-control" name="isDefault" id="field_isDefault"
+                           formControlName="isDefault"/>
+                    <div *ngIf="editForm.get('isDefault').invalid && (editForm.get('isDefault').dirty || editForm.get('isDefault').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('isDefault').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('isDefault')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_orderNum">Order Num</label>
+                    <input type="number" class="form-control" name="orderNum" id="field_orderNum"
+                           formControlName="orderNum"/>
+                    <div *ngIf="editForm.get('orderNum').invalid && (editForm.get('orderNum').dirty || editForm.get('orderNum').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('orderNum').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('orderNum')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <textarea class="form-control" name="description" id="field_description"
+                              formControlName="description"></textarea>
+                    <div *ngIf="editForm.get('description').invalid && (editForm.get('description').dirty || editForm.get('description').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('description').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

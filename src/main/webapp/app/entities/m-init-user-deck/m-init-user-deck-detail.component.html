@@ -1,0 +1,115 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mInitUserDeck">
+            <h2><span>M Init User Deck</span> {{mInitUserDeck.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Deck Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.deckId}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.name}}</span>
+                </dd>
+                <dt><span>Formation Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.formationId}}</span>
+                </dd>
+                <dt><span>Captain Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.captainCardId}}</span>
+                </dd>
+                <dt><span>Gk Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.gkCardId}}</span>
+                </dd>
+                <dt><span>Fp 1 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp1CardId}}</span>
+                </dd>
+                <dt><span>Fp 2 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp2CardId}}</span>
+                </dd>
+                <dt><span>Fp 3 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp3CardId}}</span>
+                </dd>
+                <dt><span>Fp 4 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp4CardId}}</span>
+                </dd>
+                <dt><span>Fp 5 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp5CardId}}</span>
+                </dd>
+                <dt><span>Fp 6 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp6CardId}}</span>
+                </dd>
+                <dt><span>Fp 7 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp7CardId}}</span>
+                </dd>
+                <dt><span>Fp 8 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp8CardId}}</span>
+                </dd>
+                <dt><span>Fp 9 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp9CardId}}</span>
+                </dd>
+                <dt><span>Fp 10 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.fp10CardId}}</span>
+                </dd>
+                <dt><span>Sub 1 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.sub1CardId}}</span>
+                </dd>
+                <dt><span>Sub 2 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.sub2CardId}}</span>
+                </dd>
+                <dt><span>Sub 3 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.sub3CardId}}</span>
+                </dd>
+                <dt><span>Sub 4 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.sub4CardId}}</span>
+                </dd>
+                <dt><span>Sub 5 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.sub5CardId}}</span>
+                </dd>
+                <dt><span>Team Effect 1 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.teamEffect1CardId}}</span>
+                </dd>
+                <dt><span>Team Effect 2 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.teamEffect2CardId}}</span>
+                </dd>
+                <dt><span>Team Effect 3 Card Id</span></dt>
+                <dd>
+                    <span>{{mInitUserDeck.teamEffect3CardId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-init-user-deck', mInitUserDeck.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

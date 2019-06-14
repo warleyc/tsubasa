@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mKeeperCutAction">
+            <h2><span>M Keeper Cut Action</span> {{mKeeperCutAction.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Action Cut Id</span></dt>
+                <dd>
+                    <span>{{mKeeperCutAction.actionCutId}}</span>
+                </dd>
+                <dt><span>Keeper Cut Action Type</span></dt>
+                <dd>
+                    <span>{{mKeeperCutAction.keeperCutActionType}}</span>
+                </dd>
+                <dt><span>Cut Sequence Text</span></dt>
+                <dd>
+                    <span>{{mKeeperCutAction.cutSequenceText}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-keeper-cut-action', mKeeperCutAction.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

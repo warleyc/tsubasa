@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestStageConditionDescription">
+            <h2><span>M Quest Stage Condition Description</span> {{mQuestStageConditionDescription.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Success Condition Type</span></dt>
+                <dd>
+                    <span>{{mQuestStageConditionDescription.successConditionType}}</span>
+                </dd>
+                <dt><span>Success Condition Detail Type Value</span></dt>
+                <dd>
+                    <span>{{mQuestStageConditionDescription.successConditionDetailTypeValue}}</span>
+                </dd>
+                <dt><span>Has Exist Target Character Group</span></dt>
+                <dd>
+                    <span>{{mQuestStageConditionDescription.hasExistTargetCharacterGroup}}</span>
+                </dd>
+                <dt><span>Has Success Condition Value One Only</span></dt>
+                <dd>
+                    <span>{{mQuestStageConditionDescription.hasSuccessConditionValueOneOnly}}</span>
+                </dd>
+                <dt><span>Failure Condition Type Value</span></dt>
+                <dd>
+                    <span>{{mQuestStageConditionDescription.failureConditionTypeValue}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mQuestStageConditionDescription.description}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-stage-condition-description', mQuestStageConditionDescription.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

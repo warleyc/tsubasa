@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTeamEffectRarity">
+            <h2><span>M Team Effect Rarity</span> {{mTeamEffectRarity.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rarity</span></dt>
+                <dd>
+                    <span>{{mTeamEffectRarity.rarity}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mTeamEffectRarity.name}}</span>
+                </dd>
+                <dt><span>Max Level</span></dt>
+                <dd>
+                    <span>{{mTeamEffectRarity.maxLevel}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-team-effect-rarity', mTeamEffectRarity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

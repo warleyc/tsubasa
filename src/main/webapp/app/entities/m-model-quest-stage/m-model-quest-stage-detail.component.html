@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mModelQuestStage">
+            <h2><span>M Model Quest Stage</span> {{mModelQuestStage.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mModelQuestStage.stageId}}</span>
+                </dd>
+                <dt><span>Image</span></dt>
+                <dd>
+                    <span>{{mModelQuestStage.image}}</span>
+                </dd>
+                <dt><span>Model Name</span></dt>
+                <dd>
+                    <span>{{mModelQuestStage.modelName}}</span>
+                </dd>
+                <dt><span>Bgm Offencing</span></dt>
+                <dd>
+                    <span>{{mModelQuestStage.bgmOffencing}}</span>
+                </dd>
+                <dt><span>Bgm Defencing</span></dt>
+                <dd>
+                    <span>{{mModelQuestStage.bgmDefencing}}</span>
+                </dd>
+                <dt><span>Bgm Hurrying</span></dt>
+                <dd>
+                    <span>{{mModelQuestStage.bgmHurrying}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-model-quest-stage', mModelQuestStage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

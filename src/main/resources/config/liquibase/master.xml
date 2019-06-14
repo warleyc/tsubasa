@@ -249,6 +249,8 @@
     <include file="config/liquibase/changelog/20190610225043_added_entity_MWeeklyQuestStageReward.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190610225044_added_entity_MWeeklyQuestTsubasaPointReward.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190610225045_added_entity_MWeeklyQuestWorld.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614054943_added_entity_MActionSkillHolderCardContent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614055308_added_entity_MTeam.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20190610224648_added_entity_constraints_MAchievement.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190610224653_added_entity_constraints_MActionSkillHolderCardCt.xml" relativeToChangelogFile="false"/>
@@ -286,5 +288,7 @@
     <include file="config/liquibase/changelog/20190610225031_added_entity_constraints_MTrainingCard.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190610225033_added_entity_constraints_MTriggerEffectBase.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190610225042_added_entity_constraints_MWeeklyQuestStage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614054943_added_entity_constraints_MActionSkillHolderCardContent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190610225016_added_entity_constraints_MTargetTeamGroup.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

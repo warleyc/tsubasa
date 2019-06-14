@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mRegulationMatchTutorialMessage">
+            <h2><span>M Regulation Match Tutorial Message</span> {{mRegulationMatchTutorialMessage.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rule Id</span></dt>
+                <dd>
+                    <span>{{mRegulationMatchTutorialMessage.ruleId}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mRegulationMatchTutorialMessage.orderNum}}</span>
+                </dd>
+                <dt><span>Position</span></dt>
+                <dd>
+                    <span>{{mRegulationMatchTutorialMessage.position}}</span>
+                </dd>
+                <dt><span>Message</span></dt>
+                <dd>
+                    <span>{{mRegulationMatchTutorialMessage.message}}</span>
+                </dd>
+                <dt><span>Asset Name</span></dt>
+                <dd>
+                    <span>{{mRegulationMatchTutorialMessage.assetName}}</span>
+                </dd>
+                <dt><span>Title</span></dt>
+                <dd>
+                    <span>{{mRegulationMatchTutorialMessage.title}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-regulation-match-tutorial-message', mRegulationMatchTutorialMessage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

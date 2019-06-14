@@ -12,7 +12,7 @@ import org.mapstruct.*;
 public interface MCharacterMapper extends EntityMapper<MCharacterDTO, MCharacter> {
 
 
-    @Mapping(target = "mActionSkillHolderCardCts", ignore = true)
+    @Mapping(target = "mActionSkillHolderCardContents", ignore = true)
     @Mapping(target = "mCombinationCutPositions", ignore = true)
     @Mapping(target = "mMatchResultCutins", ignore = true)
     @Mapping(target = "mNpcCards", ignore = true)

@@ -1,0 +1,69 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-model-uniform-up-resource-heading">Create or edit a M Model Uniform Up Resource</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mModelUniformUpResource.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_uniformTypeId">Uniform Type Id</label>
+                    <input type="number" class="form-control" name="uniformTypeId" id="field_uniformTypeId"
+                           formControlName="uniformTypeId"/>
+                    <div *ngIf="editForm.get('uniformTypeId').invalid && (editForm.get('uniformTypeId').dirty || editForm.get('uniformTypeId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uniformTypeId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('uniformTypeId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dressingType">Dressing Type</label>
+                    <input type="number" class="form-control" name="dressingType" id="field_dressingType"
+                           formControlName="dressingType"/>
+                    <div *ngIf="editForm.get('dressingType').invalid && (editForm.get('dressingType').dirty || editForm.get('dressingType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dressingType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('dressingType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_width">Width</label>
+                    <input type="number" class="form-control" name="width" id="field_width"
+                           formControlName="width"/>
+                    <div *ngIf="editForm.get('width').invalid && (editForm.get('width').dirty || editForm.get('width').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('width').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('width')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-model-quest-stage-heading">Create or edit a M Model Quest Stage</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mModelQuestStage.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_stageId">Stage Id</label>
+                    <input type="number" class="form-control" name="stageId" id="field_stageId"
+                           formControlName="stageId"/>
+                    <div *ngIf="editForm.get('stageId').invalid && (editForm.get('stageId').dirty || editForm.get('stageId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('stageId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('stageId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_image">Image</label>
+                    <textarea class="form-control" name="image" id="field_image"
+                              formControlName="image"></textarea>
+                    <div *ngIf="editForm.get('image').invalid && (editForm.get('image').dirty || editForm.get('image').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('image').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_modelName">Model Name</label>
+                    <textarea class="form-control" name="modelName" id="field_modelName"
+                              formControlName="modelName"></textarea>
+                    <div *ngIf="editForm.get('modelName').invalid && (editForm.get('modelName').dirty || editForm.get('modelName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('modelName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bgmOffencing">Bgm Offencing</label>
+                    <textarea class="form-control" name="bgmOffencing" id="field_bgmOffencing"
+                              formControlName="bgmOffencing"></textarea>
+                    <div *ngIf="editForm.get('bgmOffencing').invalid && (editForm.get('bgmOffencing').dirty || editForm.get('bgmOffencing').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('bgmOffencing').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bgmDefencing">Bgm Defencing</label>
+                    <textarea class="form-control" name="bgmDefencing" id="field_bgmDefencing"
+                              formControlName="bgmDefencing"></textarea>
+                    <div *ngIf="editForm.get('bgmDefencing').invalid && (editForm.get('bgmDefencing').dirty || editForm.get('bgmDefencing').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('bgmDefencing').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bgmHurrying">Bgm Hurrying</label>
+                    <textarea class="form-control" name="bgmHurrying" id="field_bgmHurrying"
+                              formControlName="bgmHurrying"></textarea>
+                    <div *ngIf="editForm.get('bgmHurrying').invalid && (editForm.get('bgmHurrying').dirty || editForm.get('bgmHurrying').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('bgmHurrying').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

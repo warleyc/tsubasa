@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLeagueRegulation">
+            <h2><span>M League Regulation</span> {{mLeagueRegulation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mLeagueRegulation.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mLeagueRegulation.endAt}}</span>
+                </dd>
+                <dt><span>Match Option Id</span></dt>
+                <dd>
+                    <span>{{mLeagueRegulation.matchOptionId}}</span>
+                </dd>
+                <dt><span>Deck Condition Id</span></dt>
+                <dd>
+                    <span>{{mLeagueRegulation.deckConditionId}}</span>
+                </dd>
+                <dt><span>Rule Tutorial Id</span></dt>
+                <dd>
+                    <span>{{mLeagueRegulation.ruleTutorialId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mLeagueRegulation.idId">
+                        <a [routerLink]="['/m-match-option', mLeagueRegulation.idId, 'view']">{{mLeagueRegulation.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-league-regulation', mLeagueRegulation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

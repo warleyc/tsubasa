@@ -16,7 +16,16 @@
             ]
         }
     ],
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mTeam",
+            "otherEntityRelationshipName": "mTargetTeamGroup",
+            "relationshipValidateRules": "required",
+            "relationshipName": "id",
+            "otherEntityField": "id"
+        }
+    ],
     "changelogDate": "20190610225016",
     "entityTableName": "m_target_team_group",
     "dto": "mapstruct",

@@ -1,0 +1,92 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Login Bonus Rounds</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-login-bonus-round" [routerLink]="['/m-login-bonus-round/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Login Bonus Round
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mLoginBonusRounds">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="roundId"><span>Round Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="bonusType"><span>Bonus Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startAt"><span>Start At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="endAt"><span>End At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serifSanae"><span>Serif Sanae</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serifYayoi"><span>Serif Yayoi</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serifYoshiko"><span>Serif Yoshiko</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serifMaki"><span>Serif Maki</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sanaeImage"><span>Sanae Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="yayoiImage"><span>Yayoi Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="yoshikoImage"><span>Yoshiko Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="makiImage"><span>Maki Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="soundSwitchEventName"><span>Sound Switch Event Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nextId"><span>Next Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lastDayAppealComment"><span>Last Day Appeal Comment</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="backgroundImage"><span>Background Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mLoginBonusRound of mLoginBonusRounds ;trackBy: trackId">
+                <td><a [routerLink]="['/m-login-bonus-round', mLoginBonusRound.id, 'view' ]">{{mLoginBonusRound.id}}</a></td>
+                <td>{{mLoginBonusRound.roundId}}</td>
+                <td>{{mLoginBonusRound.bonusType}}</td>
+                <td>{{mLoginBonusRound.startAt}}</td>
+                <td>{{mLoginBonusRound.endAt}}</td>
+                <td>{{mLoginBonusRound.serifSanae}}</td>
+                <td>{{mLoginBonusRound.serifYayoi}}</td>
+                <td>{{mLoginBonusRound.serifYoshiko}}</td>
+                <td>{{mLoginBonusRound.serifMaki}}</td>
+                <td>{{mLoginBonusRound.sanaeImage}}</td>
+                <td>{{mLoginBonusRound.yayoiImage}}</td>
+                <td>{{mLoginBonusRound.yoshikoImage}}</td>
+                <td>{{mLoginBonusRound.makiImage}}</td>
+                <td>{{mLoginBonusRound.soundSwitchEventName}}</td>
+                <td>{{mLoginBonusRound.nextId}}</td>
+                <td>{{mLoginBonusRound.lastDayAppealComment}}</td>
+                <td>{{mLoginBonusRound.backgroundImage}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-login-bonus-round', mLoginBonusRound.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-login-bonus-round', mLoginBonusRound.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-login-bonus-round', { outlets: { popup: mLoginBonusRound.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mLoginBonusRounds && mLoginBonusRounds.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

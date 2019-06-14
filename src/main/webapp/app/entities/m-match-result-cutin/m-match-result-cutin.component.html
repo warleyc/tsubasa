@@ -1,0 +1,76 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Match Result Cutins</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-match-result-cutin" [routerLink]="['/m-match-result-cutin/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Match Result Cutin
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mMatchResultCutins">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterId"><span>Character Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="teamId"><span>Team Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isWin"><span>Is Win</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="text"><span>Text</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="soundEvent"><span>Sound Event</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mMatchResultCutin of mMatchResultCutins ;trackBy: trackId">
+                <td><a [routerLink]="['/m-match-result-cutin', mMatchResultCutin.id, 'view' ]">{{mMatchResultCutin.id}}</a></td>
+                <td>{{mMatchResultCutin.characterId}}</td>
+                <td>{{mMatchResultCutin.teamId}}</td>
+                <td>{{mMatchResultCutin.isWin}}</td>
+                <td>{{mMatchResultCutin.text}}</td>
+                <td>{{mMatchResultCutin.soundEvent}}</td>
+                <td>
+                    <div *ngIf="mMatchResultCutin.idId">
+                        <a [routerLink]="['../m-character', mMatchResultCutin.idId , 'view' ]" >{{mMatchResultCutin.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-match-result-cutin', mMatchResultCutin.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-match-result-cutin', mMatchResultCutin.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-match-result-cutin', { outlets: { popup: mMatchResultCutin.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mMatchResultCutins && mMatchResultCutins.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

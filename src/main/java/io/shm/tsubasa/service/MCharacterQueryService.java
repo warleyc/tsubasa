@@ -92,9 +92,9 @@ public class MCharacterQueryService extends QueryService<MCharacter> {
             if (criteria.getCharacterBookPriority() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getCharacterBookPriority(), MCharacter_.characterBookPriority));
             }
-            if (criteria.getMActionSkillHolderCardCtId() != null) {
-                specification = specification.and(buildSpecification(criteria.getMActionSkillHolderCardCtId(),
-                    root -> root.join(MCharacter_.mActionSkillHolderCardCts, JoinType.LEFT).get(MActionSkillHolderCardCt_.id)));
+            if (criteria.getMActionSkillHolderCardContentId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMActionSkillHolderCardContentId(),
+                    root -> root.join(MCharacter_.mActionSkillHolderCardContents, JoinType.LEFT).get(MActionSkillHolderCardContent_.id)));
             }
             if (criteria.getMCombinationCutPositionId() != null) {
                 specification = specification.and(buildSpecification(criteria.getMCombinationCutPositionId(),

@@ -1,0 +1,165 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-init-user-deck-heading">Create or edit a M Init User Deck</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mInitUserDeck.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_deckId">Deck Id</label>
+                    <input type="number" class="form-control" name="deckId" id="field_deckId"
+                           formControlName="deckId"/>
+                    <div *ngIf="editForm.get('deckId').invalid && (editForm.get('deckId').dirty || editForm.get('deckId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('deckId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('deckId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <textarea class="form-control" name="name" id="field_name"
+                              formControlName="name"></textarea>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_formationId">Formation Id</label>
+                    <input type="number" class="form-control" name="formationId" id="field_formationId"
+                           formControlName="formationId"/>
+                    <div *ngIf="editForm.get('formationId').invalid && (editForm.get('formationId').dirty || editForm.get('formationId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('formationId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('formationId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_captainCardId">Captain Card Id</label>
+                    <input type="number" class="form-control" name="captainCardId" id="field_captainCardId"
+                           formControlName="captainCardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_gkCardId">Gk Card Id</label>
+                    <input type="number" class="form-control" name="gkCardId" id="field_gkCardId"
+                           formControlName="gkCardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp1CardId">Fp 1 Card Id</label>
+                    <input type="number" class="form-control" name="fp1CardId" id="field_fp1CardId"
+                           formControlName="fp1CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp2CardId">Fp 2 Card Id</label>
+                    <input type="number" class="form-control" name="fp2CardId" id="field_fp2CardId"
+                           formControlName="fp2CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp3CardId">Fp 3 Card Id</label>
+                    <input type="number" class="form-control" name="fp3CardId" id="field_fp3CardId"
+                           formControlName="fp3CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp4CardId">Fp 4 Card Id</label>
+                    <input type="number" class="form-control" name="fp4CardId" id="field_fp4CardId"
+                           formControlName="fp4CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp5CardId">Fp 5 Card Id</label>
+                    <input type="number" class="form-control" name="fp5CardId" id="field_fp5CardId"
+                           formControlName="fp5CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp6CardId">Fp 6 Card Id</label>
+                    <input type="number" class="form-control" name="fp6CardId" id="field_fp6CardId"
+                           formControlName="fp6CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp7CardId">Fp 7 Card Id</label>
+                    <input type="number" class="form-control" name="fp7CardId" id="field_fp7CardId"
+                           formControlName="fp7CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp8CardId">Fp 8 Card Id</label>
+                    <input type="number" class="form-control" name="fp8CardId" id="field_fp8CardId"
+                           formControlName="fp8CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp9CardId">Fp 9 Card Id</label>
+                    <input type="number" class="form-control" name="fp9CardId" id="field_fp9CardId"
+                           formControlName="fp9CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fp10CardId">Fp 10 Card Id</label>
+                    <input type="number" class="form-control" name="fp10CardId" id="field_fp10CardId"
+                           formControlName="fp10CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sub1CardId">Sub 1 Card Id</label>
+                    <input type="number" class="form-control" name="sub1CardId" id="field_sub1CardId"
+                           formControlName="sub1CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sub2CardId">Sub 2 Card Id</label>
+                    <input type="number" class="form-control" name="sub2CardId" id="field_sub2CardId"
+                           formControlName="sub2CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sub3CardId">Sub 3 Card Id</label>
+                    <input type="number" class="form-control" name="sub3CardId" id="field_sub3CardId"
+                           formControlName="sub3CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sub4CardId">Sub 4 Card Id</label>
+                    <input type="number" class="form-control" name="sub4CardId" id="field_sub4CardId"
+                           formControlName="sub4CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sub5CardId">Sub 5 Card Id</label>
+                    <input type="number" class="form-control" name="sub5CardId" id="field_sub5CardId"
+                           formControlName="sub5CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_teamEffect1CardId">Team Effect 1 Card Id</label>
+                    <input type="number" class="form-control" name="teamEffect1CardId" id="field_teamEffect1CardId"
+                           formControlName="teamEffect1CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_teamEffect2CardId">Team Effect 2 Card Id</label>
+                    <input type="number" class="form-control" name="teamEffect2CardId" id="field_teamEffect2CardId"
+                           formControlName="teamEffect2CardId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_teamEffect3CardId">Team Effect 3 Card Id</label>
+                    <input type="number" class="form-control" name="teamEffect3CardId" id="field_teamEffect3CardId"
+                           formControlName="teamEffect3CardId"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

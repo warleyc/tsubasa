@@ -1,0 +1,133 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mWeeklyQuestStage">
+            <h2><span>M Weekly Quest Stage</span> {{mWeeklyQuestStage.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>World Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.worldId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.name}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.imagePath}}</span>
+                </dd>
+                <dt><span>Character Thumbnail Path</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.characterThumbnailPath}}</span>
+                </dd>
+                <dt><span>Difficulty</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.difficulty}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Story Only</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.storyOnly}}</span>
+                </dd>
+                <dt><span>First Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.firstHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>First Half Environment Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.firstHalfEnvironmentId}}</span>
+                </dd>
+                <dt><span>Second Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.secondHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Second Half Environment Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.secondHalfEnvironmentId}}</span>
+                </dd>
+                <dt><span>Extra First Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.extraFirstHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Extra Second Half Npc Deck Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.extraSecondHalfNpcDeckId}}</span>
+                </dd>
+                <dt><span>Consume Ap</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.consumeAp}}</span>
+                </dd>
+                <dt><span>Kick Off Type</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.kickOffType}}</span>
+                </dd>
+                <dt><span>Match Minute</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.matchMinute}}</span>
+                </dd>
+                <dt><span>Enable Extra</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.enableExtra}}</span>
+                </dd>
+                <dt><span>Enable Pk</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.enablePk}}</span>
+                </dd>
+                <dt><span>Ai Level</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.aiLevel}}</span>
+                </dd>
+                <dt><span>Start At Second Half</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.startAtSecondHalf}}</span>
+                </dd>
+                <dt><span>Start Score</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.startScore}}</span>
+                </dd>
+                <dt><span>Start Score Opponent</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.startScoreOpponent}}</span>
+                </dd>
+                <dt><span>Condition Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.conditionId}}</span>
+                </dd>
+                <dt><span>Option Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.optionId}}</span>
+                </dd>
+                <dt><span>Deck Condition Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStage.deckConditionId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mWeeklyQuestStage.idId">
+                        <a [routerLink]="['/m-weekly-quest-world', mWeeklyQuestStage.idId, 'view']">{{mWeeklyQuestStage.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-weekly-quest-stage', mWeeklyQuestStage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

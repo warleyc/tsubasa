@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLuck">
+            <h2><span>M Luck</span> {{mLuck.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Target Attribute</span></dt>
+                <dd>
+                    <span>{{mLuck.targetAttribute}}</span>
+                </dd>
+                <dt><span>Target Character Group Id</span></dt>
+                <dd>
+                    <span>{{mLuck.targetCharacterGroupId}}</span>
+                </dd>
+                <dt><span>Target Team Group Id</span></dt>
+                <dd>
+                    <span>{{mLuck.targetTeamGroupId}}</span>
+                </dd>
+                <dt><span>Target Nationality Group Id</span></dt>
+                <dd>
+                    <span>{{mLuck.targetNationalityGroupId}}</span>
+                </dd>
+                <dt><span>Luck Rate Group Id</span></dt>
+                <dd>
+                    <span>{{mLuck.luckRateGroupId}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mLuck.description}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-luck', mLuck.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

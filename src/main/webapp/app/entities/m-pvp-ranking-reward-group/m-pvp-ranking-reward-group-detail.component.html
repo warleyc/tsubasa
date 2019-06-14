@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mPvpRankingRewardGroup">
+            <h2><span>M Pvp Ranking Reward Group</span> {{mPvpRankingRewardGroup.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Group Id</span></dt>
+                <dd>
+                    <span>{{mPvpRankingRewardGroup.groupId}}</span>
+                </dd>
+                <dt><span>Content Type</span></dt>
+                <dd>
+                    <span>{{mPvpRankingRewardGroup.contentType}}</span>
+                </dd>
+                <dt><span>Content Id</span></dt>
+                <dd>
+                    <span>{{mPvpRankingRewardGroup.contentId}}</span>
+                </dd>
+                <dt><span>Content Amount</span></dt>
+                <dd>
+                    <span>{{mPvpRankingRewardGroup.contentAmount}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-pvp-ranking-reward-group', mPvpRankingRewardGroup.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

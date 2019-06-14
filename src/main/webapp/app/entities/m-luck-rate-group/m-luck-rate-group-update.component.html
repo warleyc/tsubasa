@@ -1,0 +1,69 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-luck-rate-group-heading">Create or edit a M Luck Rate Group</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mLuckRateGroup.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_groupId">Group Id</label>
+                    <input type="number" class="form-control" name="groupId" id="field_groupId"
+                           formControlName="groupId"/>
+                    <div *ngIf="editForm.get('groupId').invalid && (editForm.get('groupId').dirty || editForm.get('groupId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('groupId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('groupId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_rarity">Rarity</label>
+                    <input type="number" class="form-control" name="rarity" id="field_rarity"
+                           formControlName="rarity"/>
+                    <div *ngIf="editForm.get('rarity').invalid && (editForm.get('rarity').dirty || editForm.get('rarity').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('rarity').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('rarity')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_rate">Rate</label>
+                    <input type="number" class="form-control" name="rate" id="field_rate"
+                           formControlName="rate"/>
+                    <div *ngIf="editForm.get('rate').invalid && (editForm.get('rate').dirty || editForm.get('rate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('rate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('rate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

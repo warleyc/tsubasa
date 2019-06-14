@@ -1,0 +1,69 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-shoot-heading">Create or edit a M Shoot</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mShoot.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_angleDecayType">Angle Decay Type</label>
+                    <input type="number" class="form-control" name="angleDecayType" id="field_angleDecayType"
+                           formControlName="angleDecayType"/>
+                    <div *ngIf="editForm.get('angleDecayType').invalid && (editForm.get('angleDecayType').dirty || editForm.get('angleDecayType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('angleDecayType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('angleDecayType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_shootOrbit">Shoot Orbit</label>
+                    <input type="number" class="form-control" name="shootOrbit" id="field_shootOrbit"
+                           formControlName="shootOrbit"/>
+                    <div *ngIf="editForm.get('shootOrbit').invalid && (editForm.get('shootOrbit').dirty || editForm.get('shootOrbit').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('shootOrbit').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('shootOrbit')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_judgementId">Judgement Id</label>
+                    <input type="number" class="form-control" name="judgementId" id="field_judgementId"
+                           formControlName="judgementId"/>
+                    <div *ngIf="editForm.get('judgementId').invalid && (editForm.get('judgementId').dirty || editForm.get('judgementId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('judgementId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('judgementId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

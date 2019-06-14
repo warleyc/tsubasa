@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-store-review-url-heading">Create or edit a M Store Review Url</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mStoreReviewUrl.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_platform">Platform</label>
+                    <input type="number" class="form-control" name="platform" id="field_platform"
+                           formControlName="platform"/>
+                    <div *ngIf="editForm.get('platform').invalid && (editForm.get('platform').dirty || editForm.get('platform').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('platform').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('platform')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_url">Url</label>
+                    <textarea class="form-control" name="url" id="field_url"
+                              formControlName="url"></textarea>
+                    <div *ngIf="editForm.get('url').invalid && (editForm.get('url').dirty || editForm.get('url').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('url').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

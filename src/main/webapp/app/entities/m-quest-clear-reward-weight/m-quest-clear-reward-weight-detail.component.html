@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestClearRewardWeight">
+            <h2><span>M Quest Clear Reward Weight</span> {{mQuestClearRewardWeight.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Reward 1</span></dt>
+                <dd>
+                    <span>{{mQuestClearRewardWeight.reward1}}</span>
+                </dd>
+                <dt><span>Reward 2</span></dt>
+                <dd>
+                    <span>{{mQuestClearRewardWeight.reward2}}</span>
+                </dd>
+                <dt><span>Reward 3</span></dt>
+                <dd>
+                    <span>{{mQuestClearRewardWeight.reward3}}</span>
+                </dd>
+                <dt><span>Reward 4</span></dt>
+                <dd>
+                    <span>{{mQuestClearRewardWeight.reward4}}</span>
+                </dd>
+                <dt><span>Reward 5</span></dt>
+                <dd>
+                    <span>{{mQuestClearRewardWeight.reward5}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-clear-reward-weight', mQuestClearRewardWeight.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

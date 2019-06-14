@@ -1,0 +1,144 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-trigger-effect-range-heading">Create or edit a M Trigger Effect Range</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mTriggerEffectRange.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectType">Effect Type</label>
+                    <input type="number" class="form-control" name="effectType" id="field_effectType"
+                           formControlName="effectType"/>
+                    <div *ngIf="editForm.get('effectType').invalid && (editForm.get('effectType').dirty || editForm.get('effectType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPositionGk">Target Position Gk</label>
+                    <input type="number" class="form-control" name="targetPositionGk" id="field_targetPositionGk"
+                           formControlName="targetPositionGk"/>
+                    <div *ngIf="editForm.get('targetPositionGk').invalid && (editForm.get('targetPositionGk').dirty || editForm.get('targetPositionGk').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPositionGk').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPositionGk')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPositionFw">Target Position Fw</label>
+                    <input type="number" class="form-control" name="targetPositionFw" id="field_targetPositionFw"
+                           formControlName="targetPositionFw"/>
+                    <div *ngIf="editForm.get('targetPositionFw').invalid && (editForm.get('targetPositionFw').dirty || editForm.get('targetPositionFw').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPositionFw').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPositionFw')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPositionOmf">Target Position Omf</label>
+                    <input type="number" class="form-control" name="targetPositionOmf" id="field_targetPositionOmf"
+                           formControlName="targetPositionOmf"/>
+                    <div *ngIf="editForm.get('targetPositionOmf').invalid && (editForm.get('targetPositionOmf').dirty || editForm.get('targetPositionOmf').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPositionOmf').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPositionOmf')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPositionDmf">Target Position Dmf</label>
+                    <input type="number" class="form-control" name="targetPositionDmf" id="field_targetPositionDmf"
+                           formControlName="targetPositionDmf"/>
+                    <div *ngIf="editForm.get('targetPositionDmf').invalid && (editForm.get('targetPositionDmf').dirty || editForm.get('targetPositionDmf').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPositionDmf').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPositionDmf')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetPositionDf">Target Position Df</label>
+                    <input type="number" class="form-control" name="targetPositionDf" id="field_targetPositionDf"
+                           formControlName="targetPositionDf"/>
+                    <div *ngIf="editForm.get('targetPositionDf').invalid && (editForm.get('targetPositionDf').dirty || editForm.get('targetPositionDf').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('targetPositionDf').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('targetPositionDf')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetAttribute">Target Attribute</label>
+                    <input type="number" class="form-control" name="targetAttribute" id="field_targetAttribute"
+                           formControlName="targetAttribute"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetNationalityGroupId">Target Nationality Group Id</label>
+                    <input type="number" class="form-control" name="targetNationalityGroupId" id="field_targetNationalityGroupId"
+                           formControlName="targetNationalityGroupId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetTeamGroupId">Target Team Group Id</label>
+                    <input type="number" class="form-control" name="targetTeamGroupId" id="field_targetTeamGroupId"
+                           formControlName="targetTeamGroupId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetCharacterGroupId">Target Character Group Id</label>
+                    <input type="number" class="form-control" name="targetCharacterGroupId" id="field_targetCharacterGroupId"
+                           formControlName="targetCharacterGroupId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetFormationGroupId">Target Formation Group Id</label>
+                    <input type="number" class="form-control" name="targetFormationGroupId" id="field_targetFormationGroupId"
+                           formControlName="targetFormationGroupId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_targetActionCommand">Target Action Command</label>
+                    <input type="number" class="form-control" name="targetActionCommand" id="field_targetActionCommand"
+                           formControlName="targetActionCommand"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

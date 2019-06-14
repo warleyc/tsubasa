@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mPvpRankingReward">
+            <h2><span>M Pvp Ranking Reward</span> {{mPvpRankingReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Wave Id</span></dt>
+                <dd>
+                    <span>{{mPvpRankingReward.waveId}}</span>
+                </dd>
+                <dt><span>Difficulty</span></dt>
+                <dd>
+                    <span>{{mPvpRankingReward.difficulty}}</span>
+                </dd>
+                <dt><span>Ranking From</span></dt>
+                <dd>
+                    <span>{{mPvpRankingReward.rankingFrom}}</span>
+                </dd>
+                <dt><span>Ranking To</span></dt>
+                <dd>
+                    <span>{{mPvpRankingReward.rankingTo}}</span>
+                </dd>
+                <dt><span>Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mPvpRankingReward.rewardGroupId}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mPvpRankingReward.idId">
+                        <a [routerLink]="['/m-pvp-wave', mPvpRankingReward.idId, 'view']">{{mPvpRankingReward.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-pvp-ranking-reward', mPvpRankingReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

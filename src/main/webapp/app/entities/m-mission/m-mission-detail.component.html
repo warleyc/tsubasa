@@ -1,0 +1,109 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMission">
+            <h2><span>M Mission</span> {{mMission.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Term</span></dt>
+                <dd>
+                    <span>{{mMission.term}}</span>
+                </dd>
+                <dt><span>Round Num</span></dt>
+                <dd>
+                    <span>{{mMission.roundNum}}</span>
+                </dd>
+                <dt><span>Title</span></dt>
+                <dd>
+                    <span>{{mMission.title}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mMission.description}}</span>
+                </dd>
+                <dt><span>Mission Type</span></dt>
+                <dd>
+                    <span>{{mMission.missionType}}</span>
+                </dd>
+                <dt><span>Absolute</span></dt>
+                <dd>
+                    <span>{{mMission.absolute}}</span>
+                </dd>
+                <dt><span>Param 1</span></dt>
+                <dd>
+                    <span>{{mMission.param1}}</span>
+                </dd>
+                <dt><span>Param 2</span></dt>
+                <dd>
+                    <span>{{mMission.param2}}</span>
+                </dd>
+                <dt><span>Param 3</span></dt>
+                <dd>
+                    <span>{{mMission.param3}}</span>
+                </dd>
+                <dt><span>Param 4</span></dt>
+                <dd>
+                    <span>{{mMission.param4}}</span>
+                </dd>
+                <dt><span>Param 5</span></dt>
+                <dd>
+                    <span>{{mMission.param5}}</span>
+                </dd>
+                <dt><span>Trigger</span></dt>
+                <dd>
+                    <span>{{mMission.trigger}}</span>
+                </dd>
+                <dt><span>Trigger Condition</span></dt>
+                <dd>
+                    <span>{{mMission.triggerCondition}}</span>
+                </dd>
+                <dt><span>Reward Id</span></dt>
+                <dd>
+                    <span>{{mMission.rewardId}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mMission.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mMission.endAt}}</span>
+                </dd>
+                <dt><span>Link</span></dt>
+                <dd>
+                    <span>{{mMission.link}}</span>
+                </dd>
+                <dt><span>Scene Transition Param</span></dt>
+                <dd>
+                    <span>{{mMission.sceneTransitionParam}}</span>
+                </dd>
+                <dt><span>Pickup</span></dt>
+                <dd>
+                    <span>{{mMission.pickup}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mMission.orderNum}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mMission.idId">
+                        <a [routerLink]="['/m-mission-reward', mMission.idId, 'view']">{{mMission.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-mission', mMission.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLoginBonusRound">
+            <h2><span>M Login Bonus Round</span> {{mLoginBonusRound.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Round Id</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.roundId}}</span>
+                </dd>
+                <dt><span>Bonus Type</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.bonusType}}</span>
+                </dd>
+                <dt><span>Start At</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.startAt}}</span>
+                </dd>
+                <dt><span>End At</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.endAt}}</span>
+                </dd>
+                <dt><span>Serif Sanae</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.serifSanae}}</span>
+                </dd>
+                <dt><span>Serif Yayoi</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.serifYayoi}}</span>
+                </dd>
+                <dt><span>Serif Yoshiko</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.serifYoshiko}}</span>
+                </dd>
+                <dt><span>Serif Maki</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.serifMaki}}</span>
+                </dd>
+                <dt><span>Sanae Image</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.sanaeImage}}</span>
+                </dd>
+                <dt><span>Yayoi Image</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.yayoiImage}}</span>
+                </dd>
+                <dt><span>Yoshiko Image</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.yoshikoImage}}</span>
+                </dd>
+                <dt><span>Maki Image</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.makiImage}}</span>
+                </dd>
+                <dt><span>Sound Switch Event Name</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.soundSwitchEventName}}</span>
+                </dd>
+                <dt><span>Next Id</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.nextId}}</span>
+                </dd>
+                <dt><span>Last Day Appeal Comment</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.lastDayAppealComment}}</span>
+                </dd>
+                <dt><span>Background Image</span></dt>
+                <dd>
+                    <span>{{mLoginBonusRound.backgroundImage}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-login-bonus-round', mLoginBonusRound.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

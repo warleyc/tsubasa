@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTsubasaPoint">
+            <h2><span>M Tsubasa Point</span> {{mTsubasaPoint.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Match Type</span></dt>
+                <dd>
+                    <span>{{mTsubasaPoint.matchType}}</span>
+                </dd>
+                <dt><span>Point Type</span></dt>
+                <dd>
+                    <span>{{mTsubasaPoint.pointType}}</span>
+                </dd>
+                <dt><span>Calc Type</span></dt>
+                <dd>
+                    <span>{{mTsubasaPoint.calcType}}</span>
+                </dd>
+                <dt><span>A Value</span></dt>
+                <dd>
+                    <span>{{mTsubasaPoint.aValue}}</span>
+                </dd>
+                <dt><span>B Value</span></dt>
+                <dd>
+                    <span>{{mTsubasaPoint.bValue}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mTsubasaPoint.orderNum}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-tsubasa-point', mTsubasaPoint.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

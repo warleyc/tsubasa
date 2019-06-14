@@ -317,6 +317,10 @@ public class CacheConfiguration {
             createCache(cm, io.shm.tsubasa.domain.MWeeklyQuestTsubasaPointReward.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MWeeklyQuestWorld.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MWeeklyQuestWorld.class.getName() + ".mWeeklyQuestStages");
+            createCache(cm, io.shm.tsubasa.domain.MActionSkillHolderCardContent.class.getName());
+            createCache(cm, io.shm.tsubasa.domain.MCharacter.class.getName() + ".mActionSkillHolderCardContents");
+            createCache(cm, io.shm.tsubasa.domain.MTeam.class.getName());
+            createCache(cm, io.shm.tsubasa.domain.MTeam.class.getName() + ".mTargetTeamGroups");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,80 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Match Environments</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-match-environment" [routerLink]="['/m-match-environment/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Match Environment
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mMatchEnvironments">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="category"><span>Category</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="skyTex"><span>Sky Tex</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ball"><span>Ball</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="stadium"><span>Stadium</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rainyAssetName"><span>Rainy Asset Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isPlayRainySound"><span>Is Play Rainy Sound</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="offenseStartBgm"><span>Offense Start Bgm</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="offenseStopBgm"><span>Offense Stop Bgm</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="defenseStartBgm"><span>Defense Start Bgm</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="defenseStopBgm"><span>Defense Stop Bgm</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mMatchEnvironment of mMatchEnvironments ;trackBy: trackId">
+                <td><a [routerLink]="['/m-match-environment', mMatchEnvironment.id, 'view' ]">{{mMatchEnvironment.id}}</a></td>
+                <td>{{mMatchEnvironment.category}}</td>
+                <td>{{mMatchEnvironment.skyTex}}</td>
+                <td>{{mMatchEnvironment.ball}}</td>
+                <td>{{mMatchEnvironment.stadium}}</td>
+                <td>{{mMatchEnvironment.rainyAssetName}}</td>
+                <td>{{mMatchEnvironment.isPlayRainySound}}</td>
+                <td>{{mMatchEnvironment.offenseStartBgm}}</td>
+                <td>{{mMatchEnvironment.offenseStopBgm}}</td>
+                <td>{{mMatchEnvironment.defenseStartBgm}}</td>
+                <td>{{mMatchEnvironment.defenseStopBgm}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-match-environment', mMatchEnvironment.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-match-environment', mMatchEnvironment.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-match-environment', { outlets: { popup: mMatchEnvironment.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mMatchEnvironments && mMatchEnvironments.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMatchOption">
+            <h2><span>M Match Option</span> {{mMatchOption.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Passive Effect Id</span></dt>
+                <dd>
+                    <span>{{mMatchOption.passiveEffectId}}</span>
+                </dd>
+                <dt><span>Passive Effect Value</span></dt>
+                <dd>
+                    <span>{{mMatchOption.passiveEffectValue}}</span>
+                </dd>
+                <dt><span>Activate Full Power Type</span></dt>
+                <dd>
+                    <span>{{mMatchOption.activateFullPowerType}}</span>
+                </dd>
+                <dt><span>Attribute Magnification</span></dt>
+                <dd>
+                    <span>{{mMatchOption.attributeMagnification}}</span>
+                </dd>
+                <dt><span>Use Stamina Magnification</span></dt>
+                <dd>
+                    <span>{{mMatchOption.useStaminaMagnification}}</span>
+                </dd>
+                <dt><span>Is Ignore Team Skill</span></dt>
+                <dd>
+                    <span>{{mMatchOption.isIgnoreTeamSkill}}</span>
+                </dd>
+                <dt><span>Stamina Infinity Type</span></dt>
+                <dd>
+                    <span>{{mMatchOption.staminaInfinityType}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mMatchOption.idId">
+                        <a [routerLink]="['/m-passive-effect-range', mMatchOption.idId, 'view']">{{mMatchOption.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-match-option', mMatchOption.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

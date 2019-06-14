@@ -1,0 +1,118 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Marathon Quest Stages</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-marathon-quest-stage" [routerLink]="['/m-marathon-quest-stage/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Marathon Quest Stage
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mMarathonQuestStages">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="worldId"><span>World Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="number"><span>Number</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="imagePath"><span>Image Path</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterThumbnailPath"><span>Character Thumbnail Path</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="difficulty"><span>Difficulty</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="stageUnlockPattern"><span>Stage Unlock Pattern</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="storyOnly"><span>Story Only</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="firstHalfNpcDeckId"><span>First Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="firstHalfEnvironmentId"><span>First Half Environment Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="secondHalfNpcDeckId"><span>Second Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="secondHalfEnvironmentId"><span>Second Half Environment Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="extraFirstHalfNpcDeckId"><span>Extra First Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="extraSecondHalfNpcDeckId"><span>Extra Second Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="consumeAp"><span>Consume Ap</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="kickOffType"><span>Kick Off Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="matchMinute"><span>Match Minute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enableExtra"><span>Enable Extra</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enablePk"><span>Enable Pk</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="aiLevel"><span>Ai Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startAtSecondHalf"><span>Start At Second Half</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startScore"><span>Start Score</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startScoreOpponent"><span>Start Score Opponent</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="conditionId"><span>Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mMarathonQuestStage of mMarathonQuestStages ;trackBy: trackId">
+                <td><a [routerLink]="['/m-marathon-quest-stage', mMarathonQuestStage.id, 'view' ]">{{mMarathonQuestStage.id}}</a></td>
+                <td>{{mMarathonQuestStage.worldId}}</td>
+                <td>{{mMarathonQuestStage.number}}</td>
+                <td>{{mMarathonQuestStage.name}}</td>
+                <td>{{mMarathonQuestStage.imagePath}}</td>
+                <td>{{mMarathonQuestStage.characterThumbnailPath}}</td>
+                <td>{{mMarathonQuestStage.difficulty}}</td>
+                <td>{{mMarathonQuestStage.stageUnlockPattern}}</td>
+                <td>{{mMarathonQuestStage.storyOnly}}</td>
+                <td>{{mMarathonQuestStage.firstHalfNpcDeckId}}</td>
+                <td>{{mMarathonQuestStage.firstHalfEnvironmentId}}</td>
+                <td>{{mMarathonQuestStage.secondHalfNpcDeckId}}</td>
+                <td>{{mMarathonQuestStage.secondHalfEnvironmentId}}</td>
+                <td>{{mMarathonQuestStage.extraFirstHalfNpcDeckId}}</td>
+                <td>{{mMarathonQuestStage.extraSecondHalfNpcDeckId}}</td>
+                <td>{{mMarathonQuestStage.consumeAp}}</td>
+                <td>{{mMarathonQuestStage.kickOffType}}</td>
+                <td>{{mMarathonQuestStage.matchMinute}}</td>
+                <td>{{mMarathonQuestStage.enableExtra}}</td>
+                <td>{{mMarathonQuestStage.enablePk}}</td>
+                <td>{{mMarathonQuestStage.aiLevel}}</td>
+                <td>{{mMarathonQuestStage.startAtSecondHalf}}</td>
+                <td>{{mMarathonQuestStage.startScore}}</td>
+                <td>{{mMarathonQuestStage.startScoreOpponent}}</td>
+                <td>{{mMarathonQuestStage.conditionId}}</td>
+                <td>{{mMarathonQuestStage.optionId}}</td>
+                <td>{{mMarathonQuestStage.deckConditionId}}</td>
+                <td>
+                    <div *ngIf="mMarathonQuestStage.idId">
+                        <a [routerLink]="['../m-marathon-quest-world', mMarathonQuestStage.idId , 'view' ]" >{{mMarathonQuestStage.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-marathon-quest-stage', mMarathonQuestStage.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-marathon-quest-stage', mMarathonQuestStage.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-marathon-quest-stage', { outlets: { popup: mMarathonQuestStage.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mMarathonQuestStages && mMarathonQuestStages.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

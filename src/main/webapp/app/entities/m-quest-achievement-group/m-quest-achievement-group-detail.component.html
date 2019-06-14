@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestAchievementGroup">
+            <h2><span>M Quest Achievement Group</span> {{mQuestAchievementGroup.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.groupId}}</span>
+                </dd>
+                <dt><span>Achievement Type</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.achievementType}}</span>
+                </dd>
+                <dt><span>Rank</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.rank}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.weight}}</span>
+                </dd>
+                <dt><span>Content Type</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.contentType}}</span>
+                </dd>
+                <dt><span>Content Id</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.contentId}}</span>
+                </dd>
+                <dt><span>Content Amount</span></dt>
+                <dd>
+                    <span>{{mQuestAchievementGroup.contentAmount}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-achievement-group', mQuestAchievementGroup.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

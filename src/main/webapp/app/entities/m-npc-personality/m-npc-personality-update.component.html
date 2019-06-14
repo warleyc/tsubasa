@@ -1,0 +1,234 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-npc-personality-heading">Create or edit a M Npc Personality</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mNpcPersonality.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_passingTargetRate">Passing Target Rate</label>
+                    <input type="number" class="form-control" name="passingTargetRate" id="field_passingTargetRate"
+                           formControlName="passingTargetRate"/>
+                    <div *ngIf="editForm.get('passingTargetRate').invalid && (editForm.get('passingTargetRate').dirty || editForm.get('passingTargetRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('passingTargetRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('passingTargetRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_actionSkillRate">Action Skill Rate</label>
+                    <input type="number" class="form-control" name="actionSkillRate" id="field_actionSkillRate"
+                           formControlName="actionSkillRate"/>
+                    <div *ngIf="editForm.get('actionSkillRate').invalid && (editForm.get('actionSkillRate').dirty || editForm.get('actionSkillRate').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('actionSkillRate').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('actionSkillRate')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dribbleMagnification">Dribble Magnification</label>
+                    <input type="number" class="form-control" name="dribbleMagnification" id="field_dribbleMagnification"
+                           formControlName="dribbleMagnification"/>
+                    <div *ngIf="editForm.get('dribbleMagnification').invalid && (editForm.get('dribbleMagnification').dirty || editForm.get('dribbleMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dribbleMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('dribbleMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_passingMagnification">Passing Magnification</label>
+                    <input type="number" class="form-control" name="passingMagnification" id="field_passingMagnification"
+                           formControlName="passingMagnification"/>
+                    <div *ngIf="editForm.get('passingMagnification').invalid && (editForm.get('passingMagnification').dirty || editForm.get('passingMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('passingMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('passingMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_onetwoMagnification">Onetwo Magnification</label>
+                    <input type="number" class="form-control" name="onetwoMagnification" id="field_onetwoMagnification"
+                           formControlName="onetwoMagnification"/>
+                    <div *ngIf="editForm.get('onetwoMagnification').invalid && (editForm.get('onetwoMagnification').dirty || editForm.get('onetwoMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('onetwoMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('onetwoMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_shootMagnification">Shoot Magnification</label>
+                    <input type="number" class="form-control" name="shootMagnification" id="field_shootMagnification"
+                           formControlName="shootMagnification"/>
+                    <div *ngIf="editForm.get('shootMagnification').invalid && (editForm.get('shootMagnification').dirty || editForm.get('shootMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('shootMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('shootMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_volleyShootMagnification">Volley Shoot Magnification</label>
+                    <input type="number" class="form-control" name="volleyShootMagnification" id="field_volleyShootMagnification"
+                           formControlName="volleyShootMagnification"/>
+                    <div *ngIf="editForm.get('volleyShootMagnification').invalid && (editForm.get('volleyShootMagnification').dirty || editForm.get('volleyShootMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('volleyShootMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('volleyShootMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_headingShootMagnification">Heading Shoot Magnification</label>
+                    <input type="number" class="form-control" name="headingShootMagnification" id="field_headingShootMagnification"
+                           formControlName="headingShootMagnification"/>
+                    <div *ngIf="editForm.get('headingShootMagnification').invalid && (editForm.get('headingShootMagnification').dirty || editForm.get('headingShootMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('headingShootMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('headingShootMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_tackleMagnification">Tackle Magnification</label>
+                    <input type="number" class="form-control" name="tackleMagnification" id="field_tackleMagnification"
+                           formControlName="tackleMagnification"/>
+                    <div *ngIf="editForm.get('tackleMagnification').invalid && (editForm.get('tackleMagnification').dirty || editForm.get('tackleMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('tackleMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('tackleMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_blockMagnification">Block Magnification</label>
+                    <input type="number" class="form-control" name="blockMagnification" id="field_blockMagnification"
+                           formControlName="blockMagnification"/>
+                    <div *ngIf="editForm.get('blockMagnification').invalid && (editForm.get('blockMagnification').dirty || editForm.get('blockMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('blockMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('blockMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_passCutMagnification">Pass Cut Magnification</label>
+                    <input type="number" class="form-control" name="passCutMagnification" id="field_passCutMagnification"
+                           formControlName="passCutMagnification"/>
+                    <div *ngIf="editForm.get('passCutMagnification').invalid && (editForm.get('passCutMagnification').dirty || editForm.get('passCutMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('passCutMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('passCutMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_clearMagnification">Clear Magnification</label>
+                    <input type="number" class="form-control" name="clearMagnification" id="field_clearMagnification"
+                           formControlName="clearMagnification"/>
+                    <div *ngIf="editForm.get('clearMagnification').invalid && (editForm.get('clearMagnification').dirty || editForm.get('clearMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('clearMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('clearMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_competeMagnification">Compete Magnification</label>
+                    <input type="number" class="form-control" name="competeMagnification" id="field_competeMagnification"
+                           formControlName="competeMagnification"/>
+                    <div *ngIf="editForm.get('competeMagnification').invalid && (editForm.get('competeMagnification').dirty || editForm.get('competeMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('competeMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('competeMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_trapMagnification">Trap Magnification</label>
+                    <input type="number" class="form-control" name="trapMagnification" id="field_trapMagnification"
+                           formControlName="trapMagnification"/>
+                    <div *ngIf="editForm.get('trapMagnification').invalid && (editForm.get('trapMagnification').dirty || editForm.get('trapMagnification').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('trapMagnification').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('trapMagnification')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

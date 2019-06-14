@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTimeattackQuestWorld">
+            <h2><span>M Timeattack Quest World</span> {{mTimeattackQuestWorld.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Set Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.setId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.name}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.imagePath}}</span>
+                </dd>
+                <dt><span>Background Image Path</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.backgroundImagePath}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.description}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Arousal Banner</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.arousalBanner}}</span>
+                </dd>
+                <dt><span>Special Reward Content Type</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.specialRewardContentType}}</span>
+                </dd>
+                <dt><span>Special Reward Content Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.specialRewardContentId}}</span>
+                </dd>
+                <dt><span>Is Enable Coop</span></dt>
+                <dd>
+                    <span>{{mTimeattackQuestWorld.isEnableCoop}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-timeattack-quest-world', mTimeattackQuestWorld.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

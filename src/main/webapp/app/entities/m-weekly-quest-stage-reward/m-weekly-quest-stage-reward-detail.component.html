@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mWeeklyQuestStageReward">
+            <h2><span>M Weekly Quest Stage Reward</span> {{mWeeklyQuestStageReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.stageId}}</span>
+                </dd>
+                <dt><span>Exp</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.exp}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.coin}}</span>
+                </dd>
+                <dt><span>Guild Point</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.guildPoint}}</span>
+                </dd>
+                <dt><span>Clear Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.clearRewardGroupId}}</span>
+                </dd>
+                <dt><span>Clear Reward Weight Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.clearRewardWeightId}}</span>
+                </dd>
+                <dt><span>Achievement Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.achievementRewardGroupId}}</span>
+                </dd>
+                <dt><span>Coop Group Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.coopGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.specialRewardGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Amount</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.specialRewardAmount}}</span>
+                </dd>
+                <dt><span>Goal Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestStageReward.goalRewardGroupId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-weekly-quest-stage-reward', mWeeklyQuestStageReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

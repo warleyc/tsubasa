@@ -1,0 +1,117 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mNpcDeck">
+            <h2><span>M Npc Deck</span> {{mNpcDeck.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Team Name</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.teamName}}</span>
+                </dd>
+                <dt><span>Uniform Bottom Fp</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.uniformBottomFp}}</span>
+                </dd>
+                <dt><span>Uniform Up Fp</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.uniformUpFp}}</span>
+                </dd>
+                <dt><span>Uniform Bottom Gk</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.uniformBottomGk}}</span>
+                </dd>
+                <dt><span>Uniform Up Gk</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.uniformUpGk}}</span>
+                </dd>
+                <dt><span>Formation Id</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.formationId}}</span>
+                </dd>
+                <dt><span>Captain Card Id</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.captainCardId}}</span>
+                </dd>
+                <dt><span>Team Effect 1 Card Id</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.teamEffect1CardId}}</span>
+                </dd>
+                <dt><span>Team Effect 2 Card Id</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.teamEffect2CardId}}</span>
+                </dd>
+                <dt><span>Team Effect 3 Card Id</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.teamEffect3CardId}}</span>
+                </dd>
+                <dt><span>Npc Card Id 1</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId1}}</span>
+                </dd>
+                <dt><span>Npc Card Id 2</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId2}}</span>
+                </dd>
+                <dt><span>Npc Card Id 3</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId3}}</span>
+                </dd>
+                <dt><span>Npc Card Id 4</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId4}}</span>
+                </dd>
+                <dt><span>Npc Card Id 5</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId5}}</span>
+                </dd>
+                <dt><span>Npc Card Id 6</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId6}}</span>
+                </dd>
+                <dt><span>Npc Card Id 7</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId7}}</span>
+                </dd>
+                <dt><span>Npc Card Id 8</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId8}}</span>
+                </dd>
+                <dt><span>Npc Card Id 9</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId9}}</span>
+                </dd>
+                <dt><span>Npc Card Id 10</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId10}}</span>
+                </dd>
+                <dt><span>Npc Card Id 11</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.npcCardId11}}</span>
+                </dd>
+                <dt><span>Tick</span></dt>
+                <dd>
+                    <span>{{mNpcDeck.tick}}</span>
+                </dd>
+                <dt><span>Id</span></dt>
+                <dd>
+                    <div *ngIf="mNpcDeck.idId">
+                        <a [routerLink]="['/m-formation', mNpcDeck.idId, 'view']">{{mNpcDeck.idId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-npc-deck', mNpcDeck.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

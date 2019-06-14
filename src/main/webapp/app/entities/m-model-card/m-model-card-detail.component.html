@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mModelCard">
+            <h2><span>M Model Card</span> {{mModelCard.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Hair Model</span></dt>
+                <dd>
+                    <span>{{mModelCard.hairModel}}</span>
+                </dd>
+                <dt><span>Hair Texture</span></dt>
+                <dd>
+                    <span>{{mModelCard.hairTexture}}</span>
+                </dd>
+                <dt><span>Head Model</span></dt>
+                <dd>
+                    <span>{{mModelCard.headModel}}</span>
+                </dd>
+                <dt><span>Head Texture</span></dt>
+                <dd>
+                    <span>{{mModelCard.headTexture}}</span>
+                </dd>
+                <dt><span>Skin Texture</span></dt>
+                <dd>
+                    <span>{{mModelCard.skinTexture}}</span>
+                </dd>
+                <dt><span>Shoes Model</span></dt>
+                <dd>
+                    <span>{{mModelCard.shoesModel}}</span>
+                </dd>
+                <dt><span>Shoes Texture</span></dt>
+                <dd>
+                    <span>{{mModelCard.shoesTexture}}</span>
+                </dd>
+                <dt><span>Globe Texture</span></dt>
+                <dd>
+                    <span>{{mModelCard.globeTexture}}</span>
+                </dd>
+                <dt><span>Unique Model</span></dt>
+                <dd>
+                    <span>{{mModelCard.uniqueModel}}</span>
+                </dd>
+                <dt><span>Unique Texture</span></dt>
+                <dd>
+                    <span>{{mModelCard.uniqueTexture}}</span>
+                </dd>
+                <dt><span>Dressing Type Up</span></dt>
+                <dd>
+                    <span>{{mModelCard.dressingTypeUp}}</span>
+                </dd>
+                <dt><span>Dressing Type Bottom</span></dt>
+                <dd>
+                    <span>{{mModelCard.dressingTypeBottom}}</span>
+                </dd>
+                <dt><span>Height</span></dt>
+                <dd>
+                    <span>{{mModelCard.height}}</span>
+                </dd>
+                <dt><span>Width</span></dt>
+                <dd>
+                    <span>{{mModelCard.width}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-model-card', mModelCard.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

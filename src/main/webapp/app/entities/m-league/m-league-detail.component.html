@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLeague">
+            <h2><span>M League</span> {{mLeague.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Hierarchy</span></dt>
+                <dd>
+                    <span>{{mLeague.hierarchy}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{mLeague.weight}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mLeague.name}}</span>
+                </dd>
+                <dt><span>Rooms</span></dt>
+                <dd>
+                    <span>{{mLeague.rooms}}</span>
+                </dd>
+                <dt><span>Promotion Rate</span></dt>
+                <dd>
+                    <span>{{mLeague.promotionRate}}</span>
+                </dd>
+                <dt><span>Demotion Rate</span></dt>
+                <dd>
+                    <span>{{mLeague.demotionRate}}</span>
+                </dd>
+                <dt><span>Total Parameter Range Upper</span></dt>
+                <dd>
+                    <span>{{mLeague.totalParameterRangeUpper}}</span>
+                </dd>
+                <dt><span>Total Parameter Range Lower</span></dt>
+                <dd>
+                    <span>{{mLeague.totalParameterRangeLower}}</span>
+                </dd>
+                <dt><span>Required Matches</span></dt>
+                <dd>
+                    <span>{{mLeague.requiredMatches}}</span>
+                </dd>
+                <dt><span>Start Week Id</span></dt>
+                <dd>
+                    <span>{{mLeague.startWeekId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-league', mLeague.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

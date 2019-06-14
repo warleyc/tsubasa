@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mStageStory">
+            <h2><span>M Stage Story</span> {{mStageStory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mStageStory.stageId}}</span>
+                </dd>
+                <dt><span>Event Type</span></dt>
+                <dd>
+                    <span>{{mStageStory.eventType}}</span>
+                </dd>
+                <dt><span>Main Story Asset</span></dt>
+                <dd>
+                    <span>{{mStageStory.mainStoryAsset}}</span>
+                </dd>
+                <dt><span>Kickoff Story Asset</span></dt>
+                <dd>
+                    <span>{{mStageStory.kickoffStoryAsset}}</span>
+                </dd>
+                <dt><span>Halftime Story Asset</span></dt>
+                <dd>
+                    <span>{{mStageStory.halftimeStoryAsset}}</span>
+                </dd>
+                <dt><span>Result Story Asset</span></dt>
+                <dd>
+                    <span>{{mStageStory.resultStoryAsset}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-stage-story', mStageStory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

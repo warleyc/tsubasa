@@ -1,0 +1,82 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Match Formations</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-match-formation" [routerLink]="['/m-match-formation/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Match Formation
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mMatchFormations">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position1"><span>Position 1</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position2"><span>Position 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position3"><span>Position 3</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position4"><span>Position 4</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position5"><span>Position 5</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position6"><span>Position 6</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position7"><span>Position 7</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position8"><span>Position 8</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position9"><span>Position 9</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position10"><span>Position 10</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="position11"><span>Position 11</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mMatchFormation of mMatchFormations ;trackBy: trackId">
+                <td><a [routerLink]="['/m-match-formation', mMatchFormation.id, 'view' ]">{{mMatchFormation.id}}</a></td>
+                <td>{{mMatchFormation.position1}}</td>
+                <td>{{mMatchFormation.position2}}</td>
+                <td>{{mMatchFormation.position3}}</td>
+                <td>{{mMatchFormation.position4}}</td>
+                <td>{{mMatchFormation.position5}}</td>
+                <td>{{mMatchFormation.position6}}</td>
+                <td>{{mMatchFormation.position7}}</td>
+                <td>{{mMatchFormation.position8}}</td>
+                <td>{{mMatchFormation.position9}}</td>
+                <td>{{mMatchFormation.position10}}</td>
+                <td>{{mMatchFormation.position11}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-match-formation', mMatchFormation.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-match-formation', mMatchFormation.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-match-formation', { outlets: { popup: mMatchFormation.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mMatchFormations && mMatchFormations.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

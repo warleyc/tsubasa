@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMatchFormation">
+            <h2><span>M Match Formation</span> {{mMatchFormation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Position 1</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position1}}</span>
+                </dd>
+                <dt><span>Position 2</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position2}}</span>
+                </dd>
+                <dt><span>Position 3</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position3}}</span>
+                </dd>
+                <dt><span>Position 4</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position4}}</span>
+                </dd>
+                <dt><span>Position 5</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position5}}</span>
+                </dd>
+                <dt><span>Position 6</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position6}}</span>
+                </dd>
+                <dt><span>Position 7</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position7}}</span>
+                </dd>
+                <dt><span>Position 8</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position8}}</span>
+                </dd>
+                <dt><span>Position 9</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position9}}</span>
+                </dd>
+                <dt><span>Position 10</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position10}}</span>
+                </dd>
+                <dt><span>Position 11</span></dt>
+                <dd>
+                    <span>{{mMatchFormation.position11}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-match-formation', mMatchFormation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

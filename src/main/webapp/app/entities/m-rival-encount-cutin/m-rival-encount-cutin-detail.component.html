@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mRivalEncountCutin">
+            <h2><span>M Rival Encount Cutin</span> {{mRivalEncountCutin.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Offense Character Id</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.offenseCharacterId}}</span>
+                </dd>
+                <dt><span>Offense Team Id</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.offenseTeamId}}</span>
+                </dd>
+                <dt><span>Defense Character Id</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.defenseCharacterId}}</span>
+                </dd>
+                <dt><span>Defense Team Id</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.defenseTeamId}}</span>
+                </dd>
+                <dt><span>Cutin Type</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.cutinType}}</span>
+                </dd>
+                <dt><span>Chapter 1 Text</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.chapter1Text}}</span>
+                </dd>
+                <dt><span>Chapter 1 Sound Event</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.chapter1SoundEvent}}</span>
+                </dd>
+                <dt><span>Chapter 2 Text</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.chapter2Text}}</span>
+                </dd>
+                <dt><span>Chapter 2 Sound Event</span></dt>
+                <dd>
+                    <span>{{mRivalEncountCutin.chapter2SoundEvent}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-rival-encount-cutin', mRivalEncountCutin.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

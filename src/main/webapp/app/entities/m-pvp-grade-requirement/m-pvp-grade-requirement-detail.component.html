@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mPvpGradeRequirement">
+            <h2><span>M Pvp Grade Requirement</span> {{mPvpGradeRequirement.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Up Description</span></dt>
+                <dd>
+                    <span>{{mPvpGradeRequirement.upDescription}}</span>
+                </dd>
+                <dt><span>Down Description</span></dt>
+                <dd>
+                    <span>{{mPvpGradeRequirement.downDescription}}</span>
+                </dd>
+                <dt><span>Target Type</span></dt>
+                <dd>
+                    <span>{{mPvpGradeRequirement.targetType}}</span>
+                </dd>
+                <dt><span>Target Wave</span></dt>
+                <dd>
+                    <span>{{mPvpGradeRequirement.targetWave}}</span>
+                </dd>
+                <dt><span>Target Lower Grade</span></dt>
+                <dd>
+                    <span>{{mPvpGradeRequirement.targetLowerGrade}}</span>
+                </dd>
+                <dt><span>Target Point</span></dt>
+                <dd>
+                    <span>{{mPvpGradeRequirement.targetPoint}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-pvp-grade-requirement', mPvpGradeRequirement.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

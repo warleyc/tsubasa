@@ -1,0 +1,214 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-team-effect-base-heading">Create or edit a M Team Effect Base</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mTeamEffectBase.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <textarea class="form-control" name="name" id="field_name"
+                              formControlName="name"></textarea>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_rarity">Rarity</label>
+                    <input type="number" class="form-control" name="rarity" id="field_rarity"
+                           formControlName="rarity"/>
+                    <div *ngIf="editForm.get('rarity').invalid && (editForm.get('rarity').dirty || editForm.get('rarity').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('rarity').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('rarity')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectValueMin">Effect Value Min</label>
+                    <input type="number" class="form-control" name="effectValueMin" id="field_effectValueMin"
+                           formControlName="effectValueMin"/>
+                    <div *ngIf="editForm.get('effectValueMin').invalid && (editForm.get('effectValueMin').dirty || editForm.get('effectValueMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectValueMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectValueMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectValueMax">Effect Value Max</label>
+                    <input type="number" class="form-control" name="effectValueMax" id="field_effectValueMax"
+                           formControlName="effectValueMax"/>
+                    <div *ngIf="editForm.get('effectValueMax').invalid && (editForm.get('effectValueMax').dirty || editForm.get('effectValueMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectValueMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectValueMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_triggerProbabilityMin">Trigger Probability Min</label>
+                    <input type="number" class="form-control" name="triggerProbabilityMin" id="field_triggerProbabilityMin"
+                           formControlName="triggerProbabilityMin"/>
+                    <div *ngIf="editForm.get('triggerProbabilityMin').invalid && (editForm.get('triggerProbabilityMin').dirty || editForm.get('triggerProbabilityMin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('triggerProbabilityMin').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('triggerProbabilityMin')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_triggerProbabilityMax">Trigger Probability Max</label>
+                    <input type="number" class="form-control" name="triggerProbabilityMax" id="field_triggerProbabilityMax"
+                           formControlName="triggerProbabilityMax"/>
+                    <div *ngIf="editForm.get('triggerProbabilityMax').invalid && (editForm.get('triggerProbabilityMax').dirty || editForm.get('triggerProbabilityMax').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('triggerProbabilityMax').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('triggerProbabilityMax')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectId">Effect Id</label>
+                    <input type="number" class="form-control" name="effectId" id="field_effectId"
+                           formControlName="effectId"/>
+                    <div *ngIf="editForm.get('effectId').invalid && (editForm.get('effectId').dirty || editForm.get('effectId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectValueMin2">Effect Value Min 2</label>
+                    <input type="number" class="form-control" name="effectValueMin2" id="field_effectValueMin2"
+                           formControlName="effectValueMin2"/>
+                    <div *ngIf="editForm.get('effectValueMin2').invalid && (editForm.get('effectValueMin2').dirty || editForm.get('effectValueMin2').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectValueMin2').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectValueMin2')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectValueMax2">Effect Value Max 2</label>
+                    <input type="number" class="form-control" name="effectValueMax2" id="field_effectValueMax2"
+                           formControlName="effectValueMax2"/>
+                    <div *ngIf="editForm.get('effectValueMax2').invalid && (editForm.get('effectValueMax2').dirty || editForm.get('effectValueMax2').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectValueMax2').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectValueMax2')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_triggerProbabilityMin2">Trigger Probability Min 2</label>
+                    <input type="number" class="form-control" name="triggerProbabilityMin2" id="field_triggerProbabilityMin2"
+                           formControlName="triggerProbabilityMin2"/>
+                    <div *ngIf="editForm.get('triggerProbabilityMin2').invalid && (editForm.get('triggerProbabilityMin2').dirty || editForm.get('triggerProbabilityMin2').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('triggerProbabilityMin2').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('triggerProbabilityMin2')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_triggerProbabilityMax2">Trigger Probability Max 2</label>
+                    <input type="number" class="form-control" name="triggerProbabilityMax2" id="field_triggerProbabilityMax2"
+                           formControlName="triggerProbabilityMax2"/>
+                    <div *ngIf="editForm.get('triggerProbabilityMax2').invalid && (editForm.get('triggerProbabilityMax2').dirty || editForm.get('triggerProbabilityMax2').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('triggerProbabilityMax2').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('triggerProbabilityMax2')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectId2">Effect Id 2</label>
+                    <input type="number" class="form-control" name="effectId2" id="field_effectId2"
+                           formControlName="effectId2"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <textarea class="form-control" name="description" id="field_description"
+                              formControlName="description"></textarea>
+                    <div *ngIf="editForm.get('description').invalid && (editForm.get('description').dirty || editForm.get('description').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('description').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mPassiveEffectRangeOption.id" *ngFor="let mPassiveEffectRangeOption of mpassiveeffectranges; trackBy: trackMPassiveEffectRangeById">{{mPassiveEffectRangeOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

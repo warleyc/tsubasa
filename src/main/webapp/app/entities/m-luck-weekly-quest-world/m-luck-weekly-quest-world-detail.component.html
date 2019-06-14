@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mLuckWeeklyQuestWorld">
+            <h2><span>M Luck Weekly Quest World</span> {{mLuckWeeklyQuestWorld.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Set Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.setId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.name}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.imagePath}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.description}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Arousal Banner</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.arousalBanner}}</span>
+                </dd>
+                <dt><span>Special Reward Content Type</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.specialRewardContentType}}</span>
+                </dd>
+                <dt><span>Special Reward Content Id</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.specialRewardContentId}}</span>
+                </dd>
+                <dt><span>Is Enable Coop</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.isEnableCoop}}</span>
+                </dd>
+                <dt><span>Clear Limit</span></dt>
+                <dd>
+                    <span>{{mLuckWeeklyQuestWorld.clearLimit}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-luck-weekly-quest-world', mLuckWeeklyQuestWorld.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

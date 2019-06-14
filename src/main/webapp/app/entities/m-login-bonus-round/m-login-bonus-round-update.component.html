@@ -1,0 +1,174 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-login-bonus-round-heading">Create or edit a M Login Bonus Round</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mLoginBonusRound.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_roundId">Round Id</label>
+                    <input type="number" class="form-control" name="roundId" id="field_roundId"
+                           formControlName="roundId"/>
+                    <div *ngIf="editForm.get('roundId').invalid && (editForm.get('roundId').dirty || editForm.get('roundId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('roundId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('roundId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bonusType">Bonus Type</label>
+                    <input type="number" class="form-control" name="bonusType" id="field_bonusType"
+                           formControlName="bonusType"/>
+                    <div *ngIf="editForm.get('bonusType').invalid && (editForm.get('bonusType').dirty || editForm.get('bonusType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('bonusType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('bonusType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_startAt">Start At</label>
+                    <input type="number" class="form-control" name="startAt" id="field_startAt"
+                           formControlName="startAt"/>
+                    <div *ngIf="editForm.get('startAt').invalid && (editForm.get('startAt').dirty || editForm.get('startAt').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('startAt').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('startAt')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_endAt">End At</label>
+                    <input type="number" class="form-control" name="endAt" id="field_endAt"
+                           formControlName="endAt"/>
+                    <div *ngIf="editForm.get('endAt').invalid && (editForm.get('endAt').dirty || editForm.get('endAt').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('endAt').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('endAt')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_serifSanae">Serif Sanae</label>
+                    <textarea class="form-control" name="serifSanae" id="field_serifSanae"
+                              formControlName="serifSanae"></textarea>
+                    <div *ngIf="editForm.get('serifSanae').invalid && (editForm.get('serifSanae').dirty || editForm.get('serifSanae').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serifSanae').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_serifYayoi">Serif Yayoi</label>
+                    <textarea class="form-control" name="serifYayoi" id="field_serifYayoi"
+                              formControlName="serifYayoi"></textarea>
+                    <div *ngIf="editForm.get('serifYayoi').invalid && (editForm.get('serifYayoi').dirty || editForm.get('serifYayoi').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serifYayoi').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_serifYoshiko">Serif Yoshiko</label>
+                    <textarea class="form-control" name="serifYoshiko" id="field_serifYoshiko"
+                              formControlName="serifYoshiko"></textarea>
+                    <div *ngIf="editForm.get('serifYoshiko').invalid && (editForm.get('serifYoshiko').dirty || editForm.get('serifYoshiko').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serifYoshiko').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_serifMaki">Serif Maki</label>
+                    <textarea class="form-control" name="serifMaki" id="field_serifMaki"
+                              formControlName="serifMaki"></textarea>
+                    <div *ngIf="editForm.get('serifMaki').invalid && (editForm.get('serifMaki').dirty || editForm.get('serifMaki').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serifMaki').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sanaeImage">Sanae Image</label>
+                    <textarea class="form-control" name="sanaeImage" id="field_sanaeImage"
+                              formControlName="sanaeImage"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_yayoiImage">Yayoi Image</label>
+                    <textarea class="form-control" name="yayoiImage" id="field_yayoiImage"
+                              formControlName="yayoiImage"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_yoshikoImage">Yoshiko Image</label>
+                    <textarea class="form-control" name="yoshikoImage" id="field_yoshikoImage"
+                              formControlName="yoshikoImage"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_makiImage">Maki Image</label>
+                    <textarea class="form-control" name="makiImage" id="field_makiImage"
+                              formControlName="makiImage"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_soundSwitchEventName">Sound Switch Event Name</label>
+                    <textarea class="form-control" name="soundSwitchEventName" id="field_soundSwitchEventName"
+                              formControlName="soundSwitchEventName"></textarea>
+                    <div *ngIf="editForm.get('soundSwitchEventName').invalid && (editForm.get('soundSwitchEventName').dirty || editForm.get('soundSwitchEventName').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('soundSwitchEventName').errors.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nextId">Next Id</label>
+                    <input type="number" class="form-control" name="nextId" id="field_nextId"
+                           formControlName="nextId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_lastDayAppealComment">Last Day Appeal Comment</label>
+                    <textarea class="form-control" name="lastDayAppealComment" id="field_lastDayAppealComment"
+                              formControlName="lastDayAppealComment"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_backgroundImage">Background Image</label>
+                    <textarea class="form-control" name="backgroundImage" id="field_backgroundImage"
+                              formControlName="backgroundImage"></textarea>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mQuestStageReward">
+            <h2><span>M Quest Stage Reward</span> {{mQuestStageReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Stage Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.stageId}}</span>
+                </dd>
+                <dt><span>Exp</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.exp}}</span>
+                </dd>
+                <dt><span>Coin</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.coin}}</span>
+                </dd>
+                <dt><span>Guild Point</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.guildPoint}}</span>
+                </dd>
+                <dt><span>Clear Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.clearRewardGroupId}}</span>
+                </dd>
+                <dt><span>Clear Reward Weight Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.clearRewardWeightId}}</span>
+                </dd>
+                <dt><span>Achievement Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.achievementRewardGroupId}}</span>
+                </dd>
+                <dt><span>Coop Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.coopGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.specialRewardGroupId}}</span>
+                </dd>
+                <dt><span>Special Reward Amount</span></dt>
+                <dd>
+                    <span>{{mQuestStageReward.specialRewardAmount}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-quest-stage-reward', mQuestStageReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

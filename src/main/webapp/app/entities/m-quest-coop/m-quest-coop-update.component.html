@@ -1,0 +1,114 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-quest-coop-heading">Create or edit a M Quest Coop</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mQuestCoop.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_groupId">Group Id</label>
+                    <input type="number" class="form-control" name="groupId" id="field_groupId"
+                           formControlName="groupId"/>
+                    <div *ngIf="editForm.get('groupId').invalid && (editForm.get('groupId').dirty || editForm.get('groupId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('groupId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('groupId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectRarity">Effect Rarity</label>
+                    <input type="number" class="form-control" name="effectRarity" id="field_effectRarity"
+                           formControlName="effectRarity"/>
+                    <div *ngIf="editForm.get('effectRarity').invalid && (editForm.get('effectRarity').dirty || editForm.get('effectRarity').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectRarity').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectRarity')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectLevelFrom">Effect Level From</label>
+                    <input type="number" class="form-control" name="effectLevelFrom" id="field_effectLevelFrom"
+                           formControlName="effectLevelFrom"/>
+                    <div *ngIf="editForm.get('effectLevelFrom').invalid && (editForm.get('effectLevelFrom').dirty || editForm.get('effectLevelFrom').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectLevelFrom').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectLevelFrom')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_effectLevelTo">Effect Level To</label>
+                    <input type="number" class="form-control" name="effectLevelTo" id="field_effectLevelTo"
+                           formControlName="effectLevelTo"/>
+                    <div *ngIf="editForm.get('effectLevelTo').invalid && (editForm.get('effectLevelTo').dirty || editForm.get('effectLevelTo').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('effectLevelTo').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('effectLevelTo')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_choose1Weight">Choose 1 Weight</label>
+                    <input type="number" class="form-control" name="choose1Weight" id="field_choose1Weight"
+                           formControlName="choose1Weight"/>
+                    <div *ngIf="editForm.get('choose1Weight').invalid && (editForm.get('choose1Weight').dirty || editForm.get('choose1Weight').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('choose1Weight').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('choose1Weight')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_choose2Weight">Choose 2 Weight</label>
+                    <input type="number" class="form-control" name="choose2Weight" id="field_choose2Weight"
+                           formControlName="choose2Weight"/>
+                    <div *ngIf="editForm.get('choose2Weight').invalid && (editForm.get('choose2Weight').dirty || editForm.get('choose2Weight').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('choose2Weight').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('choose2Weight')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

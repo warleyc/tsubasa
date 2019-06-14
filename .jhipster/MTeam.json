@@ -1,0 +1,30 @@
+{
+    "name": "MTeam",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mTargetTeamGroup",
+            "otherEntityRelationshipName": "id",
+            "relationshipName": "mTargetTeamGroup"
+        }
+    ],
+    "changelogDate": "20190614055308",
+    "entityTableName": "m_team",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMarathonBoostItem">
+            <h2><span>M Marathon Boost Item</span> {{mMarathonBoostItem.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Event Id</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostItem.eventId}}</span>
+                </dd>
+                <dt><span>Boost Ratio</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostItem.boostRatio}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostItem.name}}</span>
+                </dd>
+                <dt><span>Short Name</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostItem.shortName}}</span>
+                </dd>
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostItem.thumbnailAssetName}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mMarathonBoostItem.description}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-marathon-boost-item', mMarathonBoostItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mMatchEnvironment">
+            <h2><span>M Match Environment</span> {{mMatchEnvironment.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Category</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.category}}</span>
+                </dd>
+                <dt><span>Sky Tex</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.skyTex}}</span>
+                </dd>
+                <dt><span>Ball</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.ball}}</span>
+                </dd>
+                <dt><span>Stadium</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.stadium}}</span>
+                </dd>
+                <dt><span>Rainy Asset Name</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.rainyAssetName}}</span>
+                </dd>
+                <dt><span>Is Play Rainy Sound</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.isPlayRainySound}}</span>
+                </dd>
+                <dt><span>Offense Start Bgm</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.offenseStartBgm}}</span>
+                </dd>
+                <dt><span>Offense Stop Bgm</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.offenseStopBgm}}</span>
+                </dd>
+                <dt><span>Defense Start Bgm</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.defenseStartBgm}}</span>
+                </dd>
+                <dt><span>Defense Stop Bgm</span></dt>
+                <dd>
+                    <span>{{mMatchEnvironment.defenseStopBgm}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-match-environment', mMatchEnvironment.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

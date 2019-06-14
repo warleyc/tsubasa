@@ -48,7 +48,7 @@ public class MCharacter implements Serializable {
 
     @OneToMany(mappedBy = "id")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<MActionSkillHolderCardCt> mActionSkillHolderCardCts = new HashSet<>();
+    private Set<MActionSkillHolderCardContent> mActionSkillHolderCardContents = new HashSet<>();
 
     @OneToMany(mappedBy = "id")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -127,29 +127,29 @@ public class MCharacter implements Serializable {
         this.characterBookPriority = characterBookPriority;
     }
 
-    public Set<MActionSkillHolderCardCt> getMActionSkillHolderCardCts() {
-        return mActionSkillHolderCardCts;
+    public Set<MActionSkillHolderCardContent> getMActionSkillHolderCardContents() {
+        return mActionSkillHolderCardContents;
     }
 
-    public MCharacter mActionSkillHolderCardCts(Set<MActionSkillHolderCardCt> mActionSkillHolderCardCts) {
-        this.mActionSkillHolderCardCts = mActionSkillHolderCardCts;
+    public MCharacter mActionSkillHolderCardContents(Set<MActionSkillHolderCardContent> mActionSkillHolderCardContents) {
+        this.mActionSkillHolderCardContents = mActionSkillHolderCardContents;
         return this;
     }
 
-    public MCharacter addMActionSkillHolderCardCt(MActionSkillHolderCardCt mActionSkillHolderCardCt) {
-        this.mActionSkillHolderCardCts.add(mActionSkillHolderCardCt);
-        mActionSkillHolderCardCt.setId(this);
+    public MCharacter addMActionSkillHolderCardContent(MActionSkillHolderCardContent mActionSkillHolderCardContent) {
+        this.mActionSkillHolderCardContents.add(mActionSkillHolderCardContent);
+        mActionSkillHolderCardContent.setId(this);
         return this;
     }
 
-    public MCharacter removeMActionSkillHolderCardCt(MActionSkillHolderCardCt mActionSkillHolderCardCt) {
-        this.mActionSkillHolderCardCts.remove(mActionSkillHolderCardCt);
-        mActionSkillHolderCardCt.setId(null);
+    public MCharacter removeMActionSkillHolderCardContent(MActionSkillHolderCardContent mActionSkillHolderCardContent) {
+        this.mActionSkillHolderCardContents.remove(mActionSkillHolderCardContent);
+        mActionSkillHolderCardContent.setId(null);
         return this;
     }
 
-    public void setMActionSkillHolderCardCts(Set<MActionSkillHolderCardCt> mActionSkillHolderCardCts) {
-        this.mActionSkillHolderCardCts = mActionSkillHolderCardCts;
+    public void setMActionSkillHolderCardContents(Set<MActionSkillHolderCardContent> mActionSkillHolderCardContents) {
+        this.mActionSkillHolderCardContents = mActionSkillHolderCardContents;
     }
 
     public Set<MCombinationCutPosition> getMCombinationCutPositions() {

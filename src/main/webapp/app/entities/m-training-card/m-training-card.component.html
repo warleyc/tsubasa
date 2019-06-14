@@ -1,0 +1,108 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Training Cards</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-training-card" [routerLink]="['/m-training-card/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Training Card
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mTrainingCards">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="shortName"><span>Short Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="description"><span>Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="rarity"><span>Rarity</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="attribute"><span>Attribute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gainExp"><span>Gain Exp</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="coin"><span>Coin</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sellMedalId"><span>Sell Medal Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusDribble"><span>Plus Dribble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusShoot"><span>Plus Shoot</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusPass"><span>Plus Pass</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusTackle"><span>Plus Tackle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusBlock"><span>Plus Block</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusIntercept"><span>Plus Intercept</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusSpeed"><span>Plus Speed</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusPower"><span>Plus Power</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusTechnique"><span>Plus Technique</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusPunching"><span>Plus Punching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="plusCatching"><span>Plus Catching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="thumbnailAssetsId"><span>Thumbnail Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cardIllustAssetsId"><span>Card Illust Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mTrainingCard of mTrainingCards ;trackBy: trackId">
+                <td><a [routerLink]="['/m-training-card', mTrainingCard.id, 'view' ]">{{mTrainingCard.id}}</a></td>
+                <td>{{mTrainingCard.name}}</td>
+                <td>{{mTrainingCard.shortName}}</td>
+                <td>{{mTrainingCard.description}}</td>
+                <td>{{mTrainingCard.rarity}}</td>
+                <td>{{mTrainingCard.attribute}}</td>
+                <td>{{mTrainingCard.gainExp}}</td>
+                <td>{{mTrainingCard.coin}}</td>
+                <td>{{mTrainingCard.sellMedalId}}</td>
+                <td>{{mTrainingCard.plusDribble}}</td>
+                <td>{{mTrainingCard.plusShoot}}</td>
+                <td>{{mTrainingCard.plusPass}}</td>
+                <td>{{mTrainingCard.plusTackle}}</td>
+                <td>{{mTrainingCard.plusBlock}}</td>
+                <td>{{mTrainingCard.plusIntercept}}</td>
+                <td>{{mTrainingCard.plusSpeed}}</td>
+                <td>{{mTrainingCard.plusPower}}</td>
+                <td>{{mTrainingCard.plusTechnique}}</td>
+                <td>{{mTrainingCard.plusPunching}}</td>
+                <td>{{mTrainingCard.plusCatching}}</td>
+                <td>{{mTrainingCard.thumbnailAssetsId}}</td>
+                <td>{{mTrainingCard.cardIllustAssetsId}}</td>
+                <td>
+                    <div *ngIf="mTrainingCard.idId">
+                        <a [routerLink]="['../m-card-thumbnail-assets', mTrainingCard.idId , 'view' ]" >{{mTrainingCard.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-training-card', mTrainingCard.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-training-card', mTrainingCard.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-training-card', { outlets: { popup: mTrainingCard.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mTrainingCards && mTrainingCards.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

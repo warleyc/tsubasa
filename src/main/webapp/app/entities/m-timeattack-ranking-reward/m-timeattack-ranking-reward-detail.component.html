@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mTimeattackRankingReward">
+            <h2><span>M Timeattack Ranking Reward</span> {{mTimeattackRankingReward.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Event Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackRankingReward.eventId}}</span>
+                </dd>
+                <dt><span>Ranking From</span></dt>
+                <dd>
+                    <span>{{mTimeattackRankingReward.rankingFrom}}</span>
+                </dd>
+                <dt><span>Ranking To</span></dt>
+                <dd>
+                    <span>{{mTimeattackRankingReward.rankingTo}}</span>
+                </dd>
+                <dt><span>Reward Group Id</span></dt>
+                <dd>
+                    <span>{{mTimeattackRankingReward.rewardGroupId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-timeattack-ranking-reward', mTimeattackRankingReward.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

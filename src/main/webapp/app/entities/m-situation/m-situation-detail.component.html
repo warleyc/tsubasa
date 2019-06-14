@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mSituation">
+            <h2><span>M Situation</span> {{mSituation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Kickoff</span></dt>
+                <dd>
+                    <span>{{mSituation.kickoff}}</span>
+                </dd>
+                <dt><span>Penalty Kick</span></dt>
+                <dd>
+                    <span>{{mSituation.penaltyKick}}</span>
+                </dd>
+                <dt><span>Match Interval</span></dt>
+                <dd>
+                    <span>{{mSituation.matchInterval}}</span>
+                </dd>
+                <dt><span>Out Of Play</span></dt>
+                <dd>
+                    <span>{{mSituation.outOfPlay}}</span>
+                </dd>
+                <dt><span>Foul</span></dt>
+                <dd>
+                    <span>{{mSituation.foul}}</span>
+                </dd>
+                <dt><span>Goal</span></dt>
+                <dd>
+                    <span>{{mSituation.goal}}</span>
+                </dd>
+                <dt><span>Score</span></dt>
+                <dd>
+                    <span>{{mSituation.score}}</span>
+                </dd>
+                <dt><span>Time</span></dt>
+                <dd>
+                    <span>{{mSituation.time}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-situation', mSituation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

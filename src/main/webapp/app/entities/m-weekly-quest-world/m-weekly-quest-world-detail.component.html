@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mWeeklyQuestWorld">
+            <h2><span>M Weekly Quest World</span> {{mWeeklyQuestWorld.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Set Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.setId}}</span>
+                </dd>
+                <dt><span>Number</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.number}}</span>
+                </dd>
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.name}}</span>
+                </dd>
+                <dt><span>Image Path</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.imagePath}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.description}}</span>
+                </dd>
+                <dt><span>Stage Unlock Pattern</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.stageUnlockPattern}}</span>
+                </dd>
+                <dt><span>Arousal Banner</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.arousalBanner}}</span>
+                </dd>
+                <dt><span>Special Reward Content Type</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.specialRewardContentType}}</span>
+                </dd>
+                <dt><span>Special Reward Content Id</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.specialRewardContentId}}</span>
+                </dd>
+                <dt><span>Is Enable Coop</span></dt>
+                <dd>
+                    <span>{{mWeeklyQuestWorld.isEnableCoop}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-weekly-quest-world', mWeeklyQuestWorld.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

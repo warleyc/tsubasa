@@ -1,0 +1,122 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Ticket Quest Stages</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-ticket-quest-stage" [routerLink]="['/m-ticket-quest-stage/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Ticket Quest Stage
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mTicketQuestStages">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="worldId"><span>World Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="number"><span>Number</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ticketId"><span>Ticket Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ticketAmount"><span>Ticket Amount</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="imagePath"><span>Image Path</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="characterThumbnailPath"><span>Character Thumbnail Path</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="difficulty"><span>Difficulty</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="stageUnlockPattern"><span>Stage Unlock Pattern</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="storyOnly"><span>Story Only</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="firstHalfNpcDeckId"><span>First Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="firstHalfEnvironmentId"><span>First Half Environment Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="secondHalfNpcDeckId"><span>Second Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="secondHalfEnvironmentId"><span>Second Half Environment Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="extraFirstHalfNpcDeckId"><span>Extra First Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="extraSecondHalfNpcDeckId"><span>Extra Second Half Npc Deck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="consumeAp"><span>Consume Ap</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="kickOffType"><span>Kick Off Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="matchMinute"><span>Match Minute</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enableExtra"><span>Enable Extra</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="enablePk"><span>Enable Pk</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="aiLevel"><span>Ai Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startAtSecondHalf"><span>Start At Second Half</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startScore"><span>Start Score</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="startScoreOpponent"><span>Start Score Opponent</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="conditionId"><span>Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mTicketQuestStage of mTicketQuestStages ;trackBy: trackId">
+                <td><a [routerLink]="['/m-ticket-quest-stage', mTicketQuestStage.id, 'view' ]">{{mTicketQuestStage.id}}</a></td>
+                <td>{{mTicketQuestStage.worldId}}</td>
+                <td>{{mTicketQuestStage.number}}</td>
+                <td>{{mTicketQuestStage.name}}</td>
+                <td>{{mTicketQuestStage.ticketId}}</td>
+                <td>{{mTicketQuestStage.ticketAmount}}</td>
+                <td>{{mTicketQuestStage.imagePath}}</td>
+                <td>{{mTicketQuestStage.characterThumbnailPath}}</td>
+                <td>{{mTicketQuestStage.difficulty}}</td>
+                <td>{{mTicketQuestStage.stageUnlockPattern}}</td>
+                <td>{{mTicketQuestStage.storyOnly}}</td>
+                <td>{{mTicketQuestStage.firstHalfNpcDeckId}}</td>
+                <td>{{mTicketQuestStage.firstHalfEnvironmentId}}</td>
+                <td>{{mTicketQuestStage.secondHalfNpcDeckId}}</td>
+                <td>{{mTicketQuestStage.secondHalfEnvironmentId}}</td>
+                <td>{{mTicketQuestStage.extraFirstHalfNpcDeckId}}</td>
+                <td>{{mTicketQuestStage.extraSecondHalfNpcDeckId}}</td>
+                <td>{{mTicketQuestStage.consumeAp}}</td>
+                <td>{{mTicketQuestStage.kickOffType}}</td>
+                <td>{{mTicketQuestStage.matchMinute}}</td>
+                <td>{{mTicketQuestStage.enableExtra}}</td>
+                <td>{{mTicketQuestStage.enablePk}}</td>
+                <td>{{mTicketQuestStage.aiLevel}}</td>
+                <td>{{mTicketQuestStage.startAtSecondHalf}}</td>
+                <td>{{mTicketQuestStage.startScore}}</td>
+                <td>{{mTicketQuestStage.startScoreOpponent}}</td>
+                <td>{{mTicketQuestStage.conditionId}}</td>
+                <td>{{mTicketQuestStage.optionId}}</td>
+                <td>{{mTicketQuestStage.deckConditionId}}</td>
+                <td>
+                    <div *ngIf="mTicketQuestStage.idId">
+                        <a [routerLink]="['../m-ticket-quest-world', mTicketQuestStage.idId , 'view' ]" >{{mTicketQuestStage.idId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-ticket-quest-stage', mTicketQuestStage.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-ticket-quest-stage', mTicketQuestStage.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-ticket-quest-stage', { outlets: { popup: mTicketQuestStage.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mTicketQuestStages && mTicketQuestStages.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

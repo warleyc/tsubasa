@@ -1,0 +1,84 @@
+<div>
+    <h2 id="page-heading">
+        <span>M Model Uniform Ups</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-m-model-uniform-up" [routerLink]="['/m-model-uniform-up/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new M Model Uniform Up
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="mModelUniformUps">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformUpId"><span>Uniform Up Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="defaultDressingType"><span>Default Dressing Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformModel"><span>Uniform Model</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformTexture"><span>Uniform Texture</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformNoTexture"><span>Uniform No Texture</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="defaultColor"><span>Default Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformNoColor"><span>Uniform No Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="numberChest"><span>Number Chest</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="numberBelly"><span>Number Belly</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="numberBack"><span>Number Back</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformNoPositionX"><span>Uniform No Position X</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="uniformNoPositionY"><span>Uniform No Position Y</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let mModelUniformUp of mModelUniformUps ;trackBy: trackId">
+                <td><a [routerLink]="['/m-model-uniform-up', mModelUniformUp.id, 'view' ]">{{mModelUniformUp.id}}</a></td>
+                <td>{{mModelUniformUp.uniformUpId}}</td>
+                <td>{{mModelUniformUp.defaultDressingType}}</td>
+                <td>{{mModelUniformUp.uniformModel}}</td>
+                <td>{{mModelUniformUp.uniformTexture}}</td>
+                <td>{{mModelUniformUp.uniformNoTexture}}</td>
+                <td>{{mModelUniformUp.defaultColor}}</td>
+                <td>{{mModelUniformUp.uniformNoColor}}</td>
+                <td>{{mModelUniformUp.numberChest}}</td>
+                <td>{{mModelUniformUp.numberBelly}}</td>
+                <td>{{mModelUniformUp.numberBack}}</td>
+                <td>{{mModelUniformUp.uniformNoPositionX}}</td>
+                <td>{{mModelUniformUp.uniformNoPositionY}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/m-model-uniform-up', mModelUniformUp.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/m-model-uniform-up', mModelUniformUp.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'm-model-uniform-up', { outlets: { popup: mModelUniformUp.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="mModelUniformUps && mModelUniformUps.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

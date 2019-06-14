@@ -1,0 +1,227 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-m-mission-heading">Create or edit a M Mission</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!mMission.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_term">Term</label>
+                    <input type="number" class="form-control" name="term" id="field_term"
+                           formControlName="term"/>
+                    <div *ngIf="editForm.get('term').invalid && (editForm.get('term').dirty || editForm.get('term').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('term').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('term')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_roundNum">Round Num</label>
+                    <input type="number" class="form-control" name="roundNum" id="field_roundNum"
+                           formControlName="roundNum"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_title">Title</label>
+                    <textarea class="form-control" name="title" id="field_title"
+                              formControlName="title"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <textarea class="form-control" name="description" id="field_description"
+                              formControlName="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_missionType">Mission Type</label>
+                    <input type="number" class="form-control" name="missionType" id="field_missionType"
+                           formControlName="missionType"/>
+                    <div *ngIf="editForm.get('missionType').invalid && (editForm.get('missionType').dirty || editForm.get('missionType').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('missionType').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('missionType')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_absolute">Absolute</label>
+                    <input type="number" class="form-control" name="absolute" id="field_absolute"
+                           formControlName="absolute"/>
+                    <div *ngIf="editForm.get('absolute').invalid && (editForm.get('absolute').dirty || editForm.get('absolute').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('absolute').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('absolute')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_param1">Param 1</label>
+                    <input type="number" class="form-control" name="param1" id="field_param1"
+                           formControlName="param1"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_param2">Param 2</label>
+                    <input type="number" class="form-control" name="param2" id="field_param2"
+                           formControlName="param2"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_param3">Param 3</label>
+                    <input type="number" class="form-control" name="param3" id="field_param3"
+                           formControlName="param3"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_param4">Param 4</label>
+                    <input type="number" class="form-control" name="param4" id="field_param4"
+                           formControlName="param4"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_param5">Param 5</label>
+                    <input type="number" class="form-control" name="param5" id="field_param5"
+                           formControlName="param5"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_trigger">Trigger</label>
+                    <input type="number" class="form-control" name="trigger" id="field_trigger"
+                           formControlName="trigger"/>
+                    <div *ngIf="editForm.get('trigger').invalid && (editForm.get('trigger').dirty || editForm.get('trigger').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('trigger').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('trigger')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_triggerCondition">Trigger Condition</label>
+                    <input type="number" class="form-control" name="triggerCondition" id="field_triggerCondition"
+                           formControlName="triggerCondition"/>
+                    <div *ngIf="editForm.get('triggerCondition').invalid && (editForm.get('triggerCondition').dirty || editForm.get('triggerCondition').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('triggerCondition').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('triggerCondition')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_rewardId">Reward Id</label>
+                    <input type="number" class="form-control" name="rewardId" id="field_rewardId"
+                           formControlName="rewardId"/>
+                    <div *ngIf="editForm.get('rewardId').invalid && (editForm.get('rewardId').dirty || editForm.get('rewardId').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('rewardId').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('rewardId')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_startAt">Start At</label>
+                    <input type="number" class="form-control" name="startAt" id="field_startAt"
+                           formControlName="startAt"/>
+                    <div *ngIf="editForm.get('startAt').invalid && (editForm.get('startAt').dirty || editForm.get('startAt').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('startAt').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('startAt')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_endAt">End At</label>
+                    <input type="number" class="form-control" name="endAt" id="field_endAt"
+                           formControlName="endAt"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_link">Link</label>
+                    <input type="number" class="form-control" name="link" id="field_link"
+                           formControlName="link"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sceneTransitionParam">Scene Transition Param</label>
+                    <textarea class="form-control" name="sceneTransitionParam" id="field_sceneTransitionParam"
+                              formControlName="sceneTransitionParam"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_pickup">Pickup</label>
+                    <input type="number" class="form-control" name="pickup" id="field_pickup"
+                           formControlName="pickup"/>
+                    <div *ngIf="editForm.get('pickup').invalid && (editForm.get('pickup').dirty || editForm.get('pickup').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('pickup').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('pickup')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_orderNum">Order Num</label>
+                    <input type="number" class="form-control" name="orderNum" id="field_orderNum"
+                           formControlName="orderNum"/>
+                    <div *ngIf="editForm.get('orderNum').invalid && (editForm.get('orderNum').dirty || editForm.get('orderNum').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('orderNum').errors.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('orderNum')?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_id">Id</label>
+                    <select class="form-control" id="field_id" name="id" formControlName="idId">
+                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="mMissionRewardOption.id" *ngFor="let mMissionRewardOption of mmissionrewards; trackBy: trackMMissionRewardById">{{mMissionRewardOption.id}}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('id').errors.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

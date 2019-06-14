@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mUniformOriginalSet">
+            <h2><span>M Uniform Original Set</span> {{mUniformOriginalSet.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.name}}</span>
+                </dd>
+                <dt><span>Short Name</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.shortName}}</span>
+                </dd>
+                <dt><span>Menu Name</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.menuName}}</span>
+                </dd>
+                <dt><span>Up Model Id</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.upModelId}}</span>
+                </dd>
+                <dt><span>Bottom Model Id</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.bottomModelId}}</span>
+                </dd>
+                <dt><span>Thumbnail Asset Name</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.thumbnailAssetName}}</span>
+                </dd>
+                <dt><span>Uniform Type</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.uniformType}}</span>
+                </dd>
+                <dt><span>Is Default</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.isDefault}}</span>
+                </dd>
+                <dt><span>Order Num</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.orderNum}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{mUniformOriginalSet.description}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/m-uniform-original-set', mUniformOriginalSet.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
