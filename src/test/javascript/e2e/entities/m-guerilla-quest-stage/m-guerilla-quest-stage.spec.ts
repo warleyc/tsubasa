@@ -70,7 +70,7 @@ describe('MGuerillaQuestStage e2e test', () => {
             mGuerillaQuestStageUpdatePage.setConditionIdInput('5'),
             mGuerillaQuestStageUpdatePage.setOptionIdInput('5'),
             mGuerillaQuestStageUpdatePage.setDeckConditionIdInput('5'),
-            mGuerillaQuestStageUpdatePage.idSelectLastOption(),
+            mGuerillaQuestStageUpdatePage.mguerillaquestworldSelectLastOption(),
         ]);
         expect(await mGuerillaQuestStageUpdatePage.getWorldIdInput()).to.eq('5', 'Expected worldId value to be equals to 5');
         expect(await mGuerillaQuestStageUpdatePage.getNumberInput()).to.eq('5', 'Expected number value to be equals to 5');

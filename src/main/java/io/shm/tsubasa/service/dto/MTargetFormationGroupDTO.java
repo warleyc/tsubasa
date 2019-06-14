@@ -17,7 +17,7 @@ public class MTargetFormationGroupDTO implements Serializable {
     private Integer formationId;
 
 
-    private Long idId;
+    private Long mformationId;
 
     public Long getId() {
         return id;
@@ -43,12 +43,12 @@ public class MTargetFormationGroupDTO implements Serializable {
         this.formationId = formationId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMformationId() {
+        return mformationId;
     }
 
-    public void setIdId(Long mFormationId) {
-        this.idId = mFormationId;
+    public void setMformationId(Long mFormationId) {
+        this.mformationId = mFormationId;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class MTargetFormationGroupDTO implements Serializable {
             "id=" + getId() +
             ", groupId=" + getGroupId() +
             ", formationId=" + getFormationId() +
-            ", id=" + getIdId() +
+            ", mformation=" + getMformationId() +
             "}";
     }
 }

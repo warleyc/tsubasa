@@ -33,7 +33,7 @@ export class MTriggerEffectBaseUpdatePage {
   targetCardParameterInput = element(by.id('field_targetCardParameter'));
   effectIdInput = element(by.id('field_effectId'));
   descriptionInput = element(by.id('field_description'));
-  idSelect = element(by.id('field_id'));
+  mtriggereffectrangeSelect = element(by.id('field_mtriggereffectrange'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -95,23 +95,23 @@ export class MTriggerEffectBaseUpdatePage {
     return await this.descriptionInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mtriggereffectrangeSelectLastOption(timeout?: number) {
+    await this.mtriggereffectrangeSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mtriggereffectrangeSelectOption(option) {
+    await this.mtriggereffectrangeSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMtriggereffectrangeSelect(): ElementFinder {
+    return this.mtriggereffectrangeSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMtriggereffectrangeSelectedOption() {
+    return await this.mtriggereffectrangeSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

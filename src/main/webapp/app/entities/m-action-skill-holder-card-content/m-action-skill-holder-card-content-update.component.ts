@@ -27,7 +27,7 @@ export class MActionSkillHolderCardContentUpdateComponent implements OnInit {
     actionSkillExp: [null, [Validators.required]],
     name: [null, [Validators.required]],
     description: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mcharacterId: [null, Validators.required]
   });
 
   constructor(
@@ -62,7 +62,7 @@ export class MActionSkillHolderCardContentUpdateComponent implements OnInit {
       actionSkillExp: mActionSkillHolderCardContent.actionSkillExp,
       name: mActionSkillHolderCardContent.name,
       description: mActionSkillHolderCardContent.description,
-      idId: mActionSkillHolderCardContent.idId
+      mcharacterId: mActionSkillHolderCardContent.mcharacterId
     });
   }
 
@@ -121,7 +121,7 @@ export class MActionSkillHolderCardContentUpdateComponent implements OnInit {
       actionSkillExp: this.editForm.get(['actionSkillExp']).value,
       name: this.editForm.get(['name']).value,
       description: this.editForm.get(['description']).value,
-      idId: this.editForm.get(['idId']).value
+      mcharacterId: this.editForm.get(['mcharacterId']).value
     };
     return entity;
   }

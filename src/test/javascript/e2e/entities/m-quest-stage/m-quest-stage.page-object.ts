@@ -51,7 +51,7 @@ export class MQuestStageUpdatePage {
   conditionIdInput = element(by.id('field_conditionId'));
   optionIdInput = element(by.id('field_optionId'));
   deckConditionIdInput = element(by.id('field_deckConditionId'));
-  idSelect = element(by.id('field_id'));
+  mquestworldSelect = element(by.id('field_mquestworld'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -257,23 +257,23 @@ export class MQuestStageUpdatePage {
     return await this.deckConditionIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mquestworldSelectLastOption(timeout?: number) {
+    await this.mquestworldSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mquestworldSelectOption(option) {
+    await this.mquestworldSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMquestworldSelect(): ElementFinder {
+    return this.mquestworldSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMquestworldSelectedOption() {
+    return await this.mquestworldSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

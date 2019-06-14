@@ -1,4 +1,4 @@
-id;name;rarity;effect_value_min;effect_value_max;trigger_probability_min;trigger_probability_max;effect_id;effect_value_min_2;effect_value_max_2;trigger_probability_min_2;trigger_probability_max_2;effect_id_2;description;id_id
+id;name;rarity;effect_value_min;effect_value_max;trigger_probability_min;trigger_probability_max;effect_id;effect_value_min_2;effect_value_max_2;trigger_probability_min_2;trigger_probability_max_2;effect_id_2;description;mpassiveeffectrange_id
 1;6465706f736974204f7267616e697a6564;39485;79817;68330;78661;89179;36450;31554;98876;21548;59385;59369;526566696e6564204d6574616c204669736820446f627261;4
 2;43656e7472616c;50218;86182;64576;50403;20957;68345;41734;58793;86241;84235;21293;696e637562617465;4
 3;436869636b656e;28971;73196;23277;4283;92359;67579;74107;41469;31610;12409;76333;456c656374726f6e6963732049726171;3

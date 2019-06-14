@@ -184,7 +184,7 @@
             "otherEntityName": "mMarathonQuestWorld",
             "otherEntityRelationshipName": "mMarathonQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmarathonquestworld",
             "otherEntityField": "id"
         }
     ],

@@ -61,7 +61,7 @@ describe('MTrainingCard e2e test', () => {
             mTrainingCardUpdatePage.setPlusCatchingInput('5'),
             mTrainingCardUpdatePage.setThumbnailAssetsIdInput('5'),
             mTrainingCardUpdatePage.setCardIllustAssetsIdInput('5'),
-            mTrainingCardUpdatePage.idSelectLastOption(),
+            mTrainingCardUpdatePage.mcardthumbnailassetsSelectLastOption(),
         ]);
         expect(await mTrainingCardUpdatePage.getNameInput()).to.eq('name', 'Expected Name value to be equals to name');
         expect(await mTrainingCardUpdatePage.getShortNameInput()).to.eq('shortName', 'Expected ShortName value to be equals to shortName');

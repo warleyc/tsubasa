@@ -43,7 +43,7 @@
             "otherEntityName": "mPvpWave",
             "otherEntityRelationshipName": "mPvpRankingReward",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mpvpwave",
             "otherEntityField": "id"
         }
     ],

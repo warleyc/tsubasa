@@ -48,7 +48,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="memblemparts_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -80,7 +80,7 @@
             <column name="middle_color" type="string"/>
             <column name="lower_id" type="numeric"/>
             <column name="lower_color" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="memblemparts_id" type="numeric"/>
         </loadData>
     </changeSet>
 

@@ -22,7 +22,7 @@
             "otherEntityName": "mNationality",
             "otherEntityRelationshipName": "mTargetNationalityGroup",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mnationality",
             "otherEntityField": "id"
         }
     ],

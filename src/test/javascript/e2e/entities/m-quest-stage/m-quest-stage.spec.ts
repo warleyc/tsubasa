@@ -65,7 +65,7 @@ describe('MQuestStage e2e test', () => {
             mQuestStageUpdatePage.setConditionIdInput('5'),
             mQuestStageUpdatePage.setOptionIdInput('5'),
             mQuestStageUpdatePage.setDeckConditionIdInput('5'),
-            mQuestStageUpdatePage.idSelectLastOption(),
+            mQuestStageUpdatePage.mquestworldSelectLastOption(),
         ]);
         expect(await mQuestStageUpdatePage.getWorldIdInput()).to.eq('5', 'Expected worldId value to be equals to 5');
         expect(await mQuestStageUpdatePage.getNumberInput()).to.eq('5', 'Expected number value to be equals to 5');

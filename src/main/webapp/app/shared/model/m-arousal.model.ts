@@ -4,7 +4,7 @@ export interface IMArousal {
   afterId?: number;
   cost?: number;
   materialGroupId?: number;
-  idId?: number;
+  mplayablecardId?: number;
 }
 
 export class MArousal implements IMArousal {
@@ -14,6 +14,6 @@ export class MArousal implements IMArousal {
     public afterId?: number,
     public cost?: number,
     public materialGroupId?: number,
-    public idId?: number
+    public mplayablecardId?: number
   ) {}
 }

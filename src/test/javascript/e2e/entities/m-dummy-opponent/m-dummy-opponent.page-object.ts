@@ -39,7 +39,7 @@ export class MDummyOpponentUpdatePage {
   gkUniformUpColorInput = element(by.id('field_gkUniformUpColor'));
   gkUniformBottomIdInput = element(by.id('field_gkUniformBottomId'));
   gkUniformBottomColorInput = element(by.id('field_gkUniformBottomColor'));
-  idSelect = element(by.id('field_id'));
+  mnpcdeckSelect = element(by.id('field_mnpcdeck'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -149,23 +149,23 @@ export class MDummyOpponentUpdatePage {
     return await this.gkUniformBottomColorInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mnpcdeckSelectLastOption(timeout?: number) {
+    await this.mnpcdeckSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mnpcdeckSelectOption(option) {
+    await this.mnpcdeckSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMnpcdeckSelect(): ElementFinder {
+    return this.mnpcdeckSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMnpcdeckSelectedOption() {
+    return await this.mnpcdeckSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

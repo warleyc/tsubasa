@@ -26,7 +26,7 @@ public class MLeagueRegulationDTO implements Serializable {
     private Integer ruleTutorialId;
 
 
-    private Long idId;
+    private Long mmatchoptionId;
 
     public Long getId() {
         return id;
@@ -76,12 +76,12 @@ public class MLeagueRegulationDTO implements Serializable {
         this.ruleTutorialId = ruleTutorialId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMmatchoptionId() {
+        return mmatchoptionId;
     }
 
-    public void setIdId(Long mMatchOptionId) {
-        this.idId = mMatchOptionId;
+    public void setMmatchoptionId(Long mMatchOptionId) {
+        this.mmatchoptionId = mMatchOptionId;
     }
 
     @Override
@@ -114,7 +114,7 @@ public class MLeagueRegulationDTO implements Serializable {
             ", matchOptionId=" + getMatchOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
             ", ruleTutorialId=" + getRuleTutorialId() +
-            ", id=" + getIdId() +
+            ", mmatchoption=" + getMmatchoptionId() +
             "}";
     }
 }

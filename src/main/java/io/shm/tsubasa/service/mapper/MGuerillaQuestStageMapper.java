@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MGuerillaQuestWorldMapper.class})
 public interface MGuerillaQuestStageMapper extends EntityMapper<MGuerillaQuestStageDTO, MGuerillaQuestStage> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mguerillaquestworld.id", target = "mguerillaquestworldId")
     MGuerillaQuestStageDTO toDto(MGuerillaQuestStage mGuerillaQuestStage);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mguerillaquestworldId", target = "mguerillaquestworld")
     MGuerillaQuestStage toEntity(MGuerillaQuestStageDTO mGuerillaQuestStageDTO);
 
     default MGuerillaQuestStage fromId(Long id) {

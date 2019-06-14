@@ -30,7 +30,7 @@ public class MTargetTriggerEffectGroupCriteria implements Serializable, Criteria
 
     private IntegerFilter triggerEffectId;
 
-    private LongFilter idId;
+    private LongFilter mtriggereffectbaseId;
 
     public MTargetTriggerEffectGroupCriteria(){
     }
@@ -39,7 +39,7 @@ public class MTargetTriggerEffectGroupCriteria implements Serializable, Criteria
         this.id = other.id == null ? null : other.id.copy();
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.triggerEffectId = other.triggerEffectId == null ? null : other.triggerEffectId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mtriggereffectbaseId = other.mtriggereffectbaseId == null ? null : other.mtriggereffectbaseId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MTargetTriggerEffectGroupCriteria implements Serializable, Criteria
         this.triggerEffectId = triggerEffectId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMtriggereffectbaseId() {
+        return mtriggereffectbaseId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMtriggereffectbaseId(LongFilter mtriggereffectbaseId) {
+        this.mtriggereffectbaseId = mtriggereffectbaseId;
     }
 
 
@@ -93,7 +93,7 @@ public class MTargetTriggerEffectGroupCriteria implements Serializable, Criteria
             Objects.equals(id, that.id) &&
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(triggerEffectId, that.triggerEffectId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mtriggereffectbaseId, that.mtriggereffectbaseId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MTargetTriggerEffectGroupCriteria implements Serializable, Criteria
         id,
         groupId,
         triggerEffectId,
-        idId
+        mtriggereffectbaseId
         );
     }
 
@@ -112,7 +112,7 @@ public class MTargetTriggerEffectGroupCriteria implements Serializable, Criteria
                 (id != null ? "id=" + id + ", " : "") +
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (triggerEffectId != null ? "triggerEffectId=" + triggerEffectId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mtriggereffectbaseId != null ? "mtriggereffectbaseId=" + mtriggereffectbaseId + ", " : "") +
             "}";
     }
 

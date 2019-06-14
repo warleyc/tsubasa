@@ -52,7 +52,7 @@ public class MDummyOpponentDTO implements Serializable {
     private String gkUniformBottomColor;
 
 
-    private Long idId;
+    private Long mnpcdeckId;
 
     public Long getId() {
         return id;
@@ -166,12 +166,12 @@ public class MDummyOpponentDTO implements Serializable {
         this.gkUniformBottomColor = gkUniformBottomColor;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMnpcdeckId() {
+        return mnpcdeckId;
     }
 
-    public void setIdId(Long mNpcDeckId) {
-        this.idId = mNpcDeckId;
+    public void setMnpcdeckId(Long mNpcDeckId) {
+        this.mnpcdeckId = mNpcDeckId;
     }
 
     @Override
@@ -212,7 +212,7 @@ public class MDummyOpponentDTO implements Serializable {
             ", gkUniformUpColor='" + getGkUniformUpColor() + "'" +
             ", gkUniformBottomId=" + getGkUniformBottomId() +
             ", gkUniformBottomColor='" + getGkUniformBottomColor() + "'" +
-            ", id=" + getIdId() +
+            ", mnpcdeck=" + getMnpcdeckId() +
             "}";
     }
 }

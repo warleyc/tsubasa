@@ -188,15 +188,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mpassiveeffectrange">Mpassiveeffectrange</label>
+                    <select class="form-control" id="field_mpassiveeffectrange" name="mpassiveeffectrange" formControlName="mpassiveeffectrangeId">
+                        <option *ngIf="!editForm.get('mpassiveeffectrange').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mPassiveEffectRangeOption.id" *ngFor="let mPassiveEffectRangeOption of mpassiveeffectranges; trackBy: trackMPassiveEffectRangeById">{{mPassiveEffectRangeOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mpassiveeffectrange').invalid && (editForm.get('mpassiveeffectrange').dirty || editForm.get('mpassiveeffectrange').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mpassiveeffectrange').errors.required">
                         This field is required.
                     </small>
                 </div>

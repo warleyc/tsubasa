@@ -74,7 +74,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mQuestStage",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mquestworld",
             "relationshipName": "mQuestStage"
         }
     ],

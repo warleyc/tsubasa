@@ -128,15 +128,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mmissionreward">Mmissionreward</label>
+                    <select class="form-control" id="field_mmissionreward" name="mmissionreward" formControlName="mmissionrewardId">
+                        <option *ngIf="!editForm.get('mmissionreward').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mMissionRewardOption.id" *ngFor="let mMissionRewardOption of mmissionrewards; trackBy: trackMMissionRewardById">{{mMissionRewardOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mmissionreward').invalid && (editForm.get('mmissionreward').dirty || editForm.get('mmissionreward').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mmissionreward').errors.required">
                         This field is required.
                     </small>
                 </div>

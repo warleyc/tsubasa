@@ -24,7 +24,7 @@ export class MTargetTeamGroupUpdateComponent implements OnInit {
     id: [],
     groupId: [null, [Validators.required]],
     teamId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mteamId: [null, Validators.required]
   });
 
   constructor(
@@ -55,7 +55,7 @@ export class MTargetTeamGroupUpdateComponent implements OnInit {
       id: mTargetTeamGroup.id,
       groupId: mTargetTeamGroup.groupId,
       teamId: mTargetTeamGroup.teamId,
-      idId: mTargetTeamGroup.idId
+      mteamId: mTargetTeamGroup.mteamId
     });
   }
 
@@ -79,7 +79,7 @@ export class MTargetTeamGroupUpdateComponent implements OnInit {
       id: this.editForm.get(['id']).value,
       groupId: this.editForm.get(['groupId']).value,
       teamId: this.editForm.get(['teamId']).value,
-      idId: this.editForm.get(['idId']).value
+      mteamId: this.editForm.get(['mteamId']).value
     };
     return entity;
   }

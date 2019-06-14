@@ -79,7 +79,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mChallengeQuestStage",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mchallengequestworld",
             "relationshipName": "mChallengeQuestStage"
         }
     ],

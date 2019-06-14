@@ -36,7 +36,7 @@ public class MTriggerEffectBaseCriteria implements Serializable, Criteria {
 
     private IntegerFilter effectId;
 
-    private LongFilter idId;
+    private LongFilter mtriggereffectrangeId;
 
     private LongFilter mTargetTriggerEffectGroupId;
 
@@ -50,7 +50,7 @@ public class MTriggerEffectBaseCriteria implements Serializable, Criteria {
         this.triggerProbability = other.triggerProbability == null ? null : other.triggerProbability.copy();
         this.targetCardParameter = other.targetCardParameter == null ? null : other.targetCardParameter.copy();
         this.effectId = other.effectId == null ? null : other.effectId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mtriggereffectrangeId = other.mtriggereffectrangeId == null ? null : other.mtriggereffectrangeId.copy();
         this.mTargetTriggerEffectGroupId = other.mTargetTriggerEffectGroupId == null ? null : other.mTargetTriggerEffectGroupId.copy();
     }
 
@@ -107,12 +107,12 @@ public class MTriggerEffectBaseCriteria implements Serializable, Criteria {
         this.effectId = effectId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMtriggereffectrangeId() {
+        return mtriggereffectrangeId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMtriggereffectrangeId(LongFilter mtriggereffectrangeId) {
+        this.mtriggereffectrangeId = mtriggereffectrangeId;
     }
 
     public LongFilter getMTargetTriggerEffectGroupId() {
@@ -140,7 +140,7 @@ public class MTriggerEffectBaseCriteria implements Serializable, Criteria {
             Objects.equals(triggerProbability, that.triggerProbability) &&
             Objects.equals(targetCardParameter, that.targetCardParameter) &&
             Objects.equals(effectId, that.effectId) &&
-            Objects.equals(idId, that.idId) &&
+            Objects.equals(mtriggereffectrangeId, that.mtriggereffectrangeId) &&
             Objects.equals(mTargetTriggerEffectGroupId, that.mTargetTriggerEffectGroupId);
     }
 
@@ -153,7 +153,7 @@ public class MTriggerEffectBaseCriteria implements Serializable, Criteria {
         triggerProbability,
         targetCardParameter,
         effectId,
-        idId,
+        mtriggereffectrangeId,
         mTargetTriggerEffectGroupId
         );
     }
@@ -167,7 +167,7 @@ public class MTriggerEffectBaseCriteria implements Serializable, Criteria {
                 (triggerProbability != null ? "triggerProbability=" + triggerProbability + ", " : "") +
                 (targetCardParameter != null ? "targetCardParameter=" + targetCardParameter + ", " : "") +
                 (effectId != null ? "effectId=" + effectId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mtriggereffectrangeId != null ? "mtriggereffectrangeId=" + mtriggereffectrangeId + ", " : "") +
                 (mTargetTriggerEffectGroupId != null ? "mTargetTriggerEffectGroupId=" + mTargetTriggerEffectGroupId + ", " : "") +
             "}";
     }

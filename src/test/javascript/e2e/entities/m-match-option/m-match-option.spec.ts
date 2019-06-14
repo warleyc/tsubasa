@@ -47,7 +47,7 @@ describe('MMatchOption e2e test', () => {
             mMatchOptionUpdatePage.setUseStaminaMagnificationInput('5'),
             mMatchOptionUpdatePage.setIsIgnoreTeamSkillInput('5'),
             mMatchOptionUpdatePage.setStaminaInfinityTypeInput('5'),
-            mMatchOptionUpdatePage.idSelectLastOption(),
+            mMatchOptionUpdatePage.mpassiveeffectrangeSelectLastOption(),
         ]);
         expect(await mMatchOptionUpdatePage.getPassiveEffectIdInput()).to.eq('5', 'Expected passiveEffectId value to be equals to 5');
         expect(await mMatchOptionUpdatePage.getPassiveEffectValueInput()).to.eq('5', 'Expected passiveEffectValue value to be equals to 5');

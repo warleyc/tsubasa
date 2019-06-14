@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCardThumbnailAssetsMapper.class})
 public interface MTrainingCardMapper extends EntityMapper<MTrainingCardDTO, MTrainingCard> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcardthumbnailassets.id", target = "mcardthumbnailassetsId")
     MTrainingCardDTO toDto(MTrainingCard mTrainingCard);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcardthumbnailassetsId", target = "mcardthumbnailassets")
     MTrainingCard toEntity(MTrainingCardDTO mTrainingCardDTO);
 
     default MTrainingCard fromId(Long id) {

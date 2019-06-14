@@ -17,7 +17,7 @@ public class MTargetNationalityGroupDTO implements Serializable {
     private Integer nationalityId;
 
 
-    private Long idId;
+    private Long mnationalityId;
 
     public Long getId() {
         return id;
@@ -43,12 +43,12 @@ public class MTargetNationalityGroupDTO implements Serializable {
         this.nationalityId = nationalityId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMnationalityId() {
+        return mnationalityId;
     }
 
-    public void setIdId(Long mNationalityId) {
-        this.idId = mNationalityId;
+    public void setMnationalityId(Long mNationalityId) {
+        this.mnationalityId = mNationalityId;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class MTargetNationalityGroupDTO implements Serializable {
             "id=" + getId() +
             ", groupId=" + getGroupId() +
             ", nationalityId=" + getNationalityId() +
-            ", id=" + getIdId() +
+            ", mnationality=" + getMnationalityId() +
             "}";
     }
 }

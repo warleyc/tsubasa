@@ -119,7 +119,7 @@ public class MPvpRankingRewardResourceIT {
         } else {
             mPvpWave = TestUtil.findAll(em, MPvpWave.class).get(0);
         }
-        mPvpRankingReward.setId(mPvpWave);
+        mPvpRankingReward.setMpvpwave(mPvpWave);
         return mPvpRankingReward;
     }
     /**
@@ -144,7 +144,7 @@ public class MPvpRankingRewardResourceIT {
         } else {
             mPvpWave = TestUtil.findAll(em, MPvpWave.class).get(0);
         }
-        mPvpRankingReward.setId(mPvpWave);
+        mPvpRankingReward.setMpvpwave(mPvpWave);
         return mPvpRankingReward;
     }
 
@@ -660,17 +660,17 @@ public class MPvpRankingRewardResourceIT {
 
     @Test
     @Transactional
-    public void getAllMPvpRankingRewardsByIdIsEqualToSomething() throws Exception {
+    public void getAllMPvpRankingRewardsByMpvpwaveIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MPvpWave id = mPvpRankingReward.getId();
+        MPvpWave mpvpwave = mPvpRankingReward.getMpvpwave();
         mPvpRankingRewardRepository.saveAndFlush(mPvpRankingReward);
-        Long idId = id.getId();
+        Long mpvpwaveId = mpvpwave.getId();
 
-        // Get all the mPvpRankingRewardList where id equals to idId
-        defaultMPvpRankingRewardShouldBeFound("idId.equals=" + idId);
+        // Get all the mPvpRankingRewardList where mpvpwave equals to mpvpwaveId
+        defaultMPvpRankingRewardShouldBeFound("mpvpwaveId.equals=" + mpvpwaveId);
 
-        // Get all the mPvpRankingRewardList where id equals to idId + 1
-        defaultMPvpRankingRewardShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mPvpRankingRewardList where mpvpwave equals to mpvpwaveId + 1
+        defaultMPvpRankingRewardShouldNotBeFound("mpvpwaveId.equals=" + (mpvpwaveId + 1));
     }
 
     /**

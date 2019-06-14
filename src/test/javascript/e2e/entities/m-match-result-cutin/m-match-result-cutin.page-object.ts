@@ -31,7 +31,7 @@ export class MMatchResultCutinUpdatePage {
   isWinInput = element(by.id('field_isWin'));
   textInput = element(by.id('field_text'));
   soundEventInput = element(by.id('field_soundEvent'));
-  idSelect = element(by.id('field_id'));
+  mcharacterSelect = element(by.id('field_mcharacter'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -77,23 +77,23 @@ export class MMatchResultCutinUpdatePage {
     return await this.soundEventInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mcharacterSelectLastOption(timeout?: number) {
+    await this.mcharacterSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mcharacterSelectOption(option) {
+    await this.mcharacterSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMcharacterSelect(): ElementFinder {
+    return this.mcharacterSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMcharacterSelectedOption() {
+    return await this.mcharacterSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

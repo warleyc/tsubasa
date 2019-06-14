@@ -62,7 +62,7 @@ describe('MNpcDeck e2e test', () => {
             mNpcDeckUpdatePage.setNpcCardId10Input('5'),
             mNpcDeckUpdatePage.setNpcCardId11Input('5'),
             mNpcDeckUpdatePage.setTickInput('5'),
-            mNpcDeckUpdatePage.idSelectLastOption(),
+            mNpcDeckUpdatePage.mformationSelectLastOption(),
         ]);
         expect(await mNpcDeckUpdatePage.getTeamNameInput()).to.eq('teamName', 'Expected TeamName value to be equals to teamName');
         expect(await mNpcDeckUpdatePage.getUniformBottomFpInput()).to.eq('5', 'Expected uniformBottomFp value to be equals to 5');

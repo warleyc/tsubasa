@@ -27,7 +27,7 @@ export class MMatchResultCutinUpdateComponent implements OnInit {
     isWin: [null, [Validators.required]],
     text: [null, [Validators.required]],
     soundEvent: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mcharacterId: [null, Validators.required]
   });
 
   constructor(
@@ -62,7 +62,7 @@ export class MMatchResultCutinUpdateComponent implements OnInit {
       isWin: mMatchResultCutin.isWin,
       text: mMatchResultCutin.text,
       soundEvent: mMatchResultCutin.soundEvent,
-      idId: mMatchResultCutin.idId
+      mcharacterId: mMatchResultCutin.mcharacterId
     });
   }
 
@@ -121,7 +121,7 @@ export class MMatchResultCutinUpdateComponent implements OnInit {
       isWin: this.editForm.get(['isWin']).value,
       text: this.editForm.get(['text']).value,
       soundEvent: this.editForm.get(['soundEvent']).value,
-      idId: this.editForm.get(['idId']).value
+      mcharacterId: this.editForm.get(['mcharacterId']).value
     };
     return entity;
   }

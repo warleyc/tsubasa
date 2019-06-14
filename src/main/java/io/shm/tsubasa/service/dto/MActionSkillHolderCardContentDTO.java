@@ -29,7 +29,7 @@ public class MActionSkillHolderCardContentDTO implements Serializable {
     private String description;
 
 
-    private Long idId;
+    private Long mcharacterId;
 
     public Long getId() {
         return id;
@@ -79,12 +79,12 @@ public class MActionSkillHolderCardContentDTO implements Serializable {
         this.description = description;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(Long mCharacterId) {
-        this.idId = mCharacterId;
+    public void setMcharacterId(Long mCharacterId) {
+        this.mcharacterId = mCharacterId;
     }
 
     @Override
@@ -117,7 +117,7 @@ public class MActionSkillHolderCardContentDTO implements Serializable {
             ", actionSkillExp=" + getActionSkillExp() +
             ", name='" + getName() + "'" +
             ", description='" + getDescription() + "'" +
-            ", id=" + getIdId() +
+            ", mcharacter=" + getMcharacterId() +
             "}";
     }
 }

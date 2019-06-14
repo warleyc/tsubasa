@@ -40,7 +40,7 @@ public class MTargetPlayableCardGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetPlayableCardGroups")
-    private MPlayableCard id;
+    private MPlayableCard mplayablecard;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -90,17 +90,17 @@ public class MTargetPlayableCardGroup implements Serializable {
         this.isShowThumbnail = isShowThumbnail;
     }
 
-    public MPlayableCard getId() {
-        return id;
+    public MPlayableCard getMplayablecard() {
+        return mplayablecard;
     }
 
-    public MTargetPlayableCardGroup id(MPlayableCard mPlayableCard) {
-        this.id = mPlayableCard;
+    public MTargetPlayableCardGroup mplayablecard(MPlayableCard mPlayableCard) {
+        this.mplayablecard = mPlayableCard;
         return this;
     }
 
-    public void setId(MPlayableCard mPlayableCard) {
-        this.id = mPlayableCard;
+    public void setMplayablecard(MPlayableCard mPlayableCard) {
+        this.mplayablecard = mPlayableCard;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

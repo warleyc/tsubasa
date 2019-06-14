@@ -22,7 +22,7 @@
             "otherEntityName": "mFormation",
             "otherEntityRelationshipName": "mTargetFormationGroup",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mformation",
             "otherEntityField": "id"
         }
     ],

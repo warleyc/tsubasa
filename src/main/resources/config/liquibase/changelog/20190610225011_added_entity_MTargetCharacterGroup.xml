@@ -24,7 +24,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mcharacter_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -50,7 +50,7 @@
             <column name="id" type="numeric"/>
             <column name="group_id" type="numeric"/>
             <column name="character_id" type="numeric"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mcharacter_id" type="numeric"/>
         </loadData>
     </changeSet>
 

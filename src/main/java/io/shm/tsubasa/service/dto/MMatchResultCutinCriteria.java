@@ -32,7 +32,7 @@ public class MMatchResultCutinCriteria implements Serializable, Criteria {
 
     private IntegerFilter isWin;
 
-    private LongFilter idId;
+    private LongFilter mcharacterId;
 
     public MMatchResultCutinCriteria(){
     }
@@ -42,7 +42,7 @@ public class MMatchResultCutinCriteria implements Serializable, Criteria {
         this.characterId = other.characterId == null ? null : other.characterId.copy();
         this.teamId = other.teamId == null ? null : other.teamId.copy();
         this.isWin = other.isWin == null ? null : other.isWin.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcharacterId = other.mcharacterId == null ? null : other.mcharacterId.copy();
     }
 
     @Override
@@ -82,12 +82,12 @@ public class MMatchResultCutinCriteria implements Serializable, Criteria {
         this.isWin = isWin;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcharacterId(LongFilter mcharacterId) {
+        this.mcharacterId = mcharacterId;
     }
 
 
@@ -105,7 +105,7 @@ public class MMatchResultCutinCriteria implements Serializable, Criteria {
             Objects.equals(characterId, that.characterId) &&
             Objects.equals(teamId, that.teamId) &&
             Objects.equals(isWin, that.isWin) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcharacterId, that.mcharacterId);
     }
 
     @Override
@@ -115,7 +115,7 @@ public class MMatchResultCutinCriteria implements Serializable, Criteria {
         characterId,
         teamId,
         isWin,
-        idId
+        mcharacterId
         );
     }
 
@@ -126,7 +126,7 @@ public class MMatchResultCutinCriteria implements Serializable, Criteria {
                 (characterId != null ? "characterId=" + characterId + ", " : "") +
                 (teamId != null ? "teamId=" + teamId + ", " : "") +
                 (isWin != null ? "isWin=" + isWin + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcharacterId != null ? "mcharacterId=" + mcharacterId + ", " : "") +
             "}";
     }
 

@@ -48,7 +48,7 @@ public class MPvpRegulation implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mPvpRegulations")
-    private MMatchOption id;
+    private MMatchOption mmatchoption;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -124,17 +124,17 @@ public class MPvpRegulation implements Serializable {
         this.ruleTutorialId = ruleTutorialId;
     }
 
-    public MMatchOption getId() {
-        return id;
+    public MMatchOption getMmatchoption() {
+        return mmatchoption;
     }
 
-    public MPvpRegulation id(MMatchOption mMatchOption) {
-        this.id = mMatchOption;
+    public MPvpRegulation mmatchoption(MMatchOption mMatchOption) {
+        this.mmatchoption = mMatchOption;
         return this;
     }
 
-    public void setId(MMatchOption mMatchOption) {
-        this.id = mMatchOption;
+    public void setMmatchoption(MMatchOption mMatchOption) {
+        this.mmatchoption = mMatchOption;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

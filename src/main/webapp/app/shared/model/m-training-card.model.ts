@@ -21,7 +21,7 @@ export interface IMTrainingCard {
   plusCatching?: number;
   thumbnailAssetsId?: number;
   cardIllustAssetsId?: number;
-  idId?: number;
+  mcardthumbnailassetsId?: number;
 }
 
 export class MTrainingCard implements IMTrainingCard {
@@ -48,6 +48,6 @@ export class MTrainingCard implements IMTrainingCard {
     public plusCatching?: number,
     public thumbnailAssetsId?: number,
     public cardIllustAssetsId?: number,
-    public idId?: number
+    public mcardthumbnailassetsId?: number
   ) {}
 }

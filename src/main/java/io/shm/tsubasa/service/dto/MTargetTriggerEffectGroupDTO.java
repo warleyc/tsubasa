@@ -17,7 +17,7 @@ public class MTargetTriggerEffectGroupDTO implements Serializable {
     private Integer triggerEffectId;
 
 
-    private Long idId;
+    private Long mtriggereffectbaseId;
 
     public Long getId() {
         return id;
@@ -43,12 +43,12 @@ public class MTargetTriggerEffectGroupDTO implements Serializable {
         this.triggerEffectId = triggerEffectId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMtriggereffectbaseId() {
+        return mtriggereffectbaseId;
     }
 
-    public void setIdId(Long mTriggerEffectBaseId) {
-        this.idId = mTriggerEffectBaseId;
+    public void setMtriggereffectbaseId(Long mTriggerEffectBaseId) {
+        this.mtriggereffectbaseId = mTriggerEffectBaseId;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class MTargetTriggerEffectGroupDTO implements Serializable {
             "id=" + getId() +
             ", groupId=" + getGroupId() +
             ", triggerEffectId=" + getTriggerEffectId() +
-            ", id=" + getIdId() +
+            ", mtriggereffectbase=" + getMtriggereffectbaseId() +
             "}";
     }
 }

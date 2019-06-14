@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MNpcDeckMapper.class})
 public interface MDummyOpponentMapper extends EntityMapper<MDummyOpponentDTO, MDummyOpponent> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mnpcdeck.id", target = "mnpcdeckId")
     MDummyOpponentDTO toDto(MDummyOpponent mDummyOpponent);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mnpcdeckId", target = "mnpcdeck")
     MDummyOpponent toEntity(MDummyOpponentDTO mDummyOpponentDTO);
 
     default MDummyOpponent fromId(Long id) {

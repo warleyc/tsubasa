@@ -37,7 +37,7 @@ public class MNationality implements Serializable {
     @Column(name = "icon", nullable = false)
     private String icon;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mnationality")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetNationalityGroup> mTargetNationalityGroups = new HashSet<>();
 
@@ -87,13 +87,13 @@ public class MNationality implements Serializable {
 
     public MNationality addMTargetNationalityGroup(MTargetNationalityGroup mTargetNationalityGroup) {
         this.mTargetNationalityGroups.add(mTargetNationalityGroup);
-        mTargetNationalityGroup.setId(this);
+        mTargetNationalityGroup.setMnationality(this);
         return this;
     }
 
     public MNationality removeMTargetNationalityGroup(MTargetNationalityGroup mTargetNationalityGroup) {
         this.mTargetNationalityGroups.remove(mTargetNationalityGroup);
-        mTargetNationalityGroup.setId(null);
+        mTargetNationalityGroup.setMnationality(null);
         return this;
     }
 

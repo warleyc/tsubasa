@@ -30,7 +30,7 @@ public class MTargetNationalityGroupCriteria implements Serializable, Criteria {
 
     private IntegerFilter nationalityId;
 
-    private LongFilter idId;
+    private LongFilter mnationalityId;
 
     public MTargetNationalityGroupCriteria(){
     }
@@ -39,7 +39,7 @@ public class MTargetNationalityGroupCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.nationalityId = other.nationalityId == null ? null : other.nationalityId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mnationalityId = other.mnationalityId == null ? null : other.mnationalityId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MTargetNationalityGroupCriteria implements Serializable, Criteria {
         this.nationalityId = nationalityId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMnationalityId() {
+        return mnationalityId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMnationalityId(LongFilter mnationalityId) {
+        this.mnationalityId = mnationalityId;
     }
 
 
@@ -93,7 +93,7 @@ public class MTargetNationalityGroupCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(nationalityId, that.nationalityId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mnationalityId, that.mnationalityId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MTargetNationalityGroupCriteria implements Serializable, Criteria {
         id,
         groupId,
         nationalityId,
-        idId
+        mnationalityId
         );
     }
 
@@ -112,7 +112,7 @@ public class MTargetNationalityGroupCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (nationalityId != null ? "nationalityId=" + nationalityId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mnationalityId != null ? "mnationalityId=" + mnationalityId + ", " : "") +
             "}";
     }
 

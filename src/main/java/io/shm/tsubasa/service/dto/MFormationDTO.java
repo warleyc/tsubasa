@@ -65,7 +65,7 @@ public class MFormationDTO implements Serializable {
     private Integer matchFormationId;
 
 
-    private Long idId;
+    private Long mpassiveeffectrangeId;
 
     public Long getId() {
         return id;
@@ -195,12 +195,12 @@ public class MFormationDTO implements Serializable {
         this.matchFormationId = matchFormationId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMpassiveeffectrangeId() {
+        return mpassiveeffectrangeId;
     }
 
-    public void setIdId(Long mPassiveEffectRangeId) {
-        this.idId = mPassiveEffectRangeId;
+    public void setMpassiveeffectrangeId(Long mPassiveEffectRangeId) {
+        this.mpassiveeffectrangeId = mPassiveEffectRangeId;
     }
 
     @Override
@@ -243,7 +243,7 @@ public class MFormationDTO implements Serializable {
             ", subUniformNos='" + getSubUniformNos() + "'" +
             ", exType=" + getExType() +
             ", matchFormationId=" + getMatchFormationId() +
-            ", id=" + getIdId() +
+            ", mpassiveeffectrange=" + getMpassiveeffectrangeId() +
             "}";
     }
 }

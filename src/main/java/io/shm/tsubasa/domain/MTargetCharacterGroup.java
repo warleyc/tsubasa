@@ -36,7 +36,7 @@ public class MTargetCharacterGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetCharacterGroups")
-    private MCharacter id;
+    private MCharacter mcharacter;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,17 +73,17 @@ public class MTargetCharacterGroup implements Serializable {
         this.characterId = characterId;
     }
 
-    public MCharacter getId() {
-        return id;
+    public MCharacter getMcharacter() {
+        return mcharacter;
     }
 
-    public MTargetCharacterGroup id(MCharacter mCharacter) {
-        this.id = mCharacter;
+    public MTargetCharacterGroup mcharacter(MCharacter mCharacter) {
+        this.mcharacter = mCharacter;
         return this;
     }
 
-    public void setId(MCharacter mCharacter) {
-        this.id = mCharacter;
+    public void setMcharacter(MCharacter mCharacter) {
+        this.mcharacter = mCharacter;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

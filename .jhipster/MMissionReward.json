@@ -24,13 +24,13 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mGuildMission",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmissionreward",
             "relationshipName": "mGuildMission"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mMission",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmissionreward",
             "relationshipName": "mMission"
         }
     ],

@@ -164,15 +164,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mcardthumbnailassets">Mcardthumbnailassets</label>
+                    <select class="form-control" id="field_mcardthumbnailassets" name="mcardthumbnailassets" formControlName="mcardthumbnailassetsId">
+                        <option *ngIf="!editForm.get('mcardthumbnailassets').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mCardThumbnailAssetsOption.id" *ngFor="let mCardThumbnailAssetsOption of mcardthumbnailassets; trackBy: trackMCardThumbnailAssetsById">{{mCardThumbnailAssetsOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mcardthumbnailassets').invalid && (editForm.get('mcardthumbnailassets').dirty || editForm.get('mcardthumbnailassets').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mcardthumbnailassets').errors.required">
                         This field is required.
                     </small>
                 </div>

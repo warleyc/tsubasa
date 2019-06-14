@@ -32,7 +32,7 @@ public class MActionSkillHolderCardContentCriteria implements Serializable, Crit
 
     private IntegerFilter actionSkillExp;
 
-    private LongFilter idId;
+    private LongFilter mcharacterId;
 
     public MActionSkillHolderCardContentCriteria(){
     }
@@ -42,7 +42,7 @@ public class MActionSkillHolderCardContentCriteria implements Serializable, Crit
         this.targetCharaId = other.targetCharaId == null ? null : other.targetCharaId.copy();
         this.actionMasterId = other.actionMasterId == null ? null : other.actionMasterId.copy();
         this.actionSkillExp = other.actionSkillExp == null ? null : other.actionSkillExp.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcharacterId = other.mcharacterId == null ? null : other.mcharacterId.copy();
     }
 
     @Override
@@ -82,12 +82,12 @@ public class MActionSkillHolderCardContentCriteria implements Serializable, Crit
         this.actionSkillExp = actionSkillExp;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcharacterId(LongFilter mcharacterId) {
+        this.mcharacterId = mcharacterId;
     }
 
 
@@ -105,7 +105,7 @@ public class MActionSkillHolderCardContentCriteria implements Serializable, Crit
             Objects.equals(targetCharaId, that.targetCharaId) &&
             Objects.equals(actionMasterId, that.actionMasterId) &&
             Objects.equals(actionSkillExp, that.actionSkillExp) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcharacterId, that.mcharacterId);
     }
 
     @Override
@@ -115,7 +115,7 @@ public class MActionSkillHolderCardContentCriteria implements Serializable, Crit
         targetCharaId,
         actionMasterId,
         actionSkillExp,
-        idId
+        mcharacterId
         );
     }
 
@@ -126,7 +126,7 @@ public class MActionSkillHolderCardContentCriteria implements Serializable, Crit
                 (targetCharaId != null ? "targetCharaId=" + targetCharaId + ", " : "") +
                 (actionMasterId != null ? "actionMasterId=" + actionMasterId + ", " : "") +
                 (actionSkillExp != null ? "actionSkillExp=" + actionSkillExp + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcharacterId != null ? "mcharacterId=" + mcharacterId + ", " : "") +
             "}";
     }
 

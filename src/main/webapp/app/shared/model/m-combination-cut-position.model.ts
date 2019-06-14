@@ -8,7 +8,7 @@ export interface IMCombinationCutPosition {
   participantPosition3?: number;
   participantPosition4?: number;
   participantPosition5?: number;
-  idId?: number;
+  mcharacterId?: number;
 }
 
 export class MCombinationCutPosition implements IMCombinationCutPosition {
@@ -22,6 +22,6 @@ export class MCombinationCutPosition implements IMCombinationCutPosition {
     public participantPosition3?: number,
     public participantPosition4?: number,
     public participantPosition5?: number,
-    public idId?: number
+    public mcharacterId?: number
   ) {}
 }

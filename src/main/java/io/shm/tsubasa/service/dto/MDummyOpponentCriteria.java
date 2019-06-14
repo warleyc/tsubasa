@@ -42,7 +42,7 @@ public class MDummyOpponentCriteria implements Serializable, Criteria {
 
     private IntegerFilter gkUniformBottomId;
 
-    private LongFilter idId;
+    private LongFilter mnpcdeckId;
 
     public MDummyOpponentCriteria(){
     }
@@ -57,7 +57,7 @@ public class MDummyOpponentCriteria implements Serializable, Criteria {
         this.fpUniformBottomId = other.fpUniformBottomId == null ? null : other.fpUniformBottomId.copy();
         this.gkUniformUpId = other.gkUniformUpId == null ? null : other.gkUniformUpId.copy();
         this.gkUniformBottomId = other.gkUniformBottomId == null ? null : other.gkUniformBottomId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mnpcdeckId = other.mnpcdeckId == null ? null : other.mnpcdeckId.copy();
     }
 
     @Override
@@ -137,12 +137,12 @@ public class MDummyOpponentCriteria implements Serializable, Criteria {
         this.gkUniformBottomId = gkUniformBottomId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMnpcdeckId() {
+        return mnpcdeckId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMnpcdeckId(LongFilter mnpcdeckId) {
+        this.mnpcdeckId = mnpcdeckId;
     }
 
 
@@ -165,7 +165,7 @@ public class MDummyOpponentCriteria implements Serializable, Criteria {
             Objects.equals(fpUniformBottomId, that.fpUniformBottomId) &&
             Objects.equals(gkUniformUpId, that.gkUniformUpId) &&
             Objects.equals(gkUniformBottomId, that.gkUniformBottomId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mnpcdeckId, that.mnpcdeckId);
     }
 
     @Override
@@ -180,7 +180,7 @@ public class MDummyOpponentCriteria implements Serializable, Criteria {
         fpUniformBottomId,
         gkUniformUpId,
         gkUniformBottomId,
-        idId
+        mnpcdeckId
         );
     }
 
@@ -196,7 +196,7 @@ public class MDummyOpponentCriteria implements Serializable, Criteria {
                 (fpUniformBottomId != null ? "fpUniformBottomId=" + fpUniformBottomId + ", " : "") +
                 (gkUniformUpId != null ? "gkUniformUpId=" + gkUniformUpId + ", " : "") +
                 (gkUniformBottomId != null ? "gkUniformBottomId=" + gkUniformBottomId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mnpcdeckId != null ? "mnpcdeckId=" + mnpcdeckId + ", " : "") +
             "}";
     }
 

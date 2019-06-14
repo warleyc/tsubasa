@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MChallengeQuestWorldMapper.class})
 public interface MChallengeQuestStageMapper extends EntityMapper<MChallengeQuestStageDTO, MChallengeQuestStage> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mchallengequestworld.id", target = "mchallengequestworldId")
     MChallengeQuestStageDTO toDto(MChallengeQuestStage mChallengeQuestStage);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mchallengequestworldId", target = "mchallengequestworld")
     MChallengeQuestStage toEntity(MChallengeQuestStageDTO mChallengeQuestStageDTO);
 
     default MChallengeQuestStage fromId(Long id) {

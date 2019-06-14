@@ -46,23 +46,23 @@ public class MCharacter implements Serializable {
     @Column(name = "character_book_priority", nullable = false)
     private Integer characterBookPriority;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcharacter")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MActionSkillHolderCardContent> mActionSkillHolderCardContents = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcharacter")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MCombinationCutPosition> mCombinationCutPositions = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcharacter")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MMatchResultCutin> mMatchResultCutins = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcharacter")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MNpcCard> mNpcCards = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcharacter")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetCharacterGroup> mTargetCharacterGroups = new HashSet<>();
 
@@ -138,13 +138,13 @@ public class MCharacter implements Serializable {
 
     public MCharacter addMActionSkillHolderCardContent(MActionSkillHolderCardContent mActionSkillHolderCardContent) {
         this.mActionSkillHolderCardContents.add(mActionSkillHolderCardContent);
-        mActionSkillHolderCardContent.setId(this);
+        mActionSkillHolderCardContent.setMcharacter(this);
         return this;
     }
 
     public MCharacter removeMActionSkillHolderCardContent(MActionSkillHolderCardContent mActionSkillHolderCardContent) {
         this.mActionSkillHolderCardContents.remove(mActionSkillHolderCardContent);
-        mActionSkillHolderCardContent.setId(null);
+        mActionSkillHolderCardContent.setMcharacter(null);
         return this;
     }
 
@@ -163,13 +163,13 @@ public class MCharacter implements Serializable {
 
     public MCharacter addMCombinationCutPosition(MCombinationCutPosition mCombinationCutPosition) {
         this.mCombinationCutPositions.add(mCombinationCutPosition);
-        mCombinationCutPosition.setId(this);
+        mCombinationCutPosition.setMcharacter(this);
         return this;
     }
 
     public MCharacter removeMCombinationCutPosition(MCombinationCutPosition mCombinationCutPosition) {
         this.mCombinationCutPositions.remove(mCombinationCutPosition);
-        mCombinationCutPosition.setId(null);
+        mCombinationCutPosition.setMcharacter(null);
         return this;
     }
 
@@ -188,13 +188,13 @@ public class MCharacter implements Serializable {
 
     public MCharacter addMMatchResultCutin(MMatchResultCutin mMatchResultCutin) {
         this.mMatchResultCutins.add(mMatchResultCutin);
-        mMatchResultCutin.setId(this);
+        mMatchResultCutin.setMcharacter(this);
         return this;
     }
 
     public MCharacter removeMMatchResultCutin(MMatchResultCutin mMatchResultCutin) {
         this.mMatchResultCutins.remove(mMatchResultCutin);
-        mMatchResultCutin.setId(null);
+        mMatchResultCutin.setMcharacter(null);
         return this;
     }
 
@@ -213,13 +213,13 @@ public class MCharacter implements Serializable {
 
     public MCharacter addMNpcCard(MNpcCard mNpcCard) {
         this.mNpcCards.add(mNpcCard);
-        mNpcCard.setId(this);
+        mNpcCard.setMcharacter(this);
         return this;
     }
 
     public MCharacter removeMNpcCard(MNpcCard mNpcCard) {
         this.mNpcCards.remove(mNpcCard);
-        mNpcCard.setId(null);
+        mNpcCard.setMcharacter(null);
         return this;
     }
 
@@ -238,13 +238,13 @@ public class MCharacter implements Serializable {
 
     public MCharacter addMTargetCharacterGroup(MTargetCharacterGroup mTargetCharacterGroup) {
         this.mTargetCharacterGroups.add(mTargetCharacterGroup);
-        mTargetCharacterGroup.setId(this);
+        mTargetCharacterGroup.setMcharacter(this);
         return this;
     }
 
     public MCharacter removeMTargetCharacterGroup(MTargetCharacterGroup mTargetCharacterGroup) {
         this.mTargetCharacterGroups.remove(mTargetCharacterGroup);
-        mTargetCharacterGroup.setId(null);
+        mTargetCharacterGroup.setMcharacter(null);
         return this;
     }
 

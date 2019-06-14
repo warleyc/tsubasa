@@ -8,9 +8,9 @@
     -->
     <changeSet id="20190610224750-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="memblemparts_id"
                                  baseTableName="m_dummy_emblem"
-                                 constraintName="fk_m_dummy_emblem_id_id"
+                                 constraintName="fk_m_dummy_emblem_memblemparts_id"
                                  referencedColumnNames="id"
                                  referencedTableName="m_emblem_parts"/>
 

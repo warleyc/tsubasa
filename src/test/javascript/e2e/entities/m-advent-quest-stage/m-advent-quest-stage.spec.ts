@@ -70,7 +70,7 @@ describe('MAdventQuestStage e2e test', () => {
             mAdventQuestStageUpdatePage.setConditionIdInput('5'),
             mAdventQuestStageUpdatePage.setOptionIdInput('5'),
             mAdventQuestStageUpdatePage.setDeckConditionIdInput('5'),
-            mAdventQuestStageUpdatePage.idSelectLastOption(),
+            mAdventQuestStageUpdatePage.madventquestworldSelectLastOption(),
         ]);
         expect(await mAdventQuestStageUpdatePage.getWorldIdInput()).to.eq('5', 'Expected worldId value to be equals to 5');
         expect(await mAdventQuestStageUpdatePage.getNumberInput()).to.eq('5', 'Expected number value to be equals to 5');

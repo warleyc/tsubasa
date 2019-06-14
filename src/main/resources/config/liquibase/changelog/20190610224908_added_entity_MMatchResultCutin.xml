@@ -36,7 +36,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mcharacter_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -65,7 +65,7 @@
             <column name="is_win" type="numeric"/>
             <column name="text" type="string"/>
             <column name="sound_event" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mcharacter_id" type="numeric"/>
         </loadData>
     </changeSet>
 

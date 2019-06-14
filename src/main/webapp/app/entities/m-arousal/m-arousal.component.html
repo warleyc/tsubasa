@@ -19,7 +19,7 @@
             <th jhiSortBy="afterId"><span>After Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="cost"><span>Cost</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="materialGroupId"><span>Material Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mplayablecardId"><span>Mplayablecard</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -31,8 +31,8 @@
                 <td>{{mArousal.cost}}</td>
                 <td>{{mArousal.materialGroupId}}</td>
                 <td>
-                    <div *ngIf="mArousal.idId">
-                        <a [routerLink]="['../m-playable-card', mArousal.idId , 'view' ]" >{{mArousal.idId}}</a>
+                    <div *ngIf="mArousal.mplayablecardId">
+                        <a [routerLink]="['../m-playable-card', mArousal.mplayablecardId , 'view' ]" >{{mArousal.mplayablecardId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

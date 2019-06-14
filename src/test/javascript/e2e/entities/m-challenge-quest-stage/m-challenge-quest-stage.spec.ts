@@ -72,7 +72,7 @@ describe('MChallengeQuestStage e2e test', () => {
             mChallengeQuestStageUpdatePage.setShortNameInput('shortName'),
             mChallengeQuestStageUpdatePage.setSkipCheckPointInput('5'),
             mChallengeQuestStageUpdatePage.setRoadNumberInput('5'),
-            mChallengeQuestStageUpdatePage.idSelectLastOption(),
+            mChallengeQuestStageUpdatePage.mchallengequestworldSelectLastOption(),
         ]);
         expect(await mChallengeQuestStageUpdatePage.getWorldIdInput()).to.eq('5', 'Expected worldId value to be equals to 5');
         expect(await mChallengeQuestStageUpdatePage.getNumberInput()).to.eq('5', 'Expected number value to be equals to 5');

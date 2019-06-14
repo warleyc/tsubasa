@@ -86,15 +86,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mpvpwave">Mpvpwave</label>
+                    <select class="form-control" id="field_mpvpwave" name="mpvpwave" formControlName="mpvpwaveId">
+                        <option *ngIf="!editForm.get('mpvpwave').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mPvpWaveOption.id" *ngFor="let mPvpWaveOption of mpvpwaves; trackBy: trackMPvpWaveById">{{mPvpWaveOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mpvpwave').invalid && (editForm.get('mpvpwave').dirty || editForm.get('mpvpwave').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mpvpwave').errors.required">
                         This field is required.
                     </small>
                 </div>

@@ -155,9 +155,9 @@ public class MQuestStageQueryService extends QueryService<MQuestStage> {
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MQuestStage_.id, JoinType.LEFT).get(MQuestWorld_.id)));
+            if (criteria.getMquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMquestworldId(),
+                    root -> root.join(MQuestStage_.mquestworld, JoinType.LEFT).get(MQuestWorld_.id)));
             }
         }
         return specification;

@@ -158,9 +158,9 @@ public class MGuerillaQuestStageQueryService extends QueryService<MGuerillaQuest
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MGuerillaQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MGuerillaQuestStage_.id, JoinType.LEFT).get(MGuerillaQuestWorld_.id)));
+            if (criteria.getMguerillaquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMguerillaquestworldId(),
+                    root -> root.join(MGuerillaQuestStage_.mguerillaquestworld, JoinType.LEFT).get(MGuerillaQuestWorld_.id)));
             }
         }
         return specification;

@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MPassiveEffectRangeMapper.class})
 public interface MFormationMapper extends EntityMapper<MFormationDTO, MFormation> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mpassiveeffectrange.id", target = "mpassiveeffectrangeId")
     MFormationDTO toDto(MFormation mFormation);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mpassiveeffectrangeId", target = "mpassiveeffectrange")
     @Mapping(target = "mNpcDecks", ignore = true)
     @Mapping(target = "mTargetFormationGroups", ignore = true)
     MFormation toEntity(MFormationDTO mFormationDTO);

@@ -115,7 +115,7 @@ public class MArousalResourceIT {
         } else {
             mPlayableCard = TestUtil.findAll(em, MPlayableCard.class).get(0);
         }
-        mArousal.setId(mPlayableCard);
+        mArousal.setMplayablecard(mPlayableCard);
         return mArousal;
     }
     /**
@@ -139,7 +139,7 @@ public class MArousalResourceIT {
         } else {
             mPlayableCard = TestUtil.findAll(em, MPlayableCard.class).get(0);
         }
-        mArousal.setId(mPlayableCard);
+        mArousal.setMplayablecard(mPlayableCard);
         return mArousal;
     }
 
@@ -567,17 +567,17 @@ public class MArousalResourceIT {
 
     @Test
     @Transactional
-    public void getAllMArousalsByIdIsEqualToSomething() throws Exception {
+    public void getAllMArousalsByMplayablecardIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MPlayableCard id = mArousal.getId();
+        MPlayableCard mplayablecard = mArousal.getMplayablecard();
         mArousalRepository.saveAndFlush(mArousal);
-        Long idId = id.getId();
+        Long mplayablecardId = mplayablecard.getId();
 
-        // Get all the mArousalList where id equals to idId
-        defaultMArousalShouldBeFound("idId.equals=" + idId);
+        // Get all the mArousalList where mplayablecard equals to mplayablecardId
+        defaultMArousalShouldBeFound("mplayablecardId.equals=" + mplayablecardId);
 
-        // Get all the mArousalList where id equals to idId + 1
-        defaultMArousalShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mArousalList where mplayablecard equals to mplayablecardId + 1
+        defaultMArousalShouldNotBeFound("mplayablecardId.equals=" + (mplayablecardId + 1));
     }
 
     /**

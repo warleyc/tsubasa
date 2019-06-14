@@ -44,7 +44,7 @@ describe('MAchievement e2e test', () => {
             mAchievementUpdatePage.setNameInput('name'),
             mAchievementUpdatePage.setTypeInput('5'),
             mAchievementUpdatePage.setMissionIdInput('5'),
-            mAchievementUpdatePage.idSelectLastOption(),
+            mAchievementUpdatePage.mmissionSelectLastOption(),
         ]);
         expect(await mAchievementUpdatePage.getAchievementIdInput()).to.eq('achievementId', 'Expected AchievementId value to be equals to achievementId');
         expect(await mAchievementUpdatePage.getNameInput()).to.eq('name', 'Expected Name value to be equals to name');

@@ -44,7 +44,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mtriggereffectrange_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -75,7 +75,7 @@
             <column name="target_card_parameter" type="numeric"/>
             <column name="effect_id" type="numeric"/>
             <column name="description" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mtriggereffectrange_id" type="numeric"/>
         </loadData>
     </changeSet>
 

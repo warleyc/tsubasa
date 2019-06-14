@@ -26,7 +26,7 @@ export class MAchievementUpdateComponent implements OnInit {
     name: [null, [Validators.required]],
     type: [null, [Validators.required]],
     missionId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mmissionId: [null, Validators.required]
   });
 
   constructor(
@@ -60,7 +60,7 @@ export class MAchievementUpdateComponent implements OnInit {
       name: mAchievement.name,
       type: mAchievement.type,
       missionId: mAchievement.missionId,
-      idId: mAchievement.idId
+      mmissionId: mAchievement.mmissionId
     });
   }
 
@@ -118,7 +118,7 @@ export class MAchievementUpdateComponent implements OnInit {
       name: this.editForm.get(['name']).value,
       type: this.editForm.get(['type']).value,
       missionId: this.editForm.get(['missionId']).value,
-      idId: this.editForm.get(['idId']).value
+      mmissionId: this.editForm.get(['mmissionId']).value
     };
     return entity;
   }

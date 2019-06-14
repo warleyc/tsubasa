@@ -1,4 +1,4 @@
-id;action_cut_id;character_id;activator_position;participant_position_1;participant_position_2;participant_position_3;participant_position_4;participant_position_5;id_id
+id;action_cut_id;character_id;activator_position;participant_position_1;participant_position_2;participant_position_3;participant_position_4;participant_position_5;mcharacter_id
 1;16749;43845;14727;52988;97307;98530;75929;16602;10
 2;11443;43974;870;27836;15557;79829;20727;32625;7
 3;29938;21970;23250;2052;12967;82661;25646;36559;4

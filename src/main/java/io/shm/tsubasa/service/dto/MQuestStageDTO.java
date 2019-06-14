@@ -87,7 +87,7 @@ public class MQuestStageDTO implements Serializable {
     private Integer deckConditionId;
 
 
-    private Long idId;
+    private Long mquestworldId;
 
     public Long getId() {
         return id;
@@ -297,12 +297,12 @@ public class MQuestStageDTO implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMquestworldId() {
+        return mquestworldId;
     }
 
-    public void setIdId(Long mQuestWorldId) {
-        this.idId = mQuestWorldId;
+    public void setMquestworldId(Long mQuestWorldId) {
+        this.mquestworldId = mQuestWorldId;
     }
 
     @Override
@@ -355,7 +355,7 @@ public class MQuestStageDTO implements Serializable {
             ", conditionId=" + getConditionId() +
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
-            ", id=" + getIdId() +
+            ", mquestworld=" + getMquestworldId() +
             "}";
     }
 }

@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MMissionRewardMapper.class})
 public interface MGuildMissionMapper extends EntityMapper<MGuildMissionDTO, MGuildMission> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mmissionreward.id", target = "mmissionrewardId")
     MGuildMissionDTO toDto(MGuildMission mGuildMission);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mmissionrewardId", target = "mmissionreward")
     MGuildMission toEntity(MGuildMissionDTO mGuildMissionDTO);
 
     default MGuildMission fromId(Long id) {

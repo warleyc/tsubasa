@@ -44,7 +44,7 @@ describe('MArousal e2e test', () => {
             mArousalUpdatePage.setAfterIdInput('5'),
             mArousalUpdatePage.setCostInput('5'),
             mArousalUpdatePage.setMaterialGroupIdInput('5'),
-            mArousalUpdatePage.idSelectLastOption(),
+            mArousalUpdatePage.mplayablecardSelectLastOption(),
         ]);
         expect(await mArousalUpdatePage.getBeforeIdInput()).to.eq('5', 'Expected beforeId value to be equals to 5');
         expect(await mArousalUpdatePage.getAfterIdInput()).to.eq('5', 'Expected afterId value to be equals to 5');

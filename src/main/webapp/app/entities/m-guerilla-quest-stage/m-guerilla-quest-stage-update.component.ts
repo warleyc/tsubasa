@@ -48,7 +48,7 @@ export class MGuerillaQuestStageUpdateComponent implements OnInit {
     conditionId: [],
     optionId: [],
     deckConditionId: [],
-    idId: [null, Validators.required]
+    mguerillaquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -104,7 +104,7 @@ export class MGuerillaQuestStageUpdateComponent implements OnInit {
       conditionId: mGuerillaQuestStage.conditionId,
       optionId: mGuerillaQuestStage.optionId,
       deckConditionId: mGuerillaQuestStage.deckConditionId,
-      idId: mGuerillaQuestStage.idId
+      mguerillaquestworldId: mGuerillaQuestStage.mguerillaquestworldId
     });
   }
 
@@ -184,7 +184,7 @@ export class MGuerillaQuestStageUpdateComponent implements OnInit {
       conditionId: this.editForm.get(['conditionId']).value,
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
-      idId: this.editForm.get(['idId']).value
+      mguerillaquestworldId: this.editForm.get(['mguerillaquestworldId']).value
     };
     return entity;
   }

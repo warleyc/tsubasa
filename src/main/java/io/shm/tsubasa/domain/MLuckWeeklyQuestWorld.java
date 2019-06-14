@@ -72,7 +72,7 @@ public class MLuckWeeklyQuestWorld implements Serializable {
     @Column(name = "clear_limit", nullable = false)
     private Integer clearLimit;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mluckweeklyquestworld")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MLuckWeeklyQuestStage> mLuckWeeklyQuestStages = new HashSet<>();
 
@@ -239,13 +239,13 @@ public class MLuckWeeklyQuestWorld implements Serializable {
 
     public MLuckWeeklyQuestWorld addMLuckWeeklyQuestStage(MLuckWeeklyQuestStage mLuckWeeklyQuestStage) {
         this.mLuckWeeklyQuestStages.add(mLuckWeeklyQuestStage);
-        mLuckWeeklyQuestStage.setId(this);
+        mLuckWeeklyQuestStage.setMluckweeklyquestworld(this);
         return this;
     }
 
     public MLuckWeeklyQuestWorld removeMLuckWeeklyQuestStage(MLuckWeeklyQuestStage mLuckWeeklyQuestStage) {
         this.mLuckWeeklyQuestStages.remove(mLuckWeeklyQuestStage);
-        mLuckWeeklyQuestStage.setId(null);
+        mLuckWeeklyQuestStage.setMluckweeklyquestworld(null);
         return this;
     }
 

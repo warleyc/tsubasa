@@ -200,7 +200,7 @@ public class MQuestStageResourceIT {
         } else {
             mQuestWorld = TestUtil.findAll(em, MQuestWorld.class).get(0);
         }
-        mQuestStage.setId(mQuestWorld);
+        mQuestStage.setMquestworld(mQuestWorld);
         return mQuestStage;
     }
     /**
@@ -245,7 +245,7 @@ public class MQuestStageResourceIT {
         } else {
             mQuestWorld = TestUtil.findAll(em, MQuestWorld.class).get(0);
         }
-        mQuestStage.setId(mQuestWorld);
+        mQuestStage.setMquestworld(mQuestWorld);
         return mQuestStage;
     }
 
@@ -2209,17 +2209,17 @@ public class MQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMQuestStagesByMquestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MQuestWorld id = mQuestStage.getId();
+        MQuestWorld mquestworld = mQuestStage.getMquestworld();
         mQuestStageRepository.saveAndFlush(mQuestStage);
-        Long idId = id.getId();
+        Long mquestworldId = mquestworld.getId();
 
-        // Get all the mQuestStageList where id equals to idId
-        defaultMQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mQuestStageList where mquestworld equals to mquestworldId
+        defaultMQuestStageShouldBeFound("mquestworldId.equals=" + mquestworldId);
 
-        // Get all the mQuestStageList where id equals to idId + 1
-        defaultMQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mQuestStageList where mquestworld equals to mquestworldId + 1
+        defaultMQuestStageShouldNotBeFound("mquestworldId.equals=" + (mquestworldId + 1));
     }
 
     /**

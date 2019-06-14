@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCharacterMapper.class})
 public interface MCombinationCutPositionMapper extends EntityMapper<MCombinationCutPositionDTO, MCombinationCutPosition> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcharacter.id", target = "mcharacterId")
     MCombinationCutPositionDTO toDto(MCombinationCutPosition mCombinationCutPosition);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcharacterId", target = "mcharacter")
     MCombinationCutPosition toEntity(MCombinationCutPositionDTO mCombinationCutPositionDTO);
 
     default MCombinationCutPosition fromId(Long id) {

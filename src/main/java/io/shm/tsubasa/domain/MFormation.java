@@ -99,13 +99,13 @@ public class MFormation implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mFormations")
-    private MPassiveEffectRange id;
+    private MPassiveEffectRange mpassiveeffectrange;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mformation")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MNpcDeck> mNpcDecks = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mformation")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetFormationGroup> mTargetFormationGroups = new HashSet<>();
 
@@ -313,17 +313,17 @@ public class MFormation implements Serializable {
         this.matchFormationId = matchFormationId;
     }
 
-    public MPassiveEffectRange getId() {
-        return id;
+    public MPassiveEffectRange getMpassiveeffectrange() {
+        return mpassiveeffectrange;
     }
 
-    public MFormation id(MPassiveEffectRange mPassiveEffectRange) {
-        this.id = mPassiveEffectRange;
+    public MFormation mpassiveeffectrange(MPassiveEffectRange mPassiveEffectRange) {
+        this.mpassiveeffectrange = mPassiveEffectRange;
         return this;
     }
 
-    public void setId(MPassiveEffectRange mPassiveEffectRange) {
-        this.id = mPassiveEffectRange;
+    public void setMpassiveeffectrange(MPassiveEffectRange mPassiveEffectRange) {
+        this.mpassiveeffectrange = mPassiveEffectRange;
     }
 
     public Set<MNpcDeck> getMNpcDecks() {
@@ -337,13 +337,13 @@ public class MFormation implements Serializable {
 
     public MFormation addMNpcDeck(MNpcDeck mNpcDeck) {
         this.mNpcDecks.add(mNpcDeck);
-        mNpcDeck.setId(this);
+        mNpcDeck.setMformation(this);
         return this;
     }
 
     public MFormation removeMNpcDeck(MNpcDeck mNpcDeck) {
         this.mNpcDecks.remove(mNpcDeck);
-        mNpcDeck.setId(null);
+        mNpcDeck.setMformation(null);
         return this;
     }
 
@@ -362,13 +362,13 @@ public class MFormation implements Serializable {
 
     public MFormation addMTargetFormationGroup(MTargetFormationGroup mTargetFormationGroup) {
         this.mTargetFormationGroups.add(mTargetFormationGroup);
-        mTargetFormationGroup.setId(this);
+        mTargetFormationGroup.setMformation(this);
         return this;
     }
 
     public MFormation removeMTargetFormationGroup(MTargetFormationGroup mTargetFormationGroup) {
         this.mTargetFormationGroups.remove(mTargetFormationGroup);
-        mTargetFormationGroup.setId(null);
+        mTargetFormationGroup.setMformation(null);
         return this;
     }
 

@@ -101,9 +101,9 @@ public class MDummyEmblemQueryService extends QueryService<MDummyEmblem> {
             if (criteria.getLowerId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getLowerId(), MDummyEmblem_.lowerId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MDummyEmblem_.id, JoinType.LEFT).get(MEmblemParts_.id)));
+            if (criteria.getMemblempartsId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMemblempartsId(),
+                    root -> root.join(MDummyEmblem_.memblemparts, JoinType.LEFT).get(MEmblemParts_.id)));
             }
         }
         return specification;

@@ -37,7 +37,7 @@ export class MFormationUpdateComponent implements OnInit {
     subUniformNos: [null, [Validators.required]],
     exType: [],
     matchFormationId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mpassiveeffectrangeId: [null, Validators.required]
   });
 
   constructor(
@@ -82,7 +82,7 @@ export class MFormationUpdateComponent implements OnInit {
       subUniformNos: mFormation.subUniformNos,
       exType: mFormation.exType,
       matchFormationId: mFormation.matchFormationId,
-      idId: mFormation.idId
+      mpassiveeffectrangeId: mFormation.mpassiveeffectrangeId
     });
   }
 
@@ -151,7 +151,7 @@ export class MFormationUpdateComponent implements OnInit {
       subUniformNos: this.editForm.get(['subUniformNos']).value,
       exType: this.editForm.get(['exType']).value,
       matchFormationId: this.editForm.get(['matchFormationId']).value,
-      idId: this.editForm.get(['idId']).value
+      mpassiveeffectrangeId: this.editForm.get(['mpassiveeffectrangeId']).value
     };
     return entity;
   }

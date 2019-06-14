@@ -159,7 +159,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTargetActionGroup",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "maction",
             "relationshipName": "mTargetActionGroup"
         }
     ],

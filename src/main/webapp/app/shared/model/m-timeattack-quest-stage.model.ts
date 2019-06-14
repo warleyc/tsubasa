@@ -30,7 +30,7 @@ export interface IMTimeattackQuestStage {
   optionId?: number;
   deckConditionId?: number;
   shortName?: any;
-  idId?: number;
+  mtimeattackquestworldId?: number;
 }
 
 export class MTimeattackQuestStage implements IMTimeattackQuestStage {
@@ -66,6 +66,6 @@ export class MTimeattackQuestStage implements IMTimeattackQuestStage {
     public optionId?: number,
     public deckConditionId?: number,
     public shortName?: any,
-    public idId?: number
+    public mtimeattackquestworldId?: number
   ) {}
 }

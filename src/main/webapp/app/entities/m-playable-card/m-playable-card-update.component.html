@@ -937,15 +937,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mmodelcard">Mmodelcard</label>
+                    <select class="form-control" id="field_mmodelcard" name="mmodelcard" formControlName="mmodelcardId">
+                        <option *ngIf="!editForm.get('mmodelcard').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mModelCardOption.id" *ngFor="let mModelCardOption of mmodelcards; trackBy: trackMModelCardById">{{mModelCardOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mmodelcard').invalid && (editForm.get('mmodelcard').dirty || editForm.get('mmodelcard').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mmodelcard').errors.required">
                         This field is required.
                     </small>
                 </div>

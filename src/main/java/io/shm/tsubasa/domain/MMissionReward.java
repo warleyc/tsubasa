@@ -38,11 +38,11 @@ public class MMissionReward implements Serializable {
     @Column(name = "content_amount", nullable = false)
     private Integer contentAmount;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mmissionreward")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MGuildMission> mGuildMissions = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mmissionreward")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MMission> mMissions = new HashSet<>();
 
@@ -105,13 +105,13 @@ public class MMissionReward implements Serializable {
 
     public MMissionReward addMGuildMission(MGuildMission mGuildMission) {
         this.mGuildMissions.add(mGuildMission);
-        mGuildMission.setId(this);
+        mGuildMission.setMmissionreward(this);
         return this;
     }
 
     public MMissionReward removeMGuildMission(MGuildMission mGuildMission) {
         this.mGuildMissions.remove(mGuildMission);
-        mGuildMission.setId(null);
+        mGuildMission.setMmissionreward(null);
         return this;
     }
 
@@ -130,13 +130,13 @@ public class MMissionReward implements Serializable {
 
     public MMissionReward addMMission(MMission mMission) {
         this.mMissions.add(mMission);
-        mMission.setId(this);
+        mMission.setMmissionreward(this);
         return this;
     }
 
     public MMissionReward removeMMission(MMission mMission) {
         this.mMissions.remove(mMission);
-        mMission.setId(null);
+        mMission.setMmissionreward(null);
         return this;
     }
 

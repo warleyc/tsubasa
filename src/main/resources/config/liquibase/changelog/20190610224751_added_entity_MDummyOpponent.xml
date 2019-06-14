@@ -68,7 +68,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mnpcdeck_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -105,7 +105,7 @@
             <column name="gk_uniform_up_color" type="string"/>
             <column name="gk_uniform_bottom_id" type="numeric"/>
             <column name="gk_uniform_bottom_color" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mnpcdeck_id" type="numeric"/>
         </loadData>
     </changeSet>
 

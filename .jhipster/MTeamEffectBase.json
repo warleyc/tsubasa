@@ -98,7 +98,7 @@
             "otherEntityName": "mPassiveEffectRange",
             "otherEntityRelationshipName": "mTeamEffectBase",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mpassiveeffectrange",
             "otherEntityField": "id"
         }
     ],

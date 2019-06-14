@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCharacterMapper.class})
 public interface MMatchResultCutinMapper extends EntityMapper<MMatchResultCutinDTO, MMatchResultCutin> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcharacter.id", target = "mcharacterId")
     MMatchResultCutinDTO toDto(MMatchResultCutin mMatchResultCutin);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcharacterId", target = "mcharacter")
     MMatchResultCutin toEntity(MMatchResultCutinDTO mMatchResultCutinDTO);
 
     default MMatchResultCutin fromId(Long id) {

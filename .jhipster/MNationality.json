@@ -22,7 +22,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTargetNationalityGroup",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mnationality",
             "relationshipName": "mTargetNationalityGroup"
         }
     ],

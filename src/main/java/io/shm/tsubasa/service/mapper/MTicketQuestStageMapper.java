@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MTicketQuestWorldMapper.class})
 public interface MTicketQuestStageMapper extends EntityMapper<MTicketQuestStageDTO, MTicketQuestStage> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mticketquestworld.id", target = "mticketquestworldId")
     MTicketQuestStageDTO toDto(MTicketQuestStage mTicketQuestStage);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mticketquestworldId", target = "mticketquestworld")
     MTicketQuestStage toEntity(MTicketQuestStageDTO mTicketQuestStageDTO);
 
     default MTicketQuestStage fromId(Long id) {

@@ -46,7 +46,7 @@ describe('MTargetTriggerEffectGroup e2e test', () => {
         await promise.all([
             mTargetTriggerEffectGroupUpdatePage.setGroupIdInput('5'),
             mTargetTriggerEffectGroupUpdatePage.setTriggerEffectIdInput('5'),
-            mTargetTriggerEffectGroupUpdatePage.idSelectLastOption(),
+            mTargetTriggerEffectGroupUpdatePage.mtriggereffectbaseSelectLastOption(),
         ]);
         expect(await mTargetTriggerEffectGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetTriggerEffectGroupUpdatePage.getTriggerEffectIdInput()).to.eq('5', 'Expected triggerEffectId value to be equals to 5');

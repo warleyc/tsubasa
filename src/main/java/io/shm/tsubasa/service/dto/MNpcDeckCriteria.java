@@ -68,7 +68,7 @@ public class MNpcDeckCriteria implements Serializable, Criteria {
 
     private IntegerFilter tick;
 
-    private LongFilter idId;
+    private LongFilter mformationId;
 
     private LongFilter mDummyOpponentId;
 
@@ -98,7 +98,7 @@ public class MNpcDeckCriteria implements Serializable, Criteria {
         this.npcCardId10 = other.npcCardId10 == null ? null : other.npcCardId10.copy();
         this.npcCardId11 = other.npcCardId11 == null ? null : other.npcCardId11.copy();
         this.tick = other.tick == null ? null : other.tick.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mformationId = other.mformationId == null ? null : other.mformationId.copy();
         this.mDummyOpponentId = other.mDummyOpponentId == null ? null : other.mDummyOpponentId.copy();
     }
 
@@ -283,12 +283,12 @@ public class MNpcDeckCriteria implements Serializable, Criteria {
         this.tick = tick;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMformationId() {
+        return mformationId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMformationId(LongFilter mformationId) {
+        this.mformationId = mformationId;
     }
 
     public LongFilter getMDummyOpponentId() {
@@ -332,7 +332,7 @@ public class MNpcDeckCriteria implements Serializable, Criteria {
             Objects.equals(npcCardId10, that.npcCardId10) &&
             Objects.equals(npcCardId11, that.npcCardId11) &&
             Objects.equals(tick, that.tick) &&
-            Objects.equals(idId, that.idId) &&
+            Objects.equals(mformationId, that.mformationId) &&
             Objects.equals(mDummyOpponentId, that.mDummyOpponentId);
     }
 
@@ -361,7 +361,7 @@ public class MNpcDeckCriteria implements Serializable, Criteria {
         npcCardId10,
         npcCardId11,
         tick,
-        idId,
+        mformationId,
         mDummyOpponentId
         );
     }
@@ -391,7 +391,7 @@ public class MNpcDeckCriteria implements Serializable, Criteria {
                 (npcCardId10 != null ? "npcCardId10=" + npcCardId10 + ", " : "") +
                 (npcCardId11 != null ? "npcCardId11=" + npcCardId11 + ", " : "") +
                 (tick != null ? "tick=" + tick + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mformationId != null ? "mformationId=" + mformationId + ", " : "") +
                 (mDummyOpponentId != null ? "mDummyOpponentId=" + mDummyOpponentId + ", " : "") +
             "}";
     }

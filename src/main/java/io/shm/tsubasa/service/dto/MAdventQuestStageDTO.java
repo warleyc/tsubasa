@@ -90,7 +90,7 @@ public class MAdventQuestStageDTO implements Serializable {
     private Integer deckConditionId;
 
 
-    private Long idId;
+    private Long madventquestworldId;
 
     public Long getId() {
         return id;
@@ -308,12 +308,12 @@ public class MAdventQuestStageDTO implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMadventquestworldId() {
+        return madventquestworldId;
     }
 
-    public void setIdId(Long mAdventQuestWorldId) {
-        this.idId = mAdventQuestWorldId;
+    public void setMadventquestworldId(Long mAdventQuestWorldId) {
+        this.madventquestworldId = mAdventQuestWorldId;
     }
 
     @Override
@@ -367,7 +367,7 @@ public class MAdventQuestStageDTO implements Serializable {
             ", conditionId=" + getConditionId() +
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
-            ", id=" + getIdId() +
+            ", madventquestworld=" + getMadventquestworldId() +
             "}";
     }
 }

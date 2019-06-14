@@ -4,7 +4,7 @@ export interface IMAchievement {
   name?: any;
   type?: number;
   missionId?: number;
-  idId?: number;
+  mmissionId?: number;
 }
 
 export class MAchievement implements IMAchievement {
@@ -14,6 +14,6 @@ export class MAchievement implements IMAchievement {
     public name?: any,
     public type?: number,
     public missionId?: number,
-    public idId?: number
+    public mmissionId?: number
   ) {}
 }

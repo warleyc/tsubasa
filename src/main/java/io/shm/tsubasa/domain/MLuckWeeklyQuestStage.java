@@ -135,7 +135,7 @@ public class MLuckWeeklyQuestStage implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mLuckWeeklyQuestStages")
-    private MLuckWeeklyQuestWorld id;
+    private MLuckWeeklyQuestWorld mluckweeklyquestworld;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -497,17 +497,17 @@ public class MLuckWeeklyQuestStage implements Serializable {
         this.luckId = luckId;
     }
 
-    public MLuckWeeklyQuestWorld getId() {
-        return id;
+    public MLuckWeeklyQuestWorld getMluckweeklyquestworld() {
+        return mluckweeklyquestworld;
     }
 
-    public MLuckWeeklyQuestStage id(MLuckWeeklyQuestWorld mLuckWeeklyQuestWorld) {
-        this.id = mLuckWeeklyQuestWorld;
+    public MLuckWeeklyQuestStage mluckweeklyquestworld(MLuckWeeklyQuestWorld mLuckWeeklyQuestWorld) {
+        this.mluckweeklyquestworld = mLuckWeeklyQuestWorld;
         return this;
     }
 
-    public void setId(MLuckWeeklyQuestWorld mLuckWeeklyQuestWorld) {
-        this.id = mLuckWeeklyQuestWorld;
+    public void setMluckweeklyquestworld(MLuckWeeklyQuestWorld mLuckWeeklyQuestWorld) {
+        this.mluckweeklyquestworld = mLuckWeeklyQuestWorld;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

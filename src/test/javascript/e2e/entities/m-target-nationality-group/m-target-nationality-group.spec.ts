@@ -46,7 +46,7 @@ describe('MTargetNationalityGroup e2e test', () => {
         await promise.all([
             mTargetNationalityGroupUpdatePage.setGroupIdInput('5'),
             mTargetNationalityGroupUpdatePage.setNationalityIdInput('5'),
-            mTargetNationalityGroupUpdatePage.idSelectLastOption(),
+            mTargetNationalityGroupUpdatePage.mnationalitySelectLastOption(),
         ]);
         expect(await mTargetNationalityGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetNationalityGroupUpdatePage.getNationalityIdInput()).to.eq('5', 'Expected nationalityId value to be equals to 5');

@@ -54,7 +54,7 @@ export class MChallengeQuestStageUpdatePage {
   shortNameInput = element(by.id('field_shortName'));
   skipCheckPointInput = element(by.id('field_skipCheckPoint'));
   roadNumberInput = element(by.id('field_roadNumber'));
-  idSelect = element(by.id('field_id'));
+  mchallengequestworldSelect = element(by.id('field_mchallengequestworld'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -284,23 +284,23 @@ export class MChallengeQuestStageUpdatePage {
     return await this.roadNumberInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mchallengequestworldSelectLastOption(timeout?: number) {
+    await this.mchallengequestworldSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mchallengequestworldSelectOption(option) {
+    await this.mchallengequestworldSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMchallengequestworldSelect(): ElementFinder {
+    return this.mchallengequestworldSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMchallengequestworldSelectedOption() {
+    return await this.mchallengequestworldSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

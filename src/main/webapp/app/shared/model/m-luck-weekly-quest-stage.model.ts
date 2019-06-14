@@ -27,7 +27,7 @@ export interface IMLuckWeeklyQuestStage {
   optionId?: number;
   deckConditionId?: number;
   luckId?: number;
-  idId?: number;
+  mluckweeklyquestworldId?: number;
 }
 
 export class MLuckWeeklyQuestStage implements IMLuckWeeklyQuestStage {
@@ -60,6 +60,6 @@ export class MLuckWeeklyQuestStage implements IMLuckWeeklyQuestStage {
     public optionId?: number,
     public deckConditionId?: number,
     public luckId?: number,
-    public idId?: number
+    public mluckweeklyquestworldId?: number
   ) {}
 }

@@ -69,7 +69,7 @@ public class MTriggerEffectRange implements Serializable {
     @Column(name = "target_action_command")
     private Integer targetActionCommand;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mtriggereffectrange")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTriggerEffectBase> mTriggerEffectBases = new HashSet<>();
 
@@ -249,13 +249,13 @@ public class MTriggerEffectRange implements Serializable {
 
     public MTriggerEffectRange addMTriggerEffectBase(MTriggerEffectBase mTriggerEffectBase) {
         this.mTriggerEffectBases.add(mTriggerEffectBase);
-        mTriggerEffectBase.setId(this);
+        mTriggerEffectBase.setMtriggereffectrange(this);
         return this;
     }
 
     public MTriggerEffectRange removeMTriggerEffectBase(MTriggerEffectBase mTriggerEffectBase) {
         this.mTriggerEffectBases.remove(mTriggerEffectBase);
-        mTriggerEffectBase.setId(null);
+        mTriggerEffectBase.setMtriggereffectrange(null);
         return this;
     }
 

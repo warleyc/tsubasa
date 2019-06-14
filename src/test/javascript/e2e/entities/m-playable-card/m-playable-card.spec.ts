@@ -108,7 +108,7 @@ describe('MPlayableCard e2e test', () => {
             mPlayableCardUpdatePage.setIsShowBookInput('5'),
             mPlayableCardUpdatePage.setLevelGroupIdInput('5'),
             mPlayableCardUpdatePage.setStartAtInput('5'),
-            mPlayableCardUpdatePage.idSelectLastOption(),
+            mPlayableCardUpdatePage.mmodelcardSelectLastOption(),
         ]);
         expect(await mPlayableCardUpdatePage.getModelIdInput()).to.eq('5', 'Expected modelId value to be equals to 5');
         expect(await mPlayableCardUpdatePage.getProperPositionGkInput()).to.eq('5', 'Expected properPositionGk value to be equals to 5');

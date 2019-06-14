@@ -268,7 +268,7 @@ public class MNpcCardResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mNpcCard.setId(mCharacter);
+        mNpcCard.setMcharacter(mCharacter);
         return mNpcCard;
     }
     /**
@@ -330,7 +330,7 @@ public class MNpcCardResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mNpcCard.setId(mCharacter);
+        mNpcCard.setMcharacter(mCharacter);
         return mNpcCard;
     }
 
@@ -3704,17 +3704,17 @@ public class MNpcCardResourceIT {
 
     @Test
     @Transactional
-    public void getAllMNpcCardsByIdIsEqualToSomething() throws Exception {
+    public void getAllMNpcCardsByMcharacterIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCharacter id = mNpcCard.getId();
+        MCharacter mcharacter = mNpcCard.getMcharacter();
         mNpcCardRepository.saveAndFlush(mNpcCard);
-        Long idId = id.getId();
+        Long mcharacterId = mcharacter.getId();
 
-        // Get all the mNpcCardList where id equals to idId
-        defaultMNpcCardShouldBeFound("idId.equals=" + idId);
+        // Get all the mNpcCardList where mcharacter equals to mcharacterId
+        defaultMNpcCardShouldBeFound("mcharacterId.equals=" + mcharacterId);
 
-        // Get all the mNpcCardList where id equals to idId + 1
-        defaultMNpcCardShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mNpcCardList where mcharacter equals to mcharacterId + 1
+        defaultMNpcCardShouldNotBeFound("mcharacterId.equals=" + (mcharacterId + 1));
     }
 
     /**

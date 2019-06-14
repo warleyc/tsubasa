@@ -106,7 +106,7 @@ public class MNpcCardCriteria implements Serializable, Criteria {
 
     private IntegerFilter levelGroupId;
 
-    private LongFilter idId;
+    private LongFilter mcharacterId;
 
     public MNpcCardCriteria(){
     }
@@ -153,7 +153,7 @@ public class MNpcCardCriteria implements Serializable, Criteria {
         this.personalityId = other.personalityId == null ? null : other.personalityId.copy();
         this.uniformNo = other.uniformNo == null ? null : other.uniformNo.copy();
         this.levelGroupId = other.levelGroupId == null ? null : other.levelGroupId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcharacterId = other.mcharacterId == null ? null : other.mcharacterId.copy();
     }
 
     @Override
@@ -489,12 +489,12 @@ public class MNpcCardCriteria implements Serializable, Criteria {
         this.levelGroupId = levelGroupId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcharacterId(LongFilter mcharacterId) {
+        this.mcharacterId = mcharacterId;
     }
 
 
@@ -549,7 +549,7 @@ public class MNpcCardCriteria implements Serializable, Criteria {
             Objects.equals(personalityId, that.personalityId) &&
             Objects.equals(uniformNo, that.uniformNo) &&
             Objects.equals(levelGroupId, that.levelGroupId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcharacterId, that.mcharacterId);
     }
 
     @Override
@@ -596,7 +596,7 @@ public class MNpcCardCriteria implements Serializable, Criteria {
         personalityId,
         uniformNo,
         levelGroupId,
-        idId
+        mcharacterId
         );
     }
 
@@ -644,7 +644,7 @@ public class MNpcCardCriteria implements Serializable, Criteria {
                 (personalityId != null ? "personalityId=" + personalityId + ", " : "") +
                 (uniformNo != null ? "uniformNo=" + uniformNo + ", " : "") +
                 (levelGroupId != null ? "levelGroupId=" + levelGroupId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcharacterId != null ? "mcharacterId=" + mcharacterId + ", " : "") +
             "}";
     }
 

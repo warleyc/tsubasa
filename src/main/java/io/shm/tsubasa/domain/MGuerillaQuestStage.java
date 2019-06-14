@@ -132,7 +132,7 @@ public class MGuerillaQuestStage implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mGuerillaQuestStages")
-    private MGuerillaQuestWorld id;
+    private MGuerillaQuestWorld mguerillaquestworld;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -481,17 +481,17 @@ public class MGuerillaQuestStage implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public MGuerillaQuestWorld getId() {
-        return id;
+    public MGuerillaQuestWorld getMguerillaquestworld() {
+        return mguerillaquestworld;
     }
 
-    public MGuerillaQuestStage id(MGuerillaQuestWorld mGuerillaQuestWorld) {
-        this.id = mGuerillaQuestWorld;
+    public MGuerillaQuestStage mguerillaquestworld(MGuerillaQuestWorld mGuerillaQuestWorld) {
+        this.mguerillaquestworld = mGuerillaQuestWorld;
         return this;
     }
 
-    public void setId(MGuerillaQuestWorld mGuerillaQuestWorld) {
-        this.id = mGuerillaQuestWorld;
+    public void setMguerillaquestworld(MGuerillaQuestWorld mGuerillaQuestWorld) {
+        this.mguerillaquestworld = mGuerillaQuestWorld;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

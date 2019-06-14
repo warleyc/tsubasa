@@ -13,7 +13,7 @@ export interface IMDummyOpponent {
   gkUniformUpColor?: any;
   gkUniformBottomId?: number;
   gkUniformBottomColor?: any;
-  idId?: number;
+  mnpcdeckId?: number;
 }
 
 export class MDummyOpponent implements IMDummyOpponent {
@@ -32,6 +32,6 @@ export class MDummyOpponent implements IMDummyOpponent {
     public gkUniformUpColor?: any,
     public gkUniformBottomId?: number,
     public gkUniformBottomColor?: any,
-    public idId?: number
+    public mnpcdeckId?: number
   ) {}
 }

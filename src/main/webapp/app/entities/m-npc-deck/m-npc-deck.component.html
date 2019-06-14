@@ -37,7 +37,7 @@
             <th jhiSortBy="npcCardId10"><span>Npc Card Id 10</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="npcCardId11"><span>Npc Card Id 11</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="tick"><span>Tick</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mformationId"><span>Mformation</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -67,8 +67,8 @@
                 <td>{{mNpcDeck.npcCardId11}}</td>
                 <td>{{mNpcDeck.tick}}</td>
                 <td>
-                    <div *ngIf="mNpcDeck.idId">
-                        <a [routerLink]="['../m-formation', mNpcDeck.idId , 'view' ]" >{{mNpcDeck.idId}}</a>
+                    <div *ngIf="mNpcDeck.mformationId">
+                        <a [routerLink]="['../m-formation', mNpcDeck.mformationId , 'view' ]" >{{mNpcDeck.mformationId}}</a>
                     </div>
                 </td>
                 <td class="text-right">
