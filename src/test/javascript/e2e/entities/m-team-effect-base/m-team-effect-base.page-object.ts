@@ -39,7 +39,7 @@ export class MTeamEffectBaseUpdatePage {
   triggerProbabilityMax2Input = element(by.id('field_triggerProbabilityMax2'));
   effectId2Input = element(by.id('field_effectId2'));
   descriptionInput = element(by.id('field_description'));
-  idSelect = element(by.id('field_id'));
+  mpassiveeffectrangeSelect = element(by.id('field_mpassiveeffectrange'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -149,23 +149,23 @@ export class MTeamEffectBaseUpdatePage {
     return await this.descriptionInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mpassiveeffectrangeSelectLastOption(timeout?: number) {
+    await this.mpassiveeffectrangeSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mpassiveeffectrangeSelectOption(option) {
+    await this.mpassiveeffectrangeSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMpassiveeffectrangeSelect(): ElementFinder {
+    return this.mpassiveeffectrangeSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMpassiveeffectrangeSelectedOption() {
+    return await this.mpassiveeffectrangeSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

@@ -76,7 +76,7 @@
             "otherEntityName": "mMissionReward",
             "otherEntityRelationshipName": "mGuildMission",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmissionreward",
             "otherEntityField": "id"
         }
     ],

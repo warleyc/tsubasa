@@ -13,7 +13,7 @@ export interface IMTeamEffectBase {
   triggerProbabilityMax2?: number;
   effectId2?: number;
   description?: any;
-  idId?: number;
+  mpassiveeffectrangeId?: number;
 }
 
 export class MTeamEffectBase implements IMTeamEffectBase {
@@ -32,6 +32,6 @@ export class MTeamEffectBase implements IMTeamEffectBase {
     public triggerProbabilityMax2?: number,
     public effectId2?: number,
     public description?: any,
-    public idId?: number
+    public mpassiveeffectrangeId?: number
   ) {}
 }

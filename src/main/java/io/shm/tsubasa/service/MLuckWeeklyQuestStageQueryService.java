@@ -161,9 +161,9 @@ public class MLuckWeeklyQuestStageQueryService extends QueryService<MLuckWeeklyQ
             if (criteria.getLuckId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getLuckId(), MLuckWeeklyQuestStage_.luckId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MLuckWeeklyQuestStage_.id, JoinType.LEFT).get(MLuckWeeklyQuestWorld_.id)));
+            if (criteria.getMluckweeklyquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMluckweeklyquestworldId(),
+                    root -> root.join(MLuckWeeklyQuestStage_.mluckweeklyquestworld, JoinType.LEFT).get(MLuckWeeklyQuestWorld_.id)));
             }
         }
         return specification;

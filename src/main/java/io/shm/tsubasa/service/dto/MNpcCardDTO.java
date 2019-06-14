@@ -128,7 +128,7 @@ public class MNpcCardDTO implements Serializable {
     private Integer levelGroupId;
 
 
-    private Long idId;
+    private Long mcharacterId;
 
     public Long getId() {
         return id;
@@ -474,12 +474,12 @@ public class MNpcCardDTO implements Serializable {
         this.levelGroupId = levelGroupId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(Long mCharacterId) {
-        this.idId = mCharacterId;
+    public void setMcharacterId(Long mCharacterId) {
+        this.mcharacterId = mCharacterId;
     }
 
     @Override
@@ -549,7 +549,7 @@ public class MNpcCardDTO implements Serializable {
             ", personalityId=" + getPersonalityId() +
             ", uniformNo=" + getUniformNo() +
             ", levelGroupId=" + getLevelGroupId() +
-            ", id=" + getIdId() +
+            ", mcharacter=" + getMcharacterId() +
             "}";
     }
 }

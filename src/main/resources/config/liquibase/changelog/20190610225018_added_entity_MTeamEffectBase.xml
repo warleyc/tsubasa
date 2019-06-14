@@ -68,7 +68,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mpassiveeffectrange_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -105,7 +105,7 @@
             <column name="trigger_probability_max_2" type="numeric"/>
             <column name="effect_id_2" type="numeric"/>
             <column name="description" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mpassiveeffectrange_id" type="numeric"/>
         </loadData>
     </changeSet>
 

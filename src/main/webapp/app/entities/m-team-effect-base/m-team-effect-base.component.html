@@ -28,7 +28,7 @@
             <th jhiSortBy="triggerProbabilityMax2"><span>Trigger Probability Max 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="effectId2"><span>Effect Id 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="description"><span>Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mpassiveeffectrangeId"><span>Mpassiveeffectrange</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -49,8 +49,8 @@
                 <td>{{mTeamEffectBase.effectId2}}</td>
                 <td>{{mTeamEffectBase.description}}</td>
                 <td>
-                    <div *ngIf="mTeamEffectBase.idId">
-                        <a [routerLink]="['../m-passive-effect-range', mTeamEffectBase.idId , 'view' ]" >{{mTeamEffectBase.idId}}</a>
+                    <div *ngIf="mTeamEffectBase.mpassiveeffectrangeId">
+                        <a [routerLink]="['../m-passive-effect-range', mTeamEffectBase.mpassiveeffectrangeId , 'view' ]" >{{mTeamEffectBase.mpassiveeffectrangeId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

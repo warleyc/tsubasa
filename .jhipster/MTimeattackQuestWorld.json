@@ -79,7 +79,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTimeattackQuestStage",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mtimeattackquestworld",
             "relationshipName": "mTimeattackQuestStage"
         }
     ],

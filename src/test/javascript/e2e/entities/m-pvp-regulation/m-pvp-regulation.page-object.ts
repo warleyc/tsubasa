@@ -31,7 +31,7 @@ export class MPvpRegulationUpdatePage {
   matchOptionIdInput = element(by.id('field_matchOptionId'));
   deckConditionIdInput = element(by.id('field_deckConditionId'));
   ruleTutorialIdInput = element(by.id('field_ruleTutorialId'));
-  idSelect = element(by.id('field_id'));
+  mmatchoptionSelect = element(by.id('field_mmatchoption'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -77,23 +77,23 @@ export class MPvpRegulationUpdatePage {
     return await this.ruleTutorialIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mmatchoptionSelectLastOption(timeout?: number) {
+    await this.mmatchoptionSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mmatchoptionSelectOption(option) {
+    await this.mmatchoptionSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMmatchoptionSelect(): ElementFinder {
+    return this.mmatchoptionSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMmatchoptionSelectedOption() {
+    return await this.mmatchoptionSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

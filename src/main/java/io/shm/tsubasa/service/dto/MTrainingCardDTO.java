@@ -77,7 +77,7 @@ public class MTrainingCardDTO implements Serializable {
     private Integer cardIllustAssetsId;
 
 
-    private Long idId;
+    private Long mcardthumbnailassetsId;
 
     public Long getId() {
         return id;
@@ -255,12 +255,12 @@ public class MTrainingCardDTO implements Serializable {
         this.cardIllustAssetsId = cardIllustAssetsId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMcardthumbnailassetsId() {
+        return mcardthumbnailassetsId;
     }
 
-    public void setIdId(Long mCardThumbnailAssetsId) {
-        this.idId = mCardThumbnailAssetsId;
+    public void setMcardthumbnailassetsId(Long mCardThumbnailAssetsId) {
+        this.mcardthumbnailassetsId = mCardThumbnailAssetsId;
     }
 
     @Override
@@ -309,7 +309,7 @@ public class MTrainingCardDTO implements Serializable {
             ", plusCatching=" + getPlusCatching() +
             ", thumbnailAssetsId=" + getThumbnailAssetsId() +
             ", cardIllustAssetsId=" + getCardIllustAssetsId() +
-            ", id=" + getIdId() +
+            ", mcardthumbnailassets=" + getMcardthumbnailassetsId() +
             "}";
     }
 }

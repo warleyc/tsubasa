@@ -189,7 +189,7 @@ public class MNpcDeckResourceIT {
         } else {
             mFormation = TestUtil.findAll(em, MFormation.class).get(0);
         }
-        mNpcDeck.setId(mFormation);
+        mNpcDeck.setMformation(mFormation);
         return mNpcDeck;
     }
     /**
@@ -231,7 +231,7 @@ public class MNpcDeckResourceIT {
         } else {
             mFormation = TestUtil.findAll(em, MFormation.class).get(0);
         }
-        mNpcDeck.setId(mFormation);
+        mNpcDeck.setMformation(mFormation);
         return mNpcDeck;
     }
 
@@ -2158,17 +2158,17 @@ public class MNpcDeckResourceIT {
 
     @Test
     @Transactional
-    public void getAllMNpcDecksByIdIsEqualToSomething() throws Exception {
+    public void getAllMNpcDecksByMformationIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MFormation id = mNpcDeck.getId();
+        MFormation mformation = mNpcDeck.getMformation();
         mNpcDeckRepository.saveAndFlush(mNpcDeck);
-        Long idId = id.getId();
+        Long mformationId = mformation.getId();
 
-        // Get all the mNpcDeckList where id equals to idId
-        defaultMNpcDeckShouldBeFound("idId.equals=" + idId);
+        // Get all the mNpcDeckList where mformation equals to mformationId
+        defaultMNpcDeckShouldBeFound("mformationId.equals=" + mformationId);
 
-        // Get all the mNpcDeckList where id equals to idId + 1
-        defaultMNpcDeckShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mNpcDeckList where mformation equals to mformationId + 1
+        defaultMNpcDeckShouldNotBeFound("mformationId.equals=" + (mformationId + 1));
     }
 
 

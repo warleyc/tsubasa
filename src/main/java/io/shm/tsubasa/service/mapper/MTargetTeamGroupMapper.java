@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MTeamMapper.class})
 public interface MTargetTeamGroupMapper extends EntityMapper<MTargetTeamGroupDTO, MTargetTeamGroup> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mteam.id", target = "mteamId")
     MTargetTeamGroupDTO toDto(MTargetTeamGroup mTargetTeamGroup);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mteamId", target = "mteam")
     MTargetTeamGroup toEntity(MTargetTeamGroupDTO mTargetTeamGroupDTO);
 
     default MTargetTeamGroup fromId(Long id) {

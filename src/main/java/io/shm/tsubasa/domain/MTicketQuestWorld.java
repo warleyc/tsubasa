@@ -68,7 +68,7 @@ public class MTicketQuestWorld implements Serializable {
     @Column(name = "is_hide_do_not_having_ticket", nullable = false)
     private Integer isHideDoNotHavingTicket;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mticketquestworld")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTicketQuestStage> mTicketQuestStages = new HashSet<>();
 
@@ -222,13 +222,13 @@ public class MTicketQuestWorld implements Serializable {
 
     public MTicketQuestWorld addMTicketQuestStage(MTicketQuestStage mTicketQuestStage) {
         this.mTicketQuestStages.add(mTicketQuestStage);
-        mTicketQuestStage.setId(this);
+        mTicketQuestStage.setMticketquestworld(this);
         return this;
     }
 
     public MTicketQuestWorld removeMTicketQuestStage(MTicketQuestStage mTicketQuestStage) {
         this.mTicketQuestStages.remove(mTicketQuestStage);
-        mTicketQuestStage.setId(null);
+        mTicketQuestStage.setMticketquestworld(null);
         return this;
     }
 

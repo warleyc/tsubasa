@@ -22,7 +22,7 @@
             "otherEntityName": "mTriggerEffectBase",
             "otherEntityRelationshipName": "mTargetTriggerEffectGroup",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mtriggereffectbase",
             "otherEntityField": "id"
         }
     ],

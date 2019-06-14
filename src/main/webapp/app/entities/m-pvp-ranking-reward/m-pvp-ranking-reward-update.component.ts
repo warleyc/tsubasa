@@ -27,7 +27,7 @@ export class MPvpRankingRewardUpdateComponent implements OnInit {
     rankingFrom: [null, [Validators.required]],
     rankingTo: [null, [Validators.required]],
     rewardGroupId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mpvpwaveId: [null, Validators.required]
   });
 
   constructor(
@@ -61,7 +61,7 @@ export class MPvpRankingRewardUpdateComponent implements OnInit {
       rankingFrom: mPvpRankingReward.rankingFrom,
       rankingTo: mPvpRankingReward.rankingTo,
       rewardGroupId: mPvpRankingReward.rewardGroupId,
-      idId: mPvpRankingReward.idId
+      mpvpwaveId: mPvpRankingReward.mpvpwaveId
     });
   }
 
@@ -88,7 +88,7 @@ export class MPvpRankingRewardUpdateComponent implements OnInit {
       rankingFrom: this.editForm.get(['rankingFrom']).value,
       rankingTo: this.editForm.get(['rankingTo']).value,
       rewardGroupId: this.editForm.get(['rewardGroupId']).value,
-      idId: this.editForm.get(['idId']).value
+      mpvpwaveId: this.editForm.get(['mpvpwaveId']).value
     };
     return entity;
   }

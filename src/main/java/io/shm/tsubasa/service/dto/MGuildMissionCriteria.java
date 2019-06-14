@@ -42,7 +42,7 @@ public class MGuildMissionCriteria implements Serializable, Criteria {
 
     private IntegerFilter orderNum;
 
-    private LongFilter idId;
+    private LongFilter mmissionrewardId;
 
     public MGuildMissionCriteria(){
     }
@@ -57,7 +57,7 @@ public class MGuildMissionCriteria implements Serializable, Criteria {
         this.pickup = other.pickup == null ? null : other.pickup.copy();
         this.triggerMissionId = other.triggerMissionId == null ? null : other.triggerMissionId.copy();
         this.orderNum = other.orderNum == null ? null : other.orderNum.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mmissionrewardId = other.mmissionrewardId == null ? null : other.mmissionrewardId.copy();
     }
 
     @Override
@@ -137,12 +137,12 @@ public class MGuildMissionCriteria implements Serializable, Criteria {
         this.orderNum = orderNum;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMmissionrewardId() {
+        return mmissionrewardId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMmissionrewardId(LongFilter mmissionrewardId) {
+        this.mmissionrewardId = mmissionrewardId;
     }
 
 
@@ -165,7 +165,7 @@ public class MGuildMissionCriteria implements Serializable, Criteria {
             Objects.equals(pickup, that.pickup) &&
             Objects.equals(triggerMissionId, that.triggerMissionId) &&
             Objects.equals(orderNum, that.orderNum) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mmissionrewardId, that.mmissionrewardId);
     }
 
     @Override
@@ -180,7 +180,7 @@ public class MGuildMissionCriteria implements Serializable, Criteria {
         pickup,
         triggerMissionId,
         orderNum,
-        idId
+        mmissionrewardId
         );
     }
 
@@ -196,7 +196,7 @@ public class MGuildMissionCriteria implements Serializable, Criteria {
                 (pickup != null ? "pickup=" + pickup + ", " : "") +
                 (triggerMissionId != null ? "triggerMissionId=" + triggerMissionId + ", " : "") +
                 (orderNum != null ? "orderNum=" + orderNum + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mmissionrewardId != null ? "mmissionrewardId=" + mmissionrewardId + ", " : "") +
             "}";
     }
 

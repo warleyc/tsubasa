@@ -458,19 +458,19 @@
             "otherEntityName": "mModelCard",
             "otherEntityRelationshipName": "mPlayableCard",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmodelcard",
             "otherEntityField": "id"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mArousal",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mplayablecard",
             "relationshipName": "mArousal"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTargetPlayableCardGroup",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mplayablecard",
             "relationshipName": "mTargetPlayableCardGroup"
         }
     ],

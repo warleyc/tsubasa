@@ -141,7 +141,7 @@ public class MChallengeQuestStage implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mChallengeQuestStages")
-    private MChallengeQuestWorld id;
+    private MChallengeQuestWorld mchallengequestworld;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -516,17 +516,17 @@ public class MChallengeQuestStage implements Serializable {
         this.roadNumber = roadNumber;
     }
 
-    public MChallengeQuestWorld getId() {
-        return id;
+    public MChallengeQuestWorld getMchallengequestworld() {
+        return mchallengequestworld;
     }
 
-    public MChallengeQuestStage id(MChallengeQuestWorld mChallengeQuestWorld) {
-        this.id = mChallengeQuestWorld;
+    public MChallengeQuestStage mchallengequestworld(MChallengeQuestWorld mChallengeQuestWorld) {
+        this.mchallengequestworld = mChallengeQuestWorld;
         return this;
     }
 
-    public void setId(MChallengeQuestWorld mChallengeQuestWorld) {
-        this.id = mChallengeQuestWorld;
+    public void setMchallengequestworld(MChallengeQuestWorld mChallengeQuestWorld) {
+        this.mchallengequestworld = mChallengeQuestWorld;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

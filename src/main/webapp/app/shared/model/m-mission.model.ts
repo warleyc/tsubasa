@@ -22,7 +22,7 @@ export interface IMMission {
   sceneTransitionParam?: any;
   pickup?: number;
   orderNum?: number;
-  idId?: number;
+  mmissionrewardId?: number;
   mAchievements?: IMAchievement[];
 }
 
@@ -49,7 +49,7 @@ export class MMission implements IMMission {
     public sceneTransitionParam?: any,
     public pickup?: number,
     public orderNum?: number,
-    public idId?: number,
+    public mmissionrewardId?: number,
     public mAchievements?: IMAchievement[]
   ) {}
 }

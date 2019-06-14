@@ -97,7 +97,7 @@ public class MChallengeQuestStageDTO implements Serializable {
     private Integer roadNumber;
 
 
-    private Long idId;
+    private Long mchallengequestworldId;
 
     public Long getId() {
         return id;
@@ -331,12 +331,12 @@ public class MChallengeQuestStageDTO implements Serializable {
         this.roadNumber = roadNumber;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMchallengequestworldId() {
+        return mchallengequestworldId;
     }
 
-    public void setIdId(Long mChallengeQuestWorldId) {
-        this.idId = mChallengeQuestWorldId;
+    public void setMchallengequestworldId(Long mChallengeQuestWorldId) {
+        this.mchallengequestworldId = mChallengeQuestWorldId;
     }
 
     @Override
@@ -392,7 +392,7 @@ public class MChallengeQuestStageDTO implements Serializable {
             ", shortName='" + getShortName() + "'" +
             ", skipCheckPoint=" + getSkipCheckPoint() +
             ", roadNumber=" + getRoadNumber() +
-            ", id=" + getIdId() +
+            ", mchallengequestworld=" + getMchallengequestworldId() +
             "}";
     }
 }

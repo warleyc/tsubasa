@@ -42,7 +42,7 @@
             <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="luckId"><span>Luck Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mluckweeklyquestworldId"><span>Mluckweeklyquestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -77,8 +77,8 @@
                 <td>{{mLuckWeeklyQuestStage.deckConditionId}}</td>
                 <td>{{mLuckWeeklyQuestStage.luckId}}</td>
                 <td>
-                    <div *ngIf="mLuckWeeklyQuestStage.idId">
-                        <a [routerLink]="['../m-luck-weekly-quest-world', mLuckWeeklyQuestStage.idId , 'view' ]" >{{mLuckWeeklyQuestStage.idId}}</a>
+                    <div *ngIf="mLuckWeeklyQuestStage.mluckweeklyquestworldId">
+                        <a [routerLink]="['../m-luck-weekly-quest-world', mLuckWeeklyQuestStage.mluckweeklyquestworldId , 'view' ]" >{{mLuckWeeklyQuestStage.mluckweeklyquestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

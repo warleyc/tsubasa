@@ -52,7 +52,7 @@ public class MTeamEffectBaseDTO implements Serializable {
     private String description;
 
 
-    private Long idId;
+    private Long mpassiveeffectrangeId;
 
     public Long getId() {
         return id;
@@ -166,12 +166,12 @@ public class MTeamEffectBaseDTO implements Serializable {
         this.description = description;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMpassiveeffectrangeId() {
+        return mpassiveeffectrangeId;
     }
 
-    public void setIdId(Long mPassiveEffectRangeId) {
-        this.idId = mPassiveEffectRangeId;
+    public void setMpassiveeffectrangeId(Long mPassiveEffectRangeId) {
+        this.mpassiveeffectrangeId = mPassiveEffectRangeId;
     }
 
     @Override
@@ -212,7 +212,7 @@ public class MTeamEffectBaseDTO implements Serializable {
             ", triggerProbabilityMax2=" + getTriggerProbabilityMax2() +
             ", effectId2=" + getEffectId2() +
             ", description='" + getDescription() + "'" +
-            ", id=" + getIdId() +
+            ", mpassiveeffectrange=" + getMpassiveeffectrangeId() +
             "}";
     }
 }

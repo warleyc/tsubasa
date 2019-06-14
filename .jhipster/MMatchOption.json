@@ -54,19 +54,19 @@
             "otherEntityName": "mPassiveEffectRange",
             "otherEntityRelationshipName": "mMatchOption",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mpassiveeffectrange",
             "otherEntityField": "id"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mLeagueRegulation",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmatchoption",
             "relationshipName": "mLeagueRegulation"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mPvpRegulation",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmatchoption",
             "relationshipName": "mPvpRegulation"
         }
     ],

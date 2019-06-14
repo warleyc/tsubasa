@@ -48,7 +48,7 @@ describe('MDummyEmblem e2e test', () => {
             mDummyEmblemUpdatePage.setMiddleColorInput('middleColor'),
             mDummyEmblemUpdatePage.setLowerIdInput('5'),
             mDummyEmblemUpdatePage.setLowerColorInput('lowerColor'),
-            mDummyEmblemUpdatePage.idSelectLastOption(),
+            mDummyEmblemUpdatePage.memblempartsSelectLastOption(),
         ]);
         expect(await mDummyEmblemUpdatePage.getBackgroundIdInput()).to.eq('5', 'Expected backgroundId value to be equals to 5');
         expect(await mDummyEmblemUpdatePage.getBackgroundColorInput()).to.eq('backgroundColor', 'Expected BackgroundColor value to be equals to backgroundColor');

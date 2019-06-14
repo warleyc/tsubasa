@@ -17,10 +17,10 @@
                 <dd>
                     <span>{{mTargetPlayableCardGroup.isShowThumbnail}}</span>
                 </dd>
-                <dt><span>Id</span></dt>
+                <dt><span>Mplayablecard</span></dt>
                 <dd>
-                    <div *ngIf="mTargetPlayableCardGroup.idId">
-                        <a [routerLink]="['/m-playable-card', mTargetPlayableCardGroup.idId, 'view']">{{mTargetPlayableCardGroup.idId}}</a>
+                    <div *ngIf="mTargetPlayableCardGroup.mplayablecardId">
+                        <a [routerLink]="['/m-playable-card', mTargetPlayableCardGroup.mplayablecardId, 'view']">{{mTargetPlayableCardGroup.mplayablecardId}}</a>
                     </div>
                 </dd>
             </dl>

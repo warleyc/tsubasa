@@ -27,7 +27,7 @@ export class MPvpRegulationUpdateComponent implements OnInit {
     matchOptionId: [null, [Validators.required]],
     deckConditionId: [null, [Validators.required]],
     ruleTutorialId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mmatchoptionId: [null, Validators.required]
   });
 
   constructor(
@@ -61,7 +61,7 @@ export class MPvpRegulationUpdateComponent implements OnInit {
       matchOptionId: mPvpRegulation.matchOptionId,
       deckConditionId: mPvpRegulation.deckConditionId,
       ruleTutorialId: mPvpRegulation.ruleTutorialId,
-      idId: mPvpRegulation.idId
+      mmatchoptionId: mPvpRegulation.mmatchoptionId
     });
   }
 
@@ -88,7 +88,7 @@ export class MPvpRegulationUpdateComponent implements OnInit {
       matchOptionId: this.editForm.get(['matchOptionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
       ruleTutorialId: this.editForm.get(['ruleTutorialId']).value,
-      idId: this.editForm.get(['idId']).value
+      mmatchoptionId: this.editForm.get(['mmatchoptionId']).value
     };
     return entity;
   }

@@ -41,15 +41,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mnationality">Mnationality</label>
+                    <select class="form-control" id="field_mnationality" name="mnationality" formControlName="mnationalityId">
+                        <option *ngIf="!editForm.get('mnationality').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mNationalityOption.id" *ngFor="let mNationalityOption of mnationalities; trackBy: trackMNationalityById">{{mNationalityOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mnationality').invalid && (editForm.get('mnationality').dirty || editForm.get('mnationality').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mnationality').errors.required">
                         This field is required.
                     </small>
                 </div>

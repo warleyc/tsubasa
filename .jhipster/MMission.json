@@ -118,13 +118,13 @@
             "otherEntityName": "mMissionReward",
             "otherEntityRelationshipName": "mMission",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmissionreward",
             "otherEntityField": "id"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mAchievement",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmission",
             "relationshipName": "mAchievement"
         }
     ],

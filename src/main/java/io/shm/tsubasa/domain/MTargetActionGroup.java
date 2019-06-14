@@ -36,7 +36,7 @@ public class MTargetActionGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetActionGroups")
-    private MAction id;
+    private MAction maction;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,17 +73,17 @@ public class MTargetActionGroup implements Serializable {
         this.actionId = actionId;
     }
 
-    public MAction getId() {
-        return id;
+    public MAction getMaction() {
+        return maction;
     }
 
-    public MTargetActionGroup id(MAction mAction) {
-        this.id = mAction;
+    public MTargetActionGroup maction(MAction mAction) {
+        this.maction = mAction;
         return this;
     }
 
-    public void setId(MAction mAction) {
-        this.id = mAction;
+    public void setMaction(MAction mAction) {
+        this.maction = mAction;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

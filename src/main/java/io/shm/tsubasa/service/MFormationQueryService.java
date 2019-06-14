@@ -104,9 +104,9 @@ public class MFormationQueryService extends QueryService<MFormation> {
             if (criteria.getMatchFormationId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getMatchFormationId(), MFormation_.matchFormationId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MFormation_.id, JoinType.LEFT).get(MPassiveEffectRange_.id)));
+            if (criteria.getMpassiveeffectrangeId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMpassiveeffectrangeId(),
+                    root -> root.join(MFormation_.mpassiveeffectrange, JoinType.LEFT).get(MPassiveEffectRange_.id)));
             }
             if (criteria.getMNpcDeckId() != null) {
                 specification = specification.and(buildSpecification(criteria.getMNpcDeckId(),

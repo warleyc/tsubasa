@@ -129,7 +129,7 @@ public class MTriggerEffectBaseResourceIT {
         } else {
             mTriggerEffectRange = TestUtil.findAll(em, MTriggerEffectRange.class).get(0);
         }
-        mTriggerEffectBase.setId(mTriggerEffectRange);
+        mTriggerEffectBase.setMtriggereffectrange(mTriggerEffectRange);
         return mTriggerEffectBase;
     }
     /**
@@ -156,7 +156,7 @@ public class MTriggerEffectBaseResourceIT {
         } else {
             mTriggerEffectRange = TestUtil.findAll(em, MTriggerEffectRange.class).get(0);
         }
-        mTriggerEffectBase.setId(mTriggerEffectRange);
+        mTriggerEffectBase.setMtriggereffectrange(mTriggerEffectRange);
         return mTriggerEffectBase;
     }
 
@@ -659,17 +659,17 @@ public class MTriggerEffectBaseResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTriggerEffectBasesByIdIsEqualToSomething() throws Exception {
+    public void getAllMTriggerEffectBasesByMtriggereffectrangeIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MTriggerEffectRange id = mTriggerEffectBase.getId();
+        MTriggerEffectRange mtriggereffectrange = mTriggerEffectBase.getMtriggereffectrange();
         mTriggerEffectBaseRepository.saveAndFlush(mTriggerEffectBase);
-        Long idId = id.getId();
+        Long mtriggereffectrangeId = mtriggereffectrange.getId();
 
-        // Get all the mTriggerEffectBaseList where id equals to idId
-        defaultMTriggerEffectBaseShouldBeFound("idId.equals=" + idId);
+        // Get all the mTriggerEffectBaseList where mtriggereffectrange equals to mtriggereffectrangeId
+        defaultMTriggerEffectBaseShouldBeFound("mtriggereffectrangeId.equals=" + mtriggereffectrangeId);
 
-        // Get all the mTriggerEffectBaseList where id equals to idId + 1
-        defaultMTriggerEffectBaseShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTriggerEffectBaseList where mtriggereffectrange equals to mtriggereffectrangeId + 1
+        defaultMTriggerEffectBaseShouldNotBeFound("mtriggereffectrangeId.equals=" + (mtriggereffectrangeId + 1));
     }
 
 

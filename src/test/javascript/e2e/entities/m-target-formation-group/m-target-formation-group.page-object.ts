@@ -28,7 +28,7 @@ export class MTargetFormationGroupUpdatePage {
   cancelButton = element(by.id('cancel-save'));
   groupIdInput = element(by.id('field_groupId'));
   formationIdInput = element(by.id('field_formationId'));
-  idSelect = element(by.id('field_id'));
+  mformationSelect = element(by.id('field_mformation'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -50,23 +50,23 @@ export class MTargetFormationGroupUpdatePage {
     return await this.formationIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mformationSelectLastOption(timeout?: number) {
+    await this.mformationSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mformationSelectOption(option) {
+    await this.mformationSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMformationSelect(): ElementFinder {
+    return this.mformationSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMformationSelectedOption() {
+    return await this.mformationSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

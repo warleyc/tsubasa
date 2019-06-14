@@ -98,9 +98,9 @@ public class MMatchResultCutinQueryService extends QueryService<MMatchResultCuti
             if (criteria.getIsWin() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getIsWin(), MMatchResultCutin_.isWin));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MMatchResultCutin_.id, JoinType.LEFT).get(MCharacter_.id)));
+            if (criteria.getMcharacterId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMcharacterId(),
+                    root -> root.join(MMatchResultCutin_.mcharacter, JoinType.LEFT).get(MCharacter_.id)));
             }
         }
         return specification;

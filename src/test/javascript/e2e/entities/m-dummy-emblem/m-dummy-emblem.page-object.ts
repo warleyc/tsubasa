@@ -34,7 +34,7 @@ export class MDummyEmblemUpdatePage {
   middleColorInput = element(by.id('field_middleColor'));
   lowerIdInput = element(by.id('field_lowerId'));
   lowerColorInput = element(by.id('field_lowerColor'));
-  idSelect = element(by.id('field_id'));
+  memblempartsSelect = element(by.id('field_memblemparts'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -104,23 +104,23 @@ export class MDummyEmblemUpdatePage {
     return await this.lowerColorInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async memblempartsSelectLastOption(timeout?: number) {
+    await this.memblempartsSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async memblempartsSelectOption(option) {
+    await this.memblempartsSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMemblempartsSelect(): ElementFinder {
+    return this.memblempartsSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMemblempartsSelectedOption() {
+    return await this.memblempartsSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

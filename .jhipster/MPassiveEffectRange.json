@@ -83,19 +83,19 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mFormation",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mpassiveeffectrange",
             "relationshipName": "mFormation"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mMatchOption",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mpassiveeffectrange",
             "relationshipName": "mMatchOption"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTeamEffectBase",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mpassiveeffectrange",
             "relationshipName": "mTeamEffectBase"
         }
     ],

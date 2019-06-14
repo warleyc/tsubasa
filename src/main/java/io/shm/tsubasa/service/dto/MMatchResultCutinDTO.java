@@ -29,7 +29,7 @@ public class MMatchResultCutinDTO implements Serializable {
     private String soundEvent;
 
 
-    private Long idId;
+    private Long mcharacterId;
 
     public Long getId() {
         return id;
@@ -79,12 +79,12 @@ public class MMatchResultCutinDTO implements Serializable {
         this.soundEvent = soundEvent;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(Long mCharacterId) {
-        this.idId = mCharacterId;
+    public void setMcharacterId(Long mCharacterId) {
+        this.mcharacterId = mCharacterId;
     }
 
     @Override
@@ -117,7 +117,7 @@ public class MMatchResultCutinDTO implements Serializable {
             ", isWin=" + getIsWin() +
             ", text='" + getText() + "'" +
             ", soundEvent='" + getSoundEvent() + "'" +
-            ", id=" + getIdId() +
+            ", mcharacter=" + getMcharacterId() +
             "}";
     }
 }

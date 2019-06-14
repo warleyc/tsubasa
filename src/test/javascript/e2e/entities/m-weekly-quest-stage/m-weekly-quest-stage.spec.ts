@@ -70,7 +70,7 @@ describe('MWeeklyQuestStage e2e test', () => {
             mWeeklyQuestStageUpdatePage.setConditionIdInput('5'),
             mWeeklyQuestStageUpdatePage.setOptionIdInput('5'),
             mWeeklyQuestStageUpdatePage.setDeckConditionIdInput('5'),
-            mWeeklyQuestStageUpdatePage.idSelectLastOption(),
+            mWeeklyQuestStageUpdatePage.mweeklyquestworldSelectLastOption(),
         ]);
         expect(await mWeeklyQuestStageUpdatePage.getWorldIdInput()).to.eq('5', 'Expected worldId value to be equals to 5');
         expect(await mWeeklyQuestStageUpdatePage.getNumberInput()).to.eq('5', 'Expected number value to be equals to 5');

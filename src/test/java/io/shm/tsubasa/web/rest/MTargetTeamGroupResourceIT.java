@@ -107,7 +107,7 @@ public class MTargetTeamGroupResourceIT {
         } else {
             mTeam = TestUtil.findAll(em, MTeam.class).get(0);
         }
-        mTargetTeamGroup.setId(mTeam);
+        mTargetTeamGroup.setMteam(mTeam);
         return mTargetTeamGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class MTargetTeamGroupResourceIT {
         } else {
             mTeam = TestUtil.findAll(em, MTeam.class).get(0);
         }
-        mTargetTeamGroup.setId(mTeam);
+        mTargetTeamGroup.setMteam(mTeam);
         return mTargetTeamGroup;
     }
 
@@ -381,17 +381,17 @@ public class MTargetTeamGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetTeamGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetTeamGroupsByMteamIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MTeam id = mTargetTeamGroup.getId();
+        MTeam mteam = mTargetTeamGroup.getMteam();
         mTargetTeamGroupRepository.saveAndFlush(mTargetTeamGroup);
-        Long idId = id.getId();
+        Long mteamId = mteam.getId();
 
-        // Get all the mTargetTeamGroupList where id equals to idId
-        defaultMTargetTeamGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetTeamGroupList where mteam equals to mteamId
+        defaultMTargetTeamGroupShouldBeFound("mteamId.equals=" + mteamId);
 
-        // Get all the mTargetTeamGroupList where id equals to idId + 1
-        defaultMTargetTeamGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetTeamGroupList where mteam equals to mteamId + 1
+        defaultMTargetTeamGroupShouldNotBeFound("mteamId.equals=" + (mteamId + 1));
     }
 
     /**

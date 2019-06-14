@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MMatchOptionMapper.class})
 public interface MLeagueRegulationMapper extends EntityMapper<MLeagueRegulationDTO, MLeagueRegulation> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mmatchoption.id", target = "mmatchoptionId")
     MLeagueRegulationDTO toDto(MLeagueRegulation mLeagueRegulation);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mmatchoptionId", target = "mmatchoption")
     MLeagueRegulation toEntity(MLeagueRegulationDTO mLeagueRegulationDTO);
 
     default MLeagueRegulation fromId(Long id) {

@@ -204,7 +204,7 @@ public class MAdventQuestStageResourceIT {
         } else {
             mAdventQuestWorld = TestUtil.findAll(em, MAdventQuestWorld.class).get(0);
         }
-        mAdventQuestStage.setId(mAdventQuestWorld);
+        mAdventQuestStage.setMadventquestworld(mAdventQuestWorld);
         return mAdventQuestStage;
     }
     /**
@@ -250,7 +250,7 @@ public class MAdventQuestStageResourceIT {
         } else {
             mAdventQuestWorld = TestUtil.findAll(em, MAdventQuestWorld.class).get(0);
         }
-        mAdventQuestStage.setId(mAdventQuestWorld);
+        mAdventQuestStage.setMadventquestworld(mAdventQuestWorld);
         return mAdventQuestStage;
     }
 
@@ -2302,17 +2302,17 @@ public class MAdventQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMAdventQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMAdventQuestStagesByMadventquestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MAdventQuestWorld id = mAdventQuestStage.getId();
+        MAdventQuestWorld madventquestworld = mAdventQuestStage.getMadventquestworld();
         mAdventQuestStageRepository.saveAndFlush(mAdventQuestStage);
-        Long idId = id.getId();
+        Long madventquestworldId = madventquestworld.getId();
 
-        // Get all the mAdventQuestStageList where id equals to idId
-        defaultMAdventQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mAdventQuestStageList where madventquestworld equals to madventquestworldId
+        defaultMAdventQuestStageShouldBeFound("madventquestworldId.equals=" + madventquestworldId);
 
-        // Get all the mAdventQuestStageList where id equals to idId + 1
-        defaultMAdventQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mAdventQuestStageList where madventquestworld equals to madventquestworldId + 1
+        defaultMAdventQuestStageShouldNotBeFound("madventquestworldId.equals=" + (madventquestworldId + 1));
     }
 
     /**

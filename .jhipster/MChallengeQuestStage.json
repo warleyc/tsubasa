@@ -199,7 +199,7 @@
             "otherEntityName": "mChallengeQuestWorld",
             "otherEntityRelationshipName": "mChallengeQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mchallengequestworld",
             "otherEntityField": "id"
         }
     ],

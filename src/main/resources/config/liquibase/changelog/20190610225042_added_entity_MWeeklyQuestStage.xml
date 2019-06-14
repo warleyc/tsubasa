@@ -120,7 +120,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mweeklyquestworld_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -170,7 +170,7 @@
             <column name="condition_id" type="numeric"/>
             <column name="option_id" type="numeric"/>
             <column name="deck_condition_id" type="numeric"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mweeklyquestworld_id" type="numeric"/>
         </loadData>
     </changeSet>
 

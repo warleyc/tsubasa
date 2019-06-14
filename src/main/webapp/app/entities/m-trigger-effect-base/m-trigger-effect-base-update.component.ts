@@ -29,7 +29,7 @@ export class MTriggerEffectBaseUpdateComponent implements OnInit {
     targetCardParameter: [],
     effectId: [null, [Validators.required]],
     description: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mtriggereffectrangeId: [null, Validators.required]
   });
 
   constructor(
@@ -66,7 +66,7 @@ export class MTriggerEffectBaseUpdateComponent implements OnInit {
       targetCardParameter: mTriggerEffectBase.targetCardParameter,
       effectId: mTriggerEffectBase.effectId,
       description: mTriggerEffectBase.description,
-      idId: mTriggerEffectBase.idId
+      mtriggereffectrangeId: mTriggerEffectBase.mtriggereffectrangeId
     });
   }
 
@@ -127,7 +127,7 @@ export class MTriggerEffectBaseUpdateComponent implements OnInit {
       targetCardParameter: this.editForm.get(['targetCardParameter']).value,
       effectId: this.editForm.get(['effectId']).value,
       description: this.editForm.get(['description']).value,
-      idId: this.editForm.get(['idId']).value
+      mtriggereffectrangeId: this.editForm.get(['mtriggereffectrangeId']).value
     };
     return entity;
   }

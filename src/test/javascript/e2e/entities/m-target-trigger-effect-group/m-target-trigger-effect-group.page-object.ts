@@ -28,7 +28,7 @@ export class MTargetTriggerEffectGroupUpdatePage {
   cancelButton = element(by.id('cancel-save'));
   groupIdInput = element(by.id('field_groupId'));
   triggerEffectIdInput = element(by.id('field_triggerEffectId'));
-  idSelect = element(by.id('field_id'));
+  mtriggereffectbaseSelect = element(by.id('field_mtriggereffectbase'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -50,23 +50,23 @@ export class MTargetTriggerEffectGroupUpdatePage {
     return await this.triggerEffectIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mtriggereffectbaseSelectLastOption(timeout?: number) {
+    await this.mtriggereffectbaseSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mtriggereffectbaseSelectOption(option) {
+    await this.mtriggereffectbaseSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMtriggereffectbaseSelect(): ElementFinder {
+    return this.mtriggereffectbaseSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMtriggereffectbaseSelectedOption() {
+    return await this.mtriggereffectbaseSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

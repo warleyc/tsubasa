@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCharacterMapper.class})
 public interface MNpcCardMapper extends EntityMapper<MNpcCardDTO, MNpcCard> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcharacter.id", target = "mcharacterId")
     MNpcCardDTO toDto(MNpcCard mNpcCard);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcharacterId", target = "mcharacter")
     MNpcCard toEntity(MNpcCardDTO mNpcCardDTO);
 
     default MNpcCard fromId(Long id) {

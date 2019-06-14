@@ -2613,153 +2613,155 @@ entity MWeeklyQuestWorld {
 
 
 
+
+
 // Relations
 relationship ManyToOne {
-	MAchievement{id required} to MMission{mAchievement}
+	MAchievement{mmission required} to MMission{mAchievement}
 }
 
 relationship ManyToOne {
-	MActionSkillHolderCardContent{id required} to MCharacter{mActionSkillHolderCardContent}
+	MActionSkillHolderCardContent{mcharacter required} to MCharacter{mActionSkillHolderCardContent}
 }
 
 relationship ManyToOne {
-	MAdventQuestStage{id required} to MAdventQuestWorld{mAdventQuestStage}
+	MAdventQuestStage{madventquestworld required} to MAdventQuestWorld{mAdventQuestStage}
 }
 
 relationship ManyToOne {
-	MArousal{id required} to MPlayableCard{mArousal}
+	MArousal{mplayablecard required} to MPlayableCard{mArousal}
 }
 
 relationship ManyToOne {
-	MCardPowerupActionSkill{id required} to MCardThumbnailAssets{mCardPowerupActionSkill}
+	MCardPowerupActionSkill{mcardthumbnailassets required} to MCardThumbnailAssets{mCardPowerupActionSkill}
 }
 
 relationship ManyToOne {
-	MChallengeQuestStage{id required} to MChallengeQuestWorld{mChallengeQuestStage}
+	MChallengeQuestStage{mchallengequestworld required} to MChallengeQuestWorld{mChallengeQuestStage}
 }
 
 relationship ManyToOne {
-	MCombinationCutPosition{id required} to MCharacter{mCombinationCutPosition}
+	MCombinationCutPosition{mcharacter required} to MCharacter{mCombinationCutPosition}
 }
 
 relationship ManyToOne {
-	MDummyEmblem{id required} to MEmblemParts{mDummyEmblem}
+	MDummyEmblem{memblemparts required} to MEmblemParts{mDummyEmblem}
 }
 
 relationship ManyToOne {
-	MDummyOpponent{id required} to MNpcDeck{mDummyOpponent}
+	MDummyOpponent{mnpcdeck required} to MNpcDeck{mDummyOpponent}
 }
 
 relationship ManyToOne {
-	MFormation{id required} to MPassiveEffectRange{mFormation}
+	MFormation{mpassiveeffectrange required} to MPassiveEffectRange{mFormation}
 }
 
 relationship ManyToOne {
-	MGuerillaQuestStage{id required} to MGuerillaQuestWorld{mGuerillaQuestStage}
+	MGuerillaQuestStage{mguerillaquestworld required} to MGuerillaQuestWorld{mGuerillaQuestStage}
 }
 
 relationship ManyToOne {
-	MGuildMission{id required} to MMissionReward{mGuildMission}
+	MGuildMission{mmissionreward required} to MMissionReward{mGuildMission}
 }
 
 relationship ManyToOne {
-	MLeagueRegulation{id required} to MMatchOption{mLeagueRegulation}
+	MLeagueRegulation{mmatchoption required} to MMatchOption{mLeagueRegulation}
 }
 
 relationship ManyToOne {
-	MLuckWeeklyQuestStage{id required} to MLuckWeeklyQuestWorld{mLuckWeeklyQuestStage}
+	MLuckWeeklyQuestStage{mluckweeklyquestworld required} to MLuckWeeklyQuestWorld{mLuckWeeklyQuestStage}
 }
 
 relationship ManyToOne {
-	MMarathonQuestStage{id required} to MMarathonQuestWorld{mMarathonQuestStage}
+	MMarathonQuestStage{mmarathonquestworld required} to MMarathonQuestWorld{mMarathonQuestStage}
 }
 
 relationship ManyToOne {
-	MMatchOption{id required} to MPassiveEffectRange{mMatchOption}
+	MMatchOption{mpassiveeffectrange required} to MPassiveEffectRange{mMatchOption}
 }
 
 relationship ManyToOne {
-	MMatchResultCutin{id required} to MCharacter{mMatchResultCutin}
+	MMatchResultCutin{mcharacter required} to MCharacter{mMatchResultCutin}
 }
 
 relationship ManyToOne {
-	MMission{id required} to MMissionReward{mMission}
+	MMission{mmissionreward required} to MMissionReward{mMission}
 }
 
 relationship ManyToOne {
-	MNpcCard{id required} to MCharacter{mNpcCard}
+	MNpcCard{mcharacter required} to MCharacter{mNpcCard}
 }
 
 relationship ManyToOne {
-	MNpcDeck{id required} to MFormation{mNpcDeck}
+	MNpcDeck{mformation required} to MFormation{mNpcDeck}
 }
 
 relationship ManyToOne {
-	MPlayableCard{id required} to MModelCard{mPlayableCard}
+	MPlayableCard{mmodelcard required} to MModelCard{mPlayableCard}
 }
 
 relationship ManyToOne {
-	MPvpRankingReward{id required} to MPvpWave{mPvpRankingReward}
+	MPvpRankingReward{mpvpwave required} to MPvpWave{mPvpRankingReward}
 }
 
 relationship ManyToOne {
-	MPvpRegulation{id required} to MMatchOption{mPvpRegulation}
+	MPvpRegulation{mmatchoption required} to MMatchOption{mPvpRegulation}
 }
 
 relationship ManyToOne {
-	MQuestStage{id required} to MQuestWorld{mQuestStage}
+	MQuestStage{mquestworld required} to MQuestWorld{mQuestStage}
 }
 
 relationship ManyToOne {
-	MTargetActionGroup{id required} to MAction{mTargetActionGroup}
+	MTargetActionGroup{maction required} to MAction{mTargetActionGroup}
 }
 
 relationship ManyToOne {
-	MTargetCharacterGroup{id required} to MCharacter{mTargetCharacterGroup}
+	MTargetCharacterGroup{mcharacter required} to MCharacter{mTargetCharacterGroup}
 }
 
 relationship ManyToOne {
-	MTargetFormationGroup{id required} to MFormation{mTargetFormationGroup}
+	MTargetFormationGroup{mformation required} to MFormation{mTargetFormationGroup}
 }
 
 relationship ManyToOne {
-	MTargetNationalityGroup{id required} to MNationality{mTargetNationalityGroup}
+	MTargetNationalityGroup{mnationality required} to MNationality{mTargetNationalityGroup}
 }
 
 relationship ManyToOne {
-	MTargetPlayableCardGroup{id required} to MPlayableCard{mTargetPlayableCardGroup}
+	MTargetPlayableCardGroup{mplayablecard required} to MPlayableCard{mTargetPlayableCardGroup}
 }
 
 relationship ManyToOne {
-	MTargetTeamGroup{id required} to MTeam{mTargetTeamGroup}
+	MTargetTeamGroup{mteam required} to MTeam{mTargetTeamGroup}
 }
 
 relationship ManyToOne {
-	MTargetTriggerEffectGroup{id required} to MTriggerEffectBase{mTargetTriggerEffectGroup}
+	MTargetTriggerEffectGroup{mtriggereffectbase required} to MTriggerEffectBase{mTargetTriggerEffectGroup}
 }
 
 relationship ManyToOne {
-	MTeamEffectBase{id required} to MPassiveEffectRange{mTeamEffectBase}
+	MTeamEffectBase{mpassiveeffectrange required} to MPassiveEffectRange{mTeamEffectBase}
 }
 
 relationship ManyToOne {
-	MTicketQuestStage{id required} to MTicketQuestWorld{mTicketQuestStage}
+	MTicketQuestStage{mticketquestworld required} to MTicketQuestWorld{mTicketQuestStage}
 }
 
 relationship ManyToOne {
-	MTimeattackQuestStage{id required} to MTimeattackQuestWorld{mTimeattackQuestStage}
+	MTimeattackQuestStage{mtimeattackquestworld required} to MTimeattackQuestWorld{mTimeattackQuestStage}
 }
 
 relationship ManyToOne {
-	MTrainingCard{id required} to MCardThumbnailAssets{mTrainingCard}
+	MTrainingCard{mcardthumbnailassets required} to MCardThumbnailAssets{mTrainingCard}
 }
 
 relationship ManyToOne {
-	MTriggerEffectBase{id required} to MTriggerEffectRange{mTriggerEffectBase}
+	MTriggerEffectBase{mtriggereffectrange required} to MTriggerEffectRange{mTriggerEffectBase}
 }
 
 relationship ManyToOne {
-	MWeeklyQuestStage{id required} to MWeeklyQuestWorld{mWeeklyQuestStage}
+	MWeeklyQuestStage{mweeklyquestworld required} to MWeeklyQuestWorld{mWeeklyQuestStage}
 }
 
 
@@ -2769,4 +2771,6 @@ service * with serviceClass
 paginate * with pagination
 dto * with mapstruct
 filter *
+
+
 

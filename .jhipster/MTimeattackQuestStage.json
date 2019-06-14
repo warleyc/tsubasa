@@ -211,7 +211,7 @@
             "otherEntityName": "mTimeattackQuestWorld",
             "otherEntityRelationshipName": "mTimeattackQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mtimeattackquestworld",
             "otherEntityField": "id"
         }
     ],

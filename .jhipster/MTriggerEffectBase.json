@@ -56,13 +56,13 @@
             "otherEntityName": "mTriggerEffectRange",
             "otherEntityRelationshipName": "mTriggerEffectBase",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mtriggereffectrange",
             "otherEntityField": "id"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTargetTriggerEffectGroup",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mtriggereffectbase",
             "relationshipName": "mTargetTriggerEffectGroup"
         }
     ],

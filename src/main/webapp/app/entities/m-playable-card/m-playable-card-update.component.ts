@@ -90,7 +90,7 @@ export class MPlayableCardUpdateComponent implements OnInit {
     isShowBook: [null, [Validators.required]],
     levelGroupId: [null, [Validators.required]],
     startAt: [],
-    idId: [null, Validators.required]
+    mmodelcardId: [null, Validators.required]
   });
 
   constructor(
@@ -188,7 +188,7 @@ export class MPlayableCardUpdateComponent implements OnInit {
       isShowBook: mPlayableCard.isShowBook,
       levelGroupId: mPlayableCard.levelGroupId,
       startAt: mPlayableCard.startAt,
-      idId: mPlayableCard.idId
+      mmodelcardId: mPlayableCard.mmodelcardId
     });
   }
 
@@ -310,7 +310,7 @@ export class MPlayableCardUpdateComponent implements OnInit {
       isShowBook: this.editForm.get(['isShowBook']).value,
       levelGroupId: this.editForm.get(['levelGroupId']).value,
       startAt: this.editForm.get(['startAt']).value,
-      idId: this.editForm.get(['idId']).value
+      mmodelcardId: this.editForm.get(['mmodelcardId']).value
     };
     return entity;
   }

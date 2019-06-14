@@ -28,7 +28,7 @@ export class MTargetActionGroupUpdatePage {
   cancelButton = element(by.id('cancel-save'));
   groupIdInput = element(by.id('field_groupId'));
   actionIdInput = element(by.id('field_actionId'));
-  idSelect = element(by.id('field_id'));
+  mactionSelect = element(by.id('field_maction'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -50,23 +50,23 @@ export class MTargetActionGroupUpdatePage {
     return await this.actionIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mactionSelectLastOption(timeout?: number) {
+    await this.mactionSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mactionSelectOption(option) {
+    await this.mactionSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMactionSelect(): ElementFinder {
+    return this.mactionSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMactionSelectedOption() {
+    return await this.mactionSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

@@ -29,7 +29,7 @@ export class MMatchOptionUpdateComponent implements OnInit {
     useStaminaMagnification: [null, [Validators.required]],
     isIgnoreTeamSkill: [null, [Validators.required]],
     staminaInfinityType: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mpassiveeffectrangeId: [null, Validators.required]
   });
 
   constructor(
@@ -65,7 +65,7 @@ export class MMatchOptionUpdateComponent implements OnInit {
       useStaminaMagnification: mMatchOption.useStaminaMagnification,
       isIgnoreTeamSkill: mMatchOption.isIgnoreTeamSkill,
       staminaInfinityType: mMatchOption.staminaInfinityType,
-      idId: mMatchOption.idId
+      mpassiveeffectrangeId: mMatchOption.mpassiveeffectrangeId
     });
   }
 
@@ -94,7 +94,7 @@ export class MMatchOptionUpdateComponent implements OnInit {
       useStaminaMagnification: this.editForm.get(['useStaminaMagnification']).value,
       isIgnoreTeamSkill: this.editForm.get(['isIgnoreTeamSkill']).value,
       staminaInfinityType: this.editForm.get(['staminaInfinityType']).value,
-      idId: this.editForm.get(['idId']).value
+      mpassiveeffectrangeId: this.editForm.get(['mpassiveeffectrangeId']).value
     };
     return entity;
   }

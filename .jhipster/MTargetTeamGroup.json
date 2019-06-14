@@ -22,7 +22,7 @@
             "otherEntityName": "mTeam",
             "otherEntityRelationshipName": "mTargetTeamGroup",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mteam",
             "otherEntityField": "id"
         }
     ],

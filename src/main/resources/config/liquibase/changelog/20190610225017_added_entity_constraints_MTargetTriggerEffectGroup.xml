@@ -8,9 +8,9 @@
     -->
     <changeSet id="20190610225017-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="mtriggereffectbase_id"
                                  baseTableName="m_target_trigger_effect_group"
-                                 constraintName="fk_m_target_trigger_effect_group_id_id"
+                                 constraintName="fk_m_target_trigger_effect_group_mtriggereffectbase_id"
                                  referencedColumnNames="id"
                                  referencedTableName="m_trigger_effect_base"/>
 

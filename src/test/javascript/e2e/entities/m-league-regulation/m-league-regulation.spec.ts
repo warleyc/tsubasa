@@ -49,7 +49,7 @@ describe('MLeagueRegulation e2e test', () => {
             mLeagueRegulationUpdatePage.setMatchOptionIdInput('5'),
             mLeagueRegulationUpdatePage.setDeckConditionIdInput('5'),
             mLeagueRegulationUpdatePage.setRuleTutorialIdInput('5'),
-            mLeagueRegulationUpdatePage.idSelectLastOption(),
+            mLeagueRegulationUpdatePage.mmatchoptionSelectLastOption(),
         ]);
         expect(await mLeagueRegulationUpdatePage.getStartAtInput()).to.eq('5', 'Expected startAt value to be equals to 5');
         expect(await mLeagueRegulationUpdatePage.getEndAtInput()).to.eq('5', 'Expected endAt value to be equals to 5');

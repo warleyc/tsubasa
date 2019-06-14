@@ -36,7 +36,7 @@ public class MTargetFormationGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetFormationGroups")
-    private MFormation id;
+    private MFormation mformation;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,17 +73,17 @@ public class MTargetFormationGroup implements Serializable {
         this.formationId = formationId;
     }
 
-    public MFormation getId() {
-        return id;
+    public MFormation getMformation() {
+        return mformation;
     }
 
-    public MTargetFormationGroup id(MFormation mFormation) {
-        this.id = mFormation;
+    public MTargetFormationGroup mformation(MFormation mFormation) {
+        this.mformation = mFormation;
         return this;
     }
 
-    public void setId(MFormation mFormation) {
-        this.id = mFormation;
+    public void setMformation(MFormation mFormation) {
+        this.mformation = mFormation;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

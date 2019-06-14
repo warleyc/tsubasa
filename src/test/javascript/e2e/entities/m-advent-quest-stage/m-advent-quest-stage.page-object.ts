@@ -52,7 +52,7 @@ export class MAdventQuestStageUpdatePage {
   conditionIdInput = element(by.id('field_conditionId'));
   optionIdInput = element(by.id('field_optionId'));
   deckConditionIdInput = element(by.id('field_deckConditionId'));
-  idSelect = element(by.id('field_id'));
+  madventquestworldSelect = element(by.id('field_madventquestworld'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -266,23 +266,23 @@ export class MAdventQuestStageUpdatePage {
     return await this.deckConditionIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async madventquestworldSelectLastOption(timeout?: number) {
+    await this.madventquestworldSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async madventquestworldSelectOption(option) {
+    await this.madventquestworldSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMadventquestworldSelect(): ElementFinder {
+    return this.madventquestworldSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMadventquestworldSelectedOption() {
+    return await this.madventquestworldSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

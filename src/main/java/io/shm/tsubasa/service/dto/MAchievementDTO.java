@@ -26,7 +26,7 @@ public class MAchievementDTO implements Serializable {
     private Integer missionId;
 
 
-    private Long idId;
+    private Long mmissionId;
 
     public Long getId() {
         return id;
@@ -68,12 +68,12 @@ public class MAchievementDTO implements Serializable {
         this.missionId = missionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMmissionId() {
+        return mmissionId;
     }
 
-    public void setIdId(Long mMissionId) {
-        this.idId = mMissionId;
+    public void setMmissionId(Long mMissionId) {
+        this.mmissionId = mMissionId;
     }
 
     @Override
@@ -105,7 +105,7 @@ public class MAchievementDTO implements Serializable {
             ", name='" + getName() + "'" +
             ", type=" + getType() +
             ", missionId=" + getMissionId() +
-            ", id=" + getIdId() +
+            ", mmission=" + getMmissionId() +
             "}";
     }
 }

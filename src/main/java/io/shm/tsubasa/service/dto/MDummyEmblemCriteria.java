@@ -34,7 +34,7 @@ public class MDummyEmblemCriteria implements Serializable, Criteria {
 
     private IntegerFilter lowerId;
 
-    private LongFilter idId;
+    private LongFilter memblempartsId;
 
     public MDummyEmblemCriteria(){
     }
@@ -45,7 +45,7 @@ public class MDummyEmblemCriteria implements Serializable, Criteria {
         this.upperId = other.upperId == null ? null : other.upperId.copy();
         this.middleId = other.middleId == null ? null : other.middleId.copy();
         this.lowerId = other.lowerId == null ? null : other.lowerId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.memblempartsId = other.memblempartsId == null ? null : other.memblempartsId.copy();
     }
 
     @Override
@@ -93,12 +93,12 @@ public class MDummyEmblemCriteria implements Serializable, Criteria {
         this.lowerId = lowerId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMemblempartsId() {
+        return memblempartsId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMemblempartsId(LongFilter memblempartsId) {
+        this.memblempartsId = memblempartsId;
     }
 
 
@@ -117,7 +117,7 @@ public class MDummyEmblemCriteria implements Serializable, Criteria {
             Objects.equals(upperId, that.upperId) &&
             Objects.equals(middleId, that.middleId) &&
             Objects.equals(lowerId, that.lowerId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(memblempartsId, that.memblempartsId);
     }
 
     @Override
@@ -128,7 +128,7 @@ public class MDummyEmblemCriteria implements Serializable, Criteria {
         upperId,
         middleId,
         lowerId,
-        idId
+        memblempartsId
         );
     }
 
@@ -140,7 +140,7 @@ public class MDummyEmblemCriteria implements Serializable, Criteria {
                 (upperId != null ? "upperId=" + upperId + ", " : "") +
                 (middleId != null ? "middleId=" + middleId + ", " : "") +
                 (lowerId != null ? "lowerId=" + lowerId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (memblempartsId != null ? "memblempartsId=" + memblempartsId + ", " : "") +
             "}";
     }
 

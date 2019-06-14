@@ -36,7 +36,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mpvpwave_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -65,7 +65,7 @@
             <column name="ranking_from" type="numeric"/>
             <column name="ranking_to" type="numeric"/>
             <column name="reward_group_id" type="numeric"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mpvpwave_id" type="numeric"/>
         </loadData>
     </changeSet>
 

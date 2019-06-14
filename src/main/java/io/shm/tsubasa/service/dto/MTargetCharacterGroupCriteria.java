@@ -30,7 +30,7 @@ public class MTargetCharacterGroupCriteria implements Serializable, Criteria {
 
     private IntegerFilter characterId;
 
-    private LongFilter idId;
+    private LongFilter mcharacterId;
 
     public MTargetCharacterGroupCriteria(){
     }
@@ -39,7 +39,7 @@ public class MTargetCharacterGroupCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.characterId = other.characterId == null ? null : other.characterId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcharacterId = other.mcharacterId == null ? null : other.mcharacterId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MTargetCharacterGroupCriteria implements Serializable, Criteria {
         this.characterId = characterId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcharacterId(LongFilter mcharacterId) {
+        this.mcharacterId = mcharacterId;
     }
 
 
@@ -93,7 +93,7 @@ public class MTargetCharacterGroupCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(characterId, that.characterId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcharacterId, that.mcharacterId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MTargetCharacterGroupCriteria implements Serializable, Criteria {
         id,
         groupId,
         characterId,
-        idId
+        mcharacterId
         );
     }
 
@@ -112,7 +112,7 @@ public class MTargetCharacterGroupCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (characterId != null ? "characterId=" + characterId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcharacterId != null ? "mcharacterId=" + mcharacterId + ", " : "") +
             "}";
     }
 

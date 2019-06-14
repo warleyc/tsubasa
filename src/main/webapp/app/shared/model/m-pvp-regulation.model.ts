@@ -5,7 +5,7 @@ export interface IMPvpRegulation {
   matchOptionId?: number;
   deckConditionId?: number;
   ruleTutorialId?: number;
-  idId?: number;
+  mmatchoptionId?: number;
 }
 
 export class MPvpRegulation implements IMPvpRegulation {
@@ -16,6 +16,6 @@ export class MPvpRegulation implements IMPvpRegulation {
     public matchOptionId?: number,
     public deckConditionId?: number,
     public ruleTutorialId?: number,
-    public idId?: number
+    public mmatchoptionId?: number
   ) {}
 }

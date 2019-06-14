@@ -50,7 +50,7 @@ export class MTicketQuestStageUpdateComponent implements OnInit {
     conditionId: [],
     optionId: [],
     deckConditionId: [],
-    idId: [null, Validators.required]
+    mticketquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -108,7 +108,7 @@ export class MTicketQuestStageUpdateComponent implements OnInit {
       conditionId: mTicketQuestStage.conditionId,
       optionId: mTicketQuestStage.optionId,
       deckConditionId: mTicketQuestStage.deckConditionId,
-      idId: mTicketQuestStage.idId
+      mticketquestworldId: mTicketQuestStage.mticketquestworldId
     });
   }
 
@@ -190,7 +190,7 @@ export class MTicketQuestStageUpdateComponent implements OnInit {
       conditionId: this.editForm.get(['conditionId']).value,
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
-      idId: this.editForm.get(['idId']).value
+      mticketquestworldId: this.editForm.get(['mticketquestworldId']).value
     };
     return entity;
   }

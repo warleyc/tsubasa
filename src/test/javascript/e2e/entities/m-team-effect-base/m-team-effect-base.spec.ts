@@ -53,7 +53,7 @@ describe('MTeamEffectBase e2e test', () => {
             mTeamEffectBaseUpdatePage.setTriggerProbabilityMax2Input('5'),
             mTeamEffectBaseUpdatePage.setEffectId2Input('5'),
             mTeamEffectBaseUpdatePage.setDescriptionInput('description'),
-            mTeamEffectBaseUpdatePage.idSelectLastOption(),
+            mTeamEffectBaseUpdatePage.mpassiveeffectrangeSelectLastOption(),
         ]);
         expect(await mTeamEffectBaseUpdatePage.getNameInput()).to.eq('name', 'Expected Name value to be equals to name');
         expect(await mTeamEffectBaseUpdatePage.getRarityInput()).to.eq('5', 'Expected rarity value to be equals to 5');

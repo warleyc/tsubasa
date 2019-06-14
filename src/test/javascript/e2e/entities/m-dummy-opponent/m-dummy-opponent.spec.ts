@@ -53,7 +53,7 @@ describe('MDummyOpponent e2e test', () => {
             mDummyOpponentUpdatePage.setGkUniformUpColorInput('gkUniformUpColor'),
             mDummyOpponentUpdatePage.setGkUniformBottomIdInput('5'),
             mDummyOpponentUpdatePage.setGkUniformBottomColorInput('gkUniformBottomColor'),
-            mDummyOpponentUpdatePage.idSelectLastOption(),
+            mDummyOpponentUpdatePage.mnpcdeckSelectLastOption(),
         ]);
         expect(await mDummyOpponentUpdatePage.getNpcDeckIdInput()).to.eq('5', 'Expected npcDeckId value to be equals to 5');
         expect(await mDummyOpponentUpdatePage.getTotalParameterInput()).to.eq('5', 'Expected totalParameter value to be equals to 5');

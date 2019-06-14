@@ -48,7 +48,7 @@ export class MAdventQuestStageUpdateComponent implements OnInit {
     conditionId: [],
     optionId: [],
     deckConditionId: [],
-    idId: [null, Validators.required]
+    madventquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -104,7 +104,7 @@ export class MAdventQuestStageUpdateComponent implements OnInit {
       conditionId: mAdventQuestStage.conditionId,
       optionId: mAdventQuestStage.optionId,
       deckConditionId: mAdventQuestStage.deckConditionId,
-      idId: mAdventQuestStage.idId
+      madventquestworldId: mAdventQuestStage.madventquestworldId
     });
   }
 
@@ -184,7 +184,7 @@ export class MAdventQuestStageUpdateComponent implements OnInit {
       conditionId: this.editForm.get(['conditionId']).value,
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
-      idId: this.editForm.get(['idId']).value
+      madventquestworldId: this.editForm.get(['madventquestworldId']).value
     };
     return entity;
   }

@@ -374,7 +374,7 @@ public class MPlayableCardResourceIT {
         } else {
             mModelCard = TestUtil.findAll(em, MModelCard.class).get(0);
         }
-        mPlayableCard.setId(mModelCard);
+        mPlayableCard.setMmodelcard(mModelCard);
         return mPlayableCard;
     }
     /**
@@ -462,7 +462,7 @@ public class MPlayableCardResourceIT {
         } else {
             mModelCard = TestUtil.findAll(em, MModelCard.class).get(0);
         }
-        mPlayableCard.setId(mModelCard);
+        mPlayableCard.setMmodelcard(mModelCard);
         return mPlayableCard;
     }
 
@@ -6266,17 +6266,17 @@ public class MPlayableCardResourceIT {
 
     @Test
     @Transactional
-    public void getAllMPlayableCardsByIdIsEqualToSomething() throws Exception {
+    public void getAllMPlayableCardsByMmodelcardIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MModelCard id = mPlayableCard.getId();
+        MModelCard mmodelcard = mPlayableCard.getMmodelcard();
         mPlayableCardRepository.saveAndFlush(mPlayableCard);
-        Long idId = id.getId();
+        Long mmodelcardId = mmodelcard.getId();
 
-        // Get all the mPlayableCardList where id equals to idId
-        defaultMPlayableCardShouldBeFound("idId.equals=" + idId);
+        // Get all the mPlayableCardList where mmodelcard equals to mmodelcardId
+        defaultMPlayableCardShouldBeFound("mmodelcardId.equals=" + mmodelcardId);
 
-        // Get all the mPlayableCardList where id equals to idId + 1
-        defaultMPlayableCardShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mPlayableCardList where mmodelcard equals to mmodelcardId + 1
+        defaultMPlayableCardShouldNotBeFound("mmodelcardId.equals=" + (mmodelcardId + 1));
     }
 
 

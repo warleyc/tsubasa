@@ -119,7 +119,7 @@ public class MPvpRegulationResourceIT {
         } else {
             mMatchOption = TestUtil.findAll(em, MMatchOption.class).get(0);
         }
-        mPvpRegulation.setId(mMatchOption);
+        mPvpRegulation.setMmatchoption(mMatchOption);
         return mPvpRegulation;
     }
     /**
@@ -144,7 +144,7 @@ public class MPvpRegulationResourceIT {
         } else {
             mMatchOption = TestUtil.findAll(em, MMatchOption.class).get(0);
         }
-        mPvpRegulation.setId(mMatchOption);
+        mPvpRegulation.setMmatchoption(mMatchOption);
         return mPvpRegulation;
     }
 
@@ -660,17 +660,17 @@ public class MPvpRegulationResourceIT {
 
     @Test
     @Transactional
-    public void getAllMPvpRegulationsByIdIsEqualToSomething() throws Exception {
+    public void getAllMPvpRegulationsByMmatchoptionIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MMatchOption id = mPvpRegulation.getId();
+        MMatchOption mmatchoption = mPvpRegulation.getMmatchoption();
         mPvpRegulationRepository.saveAndFlush(mPvpRegulation);
-        Long idId = id.getId();
+        Long mmatchoptionId = mmatchoption.getId();
 
-        // Get all the mPvpRegulationList where id equals to idId
-        defaultMPvpRegulationShouldBeFound("idId.equals=" + idId);
+        // Get all the mPvpRegulationList where mmatchoption equals to mmatchoptionId
+        defaultMPvpRegulationShouldBeFound("mmatchoptionId.equals=" + mmatchoptionId);
 
-        // Get all the mPvpRegulationList where id equals to idId + 1
-        defaultMPvpRegulationShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mPvpRegulationList where mmatchoption equals to mmatchoptionId + 1
+        defaultMPvpRegulationShouldNotBeFound("mmatchoptionId.equals=" + (mmatchoptionId + 1));
     }
 
     /**

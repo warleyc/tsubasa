@@ -72,7 +72,7 @@ public class MWeeklyQuestStageCriteria implements Serializable, Criteria {
 
     private IntegerFilter deckConditionId;
 
-    private LongFilter idId;
+    private LongFilter mweeklyquestworldId;
 
     public MWeeklyQuestStageCriteria(){
     }
@@ -102,7 +102,7 @@ public class MWeeklyQuestStageCriteria implements Serializable, Criteria {
         this.conditionId = other.conditionId == null ? null : other.conditionId.copy();
         this.optionId = other.optionId == null ? null : other.optionId.copy();
         this.deckConditionId = other.deckConditionId == null ? null : other.deckConditionId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mweeklyquestworldId = other.mweeklyquestworldId == null ? null : other.mweeklyquestworldId.copy();
     }
 
     @Override
@@ -302,12 +302,12 @@ public class MWeeklyQuestStageCriteria implements Serializable, Criteria {
         this.deckConditionId = deckConditionId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMweeklyquestworldId() {
+        return mweeklyquestworldId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMweeklyquestworldId(LongFilter mweeklyquestworldId) {
+        this.mweeklyquestworldId = mweeklyquestworldId;
     }
 
 
@@ -345,7 +345,7 @@ public class MWeeklyQuestStageCriteria implements Serializable, Criteria {
             Objects.equals(conditionId, that.conditionId) &&
             Objects.equals(optionId, that.optionId) &&
             Objects.equals(deckConditionId, that.deckConditionId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mweeklyquestworldId, that.mweeklyquestworldId);
     }
 
     @Override
@@ -375,7 +375,7 @@ public class MWeeklyQuestStageCriteria implements Serializable, Criteria {
         conditionId,
         optionId,
         deckConditionId,
-        idId
+        mweeklyquestworldId
         );
     }
 
@@ -406,7 +406,7 @@ public class MWeeklyQuestStageCriteria implements Serializable, Criteria {
                 (conditionId != null ? "conditionId=" + conditionId + ", " : "") +
                 (optionId != null ? "optionId=" + optionId + ", " : "") +
                 (deckConditionId != null ? "deckConditionId=" + deckConditionId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mweeklyquestworldId != null ? "mweeklyquestworldId=" + mweeklyquestworldId + ", " : "") +
             "}";
     }
 

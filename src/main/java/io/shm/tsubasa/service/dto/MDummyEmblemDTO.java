@@ -36,7 +36,7 @@ public class MDummyEmblemDTO implements Serializable {
     private String lowerColor;
 
 
-    private Long idId;
+    private Long memblempartsId;
 
     public Long getId() {
         return id;
@@ -110,12 +110,12 @@ public class MDummyEmblemDTO implements Serializable {
         this.lowerColor = lowerColor;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMemblempartsId() {
+        return memblempartsId;
     }
 
-    public void setIdId(Long mEmblemPartsId) {
-        this.idId = mEmblemPartsId;
+    public void setMemblempartsId(Long mEmblemPartsId) {
+        this.memblempartsId = mEmblemPartsId;
     }
 
     @Override
@@ -151,7 +151,7 @@ public class MDummyEmblemDTO implements Serializable {
             ", middleColor='" + getMiddleColor() + "'" +
             ", lowerId=" + getLowerId() +
             ", lowerColor='" + getLowerColor() + "'" +
-            ", id=" + getIdId() +
+            ", memblemparts=" + getMemblempartsId() +
             "}";
     }
 }

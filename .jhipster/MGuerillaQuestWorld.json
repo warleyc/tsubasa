@@ -71,7 +71,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mGuerillaQuestStage",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mguerillaquestworld",
             "relationshipName": "mGuerillaQuestStage"
         }
     ],

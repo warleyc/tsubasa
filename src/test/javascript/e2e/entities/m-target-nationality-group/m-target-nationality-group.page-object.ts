@@ -28,7 +28,7 @@ export class MTargetNationalityGroupUpdatePage {
   cancelButton = element(by.id('cancel-save'));
   groupIdInput = element(by.id('field_groupId'));
   nationalityIdInput = element(by.id('field_nationalityId'));
-  idSelect = element(by.id('field_id'));
+  mnationalitySelect = element(by.id('field_mnationality'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -50,23 +50,23 @@ export class MTargetNationalityGroupUpdatePage {
     return await this.nationalityIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mnationalitySelectLastOption(timeout?: number) {
+    await this.mnationalitySelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mnationalitySelectOption(option) {
+    await this.mnationalitySelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMnationalitySelect(): ElementFinder {
+    return this.mnationalitySelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMnationalitySelectedOption() {
+    return await this.mnationalitySelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

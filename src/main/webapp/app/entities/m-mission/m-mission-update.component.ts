@@ -42,7 +42,7 @@ export class MMissionUpdateComponent implements OnInit {
     sceneTransitionParam: [],
     pickup: [null, [Validators.required]],
     orderNum: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mmissionrewardId: [null, Validators.required]
   });
 
   constructor(
@@ -92,7 +92,7 @@ export class MMissionUpdateComponent implements OnInit {
       sceneTransitionParam: mMission.sceneTransitionParam,
       pickup: mMission.pickup,
       orderNum: mMission.orderNum,
-      idId: mMission.idId
+      mmissionrewardId: mMission.mmissionrewardId
     });
   }
 
@@ -166,7 +166,7 @@ export class MMissionUpdateComponent implements OnInit {
       sceneTransitionParam: this.editForm.get(['sceneTransitionParam']).value,
       pickup: this.editForm.get(['pickup']).value,
       orderNum: this.editForm.get(['orderNum']).value,
-      idId: this.editForm.get(['idId']).value
+      mmissionrewardId: this.editForm.get(['mmissionrewardId']).value
     };
     return entity;
   }

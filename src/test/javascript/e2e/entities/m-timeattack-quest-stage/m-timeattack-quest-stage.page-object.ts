@@ -56,7 +56,7 @@ export class MTimeattackQuestStageUpdatePage {
   optionIdInput = element(by.id('field_optionId'));
   deckConditionIdInput = element(by.id('field_deckConditionId'));
   shortNameInput = element(by.id('field_shortName'));
-  idSelect = element(by.id('field_id'));
+  mtimeattackquestworldSelect = element(by.id('field_mtimeattackquestworld'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -302,23 +302,23 @@ export class MTimeattackQuestStageUpdatePage {
     return await this.shortNameInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mtimeattackquestworldSelectLastOption(timeout?: number) {
+    await this.mtimeattackquestworldSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mtimeattackquestworldSelectOption(option) {
+    await this.mtimeattackquestworldSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMtimeattackquestworldSelect(): ElementFinder {
+    return this.mtimeattackquestworldSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMtimeattackquestworldSelectedOption() {
+    return await this.mtimeattackquestworldSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

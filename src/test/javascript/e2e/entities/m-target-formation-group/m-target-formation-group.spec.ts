@@ -46,7 +46,7 @@ describe('MTargetFormationGroup e2e test', () => {
         await promise.all([
             mTargetFormationGroupUpdatePage.setGroupIdInput('5'),
             mTargetFormationGroupUpdatePage.setFormationIdInput('5'),
-            mTargetFormationGroupUpdatePage.idSelectLastOption(),
+            mTargetFormationGroupUpdatePage.mformationSelectLastOption(),
         ]);
         expect(await mTargetFormationGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetFormationGroupUpdatePage.getFormationIdInput()).to.eq('5', 'Expected formationId value to be equals to 5');

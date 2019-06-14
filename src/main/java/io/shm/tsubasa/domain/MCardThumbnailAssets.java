@@ -45,11 +45,11 @@ public class MCardThumbnailAssets implements Serializable {
     @Column(name = "thumbnail_effect_asset_name")
     private String thumbnailEffectAssetName;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcardthumbnailassets")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MCardPowerupActionSkill> mCardPowerupActionSkills = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mcardthumbnailassets")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTrainingCard> mTrainingCards = new HashSet<>();
 
@@ -125,13 +125,13 @@ public class MCardThumbnailAssets implements Serializable {
 
     public MCardThumbnailAssets addMCardPowerupActionSkill(MCardPowerupActionSkill mCardPowerupActionSkill) {
         this.mCardPowerupActionSkills.add(mCardPowerupActionSkill);
-        mCardPowerupActionSkill.setId(this);
+        mCardPowerupActionSkill.setMcardthumbnailassets(this);
         return this;
     }
 
     public MCardThumbnailAssets removeMCardPowerupActionSkill(MCardPowerupActionSkill mCardPowerupActionSkill) {
         this.mCardPowerupActionSkills.remove(mCardPowerupActionSkill);
-        mCardPowerupActionSkill.setId(null);
+        mCardPowerupActionSkill.setMcardthumbnailassets(null);
         return this;
     }
 
@@ -150,13 +150,13 @@ public class MCardThumbnailAssets implements Serializable {
 
     public MCardThumbnailAssets addMTrainingCard(MTrainingCard mTrainingCard) {
         this.mTrainingCards.add(mTrainingCard);
-        mTrainingCard.setId(this);
+        mTrainingCard.setMcardthumbnailassets(this);
         return this;
     }
 
     public MCardThumbnailAssets removeMTrainingCard(MTrainingCard mTrainingCard) {
         this.mTrainingCards.remove(mTrainingCard);
-        mTrainingCard.setId(null);
+        mTrainingCard.setMcardthumbnailassets(null);
         return this;
     }
 

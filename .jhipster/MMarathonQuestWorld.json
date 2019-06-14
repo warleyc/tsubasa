@@ -71,7 +71,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mMarathonQuestStage",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmarathonquestworld",
             "relationshipName": "mMarathonQuestStage"
         }
     ],

@@ -21,7 +21,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mDummyEmblem",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "memblemparts",
             "relationshipName": "mDummyEmblem"
         }
     ],

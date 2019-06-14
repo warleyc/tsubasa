@@ -158,9 +158,9 @@ public class MWeeklyQuestStageQueryService extends QueryService<MWeeklyQuestStag
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MWeeklyQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MWeeklyQuestStage_.id, JoinType.LEFT).get(MWeeklyQuestWorld_.id)));
+            if (criteria.getMweeklyquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMweeklyquestworldId(),
+                    root -> root.join(MWeeklyQuestStage_.mweeklyquestworld, JoinType.LEFT).get(MWeeklyQuestWorld_.id)));
             }
         }
         return specification;

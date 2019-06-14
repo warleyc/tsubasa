@@ -60,9 +60,9 @@ public class MTriggerEffectBase implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTriggerEffectBases")
-    private MTriggerEffectRange id;
+    private MTriggerEffectRange mtriggereffectrange;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mtriggereffectbase")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetTriggerEffectGroup> mTargetTriggerEffectGroups = new HashSet<>();
 
@@ -166,17 +166,17 @@ public class MTriggerEffectBase implements Serializable {
         this.description = description;
     }
 
-    public MTriggerEffectRange getId() {
-        return id;
+    public MTriggerEffectRange getMtriggereffectrange() {
+        return mtriggereffectrange;
     }
 
-    public MTriggerEffectBase id(MTriggerEffectRange mTriggerEffectRange) {
-        this.id = mTriggerEffectRange;
+    public MTriggerEffectBase mtriggereffectrange(MTriggerEffectRange mTriggerEffectRange) {
+        this.mtriggereffectrange = mTriggerEffectRange;
         return this;
     }
 
-    public void setId(MTriggerEffectRange mTriggerEffectRange) {
-        this.id = mTriggerEffectRange;
+    public void setMtriggereffectrange(MTriggerEffectRange mTriggerEffectRange) {
+        this.mtriggereffectrange = mTriggerEffectRange;
     }
 
     public Set<MTargetTriggerEffectGroup> getMTargetTriggerEffectGroups() {
@@ -190,13 +190,13 @@ public class MTriggerEffectBase implements Serializable {
 
     public MTriggerEffectBase addMTargetTriggerEffectGroup(MTargetTriggerEffectGroup mTargetTriggerEffectGroup) {
         this.mTargetTriggerEffectGroups.add(mTargetTriggerEffectGroup);
-        mTargetTriggerEffectGroup.setId(this);
+        mTargetTriggerEffectGroup.setMtriggereffectbase(this);
         return this;
     }
 
     public MTriggerEffectBase removeMTargetTriggerEffectGroup(MTargetTriggerEffectGroup mTargetTriggerEffectGroup) {
         this.mTargetTriggerEffectGroups.remove(mTargetTriggerEffectGroup);
-        mTargetTriggerEffectGroup.setId(null);
+        mTargetTriggerEffectGroup.setMtriggereffectbase(null);
         return this;
     }
 

@@ -48,7 +48,7 @@ public class MPvpRankingReward implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mPvpRankingRewards")
-    private MPvpWave id;
+    private MPvpWave mpvpwave;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -124,17 +124,17 @@ public class MPvpRankingReward implements Serializable {
         this.rewardGroupId = rewardGroupId;
     }
 
-    public MPvpWave getId() {
-        return id;
+    public MPvpWave getMpvpwave() {
+        return mpvpwave;
     }
 
-    public MPvpRankingReward id(MPvpWave mPvpWave) {
-        this.id = mPvpWave;
+    public MPvpRankingReward mpvpwave(MPvpWave mPvpWave) {
+        this.mpvpwave = mPvpWave;
         return this;
     }
 
-    public void setId(MPvpWave mPvpWave) {
-        this.id = mPvpWave;
+    public void setMpvpwave(MPvpWave mPvpWave) {
+        this.mpvpwave = mPvpWave;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

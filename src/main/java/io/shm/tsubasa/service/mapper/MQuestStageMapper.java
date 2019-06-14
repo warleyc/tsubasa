@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MQuestWorldMapper.class})
 public interface MQuestStageMapper extends EntityMapper<MQuestStageDTO, MQuestStage> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mquestworld.id", target = "mquestworldId")
     MQuestStageDTO toDto(MQuestStage mQuestStage);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mquestworldId", target = "mquestworld")
     MQuestStage toEntity(MQuestStageDTO mQuestStageDTO);
 
     default MQuestStage fromId(Long id) {

@@ -33,7 +33,7 @@ export class MGuildMissionUpdateComponent implements OnInit {
     pickup: [null, [Validators.required]],
     triggerMissionId: [],
     orderNum: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mmissionrewardId: [null, Validators.required]
   });
 
   constructor(
@@ -74,7 +74,7 @@ export class MGuildMissionUpdateComponent implements OnInit {
       pickup: mGuildMission.pickup,
       triggerMissionId: mGuildMission.triggerMissionId,
       orderNum: mGuildMission.orderNum,
-      idId: mGuildMission.idId
+      mmissionrewardId: mGuildMission.mmissionrewardId
     });
   }
 
@@ -139,7 +139,7 @@ export class MGuildMissionUpdateComponent implements OnInit {
       pickup: this.editForm.get(['pickup']).value,
       triggerMissionId: this.editForm.get(['triggerMissionId']).value,
       orderNum: this.editForm.get(['orderNum']).value,
-      idId: this.editForm.get(['idId']).value
+      mmissionrewardId: this.editForm.get(['mmissionrewardId']).value
     };
     return entity;
   }

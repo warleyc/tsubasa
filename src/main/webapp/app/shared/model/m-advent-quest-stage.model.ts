@@ -26,7 +26,7 @@ export interface IMAdventQuestStage {
   conditionId?: number;
   optionId?: number;
   deckConditionId?: number;
-  idId?: number;
+  madventquestworldId?: number;
 }
 
 export class MAdventQuestStage implements IMAdventQuestStage {
@@ -58,6 +58,6 @@ export class MAdventQuestStage implements IMAdventQuestStage {
     public conditionId?: number,
     public optionId?: number,
     public deckConditionId?: number,
-    public idId?: number
+    public madventquestworldId?: number
   ) {}
 }

@@ -48,7 +48,7 @@ export class MWeeklyQuestStageUpdateComponent implements OnInit {
     conditionId: [],
     optionId: [],
     deckConditionId: [],
-    idId: [null, Validators.required]
+    mweeklyquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -104,7 +104,7 @@ export class MWeeklyQuestStageUpdateComponent implements OnInit {
       conditionId: mWeeklyQuestStage.conditionId,
       optionId: mWeeklyQuestStage.optionId,
       deckConditionId: mWeeklyQuestStage.deckConditionId,
-      idId: mWeeklyQuestStage.idId
+      mweeklyquestworldId: mWeeklyQuestStage.mweeklyquestworldId
     });
   }
 
@@ -184,7 +184,7 @@ export class MWeeklyQuestStageUpdateComponent implements OnInit {
       conditionId: this.editForm.get(['conditionId']).value,
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
-      idId: this.editForm.get(['idId']).value
+      mweeklyquestworldId: this.editForm.get(['mweeklyquestworldId']).value
     };
     return entity;
   }

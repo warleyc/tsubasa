@@ -149,7 +149,7 @@ public class MTimeattackQuestStage implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTimeattackQuestStages")
-    private MTimeattackQuestWorld id;
+    private MTimeattackQuestWorld mtimeattackquestworld;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -550,17 +550,17 @@ public class MTimeattackQuestStage implements Serializable {
         this.shortName = shortName;
     }
 
-    public MTimeattackQuestWorld getId() {
-        return id;
+    public MTimeattackQuestWorld getMtimeattackquestworld() {
+        return mtimeattackquestworld;
     }
 
-    public MTimeattackQuestStage id(MTimeattackQuestWorld mTimeattackQuestWorld) {
-        this.id = mTimeattackQuestWorld;
+    public MTimeattackQuestStage mtimeattackquestworld(MTimeattackQuestWorld mTimeattackQuestWorld) {
+        this.mtimeattackquestworld = mTimeattackQuestWorld;
         return this;
     }
 
-    public void setId(MTimeattackQuestWorld mTimeattackQuestWorld) {
-        this.id = mTimeattackQuestWorld;
+    public void setMtimeattackquestworld(MTimeattackQuestWorld mTimeattackQuestWorld) {
+        this.mtimeattackquestworld = mTimeattackQuestWorld;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

@@ -209,9 +209,9 @@ public class MNpcCardQueryService extends QueryService<MNpcCard> {
             if (criteria.getLevelGroupId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getLevelGroupId(), MNpcCard_.levelGroupId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MNpcCard_.id, JoinType.LEFT).get(MCharacter_.id)));
+            if (criteria.getMcharacterId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMcharacterId(),
+                    root -> root.join(MNpcCard_.mcharacter, JoinType.LEFT).get(MCharacter_.id)));
             }
         }
         return specification;

@@ -44,7 +44,7 @@ public class MArousal implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mArousals")
-    private MPlayableCard id;
+    private MPlayableCard mplayablecard;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -107,17 +107,17 @@ public class MArousal implements Serializable {
         this.materialGroupId = materialGroupId;
     }
 
-    public MPlayableCard getId() {
-        return id;
+    public MPlayableCard getMplayablecard() {
+        return mplayablecard;
     }
 
-    public MArousal id(MPlayableCard mPlayableCard) {
-        this.id = mPlayableCard;
+    public MArousal mplayablecard(MPlayableCard mPlayableCard) {
+        this.mplayablecard = mPlayableCard;
         return this;
     }
 
-    public void setId(MPlayableCard mPlayableCard) {
-        this.id = mPlayableCard;
+    public void setMplayablecard(MPlayableCard mPlayableCard) {
+        this.mplayablecard = mPlayableCard;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

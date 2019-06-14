@@ -288,7 +288,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mmodelcard_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -380,7 +380,7 @@
             <column name="is_show_book" type="numeric"/>
             <column name="level_group_id" type="numeric"/>
             <column name="start_at" type="numeric"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mmodelcard_id" type="numeric"/>
         </loadData>
     </changeSet>
 

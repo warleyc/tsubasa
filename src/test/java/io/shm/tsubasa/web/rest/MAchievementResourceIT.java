@@ -116,7 +116,7 @@ public class MAchievementResourceIT {
         } else {
             mMission = TestUtil.findAll(em, MMission.class).get(0);
         }
-        mAchievement.setId(mMission);
+        mAchievement.setMmission(mMission);
         return mAchievement;
     }
     /**
@@ -140,7 +140,7 @@ public class MAchievementResourceIT {
         } else {
             mMission = TestUtil.findAll(em, MMission.class).get(0);
         }
-        mAchievement.setId(mMission);
+        mAchievement.setMmission(mMission);
         return mAchievement;
     }
 
@@ -398,17 +398,17 @@ public class MAchievementResourceIT {
 
     @Test
     @Transactional
-    public void getAllMAchievementsByIdIsEqualToSomething() throws Exception {
+    public void getAllMAchievementsByMmissionIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MMission id = mAchievement.getId();
+        MMission mmission = mAchievement.getMmission();
         mAchievementRepository.saveAndFlush(mAchievement);
-        Long idId = id.getId();
+        Long mmissionId = mmission.getId();
 
-        // Get all the mAchievementList where id equals to idId
-        defaultMAchievementShouldBeFound("idId.equals=" + idId);
+        // Get all the mAchievementList where mmission equals to mmissionId
+        defaultMAchievementShouldBeFound("mmissionId.equals=" + mmissionId);
 
-        // Get all the mAchievementList where id equals to idId + 1
-        defaultMAchievementShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mAchievementList where mmission equals to mmissionId + 1
+        defaultMAchievementShouldNotBeFound("mmissionId.equals=" + (mmissionId + 1));
     }
 
     /**

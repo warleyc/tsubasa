@@ -158,9 +158,9 @@ public class MAdventQuestStageQueryService extends QueryService<MAdventQuestStag
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MAdventQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MAdventQuestStage_.id, JoinType.LEFT).get(MAdventQuestWorld_.id)));
+            if (criteria.getMadventquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMadventquestworldId(),
+                    root -> root.join(MAdventQuestStage_.madventquestworld, JoinType.LEFT).get(MAdventQuestWorld_.id)));
             }
         }
         return specification;

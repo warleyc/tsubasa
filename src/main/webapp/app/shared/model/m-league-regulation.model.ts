@@ -5,7 +5,7 @@ export interface IMLeagueRegulation {
   matchOptionId?: number;
   deckConditionId?: number;
   ruleTutorialId?: number;
-  idId?: number;
+  mmatchoptionId?: number;
 }
 
 export class MLeagueRegulation implements IMLeagueRegulation {
@@ -16,6 +16,6 @@ export class MLeagueRegulation implements IMLeagueRegulation {
     public matchOptionId?: number,
     public deckConditionId?: number,
     public ruleTutorialId?: number,
-    public idId?: number
+    public mmatchoptionId?: number
   ) {}
 }

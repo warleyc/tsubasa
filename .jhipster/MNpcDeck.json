@@ -163,13 +163,13 @@
             "otherEntityName": "mFormation",
             "otherEntityRelationshipName": "mNpcDeck",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mformation",
             "otherEntityField": "id"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mDummyOpponent",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mnpcdeck",
             "relationshipName": "mDummyOpponent"
         }
     ],

@@ -104,9 +104,9 @@ public class MLeagueRegulationQueryService extends QueryService<MLeagueRegulatio
             if (criteria.getRuleTutorialId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getRuleTutorialId(), MLeagueRegulation_.ruleTutorialId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MLeagueRegulation_.id, JoinType.LEFT).get(MMatchOption_.id)));
+            if (criteria.getMmatchoptionId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmatchoptionId(),
+                    root -> root.join(MLeagueRegulation_.mmatchoption, JoinType.LEFT).get(MMatchOption_.id)));
             }
         }
         return specification;

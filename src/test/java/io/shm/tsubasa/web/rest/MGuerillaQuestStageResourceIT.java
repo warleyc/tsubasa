@@ -204,7 +204,7 @@ public class MGuerillaQuestStageResourceIT {
         } else {
             mGuerillaQuestWorld = TestUtil.findAll(em, MGuerillaQuestWorld.class).get(0);
         }
-        mGuerillaQuestStage.setId(mGuerillaQuestWorld);
+        mGuerillaQuestStage.setMguerillaquestworld(mGuerillaQuestWorld);
         return mGuerillaQuestStage;
     }
     /**
@@ -250,7 +250,7 @@ public class MGuerillaQuestStageResourceIT {
         } else {
             mGuerillaQuestWorld = TestUtil.findAll(em, MGuerillaQuestWorld.class).get(0);
         }
-        mGuerillaQuestStage.setId(mGuerillaQuestWorld);
+        mGuerillaQuestStage.setMguerillaquestworld(mGuerillaQuestWorld);
         return mGuerillaQuestStage;
     }
 
@@ -2302,17 +2302,17 @@ public class MGuerillaQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMGuerillaQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMGuerillaQuestStagesByMguerillaquestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MGuerillaQuestWorld id = mGuerillaQuestStage.getId();
+        MGuerillaQuestWorld mguerillaquestworld = mGuerillaQuestStage.getMguerillaquestworld();
         mGuerillaQuestStageRepository.saveAndFlush(mGuerillaQuestStage);
-        Long idId = id.getId();
+        Long mguerillaquestworldId = mguerillaquestworld.getId();
 
-        // Get all the mGuerillaQuestStageList where id equals to idId
-        defaultMGuerillaQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mGuerillaQuestStageList where mguerillaquestworld equals to mguerillaquestworldId
+        defaultMGuerillaQuestStageShouldBeFound("mguerillaquestworldId.equals=" + mguerillaquestworldId);
 
-        // Get all the mGuerillaQuestStageList where id equals to idId + 1
-        defaultMGuerillaQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mGuerillaQuestStageList where mguerillaquestworld equals to mguerillaquestworldId + 1
+        defaultMGuerillaQuestStageShouldNotBeFound("mguerillaquestworldId.equals=" + (mguerillaquestworldId + 1));
     }
 
     /**

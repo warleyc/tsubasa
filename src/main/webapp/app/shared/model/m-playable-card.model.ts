@@ -71,7 +71,7 @@ export interface IMPlayableCard {
   isShowBook?: number;
   levelGroupId?: number;
   startAt?: number;
-  idId?: number;
+  mmodelcardId?: number;
   mArousals?: IMArousal[];
   mTargetPlayableCardGroups?: IMTargetPlayableCardGroup[];
 }
@@ -147,7 +147,7 @@ export class MPlayableCard implements IMPlayableCard {
     public isShowBook?: number,
     public levelGroupId?: number,
     public startAt?: number,
-    public idId?: number,
+    public mmodelcardId?: number,
     public mArousals?: IMArousal[],
     public mTargetPlayableCardGroups?: IMTargetPlayableCardGroup[]
   ) {}

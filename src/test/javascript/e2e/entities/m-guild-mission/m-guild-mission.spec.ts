@@ -51,7 +51,7 @@ describe('MGuildMission e2e test', () => {
             mGuildMissionUpdatePage.setPickupInput('5'),
             mGuildMissionUpdatePage.setTriggerMissionIdInput('5'),
             mGuildMissionUpdatePage.setOrderNumInput('5'),
-            mGuildMissionUpdatePage.idSelectLastOption(),
+            mGuildMissionUpdatePage.mmissionrewardSelectLastOption(),
         ]);
         expect(await mGuildMissionUpdatePage.getTermInput()).to.eq('5', 'Expected term value to be equals to 5');
         expect(await mGuildMissionUpdatePage.getTitleInput()).to.eq('title', 'Expected Title value to be equals to title');

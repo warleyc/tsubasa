@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MMissionMapper.class})
 public interface MAchievementMapper extends EntityMapper<MAchievementDTO, MAchievement> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mmission.id", target = "mmissionId")
     MAchievementDTO toDto(MAchievement mAchievement);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mmissionId", target = "mmission")
     MAchievement toEntity(MAchievementDTO mAchievementDTO);
 
     default MAchievement fromId(Long id) {

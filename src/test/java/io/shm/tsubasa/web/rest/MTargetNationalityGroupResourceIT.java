@@ -107,7 +107,7 @@ public class MTargetNationalityGroupResourceIT {
         } else {
             mNationality = TestUtil.findAll(em, MNationality.class).get(0);
         }
-        mTargetNationalityGroup.setId(mNationality);
+        mTargetNationalityGroup.setMnationality(mNationality);
         return mTargetNationalityGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class MTargetNationalityGroupResourceIT {
         } else {
             mNationality = TestUtil.findAll(em, MNationality.class).get(0);
         }
-        mTargetNationalityGroup.setId(mNationality);
+        mTargetNationalityGroup.setMnationality(mNationality);
         return mTargetNationalityGroup;
     }
 
@@ -381,17 +381,17 @@ public class MTargetNationalityGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetNationalityGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetNationalityGroupsByMnationalityIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MNationality id = mTargetNationalityGroup.getId();
+        MNationality mnationality = mTargetNationalityGroup.getMnationality();
         mTargetNationalityGroupRepository.saveAndFlush(mTargetNationalityGroup);
-        Long idId = id.getId();
+        Long mnationalityId = mnationality.getId();
 
-        // Get all the mTargetNationalityGroupList where id equals to idId
-        defaultMTargetNationalityGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetNationalityGroupList where mnationality equals to mnationalityId
+        defaultMTargetNationalityGroupShouldBeFound("mnationalityId.equals=" + mnationalityId);
 
-        // Get all the mTargetNationalityGroupList where id equals to idId + 1
-        defaultMTargetNationalityGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetNationalityGroupList where mnationality equals to mnationalityId + 1
+        defaultMTargetNationalityGroupShouldNotBeFound("mnationalityId.equals=" + (mnationalityId + 1));
     }
 
     /**

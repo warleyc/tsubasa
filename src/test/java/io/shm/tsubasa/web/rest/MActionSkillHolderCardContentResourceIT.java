@@ -120,7 +120,7 @@ public class MActionSkillHolderCardContentResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mActionSkillHolderCardContent.setId(mCharacter);
+        mActionSkillHolderCardContent.setMcharacter(mCharacter);
         return mActionSkillHolderCardContent;
     }
     /**
@@ -145,7 +145,7 @@ public class MActionSkillHolderCardContentResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mActionSkillHolderCardContent.setId(mCharacter);
+        mActionSkillHolderCardContent.setMcharacter(mCharacter);
         return mActionSkillHolderCardContent;
     }
 
@@ -491,17 +491,17 @@ public class MActionSkillHolderCardContentResourceIT {
 
     @Test
     @Transactional
-    public void getAllMActionSkillHolderCardContentsByIdIsEqualToSomething() throws Exception {
+    public void getAllMActionSkillHolderCardContentsByMcharacterIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCharacter id = mActionSkillHolderCardContent.getId();
+        MCharacter mcharacter = mActionSkillHolderCardContent.getMcharacter();
         mActionSkillHolderCardContentRepository.saveAndFlush(mActionSkillHolderCardContent);
-        Long idId = id.getId();
+        Long mcharacterId = mcharacter.getId();
 
-        // Get all the mActionSkillHolderCardContentList where id equals to idId
-        defaultMActionSkillHolderCardContentShouldBeFound("idId.equals=" + idId);
+        // Get all the mActionSkillHolderCardContentList where mcharacter equals to mcharacterId
+        defaultMActionSkillHolderCardContentShouldBeFound("mcharacterId.equals=" + mcharacterId);
 
-        // Get all the mActionSkillHolderCardContentList where id equals to idId + 1
-        defaultMActionSkillHolderCardContentShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mActionSkillHolderCardContentList where mcharacter equals to mcharacterId + 1
+        defaultMActionSkillHolderCardContentShouldNotBeFound("mcharacterId.equals=" + (mcharacterId + 1));
     }
 
     /**

@@ -96,7 +96,7 @@ public class MTicketQuestStageDTO implements Serializable {
     private Integer deckConditionId;
 
 
-    private Long idId;
+    private Long mticketquestworldId;
 
     public Long getId() {
         return id;
@@ -330,12 +330,12 @@ public class MTicketQuestStageDTO implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMticketquestworldId() {
+        return mticketquestworldId;
     }
 
-    public void setIdId(Long mTicketQuestWorldId) {
-        this.idId = mTicketQuestWorldId;
+    public void setMticketquestworldId(Long mTicketQuestWorldId) {
+        this.mticketquestworldId = mTicketQuestWorldId;
     }
 
     @Override
@@ -391,7 +391,7 @@ public class MTicketQuestStageDTO implements Serializable {
             ", conditionId=" + getConditionId() +
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
-            ", id=" + getIdId() +
+            ", mticketquestworld=" + getMticketquestworldId() +
             "}";
     }
 }

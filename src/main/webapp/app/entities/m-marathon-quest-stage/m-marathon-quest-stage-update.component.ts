@@ -48,7 +48,7 @@ export class MMarathonQuestStageUpdateComponent implements OnInit {
     conditionId: [],
     optionId: [],
     deckConditionId: [],
-    idId: [null, Validators.required]
+    mmarathonquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -104,7 +104,7 @@ export class MMarathonQuestStageUpdateComponent implements OnInit {
       conditionId: mMarathonQuestStage.conditionId,
       optionId: mMarathonQuestStage.optionId,
       deckConditionId: mMarathonQuestStage.deckConditionId,
-      idId: mMarathonQuestStage.idId
+      mmarathonquestworldId: mMarathonQuestStage.mmarathonquestworldId
     });
   }
 
@@ -184,7 +184,7 @@ export class MMarathonQuestStageUpdateComponent implements OnInit {
       conditionId: this.editForm.get(['conditionId']).value,
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
-      idId: this.editForm.get(['idId']).value
+      mmarathonquestworldId: this.editForm.get(['mmarathonquestworldId']).value
     };
     return entity;
   }

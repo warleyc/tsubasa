@@ -60,7 +60,7 @@ public class MMissionCriteria implements Serializable, Criteria {
 
     private IntegerFilter orderNum;
 
-    private LongFilter idId;
+    private LongFilter mmissionrewardId;
 
     private LongFilter mAchievementId;
 
@@ -86,7 +86,7 @@ public class MMissionCriteria implements Serializable, Criteria {
         this.link = other.link == null ? null : other.link.copy();
         this.pickup = other.pickup == null ? null : other.pickup.copy();
         this.orderNum = other.orderNum == null ? null : other.orderNum.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mmissionrewardId = other.mmissionrewardId == null ? null : other.mmissionrewardId.copy();
         this.mAchievementId = other.mAchievementId == null ? null : other.mAchievementId.copy();
     }
 
@@ -239,12 +239,12 @@ public class MMissionCriteria implements Serializable, Criteria {
         this.orderNum = orderNum;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMmissionrewardId() {
+        return mmissionrewardId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMmissionrewardId(LongFilter mmissionrewardId) {
+        this.mmissionrewardId = mmissionrewardId;
     }
 
     public LongFilter getMAchievementId() {
@@ -284,7 +284,7 @@ public class MMissionCriteria implements Serializable, Criteria {
             Objects.equals(link, that.link) &&
             Objects.equals(pickup, that.pickup) &&
             Objects.equals(orderNum, that.orderNum) &&
-            Objects.equals(idId, that.idId) &&
+            Objects.equals(mmissionrewardId, that.mmissionrewardId) &&
             Objects.equals(mAchievementId, that.mAchievementId);
     }
 
@@ -309,7 +309,7 @@ public class MMissionCriteria implements Serializable, Criteria {
         link,
         pickup,
         orderNum,
-        idId,
+        mmissionrewardId,
         mAchievementId
         );
     }
@@ -335,7 +335,7 @@ public class MMissionCriteria implements Serializable, Criteria {
                 (link != null ? "link=" + link + ", " : "") +
                 (pickup != null ? "pickup=" + pickup + ", " : "") +
                 (orderNum != null ? "orderNum=" + orderNum + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mmissionrewardId != null ? "mmissionrewardId=" + mmissionrewardId + ", " : "") +
                 (mAchievementId != null ? "mAchievementId=" + mAchievementId + ", " : "") +
             "}";
     }

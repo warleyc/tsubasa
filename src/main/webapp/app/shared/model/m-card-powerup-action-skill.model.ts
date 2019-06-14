@@ -13,7 +13,7 @@ export interface IMCardPowerupActionSkill {
   cardIllustAssetsId?: number;
   targetActionCommandType?: number;
   targetCharacterId?: number;
-  idId?: number;
+  mcardthumbnailassetsId?: number;
 }
 
 export class MCardPowerupActionSkill implements IMCardPowerupActionSkill {
@@ -32,6 +32,6 @@ export class MCardPowerupActionSkill implements IMCardPowerupActionSkill {
     public cardIllustAssetsId?: number,
     public targetActionCommandType?: number,
     public targetCharacterId?: number,
-    public idId?: number
+    public mcardthumbnailassetsId?: number
   ) {}
 }

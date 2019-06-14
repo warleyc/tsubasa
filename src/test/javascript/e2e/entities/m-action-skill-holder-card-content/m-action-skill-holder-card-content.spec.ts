@@ -49,7 +49,7 @@ describe('MActionSkillHolderCardContent e2e test', () => {
             mActionSkillHolderCardContentUpdatePage.setActionSkillExpInput('5'),
             mActionSkillHolderCardContentUpdatePage.setNameInput('name'),
             mActionSkillHolderCardContentUpdatePage.setDescriptionInput('description'),
-            mActionSkillHolderCardContentUpdatePage.idSelectLastOption(),
+            mActionSkillHolderCardContentUpdatePage.mcharacterSelectLastOption(),
         ]);
         expect(await mActionSkillHolderCardContentUpdatePage.getTargetCharaIdInput()).to.eq('5', 'Expected targetCharaId value to be equals to 5');
         expect(await mActionSkillHolderCardContentUpdatePage.getActionMasterIdInput()).to.eq('5', 'Expected actionMasterId value to be equals to 5');

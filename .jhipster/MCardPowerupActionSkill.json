@@ -93,7 +93,7 @@
             "otherEntityName": "mCardThumbnailAssets",
             "otherEntityRelationshipName": "mCardPowerupActionSkill",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mcardthumbnailassets",
             "otherEntityField": "id"
         }
     ],

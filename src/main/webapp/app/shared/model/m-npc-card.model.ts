@@ -42,7 +42,7 @@ export interface IMNpcCard {
   personalityId?: number;
   uniformNo?: number;
   levelGroupId?: number;
-  idId?: number;
+  mcharacterId?: number;
 }
 
 export class MNpcCard implements IMNpcCard {
@@ -90,6 +90,6 @@ export class MNpcCard implements IMNpcCard {
     public personalityId?: number,
     public uniformNo?: number,
     public levelGroupId?: number,
-    public idId?: number
+    public mcharacterId?: number
   ) {}
 }

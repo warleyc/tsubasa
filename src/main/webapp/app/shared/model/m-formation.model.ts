@@ -18,7 +18,7 @@ export interface IMFormation {
   subUniformNos?: any;
   exType?: number;
   matchFormationId?: number;
-  idId?: number;
+  mpassiveeffectrangeId?: number;
   mNpcDecks?: IMNpcDeck[];
   mTargetFormationGroups?: IMTargetFormationGroup[];
 }
@@ -41,7 +41,7 @@ export class MFormation implements IMFormation {
     public subUniformNos?: any,
     public exType?: number,
     public matchFormationId?: number,
-    public idId?: number,
+    public mpassiveeffectrangeId?: number,
     public mNpcDecks?: IMNpcDeck[],
     public mTargetFormationGroups?: IMTargetFormationGroup[]
   ) {}

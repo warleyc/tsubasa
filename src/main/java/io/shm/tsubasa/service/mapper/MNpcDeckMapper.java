@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MFormationMapper.class})
 public interface MNpcDeckMapper extends EntityMapper<MNpcDeckDTO, MNpcDeck> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mformation.id", target = "mformationId")
     MNpcDeckDTO toDto(MNpcDeck mNpcDeck);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mformationId", target = "mformation")
     @Mapping(target = "mDummyOpponents", ignore = true)
     MNpcDeck toEntity(MNpcDeckDTO mNpcDeckDTO);
 

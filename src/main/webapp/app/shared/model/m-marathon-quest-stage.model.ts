@@ -26,7 +26,7 @@ export interface IMMarathonQuestStage {
   conditionId?: number;
   optionId?: number;
   deckConditionId?: number;
-  idId?: number;
+  mmarathonquestworldId?: number;
 }
 
 export class MMarathonQuestStage implements IMMarathonQuestStage {
@@ -58,6 +58,6 @@ export class MMarathonQuestStage implements IMMarathonQuestStage {
     public conditionId?: number,
     public optionId?: number,
     public deckConditionId?: number,
-    public idId?: number
+    public mmarathonquestworldId?: number
   ) {}
 }

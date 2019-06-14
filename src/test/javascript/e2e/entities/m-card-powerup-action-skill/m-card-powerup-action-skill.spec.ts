@@ -57,7 +57,7 @@ describe('MCardPowerupActionSkill e2e test', () => {
             mCardPowerupActionSkillUpdatePage.setCardIllustAssetsIdInput('5'),
             mCardPowerupActionSkillUpdatePage.setTargetActionCommandTypeInput('5'),
             mCardPowerupActionSkillUpdatePage.setTargetCharacterIdInput('5'),
-            mCardPowerupActionSkillUpdatePage.idSelectLastOption(),
+            mCardPowerupActionSkillUpdatePage.mcardthumbnailassetsSelectLastOption(),
         ]);
         expect(await mCardPowerupActionSkillUpdatePage.getNameInput()).to.eq('name', 'Expected Name value to be equals to name');
         expect(await mCardPowerupActionSkillUpdatePage.getShortNameInput()).to.eq('shortName', 'Expected ShortName value to be equals to shortName');

@@ -24,7 +24,7 @@ export interface IMNpcDeck {
   npcCardId10?: number;
   npcCardId11?: number;
   tick?: number;
-  idId?: number;
+  mformationId?: number;
   mDummyOpponents?: IMDummyOpponent[];
 }
 
@@ -53,7 +53,7 @@ export class MNpcDeck implements IMNpcDeck {
     public npcCardId10?: number,
     public npcCardId11?: number,
     public tick?: number,
-    public idId?: number,
+    public mformationId?: number,
     public mDummyOpponents?: IMDummyOpponent[]
   ) {}
 }

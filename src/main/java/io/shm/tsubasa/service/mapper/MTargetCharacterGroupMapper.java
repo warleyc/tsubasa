@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCharacterMapper.class})
 public interface MTargetCharacterGroupMapper extends EntityMapper<MTargetCharacterGroupDTO, MTargetCharacterGroup> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcharacter.id", target = "mcharacterId")
     MTargetCharacterGroupDTO toDto(MTargetCharacterGroup mTargetCharacterGroup);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcharacterId", target = "mcharacter")
     MTargetCharacterGroup toEntity(MTargetCharacterGroupDTO mTargetCharacterGroupDTO);
 
     default MTargetCharacterGroup fromId(Long id) {

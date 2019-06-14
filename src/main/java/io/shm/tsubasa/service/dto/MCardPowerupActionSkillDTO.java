@@ -51,7 +51,7 @@ public class MCardPowerupActionSkillDTO implements Serializable {
     private Integer targetCharacterId;
 
 
-    private Long idId;
+    private Long mcardthumbnailassetsId;
 
     public Long getId() {
         return id;
@@ -165,12 +165,12 @@ public class MCardPowerupActionSkillDTO implements Serializable {
         this.targetCharacterId = targetCharacterId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMcardthumbnailassetsId() {
+        return mcardthumbnailassetsId;
     }
 
-    public void setIdId(Long mCardThumbnailAssetsId) {
-        this.idId = mCardThumbnailAssetsId;
+    public void setMcardthumbnailassetsId(Long mCardThumbnailAssetsId) {
+        this.mcardthumbnailassetsId = mCardThumbnailAssetsId;
     }
 
     @Override
@@ -211,7 +211,7 @@ public class MCardPowerupActionSkillDTO implements Serializable {
             ", cardIllustAssetsId=" + getCardIllustAssetsId() +
             ", targetActionCommandType=" + getTargetActionCommandType() +
             ", targetCharacterId=" + getTargetCharacterId() +
-            ", id=" + getIdId() +
+            ", mcardthumbnailassets=" + getMcardthumbnailassetsId() +
             "}";
     }
 }

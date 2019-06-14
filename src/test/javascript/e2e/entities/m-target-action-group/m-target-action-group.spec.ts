@@ -46,7 +46,7 @@ describe('MTargetActionGroup e2e test', () => {
         await promise.all([
             mTargetActionGroupUpdatePage.setGroupIdInput('5'),
             mTargetActionGroupUpdatePage.setActionIdInput('5'),
-            mTargetActionGroupUpdatePage.idSelectLastOption(),
+            mTargetActionGroupUpdatePage.mactionSelectLastOption(),
         ]);
         expect(await mTargetActionGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetActionGroupUpdatePage.getActionIdInput()).to.eq('5', 'Expected actionId value to be equals to 5');

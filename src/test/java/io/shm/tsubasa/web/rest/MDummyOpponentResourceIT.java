@@ -152,7 +152,7 @@ public class MDummyOpponentResourceIT {
         } else {
             mNpcDeck = TestUtil.findAll(em, MNpcDeck.class).get(0);
         }
-        mDummyOpponent.setId(mNpcDeck);
+        mDummyOpponent.setMnpcdeck(mNpcDeck);
         return mDummyOpponent;
     }
     /**
@@ -185,7 +185,7 @@ public class MDummyOpponentResourceIT {
         } else {
             mNpcDeck = TestUtil.findAll(em, MNpcDeck.class).get(0);
         }
-        mDummyOpponent.setId(mNpcDeck);
+        mDummyOpponent.setMnpcdeck(mNpcDeck);
         return mDummyOpponent;
     }
 
@@ -980,17 +980,17 @@ public class MDummyOpponentResourceIT {
 
     @Test
     @Transactional
-    public void getAllMDummyOpponentsByIdIsEqualToSomething() throws Exception {
+    public void getAllMDummyOpponentsByMnpcdeckIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MNpcDeck id = mDummyOpponent.getId();
+        MNpcDeck mnpcdeck = mDummyOpponent.getMnpcdeck();
         mDummyOpponentRepository.saveAndFlush(mDummyOpponent);
-        Long idId = id.getId();
+        Long mnpcdeckId = mnpcdeck.getId();
 
-        // Get all the mDummyOpponentList where id equals to idId
-        defaultMDummyOpponentShouldBeFound("idId.equals=" + idId);
+        // Get all the mDummyOpponentList where mnpcdeck equals to mnpcdeckId
+        defaultMDummyOpponentShouldBeFound("mnpcdeckId.equals=" + mnpcdeckId);
 
-        // Get all the mDummyOpponentList where id equals to idId + 1
-        defaultMDummyOpponentShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mDummyOpponentList where mnpcdeck equals to mnpcdeckId + 1
+        defaultMDummyOpponentShouldNotBeFound("mnpcdeckId.equals=" + (mnpcdeckId + 1));
     }
 
     /**

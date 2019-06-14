@@ -29,7 +29,7 @@ export class MTargetPlayableCardGroupUpdatePage {
   groupIdInput = element(by.id('field_groupId'));
   cardIdInput = element(by.id('field_cardId'));
   isShowThumbnailInput = element(by.id('field_isShowThumbnail'));
-  idSelect = element(by.id('field_id'));
+  mplayablecardSelect = element(by.id('field_mplayablecard'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -59,23 +59,23 @@ export class MTargetPlayableCardGroupUpdatePage {
     return await this.isShowThumbnailInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mplayablecardSelectLastOption(timeout?: number) {
+    await this.mplayablecardSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mplayablecardSelectOption(option) {
+    await this.mplayablecardSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMplayablecardSelect(): ElementFinder {
+    return this.mplayablecardSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMplayablecardSelectedOption() {
+    return await this.mplayablecardSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

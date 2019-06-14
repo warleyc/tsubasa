@@ -107,7 +107,7 @@ public class MTargetFormationGroupResourceIT {
         } else {
             mFormation = TestUtil.findAll(em, MFormation.class).get(0);
         }
-        mTargetFormationGroup.setId(mFormation);
+        mTargetFormationGroup.setMformation(mFormation);
         return mTargetFormationGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class MTargetFormationGroupResourceIT {
         } else {
             mFormation = TestUtil.findAll(em, MFormation.class).get(0);
         }
-        mTargetFormationGroup.setId(mFormation);
+        mTargetFormationGroup.setMformation(mFormation);
         return mTargetFormationGroup;
     }
 
@@ -381,17 +381,17 @@ public class MTargetFormationGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetFormationGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetFormationGroupsByMformationIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MFormation id = mTargetFormationGroup.getId();
+        MFormation mformation = mTargetFormationGroup.getMformation();
         mTargetFormationGroupRepository.saveAndFlush(mTargetFormationGroup);
-        Long idId = id.getId();
+        Long mformationId = mformation.getId();
 
-        // Get all the mTargetFormationGroupList where id equals to idId
-        defaultMTargetFormationGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetFormationGroupList where mformation equals to mformationId
+        defaultMTargetFormationGroupShouldBeFound("mformationId.equals=" + mformationId);
 
-        // Get all the mTargetFormationGroupList where id equals to idId + 1
-        defaultMTargetFormationGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetFormationGroupList where mformation equals to mformationId + 1
+        defaultMTargetFormationGroupShouldNotBeFound("mformationId.equals=" + (mformationId + 1));
     }
 
     /**

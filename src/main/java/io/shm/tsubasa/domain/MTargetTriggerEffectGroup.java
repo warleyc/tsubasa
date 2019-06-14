@@ -36,7 +36,7 @@ public class MTargetTriggerEffectGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetTriggerEffectGroups")
-    private MTriggerEffectBase id;
+    private MTriggerEffectBase mtriggereffectbase;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,17 +73,17 @@ public class MTargetTriggerEffectGroup implements Serializable {
         this.triggerEffectId = triggerEffectId;
     }
 
-    public MTriggerEffectBase getId() {
-        return id;
+    public MTriggerEffectBase getMtriggereffectbase() {
+        return mtriggereffectbase;
     }
 
-    public MTargetTriggerEffectGroup id(MTriggerEffectBase mTriggerEffectBase) {
-        this.id = mTriggerEffectBase;
+    public MTargetTriggerEffectGroup mtriggereffectbase(MTriggerEffectBase mTriggerEffectBase) {
+        this.mtriggereffectbase = mTriggerEffectBase;
         return this;
     }
 
-    public void setId(MTriggerEffectBase mTriggerEffectBase) {
-        this.id = mTriggerEffectBase;
+    public void setMtriggereffectbase(MTriggerEffectBase mTriggerEffectBase) {
+        this.mtriggereffectbase = mTriggerEffectBase;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

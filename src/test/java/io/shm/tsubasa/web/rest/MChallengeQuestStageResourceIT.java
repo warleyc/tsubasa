@@ -212,7 +212,7 @@ public class MChallengeQuestStageResourceIT {
         } else {
             mChallengeQuestWorld = TestUtil.findAll(em, MChallengeQuestWorld.class).get(0);
         }
-        mChallengeQuestStage.setId(mChallengeQuestWorld);
+        mChallengeQuestStage.setMchallengequestworld(mChallengeQuestWorld);
         return mChallengeQuestStage;
     }
     /**
@@ -260,7 +260,7 @@ public class MChallengeQuestStageResourceIT {
         } else {
             mChallengeQuestWorld = TestUtil.findAll(em, MChallengeQuestWorld.class).get(0);
         }
-        mChallengeQuestStage.setId(mChallengeQuestWorld);
+        mChallengeQuestStage.setMchallengequestworld(mChallengeQuestWorld);
         return mChallengeQuestStage;
     }
 
@@ -2403,17 +2403,17 @@ public class MChallengeQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMChallengeQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMChallengeQuestStagesByMchallengequestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MChallengeQuestWorld id = mChallengeQuestStage.getId();
+        MChallengeQuestWorld mchallengequestworld = mChallengeQuestStage.getMchallengequestworld();
         mChallengeQuestStageRepository.saveAndFlush(mChallengeQuestStage);
-        Long idId = id.getId();
+        Long mchallengequestworldId = mchallengequestworld.getId();
 
-        // Get all the mChallengeQuestStageList where id equals to idId
-        defaultMChallengeQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mChallengeQuestStageList where mchallengequestworld equals to mchallengequestworldId
+        defaultMChallengeQuestStageShouldBeFound("mchallengequestworldId.equals=" + mchallengequestworldId);
 
-        // Get all the mChallengeQuestStageList where id equals to idId + 1
-        defaultMChallengeQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mChallengeQuestStageList where mchallengequestworld equals to mchallengequestworldId + 1
+        defaultMChallengeQuestStageShouldNotBeFound("mchallengequestworldId.equals=" + (mchallengequestworldId + 1));
     }
 
     /**

@@ -20,7 +20,7 @@ public class MTargetPlayableCardGroupDTO implements Serializable {
     private Integer isShowThumbnail;
 
 
-    private Long idId;
+    private Long mplayablecardId;
 
     public Long getId() {
         return id;
@@ -54,12 +54,12 @@ public class MTargetPlayableCardGroupDTO implements Serializable {
         this.isShowThumbnail = isShowThumbnail;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMplayablecardId() {
+        return mplayablecardId;
     }
 
-    public void setIdId(Long mPlayableCardId) {
-        this.idId = mPlayableCardId;
+    public void setMplayablecardId(Long mPlayableCardId) {
+        this.mplayablecardId = mPlayableCardId;
     }
 
     @Override
@@ -90,7 +90,7 @@ public class MTargetPlayableCardGroupDTO implements Serializable {
             ", groupId=" + getGroupId() +
             ", cardId=" + getCardId() +
             ", isShowThumbnail=" + getIsShowThumbnail() +
-            ", id=" + getIdId() +
+            ", mplayablecard=" + getMplayablecardId() +
             "}";
     }
 }

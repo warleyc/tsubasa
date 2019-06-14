@@ -28,7 +28,7 @@
             <th jhiSortBy="cardIllustAssetsId"><span>Card Illust Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="targetActionCommandType"><span>Target Action Command Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="targetCharacterId"><span>Target Character Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mcardthumbnailassetsId"><span>Mcardthumbnailassets</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -49,8 +49,8 @@
                 <td>{{mCardPowerupActionSkill.targetActionCommandType}}</td>
                 <td>{{mCardPowerupActionSkill.targetCharacterId}}</td>
                 <td>
-                    <div *ngIf="mCardPowerupActionSkill.idId">
-                        <a [routerLink]="['../m-card-thumbnail-assets', mCardPowerupActionSkill.idId , 'view' ]" >{{mCardPowerupActionSkill.idId}}</a>
+                    <div *ngIf="mCardPowerupActionSkill.mcardthumbnailassetsId">
+                        <a [routerLink]="['../m-card-thumbnail-assets', mCardPowerupActionSkill.mcardthumbnailassetsId , 'view' ]" >{{mCardPowerupActionSkill.mcardthumbnailassetsId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

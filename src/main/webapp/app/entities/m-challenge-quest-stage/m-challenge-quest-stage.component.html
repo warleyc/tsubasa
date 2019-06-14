@@ -43,7 +43,7 @@
             <th jhiSortBy="shortName"><span>Short Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="skipCheckPoint"><span>Skip Check Point</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="roadNumber"><span>Road Number</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mchallengequestworldId"><span>Mchallengequestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -79,8 +79,8 @@
                 <td>{{mChallengeQuestStage.skipCheckPoint}}</td>
                 <td>{{mChallengeQuestStage.roadNumber}}</td>
                 <td>
-                    <div *ngIf="mChallengeQuestStage.idId">
-                        <a [routerLink]="['../m-challenge-quest-world', mChallengeQuestStage.idId , 'view' ]" >{{mChallengeQuestStage.idId}}</a>
+                    <div *ngIf="mChallengeQuestStage.mchallengequestworldId">
+                        <a [routerLink]="['../m-challenge-quest-world', mChallengeQuestStage.mchallengequestworldId , 'view' ]" >{{mChallengeQuestStage.mchallengequestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

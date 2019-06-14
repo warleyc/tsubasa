@@ -35,7 +35,7 @@ export class MTeamEffectBaseUpdateComponent implements OnInit {
     triggerProbabilityMax2: [null, [Validators.required]],
     effectId2: [],
     description: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mpassiveeffectrangeId: [null, Validators.required]
   });
 
   constructor(
@@ -78,7 +78,7 @@ export class MTeamEffectBaseUpdateComponent implements OnInit {
       triggerProbabilityMax2: mTeamEffectBase.triggerProbabilityMax2,
       effectId2: mTeamEffectBase.effectId2,
       description: mTeamEffectBase.description,
-      idId: mTeamEffectBase.idId
+      mpassiveeffectrangeId: mTeamEffectBase.mpassiveeffectrangeId
     });
   }
 
@@ -145,7 +145,7 @@ export class MTeamEffectBaseUpdateComponent implements OnInit {
       triggerProbabilityMax2: this.editForm.get(['triggerProbabilityMax2']).value,
       effectId2: this.editForm.get(['effectId2']).value,
       description: this.editForm.get(['description']).value,
-      idId: this.editForm.get(['idId']).value
+      mpassiveeffectrangeId: this.editForm.get(['mpassiveeffectrangeId']).value
     };
     return entity;
   }

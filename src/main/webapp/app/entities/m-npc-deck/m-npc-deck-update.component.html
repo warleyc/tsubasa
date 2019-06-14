@@ -337,15 +337,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mformation">Mformation</label>
+                    <select class="form-control" id="field_mformation" name="mformation" formControlName="mformationId">
+                        <option *ngIf="!editForm.get('mformation').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mFormationOption.id" *ngFor="let mFormationOption of mformations; trackBy: trackMFormationById">{{mFormationOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mformation').invalid && (editForm.get('mformation').dirty || editForm.get('mformation').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mformation').errors.required">
                         This field is required.
                     </small>
                 </div>

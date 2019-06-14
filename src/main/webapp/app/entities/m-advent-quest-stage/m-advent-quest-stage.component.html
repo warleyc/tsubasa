@@ -41,7 +41,7 @@
             <th jhiSortBy="conditionId"><span>Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="madventquestworldId"><span>Madventquestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -75,8 +75,8 @@
                 <td>{{mAdventQuestStage.optionId}}</td>
                 <td>{{mAdventQuestStage.deckConditionId}}</td>
                 <td>
-                    <div *ngIf="mAdventQuestStage.idId">
-                        <a [routerLink]="['../m-advent-quest-world', mAdventQuestStage.idId , 'view' ]" >{{mAdventQuestStage.idId}}</a>
+                    <div *ngIf="mAdventQuestStage.madventquestworldId">
+                        <a [routerLink]="['../m-advent-quest-world', mAdventQuestStage.madventquestworldId , 'view' ]" >{{mAdventQuestStage.madventquestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -204,7 +204,7 @@ public class MMarathonQuestStageResourceIT {
         } else {
             mMarathonQuestWorld = TestUtil.findAll(em, MMarathonQuestWorld.class).get(0);
         }
-        mMarathonQuestStage.setId(mMarathonQuestWorld);
+        mMarathonQuestStage.setMmarathonquestworld(mMarathonQuestWorld);
         return mMarathonQuestStage;
     }
     /**
@@ -250,7 +250,7 @@ public class MMarathonQuestStageResourceIT {
         } else {
             mMarathonQuestWorld = TestUtil.findAll(em, MMarathonQuestWorld.class).get(0);
         }
-        mMarathonQuestStage.setId(mMarathonQuestWorld);
+        mMarathonQuestStage.setMmarathonquestworld(mMarathonQuestWorld);
         return mMarathonQuestStage;
     }
 
@@ -2302,17 +2302,17 @@ public class MMarathonQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMMarathonQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMMarathonQuestStagesByMmarathonquestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MMarathonQuestWorld id = mMarathonQuestStage.getId();
+        MMarathonQuestWorld mmarathonquestworld = mMarathonQuestStage.getMmarathonquestworld();
         mMarathonQuestStageRepository.saveAndFlush(mMarathonQuestStage);
-        Long idId = id.getId();
+        Long mmarathonquestworldId = mmarathonquestworld.getId();
 
-        // Get all the mMarathonQuestStageList where id equals to idId
-        defaultMMarathonQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mMarathonQuestStageList where mmarathonquestworld equals to mmarathonquestworldId
+        defaultMMarathonQuestStageShouldBeFound("mmarathonquestworldId.equals=" + mmarathonquestworldId);
 
-        // Get all the mMarathonQuestStageList where id equals to idId + 1
-        defaultMMarathonQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mMarathonQuestStageList where mmarathonquestworld equals to mmarathonquestworldId + 1
+        defaultMMarathonQuestStageShouldNotBeFound("mmarathonquestworldId.equals=" + (mmarathonquestworldId + 1));
     }
 
     /**

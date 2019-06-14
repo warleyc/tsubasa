@@ -34,7 +34,7 @@ public class MTriggerEffectBaseDTO implements Serializable {
     private String description;
 
 
-    private Long idId;
+    private Long mtriggereffectrangeId;
 
     public Long getId() {
         return id;
@@ -100,12 +100,12 @@ public class MTriggerEffectBaseDTO implements Serializable {
         this.description = description;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMtriggereffectrangeId() {
+        return mtriggereffectrangeId;
     }
 
-    public void setIdId(Long mTriggerEffectRangeId) {
-        this.idId = mTriggerEffectRangeId;
+    public void setMtriggereffectrangeId(Long mTriggerEffectRangeId) {
+        this.mtriggereffectrangeId = mTriggerEffectRangeId;
     }
 
     @Override
@@ -140,7 +140,7 @@ public class MTriggerEffectBaseDTO implements Serializable {
             ", targetCardParameter=" + getTargetCardParameter() +
             ", effectId=" + getEffectId() +
             ", description='" + getDescription() + "'" +
-            ", id=" + getIdId() +
+            ", mtriggereffectrange=" + getMtriggereffectrangeId() +
             "}";
     }
 }

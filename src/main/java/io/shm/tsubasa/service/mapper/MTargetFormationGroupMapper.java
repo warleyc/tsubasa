@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MFormationMapper.class})
 public interface MTargetFormationGroupMapper extends EntityMapper<MTargetFormationGroupDTO, MTargetFormationGroup> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mformation.id", target = "mformationId")
     MTargetFormationGroupDTO toDto(MTargetFormationGroup mTargetFormationGroup);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mformationId", target = "mformation")
     MTargetFormationGroup toEntity(MTargetFormationGroupDTO mTargetFormationGroupDTO);
 
     default MTargetFormationGroup fromId(Long id) {

@@ -68,7 +68,7 @@ public class MGuerillaQuestWorld implements Serializable {
     @Column(name = "is_enable_coop", nullable = false)
     private Integer isEnableCoop;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mguerillaquestworld")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MGuerillaQuestStage> mGuerillaQuestStages = new HashSet<>();
 
@@ -222,13 +222,13 @@ public class MGuerillaQuestWorld implements Serializable {
 
     public MGuerillaQuestWorld addMGuerillaQuestStage(MGuerillaQuestStage mGuerillaQuestStage) {
         this.mGuerillaQuestStages.add(mGuerillaQuestStage);
-        mGuerillaQuestStage.setId(this);
+        mGuerillaQuestStage.setMguerillaquestworld(this);
         return this;
     }
 
     public MGuerillaQuestWorld removeMGuerillaQuestStage(MGuerillaQuestStage mGuerillaQuestStage) {
         this.mGuerillaQuestStages.remove(mGuerillaQuestStage);
-        mGuerillaQuestStage.setId(null);
+        mGuerillaQuestStage.setMguerillaquestworld(null);
         return this;
     }
 

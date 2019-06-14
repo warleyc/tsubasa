@@ -162,7 +162,7 @@ public class MFormationResourceIT {
         } else {
             mPassiveEffectRange = TestUtil.findAll(em, MPassiveEffectRange.class).get(0);
         }
-        mFormation.setId(mPassiveEffectRange);
+        mFormation.setMpassiveeffectrange(mPassiveEffectRange);
         return mFormation;
     }
     /**
@@ -197,7 +197,7 @@ public class MFormationResourceIT {
         } else {
             mPassiveEffectRange = TestUtil.findAll(em, MPassiveEffectRange.class).get(0);
         }
-        mFormation.setId(mPassiveEffectRange);
+        mFormation.setMpassiveeffectrange(mPassiveEffectRange);
         return mFormation;
     }
 
@@ -705,17 +705,17 @@ public class MFormationResourceIT {
 
     @Test
     @Transactional
-    public void getAllMFormationsByIdIsEqualToSomething() throws Exception {
+    public void getAllMFormationsByMpassiveeffectrangeIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MPassiveEffectRange id = mFormation.getId();
+        MPassiveEffectRange mpassiveeffectrange = mFormation.getMpassiveeffectrange();
         mFormationRepository.saveAndFlush(mFormation);
-        Long idId = id.getId();
+        Long mpassiveeffectrangeId = mpassiveeffectrange.getId();
 
-        // Get all the mFormationList where id equals to idId
-        defaultMFormationShouldBeFound("idId.equals=" + idId);
+        // Get all the mFormationList where mpassiveeffectrange equals to mpassiveeffectrangeId
+        defaultMFormationShouldBeFound("mpassiveeffectrangeId.equals=" + mpassiveeffectrangeId);
 
-        // Get all the mFormationList where id equals to idId + 1
-        defaultMFormationShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mFormationList where mpassiveeffectrange equals to mpassiveeffectrangeId + 1
+        defaultMFormationShouldNotBeFound("mpassiveeffectrangeId.equals=" + (mpassiveeffectrangeId + 1));
     }
 
 

@@ -72,7 +72,7 @@ public class MAdventQuestStageCriteria implements Serializable, Criteria {
 
     private IntegerFilter deckConditionId;
 
-    private LongFilter idId;
+    private LongFilter madventquestworldId;
 
     public MAdventQuestStageCriteria(){
     }
@@ -102,7 +102,7 @@ public class MAdventQuestStageCriteria implements Serializable, Criteria {
         this.conditionId = other.conditionId == null ? null : other.conditionId.copy();
         this.optionId = other.optionId == null ? null : other.optionId.copy();
         this.deckConditionId = other.deckConditionId == null ? null : other.deckConditionId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.madventquestworldId = other.madventquestworldId == null ? null : other.madventquestworldId.copy();
     }
 
     @Override
@@ -302,12 +302,12 @@ public class MAdventQuestStageCriteria implements Serializable, Criteria {
         this.deckConditionId = deckConditionId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMadventquestworldId() {
+        return madventquestworldId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMadventquestworldId(LongFilter madventquestworldId) {
+        this.madventquestworldId = madventquestworldId;
     }
 
 
@@ -345,7 +345,7 @@ public class MAdventQuestStageCriteria implements Serializable, Criteria {
             Objects.equals(conditionId, that.conditionId) &&
             Objects.equals(optionId, that.optionId) &&
             Objects.equals(deckConditionId, that.deckConditionId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(madventquestworldId, that.madventquestworldId);
     }
 
     @Override
@@ -375,7 +375,7 @@ public class MAdventQuestStageCriteria implements Serializable, Criteria {
         conditionId,
         optionId,
         deckConditionId,
-        idId
+        madventquestworldId
         );
     }
 
@@ -406,7 +406,7 @@ public class MAdventQuestStageCriteria implements Serializable, Criteria {
                 (conditionId != null ? "conditionId=" + conditionId + ", " : "") +
                 (optionId != null ? "optionId=" + optionId + ", " : "") +
                 (deckConditionId != null ? "deckConditionId=" + deckConditionId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (madventquestworldId != null ? "madventquestworldId=" + madventquestworldId + ", " : "") +
             "}";
     }
 

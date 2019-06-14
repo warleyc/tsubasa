@@ -111,7 +111,7 @@ public class MTargetPlayableCardGroupResourceIT {
         } else {
             mPlayableCard = TestUtil.findAll(em, MPlayableCard.class).get(0);
         }
-        mTargetPlayableCardGroup.setId(mPlayableCard);
+        mTargetPlayableCardGroup.setMplayablecard(mPlayableCard);
         return mTargetPlayableCardGroup;
     }
     /**
@@ -134,7 +134,7 @@ public class MTargetPlayableCardGroupResourceIT {
         } else {
             mPlayableCard = TestUtil.findAll(em, MPlayableCard.class).get(0);
         }
-        mTargetPlayableCardGroup.setId(mPlayableCard);
+        mTargetPlayableCardGroup.setMplayablecard(mPlayableCard);
         return mTargetPlayableCardGroup;
     }
 
@@ -474,17 +474,17 @@ public class MTargetPlayableCardGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetPlayableCardGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetPlayableCardGroupsByMplayablecardIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MPlayableCard id = mTargetPlayableCardGroup.getId();
+        MPlayableCard mplayablecard = mTargetPlayableCardGroup.getMplayablecard();
         mTargetPlayableCardGroupRepository.saveAndFlush(mTargetPlayableCardGroup);
-        Long idId = id.getId();
+        Long mplayablecardId = mplayablecard.getId();
 
-        // Get all the mTargetPlayableCardGroupList where id equals to idId
-        defaultMTargetPlayableCardGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetPlayableCardGroupList where mplayablecard equals to mplayablecardId
+        defaultMTargetPlayableCardGroupShouldBeFound("mplayablecardId.equals=" + mplayablecardId);
 
-        // Get all the mTargetPlayableCardGroupList where id equals to idId + 1
-        defaultMTargetPlayableCardGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetPlayableCardGroupList where mplayablecard equals to mplayablecardId + 1
+        defaultMTargetPlayableCardGroupShouldNotBeFound("mplayablecardId.equals=" + (mplayablecardId + 1));
     }
 
     /**

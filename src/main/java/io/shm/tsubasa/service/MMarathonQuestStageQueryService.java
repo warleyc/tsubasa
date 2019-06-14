@@ -158,9 +158,9 @@ public class MMarathonQuestStageQueryService extends QueryService<MMarathonQuest
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MMarathonQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MMarathonQuestStage_.id, JoinType.LEFT).get(MMarathonQuestWorld_.id)));
+            if (criteria.getMmarathonquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmarathonquestworldId(),
+                    root -> root.join(MMarathonQuestStage_.mmarathonquestworld, JoinType.LEFT).get(MMarathonQuestWorld_.id)));
             }
         }
         return specification;

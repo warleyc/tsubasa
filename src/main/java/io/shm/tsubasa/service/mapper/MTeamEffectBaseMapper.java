@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MPassiveEffectRangeMapper.class})
 public interface MTeamEffectBaseMapper extends EntityMapper<MTeamEffectBaseDTO, MTeamEffectBase> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mpassiveeffectrange.id", target = "mpassiveeffectrangeId")
     MTeamEffectBaseDTO toDto(MTeamEffectBase mTeamEffectBase);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mpassiveeffectrangeId", target = "mpassiveeffectrange")
     MTeamEffectBase toEntity(MTeamEffectBaseDTO mTeamEffectBaseDTO);
 
     default MTeamEffectBase fromId(Long id) {

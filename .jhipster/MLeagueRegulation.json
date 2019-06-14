@@ -43,7 +43,7 @@
             "otherEntityName": "mMatchOption",
             "otherEntityRelationshipName": "mLeagueRegulation",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmatchoption",
             "otherEntityField": "id"
         }
     ],

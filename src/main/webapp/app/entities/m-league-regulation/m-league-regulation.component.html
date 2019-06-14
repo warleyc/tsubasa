@@ -20,7 +20,7 @@
             <th jhiSortBy="matchOptionId"><span>Match Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="ruleTutorialId"><span>Rule Tutorial Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mmatchoptionId"><span>Mmatchoption</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -33,8 +33,8 @@
                 <td>{{mLeagueRegulation.deckConditionId}}</td>
                 <td>{{mLeagueRegulation.ruleTutorialId}}</td>
                 <td>
-                    <div *ngIf="mLeagueRegulation.idId">
-                        <a [routerLink]="['../m-match-option', mLeagueRegulation.idId , 'view' ]" >{{mLeagueRegulation.idId}}</a>
+                    <div *ngIf="mLeagueRegulation.mmatchoptionId">
+                        <a [routerLink]="['../m-match-option', mLeagueRegulation.mmatchoptionId , 'view' ]" >{{mLeagueRegulation.mmatchoptionId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

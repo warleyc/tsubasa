@@ -184,7 +184,7 @@
             "otherEntityName": "mGuerillaQuestWorld",
             "otherEntityRelationshipName": "mGuerillaQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mguerillaquestworld",
             "otherEntityField": "id"
         }
     ],

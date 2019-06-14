@@ -30,7 +30,7 @@ public class MTargetFormationGroupCriteria implements Serializable, Criteria {
 
     private IntegerFilter formationId;
 
-    private LongFilter idId;
+    private LongFilter mformationId;
 
     public MTargetFormationGroupCriteria(){
     }
@@ -39,7 +39,7 @@ public class MTargetFormationGroupCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.formationId = other.formationId == null ? null : other.formationId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mformationId = other.mformationId == null ? null : other.mformationId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MTargetFormationGroupCriteria implements Serializable, Criteria {
         this.formationId = formationId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMformationId() {
+        return mformationId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMformationId(LongFilter mformationId) {
+        this.mformationId = mformationId;
     }
 
 
@@ -93,7 +93,7 @@ public class MTargetFormationGroupCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(formationId, that.formationId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mformationId, that.mformationId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MTargetFormationGroupCriteria implements Serializable, Criteria {
         id,
         groupId,
         formationId,
-        idId
+        mformationId
         );
     }
 
@@ -112,7 +112,7 @@ public class MTargetFormationGroupCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (formationId != null ? "formationId=" + formationId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mformationId != null ? "mformationId=" + mformationId + ", " : "") +
             "}";
     }
 

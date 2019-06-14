@@ -98,9 +98,9 @@ public class MActionSkillHolderCardContentQueryService extends QueryService<MAct
             if (criteria.getActionSkillExp() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getActionSkillExp(), MActionSkillHolderCardContent_.actionSkillExp));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MActionSkillHolderCardContent_.id, JoinType.LEFT).get(MCharacter_.id)));
+            if (criteria.getMcharacterId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMcharacterId(),
+                    root -> root.join(MActionSkillHolderCardContent_.mcharacter, JoinType.LEFT).get(MCharacter_.id)));
             }
         }
         return specification;

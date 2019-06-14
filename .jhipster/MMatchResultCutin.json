@@ -45,7 +45,7 @@
             "otherEntityName": "mCharacter",
             "otherEntityRelationshipName": "mMatchResultCutin",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mcharacter",
             "otherEntityField": "id"
         }
     ],

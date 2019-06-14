@@ -62,7 +62,7 @@ public class MTrainingCardCriteria implements Serializable, Criteria {
 
     private IntegerFilter cardIllustAssetsId;
 
-    private LongFilter idId;
+    private LongFilter mcardthumbnailassetsId;
 
     public MTrainingCardCriteria(){
     }
@@ -87,7 +87,7 @@ public class MTrainingCardCriteria implements Serializable, Criteria {
         this.plusCatching = other.plusCatching == null ? null : other.plusCatching.copy();
         this.thumbnailAssetsId = other.thumbnailAssetsId == null ? null : other.thumbnailAssetsId.copy();
         this.cardIllustAssetsId = other.cardIllustAssetsId == null ? null : other.cardIllustAssetsId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcardthumbnailassetsId = other.mcardthumbnailassetsId == null ? null : other.mcardthumbnailassetsId.copy();
     }
 
     @Override
@@ -247,12 +247,12 @@ public class MTrainingCardCriteria implements Serializable, Criteria {
         this.cardIllustAssetsId = cardIllustAssetsId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcardthumbnailassetsId() {
+        return mcardthumbnailassetsId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcardthumbnailassetsId(LongFilter mcardthumbnailassetsId) {
+        this.mcardthumbnailassetsId = mcardthumbnailassetsId;
     }
 
 
@@ -285,7 +285,7 @@ public class MTrainingCardCriteria implements Serializable, Criteria {
             Objects.equals(plusCatching, that.plusCatching) &&
             Objects.equals(thumbnailAssetsId, that.thumbnailAssetsId) &&
             Objects.equals(cardIllustAssetsId, that.cardIllustAssetsId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcardthumbnailassetsId, that.mcardthumbnailassetsId);
     }
 
     @Override
@@ -310,7 +310,7 @@ public class MTrainingCardCriteria implements Serializable, Criteria {
         plusCatching,
         thumbnailAssetsId,
         cardIllustAssetsId,
-        idId
+        mcardthumbnailassetsId
         );
     }
 
@@ -336,7 +336,7 @@ public class MTrainingCardCriteria implements Serializable, Criteria {
                 (plusCatching != null ? "plusCatching=" + plusCatching + ", " : "") +
                 (thumbnailAssetsId != null ? "thumbnailAssetsId=" + thumbnailAssetsId + ", " : "") +
                 (cardIllustAssetsId != null ? "cardIllustAssetsId=" + cardIllustAssetsId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcardthumbnailassetsId != null ? "mcardthumbnailassetsId=" + mcardthumbnailassetsId + ", " : "") +
             "}";
     }
 

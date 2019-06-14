@@ -43,7 +43,7 @@
             <th jhiSortBy="conditionId"><span>Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mticketquestworldId"><span>Mticketquestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -79,8 +79,8 @@
                 <td>{{mTicketQuestStage.optionId}}</td>
                 <td>{{mTicketQuestStage.deckConditionId}}</td>
                 <td>
-                    <div *ngIf="mTicketQuestStage.idId">
-                        <a [routerLink]="['../m-ticket-quest-world', mTicketQuestStage.idId , 'view' ]" >{{mTicketQuestStage.idId}}</a>
+                    <div *ngIf="mTicketQuestStage.mticketquestworldId">
+                        <a [routerLink]="['../m-ticket-quest-world', mTicketQuestStage.mticketquestworldId , 'view' ]" >{{mTicketQuestStage.mticketquestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

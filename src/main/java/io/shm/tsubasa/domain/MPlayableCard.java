@@ -295,13 +295,13 @@ public class MPlayableCard implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mPlayableCards")
-    private MModelCard id;
+    private MModelCard mmodelcard;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mplayablecard")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MArousal> mArousals = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mplayablecard")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetPlayableCardGroup> mTargetPlayableCardGroups = new HashSet<>();
 
@@ -1198,17 +1198,17 @@ public class MPlayableCard implements Serializable {
         this.startAt = startAt;
     }
 
-    public MModelCard getId() {
-        return id;
+    public MModelCard getMmodelcard() {
+        return mmodelcard;
     }
 
-    public MPlayableCard id(MModelCard mModelCard) {
-        this.id = mModelCard;
+    public MPlayableCard mmodelcard(MModelCard mModelCard) {
+        this.mmodelcard = mModelCard;
         return this;
     }
 
-    public void setId(MModelCard mModelCard) {
-        this.id = mModelCard;
+    public void setMmodelcard(MModelCard mModelCard) {
+        this.mmodelcard = mModelCard;
     }
 
     public Set<MArousal> getMArousals() {
@@ -1222,13 +1222,13 @@ public class MPlayableCard implements Serializable {
 
     public MPlayableCard addMArousal(MArousal mArousal) {
         this.mArousals.add(mArousal);
-        mArousal.setId(this);
+        mArousal.setMplayablecard(this);
         return this;
     }
 
     public MPlayableCard removeMArousal(MArousal mArousal) {
         this.mArousals.remove(mArousal);
-        mArousal.setId(null);
+        mArousal.setMplayablecard(null);
         return this;
     }
 
@@ -1247,13 +1247,13 @@ public class MPlayableCard implements Serializable {
 
     public MPlayableCard addMTargetPlayableCardGroup(MTargetPlayableCardGroup mTargetPlayableCardGroup) {
         this.mTargetPlayableCardGroups.add(mTargetPlayableCardGroup);
-        mTargetPlayableCardGroup.setId(this);
+        mTargetPlayableCardGroup.setMplayablecard(this);
         return this;
     }
 
     public MPlayableCard removeMTargetPlayableCardGroup(MTargetPlayableCardGroup mTargetPlayableCardGroup) {
         this.mTargetPlayableCardGroups.remove(mTargetPlayableCardGroup);
-        mTargetPlayableCardGroup.setId(null);
+        mTargetPlayableCardGroup.setMplayablecard(null);
         return this;
     }
 

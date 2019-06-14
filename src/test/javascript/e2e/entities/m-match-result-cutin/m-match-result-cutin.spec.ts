@@ -49,7 +49,7 @@ describe('MMatchResultCutin e2e test', () => {
             mMatchResultCutinUpdatePage.setIsWinInput('5'),
             mMatchResultCutinUpdatePage.setTextInput('text'),
             mMatchResultCutinUpdatePage.setSoundEventInput('soundEvent'),
-            mMatchResultCutinUpdatePage.idSelectLastOption(),
+            mMatchResultCutinUpdatePage.mcharacterSelectLastOption(),
         ]);
         expect(await mMatchResultCutinUpdatePage.getCharacterIdInput()).to.eq('5', 'Expected characterId value to be equals to 5');
         expect(await mMatchResultCutinUpdatePage.getTeamIdInput()).to.eq('5', 'Expected teamId value to be equals to 5');

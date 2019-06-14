@@ -98,9 +98,9 @@ public class MTargetPlayableCardGroupQueryService extends QueryService<MTargetPl
             if (criteria.getIsShowThumbnail() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getIsShowThumbnail(), MTargetPlayableCardGroup_.isShowThumbnail));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTargetPlayableCardGroup_.id, JoinType.LEFT).get(MPlayableCard_.id)));
+            if (criteria.getMplayablecardId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMplayablecardId(),
+                    root -> root.join(MTargetPlayableCardGroup_.mplayablecard, JoinType.LEFT).get(MPlayableCard_.id)));
             }
         }
         return specification;

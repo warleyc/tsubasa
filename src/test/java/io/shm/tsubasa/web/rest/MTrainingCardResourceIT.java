@@ -184,7 +184,7 @@ public class MTrainingCardResourceIT {
         } else {
             mCardThumbnailAssets = TestUtil.findAll(em, MCardThumbnailAssets.class).get(0);
         }
-        mTrainingCard.setId(mCardThumbnailAssets);
+        mTrainingCard.setMcardthumbnailassets(mCardThumbnailAssets);
         return mTrainingCard;
     }
     /**
@@ -225,7 +225,7 @@ public class MTrainingCardResourceIT {
         } else {
             mCardThumbnailAssets = TestUtil.findAll(em, MCardThumbnailAssets.class).get(0);
         }
-        mTrainingCard.setId(mCardThumbnailAssets);
+        mTrainingCard.setMcardthumbnailassets(mCardThumbnailAssets);
         return mTrainingCard;
     }
 
@@ -1875,17 +1875,17 @@ public class MTrainingCardResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTrainingCardsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTrainingCardsByMcardthumbnailassetsIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCardThumbnailAssets id = mTrainingCard.getId();
+        MCardThumbnailAssets mcardthumbnailassets = mTrainingCard.getMcardthumbnailassets();
         mTrainingCardRepository.saveAndFlush(mTrainingCard);
-        Long idId = id.getId();
+        Long mcardthumbnailassetsId = mcardthumbnailassets.getId();
 
-        // Get all the mTrainingCardList where id equals to idId
-        defaultMTrainingCardShouldBeFound("idId.equals=" + idId);
+        // Get all the mTrainingCardList where mcardthumbnailassets equals to mcardthumbnailassetsId
+        defaultMTrainingCardShouldBeFound("mcardthumbnailassetsId.equals=" + mcardthumbnailassetsId);
 
-        // Get all the mTrainingCardList where id equals to idId + 1
-        defaultMTrainingCardShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTrainingCardList where mcardthumbnailassets equals to mcardthumbnailassetsId + 1
+        defaultMTrainingCardShouldNotBeFound("mcardthumbnailassetsId.equals=" + (mcardthumbnailassetsId + 1));
     }
 
     /**

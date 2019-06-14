@@ -83,7 +83,7 @@
             <th jhiSortBy="isShowBook"><span>Is Show Book</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="levelGroupId"><span>Level Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="startAt"><span>Start At</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mmodelcardId"><span>Mmodelcard</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -159,8 +159,8 @@
                 <td>{{mPlayableCard.levelGroupId}}</td>
                 <td>{{mPlayableCard.startAt}}</td>
                 <td>
-                    <div *ngIf="mPlayableCard.idId">
-                        <a [routerLink]="['../m-model-card', mPlayableCard.idId , 'view' ]" >{{mPlayableCard.idId}}</a>
+                    <div *ngIf="mPlayableCard.mmodelcardId">
+                        <a [routerLink]="['../m-model-card', mPlayableCard.mmodelcardId , 'view' ]" >{{mPlayableCard.mmodelcardId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

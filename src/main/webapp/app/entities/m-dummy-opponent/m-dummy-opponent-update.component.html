@@ -162,15 +162,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mnpcdeck">Mnpcdeck</label>
+                    <select class="form-control" id="field_mnpcdeck" name="mnpcdeck" formControlName="mnpcdeckId">
+                        <option *ngIf="!editForm.get('mnpcdeck').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mNpcDeckOption.id" *ngFor="let mNpcDeckOption of mnpcdecks; trackBy: trackMNpcDeckById">{{mNpcDeckOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mnpcdeck').invalid && (editForm.get('mnpcdeck').dirty || editForm.get('mnpcdeck').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mnpcdeck').errors.required">
                         This field is required.
                     </small>
                 </div>

@@ -140,9 +140,9 @@ public class MMissionQueryService extends QueryService<MMission> {
             if (criteria.getOrderNum() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getOrderNum(), MMission_.orderNum));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MMission_.id, JoinType.LEFT).get(MMissionReward_.id)));
+            if (criteria.getMmissionrewardId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmissionrewardId(),
+                    root -> root.join(MMission_.mmissionreward, JoinType.LEFT).get(MMissionReward_.id)));
             }
             if (criteria.getMAchievementId() != null) {
                 specification = specification.and(buildSpecification(criteria.getMAchievementId(),

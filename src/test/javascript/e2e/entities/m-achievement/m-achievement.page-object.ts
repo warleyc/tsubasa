@@ -30,7 +30,7 @@ export class MAchievementUpdatePage {
   nameInput = element(by.id('field_name'));
   typeInput = element(by.id('field_type'));
   missionIdInput = element(by.id('field_missionId'));
-  idSelect = element(by.id('field_id'));
+  mmissionSelect = element(by.id('field_mmission'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -68,23 +68,23 @@ export class MAchievementUpdatePage {
     return await this.missionIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mmissionSelectLastOption(timeout?: number) {
+    await this.mmissionSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mmissionSelectOption(option) {
+    await this.mmissionSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMmissionSelect(): ElementFinder {
+    return this.mmissionSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMmissionSelectedOption() {
+    return await this.mmissionSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

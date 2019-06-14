@@ -64,7 +64,7 @@ export class MNpcCardUpdateComponent implements OnInit {
     personalityId: [null, [Validators.required]],
     uniformNo: [null, [Validators.required]],
     levelGroupId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mcharacterId: [null, Validators.required]
   });
 
   constructor(
@@ -136,7 +136,7 @@ export class MNpcCardUpdateComponent implements OnInit {
       personalityId: mNpcCard.personalityId,
       uniformNo: mNpcCard.uniformNo,
       levelGroupId: mNpcCard.levelGroupId,
-      idId: mNpcCard.idId
+      mcharacterId: mNpcCard.mcharacterId
     });
   }
 
@@ -232,7 +232,7 @@ export class MNpcCardUpdateComponent implements OnInit {
       personalityId: this.editForm.get(['personalityId']).value,
       uniformNo: this.editForm.get(['uniformNo']).value,
       levelGroupId: this.editForm.get(['levelGroupId']).value,
-      idId: this.editForm.get(['idId']).value
+      mcharacterId: this.editForm.get(['mcharacterId']).value
     };
     return entity;
   }

@@ -31,7 +31,7 @@ public class MMatchOptionDTO implements Serializable {
     private Integer staminaInfinityType;
 
 
-    private Long idId;
+    private Long mpassiveeffectrangeId;
 
     public Long getId() {
         return id;
@@ -97,12 +97,12 @@ public class MMatchOptionDTO implements Serializable {
         this.staminaInfinityType = staminaInfinityType;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMpassiveeffectrangeId() {
+        return mpassiveeffectrangeId;
     }
 
-    public void setIdId(Long mPassiveEffectRangeId) {
-        this.idId = mPassiveEffectRangeId;
+    public void setMpassiveeffectrangeId(Long mPassiveEffectRangeId) {
+        this.mpassiveeffectrangeId = mPassiveEffectRangeId;
     }
 
     @Override
@@ -137,7 +137,7 @@ public class MMatchOptionDTO implements Serializable {
             ", useStaminaMagnification=" + getUseStaminaMagnification() +
             ", isIgnoreTeamSkill=" + getIsIgnoreTeamSkill() +
             ", staminaInfinityType=" + getStaminaInfinityType() +
-            ", id=" + getIdId() +
+            ", mpassiveeffectrange=" + getMpassiveeffectrangeId() +
             "}";
     }
 }

@@ -30,7 +30,7 @@ public class MAchievementCriteria implements Serializable, Criteria {
 
     private IntegerFilter missionId;
 
-    private LongFilter idId;
+    private LongFilter mmissionId;
 
     public MAchievementCriteria(){
     }
@@ -39,7 +39,7 @@ public class MAchievementCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.type = other.type == null ? null : other.type.copy();
         this.missionId = other.missionId == null ? null : other.missionId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mmissionId = other.mmissionId == null ? null : other.mmissionId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MAchievementCriteria implements Serializable, Criteria {
         this.missionId = missionId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMmissionId() {
+        return mmissionId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMmissionId(LongFilter mmissionId) {
+        this.mmissionId = mmissionId;
     }
 
 
@@ -93,7 +93,7 @@ public class MAchievementCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(type, that.type) &&
             Objects.equals(missionId, that.missionId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mmissionId, that.mmissionId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MAchievementCriteria implements Serializable, Criteria {
         id,
         type,
         missionId,
-        idId
+        mmissionId
         );
     }
 
@@ -112,7 +112,7 @@ public class MAchievementCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (type != null ? "type=" + type + ", " : "") +
                 (missionId != null ? "missionId=" + missionId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mmissionId != null ? "mmissionId=" + mmissionId + ", " : "") +
             "}";
     }
 

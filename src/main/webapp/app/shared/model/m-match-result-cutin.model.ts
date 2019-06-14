@@ -5,7 +5,7 @@ export interface IMMatchResultCutin {
   isWin?: number;
   text?: any;
   soundEvent?: any;
-  idId?: number;
+  mcharacterId?: number;
 }
 
 export class MMatchResultCutin implements IMMatchResultCutin {
@@ -16,6 +16,6 @@ export class MMatchResultCutin implements IMMatchResultCutin {
     public isWin?: number,
     public text?: any,
     public soundEvent?: any,
-    public idId?: number
+    public mcharacterId?: number
   ) {}
 }

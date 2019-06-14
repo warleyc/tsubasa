@@ -104,9 +104,9 @@ public class MPvpRankingRewardQueryService extends QueryService<MPvpRankingRewar
             if (criteria.getRewardGroupId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getRewardGroupId(), MPvpRankingReward_.rewardGroupId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MPvpRankingReward_.id, JoinType.LEFT).get(MPvpWave_.id)));
+            if (criteria.getMpvpwaveId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMpvpwaveId(),
+                    root -> root.join(MPvpRankingReward_.mpvpwave, JoinType.LEFT).get(MPvpWave_.id)));
             }
         }
         return specification;

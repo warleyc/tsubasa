@@ -68,7 +68,7 @@ public class MWeeklyQuestWorld implements Serializable {
     @Column(name = "is_enable_coop", nullable = false)
     private Integer isEnableCoop;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mweeklyquestworld")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MWeeklyQuestStage> mWeeklyQuestStages = new HashSet<>();
 
@@ -222,13 +222,13 @@ public class MWeeklyQuestWorld implements Serializable {
 
     public MWeeklyQuestWorld addMWeeklyQuestStage(MWeeklyQuestStage mWeeklyQuestStage) {
         this.mWeeklyQuestStages.add(mWeeklyQuestStage);
-        mWeeklyQuestStage.setId(this);
+        mWeeklyQuestStage.setMweeklyquestworld(this);
         return this;
     }
 
     public MWeeklyQuestWorld removeMWeeklyQuestStage(MWeeklyQuestStage mWeeklyQuestStage) {
         this.mWeeklyQuestStages.remove(mWeeklyQuestStage);
-        mWeeklyQuestStage.setId(null);
+        mWeeklyQuestStage.setMweeklyquestworld(null);
         return this;
     }
 

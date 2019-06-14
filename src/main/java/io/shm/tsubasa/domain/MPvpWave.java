@@ -39,7 +39,7 @@ public class MPvpWave implements Serializable {
     @Column(name = "is_ranking", nullable = false)
     private Integer isRanking;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mpvpwave")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MPvpRankingReward> mPvpRankingRewards = new HashSet<>();
 
@@ -102,13 +102,13 @@ public class MPvpWave implements Serializable {
 
     public MPvpWave addMPvpRankingReward(MPvpRankingReward mPvpRankingReward) {
         this.mPvpRankingRewards.add(mPvpRankingReward);
-        mPvpRankingReward.setId(this);
+        mPvpRankingReward.setMpvpwave(this);
         return this;
     }
 
     public MPvpWave removeMPvpRankingReward(MPvpRankingReward mPvpRankingReward) {
         this.mPvpRankingRewards.remove(mPvpRankingReward);
-        mPvpRankingReward.setId(null);
+        mPvpRankingReward.setMpvpwave(null);
         return this;
     }
 

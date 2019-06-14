@@ -36,7 +36,7 @@
             <th jhiSortBy="plusCatching"><span>Plus Catching</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="thumbnailAssetsId"><span>Thumbnail Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="cardIllustAssetsId"><span>Card Illust Assets Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mcardthumbnailassetsId"><span>Mcardthumbnailassets</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -65,8 +65,8 @@
                 <td>{{mTrainingCard.thumbnailAssetsId}}</td>
                 <td>{{mTrainingCard.cardIllustAssetsId}}</td>
                 <td>
-                    <div *ngIf="mTrainingCard.idId">
-                        <a [routerLink]="['../m-card-thumbnail-assets', mTrainingCard.idId , 'view' ]" >{{mTrainingCard.idId}}</a>
+                    <div *ngIf="mTrainingCard.mcardthumbnailassetsId">
+                        <a [routerLink]="['../m-card-thumbnail-assets', mTrainingCard.mcardthumbnailassetsId , 'view' ]" >{{mTrainingCard.mcardthumbnailassetsId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -107,7 +107,7 @@ public class MTargetTriggerEffectGroupResourceIT {
         } else {
             mTriggerEffectBase = TestUtil.findAll(em, MTriggerEffectBase.class).get(0);
         }
-        mTargetTriggerEffectGroup.setId(mTriggerEffectBase);
+        mTargetTriggerEffectGroup.setMtriggereffectbase(mTriggerEffectBase);
         return mTargetTriggerEffectGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class MTargetTriggerEffectGroupResourceIT {
         } else {
             mTriggerEffectBase = TestUtil.findAll(em, MTriggerEffectBase.class).get(0);
         }
-        mTargetTriggerEffectGroup.setId(mTriggerEffectBase);
+        mTargetTriggerEffectGroup.setMtriggereffectbase(mTriggerEffectBase);
         return mTargetTriggerEffectGroup;
     }
 
@@ -381,17 +381,17 @@ public class MTargetTriggerEffectGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetTriggerEffectGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetTriggerEffectGroupsByMtriggereffectbaseIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MTriggerEffectBase id = mTargetTriggerEffectGroup.getId();
+        MTriggerEffectBase mtriggereffectbase = mTargetTriggerEffectGroup.getMtriggereffectbase();
         mTargetTriggerEffectGroupRepository.saveAndFlush(mTargetTriggerEffectGroup);
-        Long idId = id.getId();
+        Long mtriggereffectbaseId = mtriggereffectbase.getId();
 
-        // Get all the mTargetTriggerEffectGroupList where id equals to idId
-        defaultMTargetTriggerEffectGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetTriggerEffectGroupList where mtriggereffectbase equals to mtriggereffectbaseId
+        defaultMTargetTriggerEffectGroupShouldBeFound("mtriggereffectbaseId.equals=" + mtriggereffectbaseId);
 
-        // Get all the mTargetTriggerEffectGroupList where id equals to idId + 1
-        defaultMTargetTriggerEffectGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetTriggerEffectGroupList where mtriggereffectbase equals to mtriggereffectbaseId + 1
+        defaultMTargetTriggerEffectGroupShouldNotBeFound("mtriggereffectbaseId.equals=" + (mtriggereffectbaseId + 1));
     }
 
     /**

@@ -95,9 +95,9 @@ public class MAchievementQueryService extends QueryService<MAchievement> {
             if (criteria.getMissionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getMissionId(), MAchievement_.missionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MAchievement_.id, JoinType.LEFT).get(MMission_.id)));
+            if (criteria.getMmissionId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmissionId(),
+                    root -> root.join(MAchievement_.mmission, JoinType.LEFT).get(MMission_.id)));
             }
         }
         return specification;

@@ -58,13 +58,13 @@ public class MMatchOption implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mMatchOptions")
-    private MPassiveEffectRange id;
+    private MPassiveEffectRange mpassiveeffectrange;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mmatchoption")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MLeagueRegulation> mLeagueRegulations = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mmatchoption")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MPvpRegulation> mPvpRegulations = new HashSet<>();
 
@@ -168,17 +168,17 @@ public class MMatchOption implements Serializable {
         this.staminaInfinityType = staminaInfinityType;
     }
 
-    public MPassiveEffectRange getId() {
-        return id;
+    public MPassiveEffectRange getMpassiveeffectrange() {
+        return mpassiveeffectrange;
     }
 
-    public MMatchOption id(MPassiveEffectRange mPassiveEffectRange) {
-        this.id = mPassiveEffectRange;
+    public MMatchOption mpassiveeffectrange(MPassiveEffectRange mPassiveEffectRange) {
+        this.mpassiveeffectrange = mPassiveEffectRange;
         return this;
     }
 
-    public void setId(MPassiveEffectRange mPassiveEffectRange) {
-        this.id = mPassiveEffectRange;
+    public void setMpassiveeffectrange(MPassiveEffectRange mPassiveEffectRange) {
+        this.mpassiveeffectrange = mPassiveEffectRange;
     }
 
     public Set<MLeagueRegulation> getMLeagueRegulations() {
@@ -192,13 +192,13 @@ public class MMatchOption implements Serializable {
 
     public MMatchOption addMLeagueRegulation(MLeagueRegulation mLeagueRegulation) {
         this.mLeagueRegulations.add(mLeagueRegulation);
-        mLeagueRegulation.setId(this);
+        mLeagueRegulation.setMmatchoption(this);
         return this;
     }
 
     public MMatchOption removeMLeagueRegulation(MLeagueRegulation mLeagueRegulation) {
         this.mLeagueRegulations.remove(mLeagueRegulation);
-        mLeagueRegulation.setId(null);
+        mLeagueRegulation.setMmatchoption(null);
         return this;
     }
 
@@ -217,13 +217,13 @@ public class MMatchOption implements Serializable {
 
     public MMatchOption addMPvpRegulation(MPvpRegulation mPvpRegulation) {
         this.mPvpRegulations.add(mPvpRegulation);
-        mPvpRegulation.setId(this);
+        mPvpRegulation.setMmatchoption(this);
         return this;
     }
 
     public MMatchOption removeMPvpRegulation(MPvpRegulation mPvpRegulation) {
         this.mPvpRegulations.remove(mPvpRegulation);
-        mPvpRegulation.setId(null);
+        mPvpRegulation.setMmatchoption(null);
         return this;
     }
 

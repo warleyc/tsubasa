@@ -40,7 +40,7 @@ public class MMatchOptionCriteria implements Serializable, Criteria {
 
     private IntegerFilter staminaInfinityType;
 
-    private LongFilter idId;
+    private LongFilter mpassiveeffectrangeId;
 
     private LongFilter mLeagueRegulationId;
 
@@ -58,7 +58,7 @@ public class MMatchOptionCriteria implements Serializable, Criteria {
         this.useStaminaMagnification = other.useStaminaMagnification == null ? null : other.useStaminaMagnification.copy();
         this.isIgnoreTeamSkill = other.isIgnoreTeamSkill == null ? null : other.isIgnoreTeamSkill.copy();
         this.staminaInfinityType = other.staminaInfinityType == null ? null : other.staminaInfinityType.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mpassiveeffectrangeId = other.mpassiveeffectrangeId == null ? null : other.mpassiveeffectrangeId.copy();
         this.mLeagueRegulationId = other.mLeagueRegulationId == null ? null : other.mLeagueRegulationId.copy();
         this.mPvpRegulationId = other.mPvpRegulationId == null ? null : other.mPvpRegulationId.copy();
     }
@@ -132,12 +132,12 @@ public class MMatchOptionCriteria implements Serializable, Criteria {
         this.staminaInfinityType = staminaInfinityType;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMpassiveeffectrangeId() {
+        return mpassiveeffectrangeId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMpassiveeffectrangeId(LongFilter mpassiveeffectrangeId) {
+        this.mpassiveeffectrangeId = mpassiveeffectrangeId;
     }
 
     public LongFilter getMLeagueRegulationId() {
@@ -175,7 +175,7 @@ public class MMatchOptionCriteria implements Serializable, Criteria {
             Objects.equals(useStaminaMagnification, that.useStaminaMagnification) &&
             Objects.equals(isIgnoreTeamSkill, that.isIgnoreTeamSkill) &&
             Objects.equals(staminaInfinityType, that.staminaInfinityType) &&
-            Objects.equals(idId, that.idId) &&
+            Objects.equals(mpassiveeffectrangeId, that.mpassiveeffectrangeId) &&
             Objects.equals(mLeagueRegulationId, that.mLeagueRegulationId) &&
             Objects.equals(mPvpRegulationId, that.mPvpRegulationId);
     }
@@ -191,7 +191,7 @@ public class MMatchOptionCriteria implements Serializable, Criteria {
         useStaminaMagnification,
         isIgnoreTeamSkill,
         staminaInfinityType,
-        idId,
+        mpassiveeffectrangeId,
         mLeagueRegulationId,
         mPvpRegulationId
         );
@@ -208,7 +208,7 @@ public class MMatchOptionCriteria implements Serializable, Criteria {
                 (useStaminaMagnification != null ? "useStaminaMagnification=" + useStaminaMagnification + ", " : "") +
                 (isIgnoreTeamSkill != null ? "isIgnoreTeamSkill=" + isIgnoreTeamSkill + ", " : "") +
                 (staminaInfinityType != null ? "staminaInfinityType=" + staminaInfinityType + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mpassiveeffectrangeId != null ? "mpassiveeffectrangeId=" + mpassiveeffectrangeId + ", " : "") +
                 (mLeagueRegulationId != null ? "mLeagueRegulationId=" + mLeagueRegulationId + ", " : "") +
                 (mPvpRegulationId != null ? "mPvpRegulationId=" + mPvpRegulationId + ", " : "") +
             "}";

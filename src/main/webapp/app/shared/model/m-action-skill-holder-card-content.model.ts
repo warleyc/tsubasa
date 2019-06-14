@@ -5,7 +5,7 @@ export interface IMActionSkillHolderCardContent {
   actionSkillExp?: number;
   name?: any;
   description?: any;
-  idId?: number;
+  mcharacterId?: number;
 }
 
 export class MActionSkillHolderCardContent implements IMActionSkillHolderCardContent {
@@ -16,6 +16,6 @@ export class MActionSkillHolderCardContent implements IMActionSkillHolderCardCon
     public actionSkillExp?: number,
     public name?: any,
     public description?: any,
-    public idId?: number
+    public mcharacterId?: number
   ) {}
 }

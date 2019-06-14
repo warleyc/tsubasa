@@ -95,9 +95,9 @@ public class MTargetTeamGroupQueryService extends QueryService<MTargetTeamGroup>
             if (criteria.getTeamId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getTeamId(), MTargetTeamGroup_.teamId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTargetTeamGroup_.id, JoinType.LEFT).get(MTeam_.id)));
+            if (criteria.getMteamId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMteamId(),
+                    root -> root.join(MTargetTeamGroup_.mteam, JoinType.LEFT).get(MTeam_.id)));
             }
         }
         return specification;

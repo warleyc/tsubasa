@@ -71,7 +71,7 @@ public class MGuildMission implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mGuildMissions")
-    private MMissionReward id;
+    private MMissionReward mmissionreward;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -225,17 +225,17 @@ public class MGuildMission implements Serializable {
         this.orderNum = orderNum;
     }
 
-    public MMissionReward getId() {
-        return id;
+    public MMissionReward getMmissionreward() {
+        return mmissionreward;
     }
 
-    public MGuildMission id(MMissionReward mMissionReward) {
-        this.id = mMissionReward;
+    public MGuildMission mmissionreward(MMissionReward mMissionReward) {
+        this.mmissionreward = mMissionReward;
         return this;
     }
 
-    public void setId(MMissionReward mMissionReward) {
-        this.id = mMissionReward;
+    public void setMmissionreward(MMissionReward mMissionReward) {
+        this.mmissionreward = mMissionReward;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

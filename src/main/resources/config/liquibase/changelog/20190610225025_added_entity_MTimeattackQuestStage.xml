@@ -136,7 +136,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mtimeattackquestworld_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -190,7 +190,7 @@
             <column name="option_id" type="numeric"/>
             <column name="deck_condition_id" type="numeric"/>
             <column name="short_name" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mtimeattackquestworld_id" type="numeric"/>
         </loadData>
     </changeSet>
 

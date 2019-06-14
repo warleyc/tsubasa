@@ -26,7 +26,7 @@ export interface IMWeeklyQuestStage {
   conditionId?: number;
   optionId?: number;
   deckConditionId?: number;
-  idId?: number;
+  mweeklyquestworldId?: number;
 }
 
 export class MWeeklyQuestStage implements IMWeeklyQuestStage {
@@ -58,6 +58,6 @@ export class MWeeklyQuestStage implements IMWeeklyQuestStage {
     public conditionId?: number,
     public optionId?: number,
     public deckConditionId?: number,
-    public idId?: number
+    public mweeklyquestworldId?: number
   ) {}
 }

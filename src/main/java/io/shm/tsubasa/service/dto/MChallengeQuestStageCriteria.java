@@ -74,7 +74,7 @@ public class MChallengeQuestStageCriteria implements Serializable, Criteria {
 
     private IntegerFilter roadNumber;
 
-    private LongFilter idId;
+    private LongFilter mchallengequestworldId;
 
     public MChallengeQuestStageCriteria(){
     }
@@ -105,7 +105,7 @@ public class MChallengeQuestStageCriteria implements Serializable, Criteria {
         this.deckConditionId = other.deckConditionId == null ? null : other.deckConditionId.copy();
         this.skipCheckPoint = other.skipCheckPoint == null ? null : other.skipCheckPoint.copy();
         this.roadNumber = other.roadNumber == null ? null : other.roadNumber.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mchallengequestworldId = other.mchallengequestworldId == null ? null : other.mchallengequestworldId.copy();
     }
 
     @Override
@@ -313,12 +313,12 @@ public class MChallengeQuestStageCriteria implements Serializable, Criteria {
         this.roadNumber = roadNumber;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMchallengequestworldId() {
+        return mchallengequestworldId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMchallengequestworldId(LongFilter mchallengequestworldId) {
+        this.mchallengequestworldId = mchallengequestworldId;
     }
 
 
@@ -357,7 +357,7 @@ public class MChallengeQuestStageCriteria implements Serializable, Criteria {
             Objects.equals(deckConditionId, that.deckConditionId) &&
             Objects.equals(skipCheckPoint, that.skipCheckPoint) &&
             Objects.equals(roadNumber, that.roadNumber) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mchallengequestworldId, that.mchallengequestworldId);
     }
 
     @Override
@@ -388,7 +388,7 @@ public class MChallengeQuestStageCriteria implements Serializable, Criteria {
         deckConditionId,
         skipCheckPoint,
         roadNumber,
-        idId
+        mchallengequestworldId
         );
     }
 
@@ -420,7 +420,7 @@ public class MChallengeQuestStageCriteria implements Serializable, Criteria {
                 (deckConditionId != null ? "deckConditionId=" + deckConditionId + ", " : "") +
                 (skipCheckPoint != null ? "skipCheckPoint=" + skipCheckPoint + ", " : "") +
                 (roadNumber != null ? "roadNumber=" + roadNumber + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mchallengequestworldId != null ? "mchallengequestworldId=" + mchallengequestworldId + ", " : "") +
             "}";
     }
 

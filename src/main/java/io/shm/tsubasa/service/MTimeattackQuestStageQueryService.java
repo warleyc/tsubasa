@@ -164,9 +164,9 @@ public class MTimeattackQuestStageQueryService extends QueryService<MTimeattackQ
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MTimeattackQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTimeattackQuestStage_.id, JoinType.LEFT).get(MTimeattackQuestWorld_.id)));
+            if (criteria.getMtimeattackquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMtimeattackquestworldId(),
+                    root -> root.join(MTimeattackQuestStage_.mtimeattackquestworld, JoinType.LEFT).get(MTimeattackQuestWorld_.id)));
             }
         }
         return specification;

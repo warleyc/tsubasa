@@ -36,7 +36,7 @@ public class MFormationCriteria implements Serializable, Criteria {
 
     private IntegerFilter matchFormationId;
 
-    private LongFilter idId;
+    private LongFilter mpassiveeffectrangeId;
 
     private LongFilter mNpcDeckId;
 
@@ -52,7 +52,7 @@ public class MFormationCriteria implements Serializable, Criteria {
         this.effectId = other.effectId == null ? null : other.effectId.copy();
         this.exType = other.exType == null ? null : other.exType.copy();
         this.matchFormationId = other.matchFormationId == null ? null : other.matchFormationId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mpassiveeffectrangeId = other.mpassiveeffectrangeId == null ? null : other.mpassiveeffectrangeId.copy();
         this.mNpcDeckId = other.mNpcDeckId == null ? null : other.mNpcDeckId.copy();
         this.mTargetFormationGroupId = other.mTargetFormationGroupId == null ? null : other.mTargetFormationGroupId.copy();
     }
@@ -110,12 +110,12 @@ public class MFormationCriteria implements Serializable, Criteria {
         this.matchFormationId = matchFormationId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMpassiveeffectrangeId() {
+        return mpassiveeffectrangeId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMpassiveeffectrangeId(LongFilter mpassiveeffectrangeId) {
+        this.mpassiveeffectrangeId = mpassiveeffectrangeId;
     }
 
     public LongFilter getMNpcDeckId() {
@@ -151,7 +151,7 @@ public class MFormationCriteria implements Serializable, Criteria {
             Objects.equals(effectId, that.effectId) &&
             Objects.equals(exType, that.exType) &&
             Objects.equals(matchFormationId, that.matchFormationId) &&
-            Objects.equals(idId, that.idId) &&
+            Objects.equals(mpassiveeffectrangeId, that.mpassiveeffectrangeId) &&
             Objects.equals(mNpcDeckId, that.mNpcDeckId) &&
             Objects.equals(mTargetFormationGroupId, that.mTargetFormationGroupId);
     }
@@ -165,7 +165,7 @@ public class MFormationCriteria implements Serializable, Criteria {
         effectId,
         exType,
         matchFormationId,
-        idId,
+        mpassiveeffectrangeId,
         mNpcDeckId,
         mTargetFormationGroupId
         );
@@ -180,7 +180,7 @@ public class MFormationCriteria implements Serializable, Criteria {
                 (effectId != null ? "effectId=" + effectId + ", " : "") +
                 (exType != null ? "exType=" + exType + ", " : "") +
                 (matchFormationId != null ? "matchFormationId=" + matchFormationId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mpassiveeffectrangeId != null ? "mpassiveeffectrangeId=" + mpassiveeffectrangeId + ", " : "") +
                 (mNpcDeckId != null ? "mNpcDeckId=" + mNpcDeckId + ", " : "") +
                 (mTargetFormationGroupId != null ? "mTargetFormationGroupId=" + mTargetFormationGroupId + ", " : "") +
             "}";

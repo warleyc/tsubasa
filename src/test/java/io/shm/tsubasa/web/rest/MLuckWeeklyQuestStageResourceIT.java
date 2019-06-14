@@ -208,7 +208,7 @@ public class MLuckWeeklyQuestStageResourceIT {
         } else {
             mLuckWeeklyQuestWorld = TestUtil.findAll(em, MLuckWeeklyQuestWorld.class).get(0);
         }
-        mLuckWeeklyQuestStage.setId(mLuckWeeklyQuestWorld);
+        mLuckWeeklyQuestStage.setMluckweeklyquestworld(mLuckWeeklyQuestWorld);
         return mLuckWeeklyQuestStage;
     }
     /**
@@ -255,7 +255,7 @@ public class MLuckWeeklyQuestStageResourceIT {
         } else {
             mLuckWeeklyQuestWorld = TestUtil.findAll(em, MLuckWeeklyQuestWorld.class).get(0);
         }
-        mLuckWeeklyQuestStage.setId(mLuckWeeklyQuestWorld);
+        mLuckWeeklyQuestStage.setMluckweeklyquestworld(mLuckWeeklyQuestWorld);
         return mLuckWeeklyQuestStage;
     }
 
@@ -2376,17 +2376,17 @@ public class MLuckWeeklyQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMLuckWeeklyQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMLuckWeeklyQuestStagesByMluckweeklyquestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MLuckWeeklyQuestWorld id = mLuckWeeklyQuestStage.getId();
+        MLuckWeeklyQuestWorld mluckweeklyquestworld = mLuckWeeklyQuestStage.getMluckweeklyquestworld();
         mLuckWeeklyQuestStageRepository.saveAndFlush(mLuckWeeklyQuestStage);
-        Long idId = id.getId();
+        Long mluckweeklyquestworldId = mluckweeklyquestworld.getId();
 
-        // Get all the mLuckWeeklyQuestStageList where id equals to idId
-        defaultMLuckWeeklyQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mLuckWeeklyQuestStageList where mluckweeklyquestworld equals to mluckweeklyquestworldId
+        defaultMLuckWeeklyQuestStageShouldBeFound("mluckweeklyquestworldId.equals=" + mluckweeklyquestworldId);
 
-        // Get all the mLuckWeeklyQuestStageList where id equals to idId + 1
-        defaultMLuckWeeklyQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mLuckWeeklyQuestStageList where mluckweeklyquestworld equals to mluckweeklyquestworldId + 1
+        defaultMLuckWeeklyQuestStageShouldNotBeFound("mluckweeklyquestworldId.equals=" + (mluckweeklyquestworldId + 1));
     }
 
     /**

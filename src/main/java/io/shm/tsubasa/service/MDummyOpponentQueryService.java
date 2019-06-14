@@ -113,9 +113,9 @@ public class MDummyOpponentQueryService extends QueryService<MDummyOpponent> {
             if (criteria.getGkUniformBottomId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getGkUniformBottomId(), MDummyOpponent_.gkUniformBottomId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MDummyOpponent_.id, JoinType.LEFT).get(MNpcDeck_.id)));
+            if (criteria.getMnpcdeckId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMnpcdeckId(),
+                    root -> root.join(MDummyOpponent_.mnpcdeck, JoinType.LEFT).get(MNpcDeck_.id)));
             }
         }
         return specification;

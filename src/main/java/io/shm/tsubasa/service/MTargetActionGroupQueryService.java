@@ -95,9 +95,9 @@ public class MTargetActionGroupQueryService extends QueryService<MTargetActionGr
             if (criteria.getActionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getActionId(), MTargetActionGroup_.actionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTargetActionGroup_.id, JoinType.LEFT).get(MAction_.id)));
+            if (criteria.getMactionId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMactionId(),
+                    root -> root.join(MTargetActionGroup_.maction, JoinType.LEFT).get(MAction_.id)));
             }
         }
         return specification;

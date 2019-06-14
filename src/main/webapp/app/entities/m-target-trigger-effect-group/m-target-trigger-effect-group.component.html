@@ -17,7 +17,7 @@
             <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="groupId"><span>Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="triggerEffectId"><span>Trigger Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mtriggereffectbaseId"><span>Mtriggereffectbase</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -27,8 +27,8 @@
                 <td>{{mTargetTriggerEffectGroup.groupId}}</td>
                 <td>{{mTargetTriggerEffectGroup.triggerEffectId}}</td>
                 <td>
-                    <div *ngIf="mTargetTriggerEffectGroup.idId">
-                        <a [routerLink]="['../m-trigger-effect-base', mTargetTriggerEffectGroup.idId , 'view' ]" >{{mTargetTriggerEffectGroup.idId}}</a>
+                    <div *ngIf="mTargetTriggerEffectGroup.mtriggereffectbaseId">
+                        <a [routerLink]="['../m-trigger-effect-base', mTargetTriggerEffectGroup.mtriggereffectbaseId , 'view' ]" >{{mTargetTriggerEffectGroup.mtriggereffectbaseId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

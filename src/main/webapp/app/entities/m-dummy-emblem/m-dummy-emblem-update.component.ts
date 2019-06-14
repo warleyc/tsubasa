@@ -30,7 +30,7 @@ export class MDummyEmblemUpdateComponent implements OnInit {
     middleColor: [null, [Validators.required]],
     lowerId: [],
     lowerColor: [],
-    idId: [null, Validators.required]
+    memblempartsId: [null, Validators.required]
   });
 
   constructor(
@@ -68,7 +68,7 @@ export class MDummyEmblemUpdateComponent implements OnInit {
       middleColor: mDummyEmblem.middleColor,
       lowerId: mDummyEmblem.lowerId,
       lowerColor: mDummyEmblem.lowerColor,
-      idId: mDummyEmblem.idId
+      memblempartsId: mDummyEmblem.memblempartsId
     });
   }
 
@@ -130,7 +130,7 @@ export class MDummyEmblemUpdateComponent implements OnInit {
       middleColor: this.editForm.get(['middleColor']).value,
       lowerId: this.editForm.get(['lowerId']).value,
       lowerColor: this.editForm.get(['lowerColor']).value,
-      idId: this.editForm.get(['idId']).value
+      memblempartsId: this.editForm.get(['memblempartsId']).value
     };
     return entity;
   }

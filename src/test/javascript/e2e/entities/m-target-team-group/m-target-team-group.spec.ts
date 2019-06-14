@@ -46,7 +46,7 @@ describe('MTargetTeamGroup e2e test', () => {
         await promise.all([
             mTargetTeamGroupUpdatePage.setGroupIdInput('5'),
             mTargetTeamGroupUpdatePage.setTeamIdInput('5'),
-            mTargetTeamGroupUpdatePage.idSelectLastOption(),
+            mTargetTeamGroupUpdatePage.mteamSelectLastOption(),
         ]);
         expect(await mTargetTeamGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetTeamGroupUpdatePage.getTeamIdInput()).to.eq('5', 'Expected teamId value to be equals to 5');

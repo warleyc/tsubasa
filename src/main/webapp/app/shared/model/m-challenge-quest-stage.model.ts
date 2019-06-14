@@ -28,7 +28,7 @@ export interface IMChallengeQuestStage {
   shortName?: any;
   skipCheckPoint?: number;
   roadNumber?: number;
-  idId?: number;
+  mchallengequestworldId?: number;
 }
 
 export class MChallengeQuestStage implements IMChallengeQuestStage {
@@ -62,6 +62,6 @@ export class MChallengeQuestStage implements IMChallengeQuestStage {
     public shortName?: any,
     public skipCheckPoint?: number,
     public roadNumber?: number,
-    public idId?: number
+    public mchallengequestworldId?: number
   ) {}
 }

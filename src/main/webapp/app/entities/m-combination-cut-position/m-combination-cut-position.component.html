@@ -23,7 +23,7 @@
             <th jhiSortBy="participantPosition3"><span>Participant Position 3</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="participantPosition4"><span>Participant Position 4</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="participantPosition5"><span>Participant Position 5</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mcharacterId"><span>Mcharacter</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -39,8 +39,8 @@
                 <td>{{mCombinationCutPosition.participantPosition4}}</td>
                 <td>{{mCombinationCutPosition.participantPosition5}}</td>
                 <td>
-                    <div *ngIf="mCombinationCutPosition.idId">
-                        <a [routerLink]="['../m-character', mCombinationCutPosition.idId , 'view' ]" >{{mCombinationCutPosition.idId}}</a>
+                    <div *ngIf="mCombinationCutPosition.mcharacterId">
+                        <a [routerLink]="['../m-character', mCombinationCutPosition.mcharacterId , 'view' ]" >{{mCombinationCutPosition.mcharacterId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

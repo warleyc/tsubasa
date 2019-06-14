@@ -49,7 +49,7 @@ export class MLuckWeeklyQuestStageUpdateComponent implements OnInit {
     optionId: [],
     deckConditionId: [],
     luckId: [],
-    idId: [null, Validators.required]
+    mluckweeklyquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -109,7 +109,7 @@ export class MLuckWeeklyQuestStageUpdateComponent implements OnInit {
       optionId: mLuckWeeklyQuestStage.optionId,
       deckConditionId: mLuckWeeklyQuestStage.deckConditionId,
       luckId: mLuckWeeklyQuestStage.luckId,
-      idId: mLuckWeeklyQuestStage.idId
+      mluckweeklyquestworldId: mLuckWeeklyQuestStage.mluckweeklyquestworldId
     });
   }
 
@@ -190,7 +190,7 @@ export class MLuckWeeklyQuestStageUpdateComponent implements OnInit {
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
       luckId: this.editForm.get(['luckId']).value,
-      idId: this.editForm.get(['idId']).value
+      mluckweeklyquestworldId: this.editForm.get(['mluckweeklyquestworldId']).value
     };
     return entity;
   }

@@ -37,31 +37,31 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mActionSkillHolderCardContent",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcharacter",
             "relationshipName": "mActionSkillHolderCardContent"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mCombinationCutPosition",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcharacter",
             "relationshipName": "mCombinationCutPosition"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mMatchResultCutin",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcharacter",
             "relationshipName": "mMatchResultCutin"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mNpcCard",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcharacter",
             "relationshipName": "mNpcCard"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTargetCharacterGroup",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcharacter",
             "relationshipName": "mTargetCharacterGroup"
         }
     ],

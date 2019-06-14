@@ -103,7 +103,7 @@ public class MTimeattackQuestStageDTO implements Serializable {
     private String shortName;
 
 
-    private Long idId;
+    private Long mtimeattackquestworldId;
 
     public Long getId() {
         return id;
@@ -353,12 +353,12 @@ public class MTimeattackQuestStageDTO implements Serializable {
         this.shortName = shortName;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMtimeattackquestworldId() {
+        return mtimeattackquestworldId;
     }
 
-    public void setIdId(Long mTimeattackQuestWorldId) {
-        this.idId = mTimeattackQuestWorldId;
+    public void setMtimeattackquestworldId(Long mTimeattackQuestWorldId) {
+        this.mtimeattackquestworldId = mTimeattackQuestWorldId;
     }
 
     @Override
@@ -416,7 +416,7 @@ public class MTimeattackQuestStageDTO implements Serializable {
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
             ", shortName='" + getShortName() + "'" +
-            ", id=" + getIdId() +
+            ", mtimeattackquestworld=" + getMtimeattackquestworldId() +
             "}";
     }
 }

@@ -104,9 +104,9 @@ public class MPvpRegulationQueryService extends QueryService<MPvpRegulation> {
             if (criteria.getRuleTutorialId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getRuleTutorialId(), MPvpRegulation_.ruleTutorialId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MPvpRegulation_.id, JoinType.LEFT).get(MMatchOption_.id)));
+            if (criteria.getMmatchoptionId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmatchoptionId(),
+                    root -> root.join(MPvpRegulation_.mmatchoption, JoinType.LEFT).get(MMatchOption_.id)));
             }
         }
         return specification;

@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MPvpWaveMapper.class})
 public interface MPvpRankingRewardMapper extends EntityMapper<MPvpRankingRewardDTO, MPvpRankingReward> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mpvpwave.id", target = "mpvpwaveId")
     MPvpRankingRewardDTO toDto(MPvpRankingReward mPvpRankingReward);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mpvpwaveId", target = "mpvpwave")
     MPvpRankingReward toEntity(MPvpRankingRewardDTO mPvpRankingRewardDTO);
 
     default MPvpRankingReward fromId(Long id) {

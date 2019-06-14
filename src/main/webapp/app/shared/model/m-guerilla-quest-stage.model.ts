@@ -26,7 +26,7 @@ export interface IMGuerillaQuestStage {
   conditionId?: number;
   optionId?: number;
   deckConditionId?: number;
-  idId?: number;
+  mguerillaquestworldId?: number;
 }
 
 export class MGuerillaQuestStage implements IMGuerillaQuestStage {
@@ -58,6 +58,6 @@ export class MGuerillaQuestStage implements IMGuerillaQuestStage {
     public conditionId?: number,
     public optionId?: number,
     public deckConditionId?: number,
-    public idId?: number
+    public mguerillaquestworldId?: number
   ) {}
 }

@@ -79,7 +79,7 @@ public class MNpcDeckDTO implements Serializable {
     private Integer tick;
 
 
-    private Long idId;
+    private Long mformationId;
 
     public Long getId() {
         return id;
@@ -265,12 +265,12 @@ public class MNpcDeckDTO implements Serializable {
         this.tick = tick;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMformationId() {
+        return mformationId;
     }
 
-    public void setIdId(Long mFormationId) {
-        this.idId = mFormationId;
+    public void setMformationId(Long mFormationId) {
+        this.mformationId = mFormationId;
     }
 
     @Override
@@ -320,7 +320,7 @@ public class MNpcDeckDTO implements Serializable {
             ", npcCardId10=" + getNpcCardId10() +
             ", npcCardId11=" + getNpcCardId11() +
             ", tick=" + getTick() +
-            ", id=" + getIdId() +
+            ", mformation=" + getMformationId() +
             "}";
     }
 }

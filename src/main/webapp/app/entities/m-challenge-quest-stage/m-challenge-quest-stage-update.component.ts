@@ -50,7 +50,7 @@ export class MChallengeQuestStageUpdateComponent implements OnInit {
     shortName: [null, [Validators.required]],
     skipCheckPoint: [null, [Validators.required]],
     roadNumber: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mchallengequestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -111,7 +111,7 @@ export class MChallengeQuestStageUpdateComponent implements OnInit {
       shortName: mChallengeQuestStage.shortName,
       skipCheckPoint: mChallengeQuestStage.skipCheckPoint,
       roadNumber: mChallengeQuestStage.roadNumber,
-      idId: mChallengeQuestStage.idId
+      mchallengequestworldId: mChallengeQuestStage.mchallengequestworldId
     });
   }
 
@@ -193,7 +193,7 @@ export class MChallengeQuestStageUpdateComponent implements OnInit {
       shortName: this.editForm.get(['shortName']).value,
       skipCheckPoint: this.editForm.get(['skipCheckPoint']).value,
       roadNumber: this.editForm.get(['roadNumber']).value,
-      idId: this.editForm.get(['idId']).value
+      mchallengequestworldId: this.editForm.get(['mchallengequestworldId']).value
     };
     return entity;
   }

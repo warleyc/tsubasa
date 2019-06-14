@@ -95,9 +95,9 @@ public class MTargetFormationGroupQueryService extends QueryService<MTargetForma
             if (criteria.getFormationId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getFormationId(), MTargetFormationGroup_.formationId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTargetFormationGroup_.id, JoinType.LEFT).get(MFormation_.id)));
+            if (criteria.getMformationId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMformationId(),
+                    root -> root.join(MTargetFormationGroup_.mformation, JoinType.LEFT).get(MFormation_.id)));
             }
         }
         return specification;

@@ -24,7 +24,7 @@ export class MTargetTriggerEffectGroupUpdateComponent implements OnInit {
     id: [],
     groupId: [null, [Validators.required]],
     triggerEffectId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mtriggereffectbaseId: [null, Validators.required]
   });
 
   constructor(
@@ -55,7 +55,7 @@ export class MTargetTriggerEffectGroupUpdateComponent implements OnInit {
       id: mTargetTriggerEffectGroup.id,
       groupId: mTargetTriggerEffectGroup.groupId,
       triggerEffectId: mTargetTriggerEffectGroup.triggerEffectId,
-      idId: mTargetTriggerEffectGroup.idId
+      mtriggereffectbaseId: mTargetTriggerEffectGroup.mtriggereffectbaseId
     });
   }
 
@@ -79,7 +79,7 @@ export class MTargetTriggerEffectGroupUpdateComponent implements OnInit {
       id: this.editForm.get(['id']).value,
       groupId: this.editForm.get(['groupId']).value,
       triggerEffectId: this.editForm.get(['triggerEffectId']).value,
-      idId: this.editForm.get(['idId']).value
+      mtriggereffectbaseId: this.editForm.get(['mtriggereffectbaseId']).value
     };
     return entity;
   }

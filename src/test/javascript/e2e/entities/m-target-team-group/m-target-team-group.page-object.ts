@@ -28,7 +28,7 @@ export class MTargetTeamGroupUpdatePage {
   cancelButton = element(by.id('cancel-save'));
   groupIdInput = element(by.id('field_groupId'));
   teamIdInput = element(by.id('field_teamId'));
-  idSelect = element(by.id('field_id'));
+  mteamSelect = element(by.id('field_mteam'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -50,23 +50,23 @@ export class MTargetTeamGroupUpdatePage {
     return await this.teamIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mteamSelectLastOption(timeout?: number) {
+    await this.mteamSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mteamSelectOption(option) {
+    await this.mteamSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMteamSelect(): ElementFinder {
+    return this.mteamSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMteamSelectedOption() {
+    return await this.mteamSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

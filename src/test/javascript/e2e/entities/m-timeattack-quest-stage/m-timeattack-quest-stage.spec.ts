@@ -74,7 +74,7 @@ describe('MTimeattackQuestStage e2e test', () => {
             mTimeattackQuestStageUpdatePage.setOptionIdInput('5'),
             mTimeattackQuestStageUpdatePage.setDeckConditionIdInput('5'),
             mTimeattackQuestStageUpdatePage.setShortNameInput('shortName'),
-            mTimeattackQuestStageUpdatePage.idSelectLastOption(),
+            mTimeattackQuestStageUpdatePage.mtimeattackquestworldSelectLastOption(),
         ]);
         expect(await mTimeattackQuestStageUpdatePage.getWorldIdInput()).to.eq('5', 'Expected worldId value to be equals to 5');
         expect(await mTimeattackQuestStageUpdatePage.getNumberInput()).to.eq('5', 'Expected number value to be equals to 5');

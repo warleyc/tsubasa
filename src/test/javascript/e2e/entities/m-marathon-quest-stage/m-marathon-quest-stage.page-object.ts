@@ -52,7 +52,7 @@ export class MMarathonQuestStageUpdatePage {
   conditionIdInput = element(by.id('field_conditionId'));
   optionIdInput = element(by.id('field_optionId'));
   deckConditionIdInput = element(by.id('field_deckConditionId'));
-  idSelect = element(by.id('field_id'));
+  mmarathonquestworldSelect = element(by.id('field_mmarathonquestworld'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -266,23 +266,23 @@ export class MMarathonQuestStageUpdatePage {
     return await this.deckConditionIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mmarathonquestworldSelectLastOption(timeout?: number) {
+    await this.mmarathonquestworldSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mmarathonquestworldSelectOption(option) {
+    await this.mmarathonquestworldSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMmarathonquestworldSelect(): ElementFinder {
+    return this.mmarathonquestworldSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMmarathonquestworldSelectedOption() {
+    return await this.mmarathonquestworldSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

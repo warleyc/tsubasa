@@ -17,7 +17,7 @@
             <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="groupId"><span>Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="actionId"><span>Action Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mactionId"><span>Maction</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -27,8 +27,8 @@
                 <td>{{mTargetActionGroup.groupId}}</td>
                 <td>{{mTargetActionGroup.actionId}}</td>
                 <td>
-                    <div *ngIf="mTargetActionGroup.idId">
-                        <a [routerLink]="['../m-action', mTargetActionGroup.idId , 'view' ]" >{{mTargetActionGroup.idId}}</a>
+                    <div *ngIf="mTargetActionGroup.mactionId">
+                        <a [routerLink]="['../m-action', mTargetActionGroup.mactionId , 'view' ]" >{{mTargetActionGroup.mactionId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -29,7 +29,7 @@
             "otherEntityName": "mPlayableCard",
             "otherEntityRelationshipName": "mTargetPlayableCardGroup",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mplayablecard",
             "otherEntityField": "id"
         }
     ],

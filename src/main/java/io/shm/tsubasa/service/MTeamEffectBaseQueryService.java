@@ -122,9 +122,9 @@ public class MTeamEffectBaseQueryService extends QueryService<MTeamEffectBase> {
             if (criteria.getEffectId2() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getEffectId2(), MTeamEffectBase_.effectId2));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTeamEffectBase_.id, JoinType.LEFT).get(MPassiveEffectRange_.id)));
+            if (criteria.getMpassiveeffectrangeId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMpassiveeffectrangeId(),
+                    root -> root.join(MTeamEffectBase_.mpassiveeffectrange, JoinType.LEFT).get(MPassiveEffectRange_.id)));
             }
         }
         return specification;

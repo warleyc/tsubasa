@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MMissionRewardMapper.class})
 public interface MMissionMapper extends EntityMapper<MMissionDTO, MMission> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mmissionreward.id", target = "mmissionrewardId")
     MMissionDTO toDto(MMission mMission);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mmissionrewardId", target = "mmissionreward")
     @Mapping(target = "mAchievements", ignore = true)
     MMission toEntity(MMissionDTO mMissionDTO);
 

@@ -73,7 +73,7 @@ public class MTimeattackQuestWorld implements Serializable {
     @Column(name = "is_enable_coop", nullable = false)
     private Integer isEnableCoop;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mtimeattackquestworld")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTimeattackQuestStage> mTimeattackQuestStages = new HashSet<>();
 
@@ -240,13 +240,13 @@ public class MTimeattackQuestWorld implements Serializable {
 
     public MTimeattackQuestWorld addMTimeattackQuestStage(MTimeattackQuestStage mTimeattackQuestStage) {
         this.mTimeattackQuestStages.add(mTimeattackQuestStage);
-        mTimeattackQuestStage.setId(this);
+        mTimeattackQuestStage.setMtimeattackquestworld(this);
         return this;
     }
 
     public MTimeattackQuestWorld removeMTimeattackQuestStage(MTimeattackQuestStage mTimeattackQuestStage) {
         this.mTimeattackQuestStages.remove(mTimeattackQuestStage);
-        mTimeattackQuestStage.setId(null);
+        mTimeattackQuestStage.setMtimeattackquestworld(null);
         return this;
     }
 

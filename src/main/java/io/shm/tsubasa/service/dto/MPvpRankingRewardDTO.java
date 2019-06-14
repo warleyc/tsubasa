@@ -26,7 +26,7 @@ public class MPvpRankingRewardDTO implements Serializable {
     private Integer rewardGroupId;
 
 
-    private Long idId;
+    private Long mpvpwaveId;
 
     public Long getId() {
         return id;
@@ -76,12 +76,12 @@ public class MPvpRankingRewardDTO implements Serializable {
         this.rewardGroupId = rewardGroupId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMpvpwaveId() {
+        return mpvpwaveId;
     }
 
-    public void setIdId(Long mPvpWaveId) {
-        this.idId = mPvpWaveId;
+    public void setMpvpwaveId(Long mPvpWaveId) {
+        this.mpvpwaveId = mPvpWaveId;
     }
 
     @Override
@@ -114,7 +114,7 @@ public class MPvpRankingRewardDTO implements Serializable {
             ", rankingFrom=" + getRankingFrom() +
             ", rankingTo=" + getRankingTo() +
             ", rewardGroupId=" + getRewardGroupId() +
-            ", id=" + getIdId() +
+            ", mpvpwave=" + getMpvpwaveId() +
             "}";
     }
 }

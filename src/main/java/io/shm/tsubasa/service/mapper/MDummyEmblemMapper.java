@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MEmblemPartsMapper.class})
 public interface MDummyEmblemMapper extends EntityMapper<MDummyEmblemDTO, MDummyEmblem> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "memblemparts.id", target = "memblempartsId")
     MDummyEmblemDTO toDto(MDummyEmblem mDummyEmblem);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "memblempartsId", target = "memblemparts")
     MDummyEmblem toEntity(MDummyEmblemDTO mDummyEmblemDTO);
 
     default MDummyEmblem fromId(Long id) {

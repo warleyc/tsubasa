@@ -119,9 +119,9 @@ public class MCardPowerupActionSkillQueryService extends QueryService<MCardPower
             if (criteria.getTargetCharacterId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getTargetCharacterId(), MCardPowerupActionSkill_.targetCharacterId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MCardPowerupActionSkill_.id, JoinType.LEFT).get(MCardThumbnailAssets_.id)));
+            if (criteria.getMcardthumbnailassetsId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMcardthumbnailassetsId(),
+                    root -> root.join(MCardPowerupActionSkill_.mcardthumbnailassets, JoinType.LEFT).get(MCardThumbnailAssets_.id)));
             }
         }
         return specification;

@@ -41,7 +41,7 @@
             <th jhiSortBy="conditionId"><span>Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mweeklyquestworldId"><span>Mweeklyquestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -75,8 +75,8 @@
                 <td>{{mWeeklyQuestStage.optionId}}</td>
                 <td>{{mWeeklyQuestStage.deckConditionId}}</td>
                 <td>
-                    <div *ngIf="mWeeklyQuestStage.idId">
-                        <a [routerLink]="['../m-weekly-quest-world', mWeeklyQuestStage.idId , 'view' ]" >{{mWeeklyQuestStage.idId}}</a>
+                    <div *ngIf="mWeeklyQuestStage.mweeklyquestworldId">
+                        <a [routerLink]="['../m-weekly-quest-world', mWeeklyQuestStage.mweeklyquestworldId , 'view' ]" >{{mWeeklyQuestStage.mweeklyquestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

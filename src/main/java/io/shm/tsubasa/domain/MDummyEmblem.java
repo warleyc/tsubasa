@@ -60,7 +60,7 @@ public class MDummyEmblem implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mDummyEmblems")
-    private MEmblemParts id;
+    private MEmblemParts memblemparts;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -175,17 +175,17 @@ public class MDummyEmblem implements Serializable {
         this.lowerColor = lowerColor;
     }
 
-    public MEmblemParts getId() {
-        return id;
+    public MEmblemParts getMemblemparts() {
+        return memblemparts;
     }
 
-    public MDummyEmblem id(MEmblemParts mEmblemParts) {
-        this.id = mEmblemParts;
+    public MDummyEmblem memblemparts(MEmblemParts mEmblemParts) {
+        this.memblemparts = mEmblemParts;
         return this;
     }
 
-    public void setId(MEmblemParts mEmblemParts) {
-        this.id = mEmblemParts;
+    public void setMemblemparts(MEmblemParts mEmblemParts) {
+        this.memblemparts = mEmblemParts;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

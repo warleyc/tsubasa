@@ -30,7 +30,7 @@ public class MTargetTeamGroupCriteria implements Serializable, Criteria {
 
     private IntegerFilter teamId;
 
-    private LongFilter idId;
+    private LongFilter mteamId;
 
     public MTargetTeamGroupCriteria(){
     }
@@ -39,7 +39,7 @@ public class MTargetTeamGroupCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.teamId = other.teamId == null ? null : other.teamId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mteamId = other.mteamId == null ? null : other.mteamId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MTargetTeamGroupCriteria implements Serializable, Criteria {
         this.teamId = teamId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMteamId() {
+        return mteamId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMteamId(LongFilter mteamId) {
+        this.mteamId = mteamId;
     }
 
 
@@ -93,7 +93,7 @@ public class MTargetTeamGroupCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(teamId, that.teamId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mteamId, that.mteamId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MTargetTeamGroupCriteria implements Serializable, Criteria {
         id,
         groupId,
         teamId,
-        idId
+        mteamId
         );
     }
 
@@ -112,7 +112,7 @@ public class MTargetTeamGroupCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (teamId != null ? "teamId=" + teamId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mteamId != null ? "mteamId=" + mteamId + ", " : "") +
             "}";
     }
 

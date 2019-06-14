@@ -36,7 +36,7 @@ public class MPvpRankingRewardCriteria implements Serializable, Criteria {
 
     private IntegerFilter rewardGroupId;
 
-    private LongFilter idId;
+    private LongFilter mpvpwaveId;
 
     public MPvpRankingRewardCriteria(){
     }
@@ -48,7 +48,7 @@ public class MPvpRankingRewardCriteria implements Serializable, Criteria {
         this.rankingFrom = other.rankingFrom == null ? null : other.rankingFrom.copy();
         this.rankingTo = other.rankingTo == null ? null : other.rankingTo.copy();
         this.rewardGroupId = other.rewardGroupId == null ? null : other.rewardGroupId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mpvpwaveId = other.mpvpwaveId == null ? null : other.mpvpwaveId.copy();
     }
 
     @Override
@@ -104,12 +104,12 @@ public class MPvpRankingRewardCriteria implements Serializable, Criteria {
         this.rewardGroupId = rewardGroupId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMpvpwaveId() {
+        return mpvpwaveId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMpvpwaveId(LongFilter mpvpwaveId) {
+        this.mpvpwaveId = mpvpwaveId;
     }
 
 
@@ -129,7 +129,7 @@ public class MPvpRankingRewardCriteria implements Serializable, Criteria {
             Objects.equals(rankingFrom, that.rankingFrom) &&
             Objects.equals(rankingTo, that.rankingTo) &&
             Objects.equals(rewardGroupId, that.rewardGroupId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mpvpwaveId, that.mpvpwaveId);
     }
 
     @Override
@@ -141,7 +141,7 @@ public class MPvpRankingRewardCriteria implements Serializable, Criteria {
         rankingFrom,
         rankingTo,
         rewardGroupId,
-        idId
+        mpvpwaveId
         );
     }
 
@@ -154,7 +154,7 @@ public class MPvpRankingRewardCriteria implements Serializable, Criteria {
                 (rankingFrom != null ? "rankingFrom=" + rankingFrom + ", " : "") +
                 (rankingTo != null ? "rankingTo=" + rankingTo + ", " : "") +
                 (rewardGroupId != null ? "rewardGroupId=" + rewardGroupId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mpvpwaveId != null ? "mpvpwaveId=" + mpvpwaveId + ", " : "") +
             "}";
     }
 

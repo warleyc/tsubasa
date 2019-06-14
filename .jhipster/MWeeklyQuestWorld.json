@@ -71,7 +71,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mWeeklyQuestStage",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mweeklyquestworld",
             "relationshipName": "mWeeklyQuestStage"
         }
     ],

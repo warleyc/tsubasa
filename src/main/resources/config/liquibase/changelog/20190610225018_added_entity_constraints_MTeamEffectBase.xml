@@ -8,9 +8,9 @@
     -->
     <changeSet id="20190610225018-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="mpassiveeffectrange_id"
                                  baseTableName="m_team_effect_base"
-                                 constraintName="fk_m_team_effect_base_id_id"
+                                 constraintName="fk_m_team_effect_base_mpassiveeffectrange_id"
                                  referencedColumnNames="id"
                                  referencedTableName="m_passive_effect_range"/>
 

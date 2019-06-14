@@ -13,10 +13,10 @@
                 <dd>
                     <span>{{mTargetCharacterGroup.characterId}}</span>
                 </dd>
-                <dt><span>Id</span></dt>
+                <dt><span>Mcharacter</span></dt>
                 <dd>
-                    <div *ngIf="mTargetCharacterGroup.idId">
-                        <a [routerLink]="['/m-character', mTargetCharacterGroup.idId, 'view']">{{mTargetCharacterGroup.idId}}</a>
+                    <div *ngIf="mTargetCharacterGroup.mcharacterId">
+                        <a [routerLink]="['/m-character', mTargetCharacterGroup.mcharacterId, 'view']">{{mTargetCharacterGroup.mcharacterId}}</a>
                     </div>
                 </dd>
             </dl>

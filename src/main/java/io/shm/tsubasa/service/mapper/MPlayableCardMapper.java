@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MModelCardMapper.class})
 public interface MPlayableCardMapper extends EntityMapper<MPlayableCardDTO, MPlayableCard> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mmodelcard.id", target = "mmodelcardId")
     MPlayableCardDTO toDto(MPlayableCard mPlayableCard);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mmodelcardId", target = "mmodelcard")
     @Mapping(target = "mArousals", ignore = true)
     @Mapping(target = "mTargetPlayableCardGroups", ignore = true)
     MPlayableCard toEntity(MPlayableCardDTO mPlayableCardDTO);

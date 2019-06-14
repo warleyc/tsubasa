@@ -107,7 +107,7 @@ public class MTargetActionGroupResourceIT {
         } else {
             mAction = TestUtil.findAll(em, MAction.class).get(0);
         }
-        mTargetActionGroup.setId(mAction);
+        mTargetActionGroup.setMaction(mAction);
         return mTargetActionGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class MTargetActionGroupResourceIT {
         } else {
             mAction = TestUtil.findAll(em, MAction.class).get(0);
         }
-        mTargetActionGroup.setId(mAction);
+        mTargetActionGroup.setMaction(mAction);
         return mTargetActionGroup;
     }
 
@@ -381,17 +381,17 @@ public class MTargetActionGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetActionGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetActionGroupsByMactionIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MAction id = mTargetActionGroup.getId();
+        MAction maction = mTargetActionGroup.getMaction();
         mTargetActionGroupRepository.saveAndFlush(mTargetActionGroup);
-        Long idId = id.getId();
+        Long mactionId = maction.getId();
 
-        // Get all the mTargetActionGroupList where id equals to idId
-        defaultMTargetActionGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetActionGroupList where maction equals to mactionId
+        defaultMTargetActionGroupShouldBeFound("mactionId.equals=" + mactionId);
 
-        // Get all the mTargetActionGroupList where id equals to idId + 1
-        defaultMTargetActionGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetActionGroupList where maction equals to mactionId + 1
+        defaultMTargetActionGroupShouldNotBeFound("mactionId.equals=" + (mactionId + 1));
     }
 
     /**

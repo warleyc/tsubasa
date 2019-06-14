@@ -101,9 +101,9 @@ public class MArousalQueryService extends QueryService<MArousal> {
             if (criteria.getMaterialGroupId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getMaterialGroupId(), MArousal_.materialGroupId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MArousal_.id, JoinType.LEFT).get(MPlayableCard_.id)));
+            if (criteria.getMplayablecardId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMplayablecardId(),
+                    root -> root.join(MArousal_.mplayablecard, JoinType.LEFT).get(MPlayableCard_.id)));
             }
         }
         return specification;

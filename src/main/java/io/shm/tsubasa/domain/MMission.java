@@ -103,9 +103,9 @@ public class MMission implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mMissions")
-    private MMissionReward id;
+    private MMissionReward mmissionreward;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mmission")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MAchievement> mAchievements = new HashSet<>();
 
@@ -378,17 +378,17 @@ public class MMission implements Serializable {
         this.orderNum = orderNum;
     }
 
-    public MMissionReward getId() {
-        return id;
+    public MMissionReward getMmissionreward() {
+        return mmissionreward;
     }
 
-    public MMission id(MMissionReward mMissionReward) {
-        this.id = mMissionReward;
+    public MMission mmissionreward(MMissionReward mMissionReward) {
+        this.mmissionreward = mMissionReward;
         return this;
     }
 
-    public void setId(MMissionReward mMissionReward) {
-        this.id = mMissionReward;
+    public void setMmissionreward(MMissionReward mMissionReward) {
+        this.mmissionreward = mMissionReward;
     }
 
     public Set<MAchievement> getMAchievements() {
@@ -402,13 +402,13 @@ public class MMission implements Serializable {
 
     public MMission addMAchievement(MAchievement mAchievement) {
         this.mAchievements.add(mAchievement);
-        mAchievement.setId(this);
+        mAchievement.setMmission(this);
         return this;
     }
 
     public MMission removeMAchievement(MAchievement mAchievement) {
         this.mAchievements.remove(mAchievement);
-        mAchievement.setId(null);
+        mAchievement.setMmission(null);
         return this;
     }
 

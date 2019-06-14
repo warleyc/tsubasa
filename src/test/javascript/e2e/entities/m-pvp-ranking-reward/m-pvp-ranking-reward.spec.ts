@@ -49,7 +49,7 @@ describe('MPvpRankingReward e2e test', () => {
             mPvpRankingRewardUpdatePage.setRankingFromInput('5'),
             mPvpRankingRewardUpdatePage.setRankingToInput('5'),
             mPvpRankingRewardUpdatePage.setRewardGroupIdInput('5'),
-            mPvpRankingRewardUpdatePage.idSelectLastOption(),
+            mPvpRankingRewardUpdatePage.mpvpwaveSelectLastOption(),
         ]);
         expect(await mPvpRankingRewardUpdatePage.getWaveIdInput()).to.eq('5', 'Expected waveId value to be equals to 5');
         expect(await mPvpRankingRewardUpdatePage.getDifficultyInput()).to.eq('5', 'Expected difficulty value to be equals to 5');

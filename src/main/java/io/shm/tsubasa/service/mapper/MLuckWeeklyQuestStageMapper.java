@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MLuckWeeklyQuestWorldMapper.class})
 public interface MLuckWeeklyQuestStageMapper extends EntityMapper<MLuckWeeklyQuestStageDTO, MLuckWeeklyQuestStage> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mluckweeklyquestworld.id", target = "mluckweeklyquestworldId")
     MLuckWeeklyQuestStageDTO toDto(MLuckWeeklyQuestStage mLuckWeeklyQuestStage);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mluckweeklyquestworldId", target = "mluckweeklyquestworld")
     MLuckWeeklyQuestStage toEntity(MLuckWeeklyQuestStageDTO mLuckWeeklyQuestStageDTO);
 
     default MLuckWeeklyQuestStage fromId(Long id) {

@@ -208,7 +208,7 @@ public class MPlayableCardDTO implements Serializable {
     private Integer startAt;
 
 
-    private Long idId;
+    private Long mmodelcardId;
 
     public Long getId() {
         return id;
@@ -762,12 +762,12 @@ public class MPlayableCardDTO implements Serializable {
         this.startAt = startAt;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMmodelcardId() {
+        return mmodelcardId;
     }
 
-    public void setIdId(Long mModelCardId) {
-        this.idId = mModelCardId;
+    public void setMmodelcardId(Long mModelCardId) {
+        this.mmodelcardId = mModelCardId;
     }
 
     @Override
@@ -863,7 +863,7 @@ public class MPlayableCardDTO implements Serializable {
             ", isShowBook=" + getIsShowBook() +
             ", levelGroupId=" + getLevelGroupId() +
             ", startAt=" + getStartAt() +
-            ", id=" + getIdId() +
+            ", mmodelcard=" + getMmodelcardId() +
             "}";
     }
 }

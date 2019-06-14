@@ -48,7 +48,7 @@ public class MTeamEffectBaseCriteria implements Serializable, Criteria {
 
     private IntegerFilter effectId2;
 
-    private LongFilter idId;
+    private LongFilter mpassiveeffectrangeId;
 
     public MTeamEffectBaseCriteria(){
     }
@@ -66,7 +66,7 @@ public class MTeamEffectBaseCriteria implements Serializable, Criteria {
         this.triggerProbabilityMin2 = other.triggerProbabilityMin2 == null ? null : other.triggerProbabilityMin2.copy();
         this.triggerProbabilityMax2 = other.triggerProbabilityMax2 == null ? null : other.triggerProbabilityMax2.copy();
         this.effectId2 = other.effectId2 == null ? null : other.effectId2.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mpassiveeffectrangeId = other.mpassiveeffectrangeId == null ? null : other.mpassiveeffectrangeId.copy();
     }
 
     @Override
@@ -170,12 +170,12 @@ public class MTeamEffectBaseCriteria implements Serializable, Criteria {
         this.effectId2 = effectId2;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMpassiveeffectrangeId() {
+        return mpassiveeffectrangeId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMpassiveeffectrangeId(LongFilter mpassiveeffectrangeId) {
+        this.mpassiveeffectrangeId = mpassiveeffectrangeId;
     }
 
 
@@ -201,7 +201,7 @@ public class MTeamEffectBaseCriteria implements Serializable, Criteria {
             Objects.equals(triggerProbabilityMin2, that.triggerProbabilityMin2) &&
             Objects.equals(triggerProbabilityMax2, that.triggerProbabilityMax2) &&
             Objects.equals(effectId2, that.effectId2) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mpassiveeffectrangeId, that.mpassiveeffectrangeId);
     }
 
     @Override
@@ -219,7 +219,7 @@ public class MTeamEffectBaseCriteria implements Serializable, Criteria {
         triggerProbabilityMin2,
         triggerProbabilityMax2,
         effectId2,
-        idId
+        mpassiveeffectrangeId
         );
     }
 
@@ -238,7 +238,7 @@ public class MTeamEffectBaseCriteria implements Serializable, Criteria {
                 (triggerProbabilityMin2 != null ? "triggerProbabilityMin2=" + triggerProbabilityMin2 + ", " : "") +
                 (triggerProbabilityMax2 != null ? "triggerProbabilityMax2=" + triggerProbabilityMax2 + ", " : "") +
                 (effectId2 != null ? "effectId2=" + effectId2 + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mpassiveeffectrangeId != null ? "mpassiveeffectrangeId=" + mpassiveeffectrangeId + ", " : "") +
             "}";
     }
 

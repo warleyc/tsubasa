@@ -8,7 +8,7 @@ export interface IMDummyEmblem {
   middleColor?: any;
   lowerId?: number;
   lowerColor?: any;
-  idId?: number;
+  memblempartsId?: number;
 }
 
 export class MDummyEmblem implements IMDummyEmblem {
@@ -22,6 +22,6 @@ export class MDummyEmblem implements IMDummyEmblem {
     public middleColor?: any,
     public lowerId?: number,
     public lowerColor?: any,
-    public idId?: number
+    public memblempartsId?: number
   ) {}
 }

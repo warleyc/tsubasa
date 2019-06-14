@@ -1,4 +1,4 @@
-id;passive_effect_id;passive_effect_value;activate_full_power_type;attribute_magnification;use_stamina_magnification;is_ignore_team_skill;stamina_infinity_type;id_id
+id;passive_effect_id;passive_effect_value;activate_full_power_type;attribute_magnification;use_stamina_magnification;is_ignore_team_skill;stamina_infinity_type;mpassiveeffectrange_id
 1;900;79670;23547;60014;13772;71092;61216;4
 2;16654;50948;52862;74717;59011;46256;29804;7
 3;3506;78972;3725;21522;2634;6592;73912;6

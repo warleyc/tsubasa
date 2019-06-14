@@ -110,9 +110,9 @@ public class MMatchOptionQueryService extends QueryService<MMatchOption> {
             if (criteria.getStaminaInfinityType() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getStaminaInfinityType(), MMatchOption_.staminaInfinityType));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MMatchOption_.id, JoinType.LEFT).get(MPassiveEffectRange_.id)));
+            if (criteria.getMpassiveeffectrangeId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMpassiveeffectrangeId(),
+                    root -> root.join(MMatchOption_.mpassiveeffectrange, JoinType.LEFT).get(MPassiveEffectRange_.id)));
             }
             if (criteria.getMLeagueRegulationId() != null) {
                 specification = specification.and(buildSpecification(criteria.getMLeagueRegulationId(),

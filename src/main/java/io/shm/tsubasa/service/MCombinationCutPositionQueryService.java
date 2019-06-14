@@ -113,9 +113,9 @@ public class MCombinationCutPositionQueryService extends QueryService<MCombinati
             if (criteria.getParticipantPosition5() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getParticipantPosition5(), MCombinationCutPosition_.participantPosition5));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MCombinationCutPosition_.id, JoinType.LEFT).get(MCharacter_.id)));
+            if (criteria.getMcharacterId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMcharacterId(),
+                    root -> root.join(MCombinationCutPosition_.mcharacter, JoinType.LEFT).get(MCharacter_.id)));
             }
         }
         return specification;

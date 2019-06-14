@@ -120,9 +120,9 @@ public class MNpcDeck implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mNpcDecks")
-    private MFormation id;
+    private MFormation mformation;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mnpcdeck")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MDummyOpponent> mDummyOpponents = new HashSet<>();
 
@@ -421,17 +421,17 @@ public class MNpcDeck implements Serializable {
         this.tick = tick;
     }
 
-    public MFormation getId() {
-        return id;
+    public MFormation getMformation() {
+        return mformation;
     }
 
-    public MNpcDeck id(MFormation mFormation) {
-        this.id = mFormation;
+    public MNpcDeck mformation(MFormation mFormation) {
+        this.mformation = mFormation;
         return this;
     }
 
-    public void setId(MFormation mFormation) {
-        this.id = mFormation;
+    public void setMformation(MFormation mFormation) {
+        this.mformation = mFormation;
     }
 
     public Set<MDummyOpponent> getMDummyOpponents() {
@@ -445,13 +445,13 @@ public class MNpcDeck implements Serializable {
 
     public MNpcDeck addMDummyOpponent(MDummyOpponent mDummyOpponent) {
         this.mDummyOpponents.add(mDummyOpponent);
-        mDummyOpponent.setId(this);
+        mDummyOpponent.setMnpcdeck(this);
         return this;
     }
 
     public MNpcDeck removeMDummyOpponent(MDummyOpponent mDummyOpponent) {
         this.mDummyOpponents.remove(mDummyOpponent);
-        mDummyOpponent.setId(null);
+        mDummyOpponent.setMnpcdeck(null);
         return this;
     }
 

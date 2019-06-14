@@ -36,7 +36,7 @@ public class MTargetNationalityGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetNationalityGroups")
-    private MNationality id;
+    private MNationality mnationality;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,17 +73,17 @@ public class MTargetNationalityGroup implements Serializable {
         this.nationalityId = nationalityId;
     }
 
-    public MNationality getId() {
-        return id;
+    public MNationality getMnationality() {
+        return mnationality;
     }
 
-    public MTargetNationalityGroup id(MNationality mNationality) {
-        this.id = mNationality;
+    public MTargetNationalityGroup mnationality(MNationality mNationality) {
+        this.mnationality = mNationality;
         return this;
     }
 
-    public void setId(MNationality mNationality) {
-        this.id = mNationality;
+    public void setMnationality(MNationality mNationality) {
+        this.mnationality = mNationality;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

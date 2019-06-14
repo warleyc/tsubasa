@@ -177,7 +177,7 @@
             "otherEntityName": "mQuestWorld",
             "otherEntityRelationshipName": "mQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mquestworld",
             "otherEntityField": "id"
         }
     ],

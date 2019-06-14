@@ -45,7 +45,7 @@
             "otherEntityName": "mCharacter",
             "otherEntityRelationshipName": "mActionSkillHolderCardContent",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mcharacter",
             "otherEntityField": "id"
         }
     ],

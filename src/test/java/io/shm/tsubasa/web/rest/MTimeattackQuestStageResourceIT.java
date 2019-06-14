@@ -220,7 +220,7 @@ public class MTimeattackQuestStageResourceIT {
         } else {
             mTimeattackQuestWorld = TestUtil.findAll(em, MTimeattackQuestWorld.class).get(0);
         }
-        mTimeattackQuestStage.setId(mTimeattackQuestWorld);
+        mTimeattackQuestStage.setMtimeattackquestworld(mTimeattackQuestWorld);
         return mTimeattackQuestStage;
     }
     /**
@@ -270,7 +270,7 @@ public class MTimeattackQuestStageResourceIT {
         } else {
             mTimeattackQuestWorld = TestUtil.findAll(em, MTimeattackQuestWorld.class).get(0);
         }
-        mTimeattackQuestStage.setId(mTimeattackQuestWorld);
+        mTimeattackQuestStage.setMtimeattackquestworld(mTimeattackQuestWorld);
         return mTimeattackQuestStage;
     }
 
@@ -2485,17 +2485,17 @@ public class MTimeattackQuestStageResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTimeattackQuestStagesByIdIsEqualToSomething() throws Exception {
+    public void getAllMTimeattackQuestStagesByMtimeattackquestworldIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MTimeattackQuestWorld id = mTimeattackQuestStage.getId();
+        MTimeattackQuestWorld mtimeattackquestworld = mTimeattackQuestStage.getMtimeattackquestworld();
         mTimeattackQuestStageRepository.saveAndFlush(mTimeattackQuestStage);
-        Long idId = id.getId();
+        Long mtimeattackquestworldId = mtimeattackquestworld.getId();
 
-        // Get all the mTimeattackQuestStageList where id equals to idId
-        defaultMTimeattackQuestStageShouldBeFound("idId.equals=" + idId);
+        // Get all the mTimeattackQuestStageList where mtimeattackquestworld equals to mtimeattackquestworldId
+        defaultMTimeattackQuestStageShouldBeFound("mtimeattackquestworldId.equals=" + mtimeattackquestworldId);
 
-        // Get all the mTimeattackQuestStageList where id equals to idId + 1
-        defaultMTimeattackQuestStageShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTimeattackQuestStageList where mtimeattackquestworld equals to mtimeattackquestworldId + 1
+        defaultMTimeattackQuestStageShouldNotBeFound("mtimeattackquestworldId.equals=" + (mtimeattackquestworldId + 1));
     }
 
     /**

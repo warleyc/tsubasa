@@ -64,7 +64,7 @@ public class MMissionDTO implements Serializable {
     private Integer orderNum;
 
 
-    private Long idId;
+    private Long mmissionrewardId;
 
     public Long getId() {
         return id;
@@ -234,12 +234,12 @@ public class MMissionDTO implements Serializable {
         this.orderNum = orderNum;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMmissionrewardId() {
+        return mmissionrewardId;
     }
 
-    public void setIdId(Long mMissionRewardId) {
-        this.idId = mMissionRewardId;
+    public void setMmissionrewardId(Long mMissionRewardId) {
+        this.mmissionrewardId = mMissionRewardId;
     }
 
     @Override
@@ -287,7 +287,7 @@ public class MMissionDTO implements Serializable {
             ", sceneTransitionParam='" + getSceneTransitionParam() + "'" +
             ", pickup=" + getPickup() +
             ", orderNum=" + getOrderNum() +
-            ", id=" + getIdId() +
+            ", mmissionreward=" + getMmissionrewardId() +
             "}";
     }
 }

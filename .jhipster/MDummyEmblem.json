@@ -56,7 +56,7 @@
             "otherEntityName": "mEmblemParts",
             "otherEntityRelationshipName": "mDummyEmblem",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "memblemparts",
             "otherEntityField": "id"
         }
     ],

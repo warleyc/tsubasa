@@ -290,9 +290,9 @@ public class MPlayableCardQueryService extends QueryService<MPlayableCard> {
             if (criteria.getStartAt() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getStartAt(), MPlayableCard_.startAt));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MPlayableCard_.id, JoinType.LEFT).get(MModelCard_.id)));
+            if (criteria.getMmodelcardId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmodelcardId(),
+                    root -> root.join(MPlayableCard_.mmodelcard, JoinType.LEFT).get(MModelCard_.id)));
             }
             if (criteria.getMArousalId() != null) {
                 specification = specification.and(buildSpecification(criteria.getMArousalId(),

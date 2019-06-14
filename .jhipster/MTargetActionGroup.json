@@ -22,7 +22,7 @@
             "otherEntityName": "mAction",
             "otherEntityRelationshipName": "mTargetActionGroup",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "maction",
             "otherEntityField": "id"
         }
     ],

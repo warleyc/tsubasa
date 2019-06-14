@@ -47,7 +47,7 @@ export class MTrainingCardUpdatePage {
   plusCatchingInput = element(by.id('field_plusCatching'));
   thumbnailAssetsIdInput = element(by.id('field_thumbnailAssetsId'));
   cardIllustAssetsIdInput = element(by.id('field_cardIllustAssetsId'));
-  idSelect = element(by.id('field_id'));
+  mcardthumbnailassetsSelect = element(by.id('field_mcardthumbnailassets'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -221,23 +221,23 @@ export class MTrainingCardUpdatePage {
     return await this.cardIllustAssetsIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mcardthumbnailassetsSelectLastOption(timeout?: number) {
+    await this.mcardthumbnailassetsSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mcardthumbnailassetsSelectOption(option) {
+    await this.mcardthumbnailassetsSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMcardthumbnailassetsSelect(): ElementFinder {
+    return this.mcardthumbnailassetsSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMcardthumbnailassetsSelectedOption() {
+    return await this.mcardthumbnailassetsSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

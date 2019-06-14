@@ -43,7 +43,7 @@
             "otherEntityName": "mMatchOption",
             "otherEntityRelationshipName": "mPvpRegulation",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmatchoption",
             "otherEntityField": "id"
         }
     ],

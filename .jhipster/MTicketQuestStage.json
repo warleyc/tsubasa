@@ -198,7 +198,7 @@
             "otherEntityName": "mTicketQuestWorld",
             "otherEntityRelationshipName": "mTicketQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mticketquestworld",
             "otherEntityField": "id"
         }
     ],

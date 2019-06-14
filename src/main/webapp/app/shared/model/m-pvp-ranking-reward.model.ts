@@ -5,7 +5,7 @@ export interface IMPvpRankingReward {
   rankingFrom?: number;
   rankingTo?: number;
   rewardGroupId?: number;
-  idId?: number;
+  mpvpwaveId?: number;
 }
 
 export class MPvpRankingReward implements IMPvpRankingReward {
@@ -16,6 +16,6 @@ export class MPvpRankingReward implements IMPvpRankingReward {
     public rankingFrom?: number,
     public rankingTo?: number,
     public rewardGroupId?: number,
-    public idId?: number
+    public mpvpwaveId?: number
   ) {}
 }

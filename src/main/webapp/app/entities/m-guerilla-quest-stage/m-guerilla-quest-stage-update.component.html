@@ -359,15 +359,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mguerillaquestworld">Mguerillaquestworld</label>
+                    <select class="form-control" id="field_mguerillaquestworld" name="mguerillaquestworld" formControlName="mguerillaquestworldId">
+                        <option *ngIf="!editForm.get('mguerillaquestworld').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mGuerillaQuestWorldOption.id" *ngFor="let mGuerillaQuestWorldOption of mguerillaquestworlds; trackBy: trackMGuerillaQuestWorldById">{{mGuerillaQuestWorldOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mguerillaquestworld').invalid && (editForm.get('mguerillaquestworld').dirty || editForm.get('mguerillaquestworld').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mguerillaquestworld').errors.required">
                         This field is required.
                     </small>
                 </div>

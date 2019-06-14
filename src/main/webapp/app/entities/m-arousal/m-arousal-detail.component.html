@@ -21,10 +21,10 @@
                 <dd>
                     <span>{{mArousal.materialGroupId}}</span>
                 </dd>
-                <dt><span>Id</span></dt>
+                <dt><span>Mplayablecard</span></dt>
                 <dd>
-                    <div *ngIf="mArousal.idId">
-                        <a [routerLink]="['/m-playable-card', mArousal.idId, 'view']">{{mArousal.idId}}</a>
+                    <div *ngIf="mArousal.mplayablecardId">
+                        <a [routerLink]="['/m-playable-card', mArousal.mplayablecardId, 'view']">{{mArousal.mplayablecardId}}</a>
                     </div>
                 </dd>
             </dl>

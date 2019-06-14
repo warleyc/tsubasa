@@ -17,7 +17,7 @@
             <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="groupId"><span>Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="nationalityId"><span>Nationality Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mnationalityId"><span>Mnationality</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -27,8 +27,8 @@
                 <td>{{mTargetNationalityGroup.groupId}}</td>
                 <td>{{mTargetNationalityGroup.nationalityId}}</td>
                 <td>
-                    <div *ngIf="mTargetNationalityGroup.idId">
-                        <a [routerLink]="['../m-nationality', mTargetNationalityGroup.idId , 'view' ]" >{{mTargetNationalityGroup.idId}}</a>
+                    <div *ngIf="mTargetNationalityGroup.mnationalityId">
+                        <a [routerLink]="['../m-nationality', mTargetNationalityGroup.mnationalityId , 'view' ]" >{{mTargetNationalityGroup.mnationalityId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -57,7 +57,7 @@
             <th jhiSortBy="personalityId"><span>Personality Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="uniformNo"><span>Uniform No</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="levelGroupId"><span>Level Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mcharacterId"><span>Mcharacter</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -107,8 +107,8 @@
                 <td>{{mNpcCard.uniformNo}}</td>
                 <td>{{mNpcCard.levelGroupId}}</td>
                 <td>
-                    <div *ngIf="mNpcCard.idId">
-                        <a [routerLink]="['../m-character', mNpcCard.idId , 'view' ]" >{{mNpcCard.idId}}</a>
+                    <div *ngIf="mNpcCard.mcharacterId">
+                        <a [routerLink]="['../m-character', mNpcCard.mcharacterId , 'view' ]" >{{mNpcCard.mcharacterId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

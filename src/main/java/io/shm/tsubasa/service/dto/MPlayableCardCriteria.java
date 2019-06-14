@@ -160,7 +160,7 @@ public class MPlayableCardCriteria implements Serializable, Criteria {
 
     private IntegerFilter startAt;
 
-    private LongFilter idId;
+    private LongFilter mmodelcardId;
 
     private LongFilter mArousalId;
 
@@ -238,7 +238,7 @@ public class MPlayableCardCriteria implements Serializable, Criteria {
         this.isShowBook = other.isShowBook == null ? null : other.isShowBook.copy();
         this.levelGroupId = other.levelGroupId == null ? null : other.levelGroupId.copy();
         this.startAt = other.startAt == null ? null : other.startAt.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mmodelcardId = other.mmodelcardId == null ? null : other.mmodelcardId.copy();
         this.mArousalId = other.mArousalId == null ? null : other.mArousalId.copy();
         this.mTargetPlayableCardGroupId = other.mTargetPlayableCardGroupId == null ? null : other.mTargetPlayableCardGroupId.copy();
     }
@@ -792,12 +792,12 @@ public class MPlayableCardCriteria implements Serializable, Criteria {
         this.startAt = startAt;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMmodelcardId() {
+        return mmodelcardId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMmodelcardId(LongFilter mmodelcardId) {
+        this.mmodelcardId = mmodelcardId;
     }
 
     public LongFilter getMArousalId() {
@@ -895,7 +895,7 @@ public class MPlayableCardCriteria implements Serializable, Criteria {
             Objects.equals(isShowBook, that.isShowBook) &&
             Objects.equals(levelGroupId, that.levelGroupId) &&
             Objects.equals(startAt, that.startAt) &&
-            Objects.equals(idId, that.idId) &&
+            Objects.equals(mmodelcardId, that.mmodelcardId) &&
             Objects.equals(mArousalId, that.mArousalId) &&
             Objects.equals(mTargetPlayableCardGroupId, that.mTargetPlayableCardGroupId);
     }
@@ -971,7 +971,7 @@ public class MPlayableCardCriteria implements Serializable, Criteria {
         isShowBook,
         levelGroupId,
         startAt,
-        idId,
+        mmodelcardId,
         mArousalId,
         mTargetPlayableCardGroupId
         );
@@ -1048,7 +1048,7 @@ public class MPlayableCardCriteria implements Serializable, Criteria {
                 (isShowBook != null ? "isShowBook=" + isShowBook + ", " : "") +
                 (levelGroupId != null ? "levelGroupId=" + levelGroupId + ", " : "") +
                 (startAt != null ? "startAt=" + startAt + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mmodelcardId != null ? "mmodelcardId=" + mmodelcardId + ", " : "") +
                 (mArousalId != null ? "mArousalId=" + mArousalId + ", " : "") +
                 (mTargetPlayableCardGroupId != null ? "mTargetPlayableCardGroupId=" + mTargetPlayableCardGroupId + ", " : "") +
             "}";

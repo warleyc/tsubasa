@@ -20,7 +20,7 @@
             <th jhiSortBy="rankingFrom"><span>Ranking From</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="rankingTo"><span>Ranking To</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="rewardGroupId"><span>Reward Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mpvpwaveId"><span>Mpvpwave</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -33,8 +33,8 @@
                 <td>{{mPvpRankingReward.rankingTo}}</td>
                 <td>{{mPvpRankingReward.rewardGroupId}}</td>
                 <td>
-                    <div *ngIf="mPvpRankingReward.idId">
-                        <a [routerLink]="['../m-pvp-wave', mPvpRankingReward.idId , 'view' ]" >{{mPvpRankingReward.idId}}</a>
+                    <div *ngIf="mPvpRankingReward.mpvpwaveId">
+                        <a [routerLink]="['../m-pvp-wave', mPvpRankingReward.mpvpwaveId , 'view' ]" >{{mPvpRankingReward.mpvpwaveId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

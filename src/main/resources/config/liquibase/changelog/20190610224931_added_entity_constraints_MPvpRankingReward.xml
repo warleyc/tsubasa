@@ -8,9 +8,9 @@
     -->
     <changeSet id="20190610224931-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="mpvpwave_id"
                                  baseTableName="m_pvp_ranking_reward"
-                                 constraintName="fk_m_pvp_ranking_reward_id_id"
+                                 constraintName="fk_m_pvp_ranking_reward_mpvpwave_id"
                                  referencedColumnNames="id"
                                  referencedTableName="m_pvp_wave"/>
 

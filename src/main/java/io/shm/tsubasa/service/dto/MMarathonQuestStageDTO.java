@@ -90,7 +90,7 @@ public class MMarathonQuestStageDTO implements Serializable {
     private Integer deckConditionId;
 
 
-    private Long idId;
+    private Long mmarathonquestworldId;
 
     public Long getId() {
         return id;
@@ -308,12 +308,12 @@ public class MMarathonQuestStageDTO implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMmarathonquestworldId() {
+        return mmarathonquestworldId;
     }
 
-    public void setIdId(Long mMarathonQuestWorldId) {
-        this.idId = mMarathonQuestWorldId;
+    public void setMmarathonquestworldId(Long mMarathonQuestWorldId) {
+        this.mmarathonquestworldId = mMarathonQuestWorldId;
     }
 
     @Override
@@ -367,7 +367,7 @@ public class MMarathonQuestStageDTO implements Serializable {
             ", conditionId=" + getConditionId() +
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
-            ", id=" + getIdId() +
+            ", mmarathonquestworld=" + getMmarathonquestworldId() +
             "}";
     }
 }

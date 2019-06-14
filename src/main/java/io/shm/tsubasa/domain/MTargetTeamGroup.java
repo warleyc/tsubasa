@@ -36,7 +36,7 @@ public class MTargetTeamGroup implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTargetTeamGroups")
-    private MTeam id;
+    private MTeam mteam;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -73,17 +73,17 @@ public class MTargetTeamGroup implements Serializable {
         this.teamId = teamId;
     }
 
-    public MTeam getId() {
-        return id;
+    public MTeam getMteam() {
+        return mteam;
     }
 
-    public MTargetTeamGroup id(MTeam mTeam) {
-        this.id = mTeam;
+    public MTargetTeamGroup mteam(MTeam mTeam) {
+        this.mteam = mTeam;
         return this;
     }
 
-    public void setId(MTeam mTeam) {
-        this.id = mTeam;
+    public void setMteam(MTeam mTeam) {
+        this.mteam = mTeam;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

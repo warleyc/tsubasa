@@ -44,7 +44,7 @@ export class MNpcDeckUpdateComponent implements OnInit {
     npcCardId10: [null, [Validators.required]],
     npcCardId11: [null, [Validators.required]],
     tick: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mformationId: [null, Validators.required]
   });
 
   constructor(
@@ -96,7 +96,7 @@ export class MNpcDeckUpdateComponent implements OnInit {
       npcCardId10: mNpcDeck.npcCardId10,
       npcCardId11: mNpcDeck.npcCardId11,
       tick: mNpcDeck.tick,
-      idId: mNpcDeck.idId
+      mformationId: mNpcDeck.mformationId
     });
   }
 
@@ -172,7 +172,7 @@ export class MNpcDeckUpdateComponent implements OnInit {
       npcCardId10: this.editForm.get(['npcCardId10']).value,
       npcCardId11: this.editForm.get(['npcCardId11']).value,
       tick: this.editForm.get(['tick']).value,
-      idId: this.editForm.get(['idId']).value
+      mformationId: this.editForm.get(['mformationId']).value
     };
     return entity;
   }

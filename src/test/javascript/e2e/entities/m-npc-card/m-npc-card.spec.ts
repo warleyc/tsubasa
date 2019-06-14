@@ -82,7 +82,7 @@ describe('MNpcCard e2e test', () => {
             mNpcCardUpdatePage.setPersonalityIdInput('5'),
             mNpcCardUpdatePage.setUniformNoInput('5'),
             mNpcCardUpdatePage.setLevelGroupIdInput('5'),
-            mNpcCardUpdatePage.idSelectLastOption(),
+            mNpcCardUpdatePage.mcharacterSelectLastOption(),
         ]);
         expect(await mNpcCardUpdatePage.getCharacterIdInput()).to.eq('5', 'Expected characterId value to be equals to 5');
         expect(await mNpcCardUpdatePage.getShortNameInput()).to.eq('shortName', 'Expected ShortName value to be equals to shortName');

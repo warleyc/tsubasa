@@ -49,7 +49,6 @@ public class CacheConfiguration {
             createCache(cm, io.shm.tsubasa.domain.MActionLevel.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MActionRarity.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MActionSkillCutin.class.getName());
-            createCache(cm, io.shm.tsubasa.domain.MActionSkillHolderCardCt.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MAdventQuestStage.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MAdventQuestStageReward.class.getName());
             createCache(cm, io.shm.tsubasa.domain.MAdventQuestTsubasaPointReward.class.getName());

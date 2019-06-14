@@ -95,9 +95,9 @@ public class MTargetNationalityGroupQueryService extends QueryService<MTargetNat
             if (criteria.getNationalityId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getNationalityId(), MTargetNationalityGroup_.nationalityId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTargetNationalityGroup_.id, JoinType.LEFT).get(MNationality_.id)));
+            if (criteria.getMnationalityId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMnationalityId(),
+                    root -> root.join(MTargetNationalityGroup_.mnationality, JoinType.LEFT).get(MNationality_.id)));
             }
         }
         return specification;

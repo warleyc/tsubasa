@@ -24,7 +24,7 @@ export class MTargetNationalityGroupUpdateComponent implements OnInit {
     id: [],
     groupId: [null, [Validators.required]],
     nationalityId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mnationalityId: [null, Validators.required]
   });
 
   constructor(
@@ -55,7 +55,7 @@ export class MTargetNationalityGroupUpdateComponent implements OnInit {
       id: mTargetNationalityGroup.id,
       groupId: mTargetNationalityGroup.groupId,
       nationalityId: mTargetNationalityGroup.nationalityId,
-      idId: mTargetNationalityGroup.idId
+      mnationalityId: mTargetNationalityGroup.mnationalityId
     });
   }
 
@@ -79,7 +79,7 @@ export class MTargetNationalityGroupUpdateComponent implements OnInit {
       id: this.editForm.get(['id']).value,
       groupId: this.editForm.get(['groupId']).value,
       nationalityId: this.editForm.get(['nationalityId']).value,
-      idId: this.editForm.get(['idId']).value
+      mnationalityId: this.editForm.get(['mnationalityId']).value
     };
     return entity;
   }

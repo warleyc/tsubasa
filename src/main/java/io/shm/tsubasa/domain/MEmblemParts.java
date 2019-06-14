@@ -36,7 +36,7 @@ public class MEmblemParts implements Serializable {
     @Column(name = "parts_type", nullable = false)
     private Integer partsType;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "memblemparts")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MDummyEmblem> mDummyEmblems = new HashSet<>();
 
@@ -86,13 +86,13 @@ public class MEmblemParts implements Serializable {
 
     public MEmblemParts addMDummyEmblem(MDummyEmblem mDummyEmblem) {
         this.mDummyEmblems.add(mDummyEmblem);
-        mDummyEmblem.setId(this);
+        mDummyEmblem.setMemblemparts(this);
         return this;
     }
 
     public MEmblemParts removeMDummyEmblem(MDummyEmblem mDummyEmblem) {
         this.mDummyEmblems.remove(mDummyEmblem);
-        mDummyEmblem.setId(null);
+        mDummyEmblem.setMemblemparts(null);
         return this;
     }
 

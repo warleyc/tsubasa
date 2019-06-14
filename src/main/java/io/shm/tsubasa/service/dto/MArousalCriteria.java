@@ -34,7 +34,7 @@ public class MArousalCriteria implements Serializable, Criteria {
 
     private IntegerFilter materialGroupId;
 
-    private LongFilter idId;
+    private LongFilter mplayablecardId;
 
     public MArousalCriteria(){
     }
@@ -45,7 +45,7 @@ public class MArousalCriteria implements Serializable, Criteria {
         this.afterId = other.afterId == null ? null : other.afterId.copy();
         this.cost = other.cost == null ? null : other.cost.copy();
         this.materialGroupId = other.materialGroupId == null ? null : other.materialGroupId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mplayablecardId = other.mplayablecardId == null ? null : other.mplayablecardId.copy();
     }
 
     @Override
@@ -93,12 +93,12 @@ public class MArousalCriteria implements Serializable, Criteria {
         this.materialGroupId = materialGroupId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMplayablecardId() {
+        return mplayablecardId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMplayablecardId(LongFilter mplayablecardId) {
+        this.mplayablecardId = mplayablecardId;
     }
 
 
@@ -117,7 +117,7 @@ public class MArousalCriteria implements Serializable, Criteria {
             Objects.equals(afterId, that.afterId) &&
             Objects.equals(cost, that.cost) &&
             Objects.equals(materialGroupId, that.materialGroupId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mplayablecardId, that.mplayablecardId);
     }
 
     @Override
@@ -128,7 +128,7 @@ public class MArousalCriteria implements Serializable, Criteria {
         afterId,
         cost,
         materialGroupId,
-        idId
+        mplayablecardId
         );
     }
 
@@ -140,7 +140,7 @@ public class MArousalCriteria implements Serializable, Criteria {
                 (afterId != null ? "afterId=" + afterId + ", " : "") +
                 (cost != null ? "cost=" + cost + ", " : "") +
                 (materialGroupId != null ? "materialGroupId=" + materialGroupId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mplayablecardId != null ? "mplayablecardId=" + mplayablecardId + ", " : "") +
             "}";
     }
 

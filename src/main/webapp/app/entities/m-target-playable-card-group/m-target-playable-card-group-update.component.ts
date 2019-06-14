@@ -25,7 +25,7 @@ export class MTargetPlayableCardGroupUpdateComponent implements OnInit {
     groupId: [null, [Validators.required]],
     cardId: [null, [Validators.required]],
     isShowThumbnail: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mplayablecardId: [null, Validators.required]
   });
 
   constructor(
@@ -57,7 +57,7 @@ export class MTargetPlayableCardGroupUpdateComponent implements OnInit {
       groupId: mTargetPlayableCardGroup.groupId,
       cardId: mTargetPlayableCardGroup.cardId,
       isShowThumbnail: mTargetPlayableCardGroup.isShowThumbnail,
-      idId: mTargetPlayableCardGroup.idId
+      mplayablecardId: mTargetPlayableCardGroup.mplayablecardId
     });
   }
 
@@ -82,7 +82,7 @@ export class MTargetPlayableCardGroupUpdateComponent implements OnInit {
       groupId: this.editForm.get(['groupId']).value,
       cardId: this.editForm.get(['cardId']).value,
       isShowThumbnail: this.editForm.get(['isShowThumbnail']).value,
-      idId: this.editForm.get(['idId']).value
+      mplayablecardId: this.editForm.get(['mplayablecardId']).value
     };
     return entity;
   }

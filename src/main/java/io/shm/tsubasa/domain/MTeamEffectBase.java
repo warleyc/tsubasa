@@ -81,7 +81,7 @@ public class MTeamEffectBase implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mTeamEffectBases")
-    private MPassiveEffectRange id;
+    private MPassiveEffectRange mpassiveeffectrange;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -261,17 +261,17 @@ public class MTeamEffectBase implements Serializable {
         this.description = description;
     }
 
-    public MPassiveEffectRange getId() {
-        return id;
+    public MPassiveEffectRange getMpassiveeffectrange() {
+        return mpassiveeffectrange;
     }
 
-    public MTeamEffectBase id(MPassiveEffectRange mPassiveEffectRange) {
-        this.id = mPassiveEffectRange;
+    public MTeamEffectBase mpassiveeffectrange(MPassiveEffectRange mPassiveEffectRange) {
+        this.mpassiveeffectrange = mPassiveEffectRange;
         return this;
     }
 
-    public void setId(MPassiveEffectRange mPassiveEffectRange) {
-        this.id = mPassiveEffectRange;
+    public void setMpassiveeffectrange(MPassiveEffectRange mPassiveEffectRange) {
+        this.mpassiveeffectrange = mPassiveEffectRange;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

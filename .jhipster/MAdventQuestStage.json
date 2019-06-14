@@ -184,7 +184,7 @@
             "otherEntityName": "mAdventQuestWorld",
             "otherEntityRelationshipName": "mAdventQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "madventquestworld",
             "otherEntityField": "id"
         }
     ],

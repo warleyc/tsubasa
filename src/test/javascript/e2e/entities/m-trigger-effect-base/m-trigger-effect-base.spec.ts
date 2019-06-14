@@ -51,7 +51,7 @@ describe('MTriggerEffectBase e2e test', () => {
             mTriggerEffectBaseUpdatePage.setTargetCardParameterInput('5'),
             mTriggerEffectBaseUpdatePage.setEffectIdInput('5'),
             mTriggerEffectBaseUpdatePage.setDescriptionInput('description'),
-            mTriggerEffectBaseUpdatePage.idSelectLastOption(),
+            mTriggerEffectBaseUpdatePage.mtriggereffectrangeSelectLastOption(),
         ]);
         expect(await mTriggerEffectBaseUpdatePage.getNameInput()).to.eq('name', 'Expected Name value to be equals to name');
         expect(await mTriggerEffectBaseUpdatePage.getRarityInput()).to.eq('5', 'Expected rarity value to be equals to 5');

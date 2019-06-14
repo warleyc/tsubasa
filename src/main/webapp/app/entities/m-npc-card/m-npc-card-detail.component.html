@@ -173,10 +173,10 @@
                 <dd>
                     <span>{{mNpcCard.levelGroupId}}</span>
                 </dd>
-                <dt><span>Id</span></dt>
+                <dt><span>Mcharacter</span></dt>
                 <dd>
-                    <div *ngIf="mNpcCard.idId">
-                        <a [routerLink]="['/m-character', mNpcCard.idId, 'view']">{{mNpcCard.idId}}</a>
+                    <div *ngIf="mNpcCard.mcharacterId">
+                        <a [routerLink]="['/m-character', mNpcCard.mcharacterId, 'view']">{{mNpcCard.mcharacterId}}</a>
                     </div>
                 </dd>
             </dl>

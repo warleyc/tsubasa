@@ -55,7 +55,7 @@ describe('MFormation e2e test', () => {
             mFormationUpdatePage.setSubUniformNosInput('subUniformNos'),
             mFormationUpdatePage.setExTypeInput('5'),
             mFormationUpdatePage.setMatchFormationIdInput('5'),
-            mFormationUpdatePage.idSelectLastOption(),
+            mFormationUpdatePage.mpassiveeffectrangeSelectLastOption(),
         ]);
         expect(await mFormationUpdatePage.getEffectValueInput()).to.eq('5', 'Expected effectValue value to be equals to 5');
         expect(await mFormationUpdatePage.getEffectProbabilityInput()).to.eq('5', 'Expected effectProbability value to be equals to 5');

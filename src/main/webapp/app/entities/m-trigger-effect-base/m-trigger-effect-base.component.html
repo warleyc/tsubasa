@@ -22,7 +22,7 @@
             <th jhiSortBy="targetCardParameter"><span>Target Card Parameter</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="effectId"><span>Effect Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="description"><span>Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mtriggereffectrangeId"><span>Mtriggereffectrange</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -37,8 +37,8 @@
                 <td>{{mTriggerEffectBase.effectId}}</td>
                 <td>{{mTriggerEffectBase.description}}</td>
                 <td>
-                    <div *ngIf="mTriggerEffectBase.idId">
-                        <a [routerLink]="['../m-trigger-effect-range', mTriggerEffectBase.idId , 'view' ]" >{{mTriggerEffectBase.idId}}</a>
+                    <div *ngIf="mTriggerEffectBase.mtriggereffectrangeId">
+                        <a [routerLink]="['../m-trigger-effect-range', mTriggerEffectBase.mtriggereffectrangeId , 'view' ]" >{{mTriggerEffectBase.mtriggereffectrangeId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

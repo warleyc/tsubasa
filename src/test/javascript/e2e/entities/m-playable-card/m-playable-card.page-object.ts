@@ -94,7 +94,7 @@ export class MPlayableCardUpdatePage {
   isShowBookInput = element(by.id('field_isShowBook'));
   levelGroupIdInput = element(by.id('field_levelGroupId'));
   startAtInput = element(by.id('field_startAt'));
-  idSelect = element(by.id('field_id'));
+  mmodelcardSelect = element(by.id('field_mmodelcard'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -644,23 +644,23 @@ export class MPlayableCardUpdatePage {
     return await this.startAtInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mmodelcardSelectLastOption(timeout?: number) {
+    await this.mmodelcardSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mmodelcardSelectOption(option) {
+    await this.mmodelcardSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMmodelcardSelect(): ElementFinder {
+    return this.mmodelcardSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMmodelcardSelectedOption() {
+    return await this.mmodelcardSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

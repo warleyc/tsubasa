@@ -36,7 +36,7 @@ public class MPvpRegulationCriteria implements Serializable, Criteria {
 
     private IntegerFilter ruleTutorialId;
 
-    private LongFilter idId;
+    private LongFilter mmatchoptionId;
 
     public MPvpRegulationCriteria(){
     }
@@ -48,7 +48,7 @@ public class MPvpRegulationCriteria implements Serializable, Criteria {
         this.matchOptionId = other.matchOptionId == null ? null : other.matchOptionId.copy();
         this.deckConditionId = other.deckConditionId == null ? null : other.deckConditionId.copy();
         this.ruleTutorialId = other.ruleTutorialId == null ? null : other.ruleTutorialId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mmatchoptionId = other.mmatchoptionId == null ? null : other.mmatchoptionId.copy();
     }
 
     @Override
@@ -104,12 +104,12 @@ public class MPvpRegulationCriteria implements Serializable, Criteria {
         this.ruleTutorialId = ruleTutorialId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMmatchoptionId() {
+        return mmatchoptionId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMmatchoptionId(LongFilter mmatchoptionId) {
+        this.mmatchoptionId = mmatchoptionId;
     }
 
 
@@ -129,7 +129,7 @@ public class MPvpRegulationCriteria implements Serializable, Criteria {
             Objects.equals(matchOptionId, that.matchOptionId) &&
             Objects.equals(deckConditionId, that.deckConditionId) &&
             Objects.equals(ruleTutorialId, that.ruleTutorialId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mmatchoptionId, that.mmatchoptionId);
     }
 
     @Override
@@ -141,7 +141,7 @@ public class MPvpRegulationCriteria implements Serializable, Criteria {
         matchOptionId,
         deckConditionId,
         ruleTutorialId,
-        idId
+        mmatchoptionId
         );
     }
 
@@ -154,7 +154,7 @@ public class MPvpRegulationCriteria implements Serializable, Criteria {
                 (matchOptionId != null ? "matchOptionId=" + matchOptionId + ", " : "") +
                 (deckConditionId != null ? "deckConditionId=" + deckConditionId + ", " : "") +
                 (ruleTutorialId != null ? "ruleTutorialId=" + ruleTutorialId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mmatchoptionId != null ? "mmatchoptionId=" + mmatchoptionId + ", " : "") +
             "}";
     }
 

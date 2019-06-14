@@ -53,7 +53,7 @@ export class MLuckWeeklyQuestStageUpdatePage {
   optionIdInput = element(by.id('field_optionId'));
   deckConditionIdInput = element(by.id('field_deckConditionId'));
   luckIdInput = element(by.id('field_luckId'));
-  idSelect = element(by.id('field_id'));
+  mluckweeklyquestworldSelect = element(by.id('field_mluckweeklyquestworld'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -275,23 +275,23 @@ export class MLuckWeeklyQuestStageUpdatePage {
     return await this.luckIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mluckweeklyquestworldSelectLastOption(timeout?: number) {
+    await this.mluckweeklyquestworldSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mluckweeklyquestworldSelectOption(option) {
+    await this.mluckweeklyquestworldSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMluckweeklyquestworldSelect(): ElementFinder {
+    return this.mluckweeklyquestworldSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMluckweeklyquestworldSelectedOption() {
+    return await this.mluckweeklyquestworldSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

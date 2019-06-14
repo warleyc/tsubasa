@@ -143,9 +143,9 @@ public class MTrainingCardQueryService extends QueryService<MTrainingCard> {
             if (criteria.getCardIllustAssetsId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getCardIllustAssetsId(), MTrainingCard_.cardIllustAssetsId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTrainingCard_.id, JoinType.LEFT).get(MCardThumbnailAssets_.id)));
+            if (criteria.getMcardthumbnailassetsId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMcardthumbnailassetsId(),
+                    root -> root.join(MTrainingCard_.mcardthumbnailassets, JoinType.LEFT).get(MCardThumbnailAssets_.id)));
             }
         }
         return specification;

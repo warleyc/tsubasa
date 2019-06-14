@@ -31,7 +31,7 @@ export class MPvpRankingRewardUpdatePage {
   rankingFromInput = element(by.id('field_rankingFrom'));
   rankingToInput = element(by.id('field_rankingTo'));
   rewardGroupIdInput = element(by.id('field_rewardGroupId'));
-  idSelect = element(by.id('field_id'));
+  mpvpwaveSelect = element(by.id('field_mpvpwave'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -77,23 +77,23 @@ export class MPvpRankingRewardUpdatePage {
     return await this.rewardGroupIdInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mpvpwaveSelectLastOption(timeout?: number) {
+    await this.mpvpwaveSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mpvpwaveSelectOption(option) {
+    await this.mpvpwaveSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMpvpwaveSelect(): ElementFinder {
+    return this.mpvpwaveSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMpvpwaveSelectedOption() {
+    return await this.mpvpwaveSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

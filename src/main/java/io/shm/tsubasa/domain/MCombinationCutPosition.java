@@ -60,7 +60,7 @@ public class MCombinationCutPosition implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mCombinationCutPositions")
-    private MCharacter id;
+    private MCharacter mcharacter;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -175,17 +175,17 @@ public class MCombinationCutPosition implements Serializable {
         this.participantPosition5 = participantPosition5;
     }
 
-    public MCharacter getId() {
-        return id;
+    public MCharacter getMcharacter() {
+        return mcharacter;
     }
 
-    public MCombinationCutPosition id(MCharacter mCharacter) {
-        this.id = mCharacter;
+    public MCombinationCutPosition mcharacter(MCharacter mCharacter) {
+        this.mcharacter = mCharacter;
         return this;
     }
 
-    public void setId(MCharacter mCharacter) {
-        this.id = mCharacter;
+    public void setMcharacter(MCharacter mCharacter) {
+        this.mcharacter = mCharacter;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

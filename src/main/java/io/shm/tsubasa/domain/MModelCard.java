@@ -80,7 +80,7 @@ public class MModelCard implements Serializable {
     @Column(name = "width", nullable = false)
     private Integer width;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mmodelcard")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MPlayableCard> mPlayableCards = new HashSet<>();
 
@@ -286,13 +286,13 @@ public class MModelCard implements Serializable {
 
     public MModelCard addMPlayableCard(MPlayableCard mPlayableCard) {
         this.mPlayableCards.add(mPlayableCard);
-        mPlayableCard.setId(this);
+        mPlayableCard.setMmodelcard(this);
         return this;
     }
 
     public MModelCard removeMPlayableCard(MPlayableCard mPlayableCard) {
         this.mPlayableCards.remove(mPlayableCard);
-        mPlayableCard.setId(null);
+        mPlayableCard.setMmodelcard(null);
         return this;
     }
 

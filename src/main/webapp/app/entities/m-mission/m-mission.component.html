@@ -35,7 +35,7 @@
             <th jhiSortBy="sceneTransitionParam"><span>Scene Transition Param</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="pickup"><span>Pickup</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="orderNum"><span>Order Num</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mmissionrewardId"><span>Mmissionreward</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -63,8 +63,8 @@
                 <td>{{mMission.pickup}}</td>
                 <td>{{mMission.orderNum}}</td>
                 <td>
-                    <div *ngIf="mMission.idId">
-                        <a [routerLink]="['../m-mission-reward', mMission.idId , 'view' ]" >{{mMission.idId}}</a>
+                    <div *ngIf="mMission.mmissionrewardId">
+                        <a [routerLink]="['../m-mission-reward', mMission.mmissionrewardId , 'view' ]" >{{mMission.mmissionrewardId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -152,7 +152,7 @@ public class MCardPowerupActionSkillResourceIT {
         } else {
             mCardThumbnailAssets = TestUtil.findAll(em, MCardThumbnailAssets.class).get(0);
         }
-        mCardPowerupActionSkill.setId(mCardThumbnailAssets);
+        mCardPowerupActionSkill.setMcardthumbnailassets(mCardThumbnailAssets);
         return mCardPowerupActionSkill;
     }
     /**
@@ -185,7 +185,7 @@ public class MCardPowerupActionSkillResourceIT {
         } else {
             mCardThumbnailAssets = TestUtil.findAll(em, MCardThumbnailAssets.class).get(0);
         }
-        mCardPowerupActionSkill.setId(mCardThumbnailAssets);
+        mCardPowerupActionSkill.setMcardthumbnailassets(mCardThumbnailAssets);
         return mCardPowerupActionSkill;
     }
 
@@ -1093,17 +1093,17 @@ public class MCardPowerupActionSkillResourceIT {
 
     @Test
     @Transactional
-    public void getAllMCardPowerupActionSkillsByIdIsEqualToSomething() throws Exception {
+    public void getAllMCardPowerupActionSkillsByMcardthumbnailassetsIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCardThumbnailAssets id = mCardPowerupActionSkill.getId();
+        MCardThumbnailAssets mcardthumbnailassets = mCardPowerupActionSkill.getMcardthumbnailassets();
         mCardPowerupActionSkillRepository.saveAndFlush(mCardPowerupActionSkill);
-        Long idId = id.getId();
+        Long mcardthumbnailassetsId = mcardthumbnailassets.getId();
 
-        // Get all the mCardPowerupActionSkillList where id equals to idId
-        defaultMCardPowerupActionSkillShouldBeFound("idId.equals=" + idId);
+        // Get all the mCardPowerupActionSkillList where mcardthumbnailassets equals to mcardthumbnailassetsId
+        defaultMCardPowerupActionSkillShouldBeFound("mcardthumbnailassetsId.equals=" + mcardthumbnailassetsId);
 
-        // Get all the mCardPowerupActionSkillList where id equals to idId + 1
-        defaultMCardPowerupActionSkillShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mCardPowerupActionSkillList where mcardthumbnailassets equals to mcardthumbnailassetsId + 1
+        defaultMCardPowerupActionSkillShouldNotBeFound("mcardthumbnailassetsId.equals=" + (mcardthumbnailassetsId + 1));
     }
 
     /**

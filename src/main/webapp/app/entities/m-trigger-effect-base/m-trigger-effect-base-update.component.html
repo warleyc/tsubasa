@@ -98,15 +98,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mtriggereffectrange">Mtriggereffectrange</label>
+                    <select class="form-control" id="field_mtriggereffectrange" name="mtriggereffectrange" formControlName="mtriggereffectrangeId">
+                        <option *ngIf="!editForm.get('mtriggereffectrange').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mTriggerEffectRangeOption.id" *ngFor="let mTriggerEffectRangeOption of mtriggereffectranges; trackBy: trackMTriggerEffectRangeById">{{mTriggerEffectRangeOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mtriggereffectrange').invalid && (editForm.get('mtriggereffectrange').dirty || editForm.get('mtriggereffectrange').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mtriggereffectrange').errors.required">
                         This field is required.
                     </small>
                 </div>

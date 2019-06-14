@@ -18,7 +18,7 @@
             <th jhiSortBy="groupId"><span>Group Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="cardId"><span>Card Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="isShowThumbnail"><span>Is Show Thumbnail</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mplayablecardId"><span>Mplayablecard</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -29,8 +29,8 @@
                 <td>{{mTargetPlayableCardGroup.cardId}}</td>
                 <td>{{mTargetPlayableCardGroup.isShowThumbnail}}</td>
                 <td>
-                    <div *ngIf="mTargetPlayableCardGroup.idId">
-                        <a [routerLink]="['../m-playable-card', mTargetPlayableCardGroup.idId , 'view' ]" >{{mTargetPlayableCardGroup.idId}}</a>
+                    <div *ngIf="mTargetPlayableCardGroup.mplayablecardId">
+                        <a [routerLink]="['../m-playable-card', mTargetPlayableCardGroup.mplayablecardId , 'view' ]" >{{mTargetPlayableCardGroup.mplayablecardId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

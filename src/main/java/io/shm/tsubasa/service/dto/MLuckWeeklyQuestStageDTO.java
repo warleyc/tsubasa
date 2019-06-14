@@ -92,7 +92,7 @@ public class MLuckWeeklyQuestStageDTO implements Serializable {
     private Integer luckId;
 
 
-    private Long idId;
+    private Long mluckweeklyquestworldId;
 
     public Long getId() {
         return id;
@@ -318,12 +318,12 @@ public class MLuckWeeklyQuestStageDTO implements Serializable {
         this.luckId = luckId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMluckweeklyquestworldId() {
+        return mluckweeklyquestworldId;
     }
 
-    public void setIdId(Long mLuckWeeklyQuestWorldId) {
-        this.idId = mLuckWeeklyQuestWorldId;
+    public void setMluckweeklyquestworldId(Long mLuckWeeklyQuestWorldId) {
+        this.mluckweeklyquestworldId = mLuckWeeklyQuestWorldId;
     }
 
     @Override
@@ -378,7 +378,7 @@ public class MLuckWeeklyQuestStageDTO implements Serializable {
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
             ", luckId=" + getLuckId() +
-            ", id=" + getIdId() +
+            ", mluckweeklyquestworld=" + getMluckweeklyquestworldId() +
             "}";
     }
 }

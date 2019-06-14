@@ -32,13 +32,13 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mCardPowerupActionSkill",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcardthumbnailassets",
             "relationshipName": "mCardPowerupActionSkill"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTrainingCard",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mcardthumbnailassets",
             "relationshipName": "mTrainingCard"
         }
     ],

@@ -11,7 +11,7 @@ export interface IMGuildMission {
   pickup?: number;
   triggerMissionId?: number;
   orderNum?: number;
-  idId?: number;
+  mmissionrewardId?: number;
 }
 
 export class MGuildMission implements IMGuildMission {
@@ -28,6 +28,6 @@ export class MGuildMission implements IMGuildMission {
     public pickup?: number,
     public triggerMissionId?: number,
     public orderNum?: number,
-    public idId?: number
+    public mmissionrewardId?: number
   ) {}
 }

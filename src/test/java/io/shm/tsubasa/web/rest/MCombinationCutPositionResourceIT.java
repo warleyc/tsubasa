@@ -131,7 +131,7 @@ public class MCombinationCutPositionResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mCombinationCutPosition.setId(mCharacter);
+        mCombinationCutPosition.setMcharacter(mCharacter);
         return mCombinationCutPosition;
     }
     /**
@@ -159,7 +159,7 @@ public class MCombinationCutPositionResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mCombinationCutPosition.setId(mCharacter);
+        mCombinationCutPosition.setMcharacter(mCharacter);
         return mCombinationCutPosition;
     }
 
@@ -939,17 +939,17 @@ public class MCombinationCutPositionResourceIT {
 
     @Test
     @Transactional
-    public void getAllMCombinationCutPositionsByIdIsEqualToSomething() throws Exception {
+    public void getAllMCombinationCutPositionsByMcharacterIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCharacter id = mCombinationCutPosition.getId();
+        MCharacter mcharacter = mCombinationCutPosition.getMcharacter();
         mCombinationCutPositionRepository.saveAndFlush(mCombinationCutPosition);
-        Long idId = id.getId();
+        Long mcharacterId = mcharacter.getId();
 
-        // Get all the mCombinationCutPositionList where id equals to idId
-        defaultMCombinationCutPositionShouldBeFound("idId.equals=" + idId);
+        // Get all the mCombinationCutPositionList where mcharacter equals to mcharacterId
+        defaultMCombinationCutPositionShouldBeFound("mcharacterId.equals=" + mcharacterId);
 
-        // Get all the mCombinationCutPositionList where id equals to idId + 1
-        defaultMCombinationCutPositionShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mCombinationCutPositionList where mcharacter equals to mcharacterId + 1
+        defaultMCombinationCutPositionShouldNotBeFound("mcharacterId.equals=" + (mcharacterId + 1));
     }
 
     /**

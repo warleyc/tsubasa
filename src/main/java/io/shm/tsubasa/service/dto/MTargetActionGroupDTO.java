@@ -17,7 +17,7 @@ public class MTargetActionGroupDTO implements Serializable {
     private Integer actionId;
 
 
-    private Long idId;
+    private Long mactionId;
 
     public Long getId() {
         return id;
@@ -43,12 +43,12 @@ public class MTargetActionGroupDTO implements Serializable {
         this.actionId = actionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMactionId() {
+        return mactionId;
     }
 
-    public void setIdId(Long mActionId) {
-        this.idId = mActionId;
+    public void setMactionId(Long mActionId) {
+        this.mactionId = mActionId;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class MTargetActionGroupDTO implements Serializable {
             "id=" + getId() +
             ", groupId=" + getGroupId() +
             ", actionId=" + getActionId() +
-            ", id=" + getIdId() +
+            ", maction=" + getMactionId() +
             "}";
     }
 }

@@ -164,9 +164,9 @@ public class MTicketQuestStageQueryService extends QueryService<MTicketQuestStag
             if (criteria.getDeckConditionId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getDeckConditionId(), MTicketQuestStage_.deckConditionId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTicketQuestStage_.id, JoinType.LEFT).get(MTicketQuestWorld_.id)));
+            if (criteria.getMticketquestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMticketquestworldId(),
+                    root -> root.join(MTicketQuestStage_.mticketquestworld, JoinType.LEFT).get(MTicketQuestWorld_.id)));
             }
         }
         return specification;

@@ -45,7 +45,7 @@ describe('MPvpRegulation e2e test', () => {
             mPvpRegulationUpdatePage.setMatchOptionIdInput('5'),
             mPvpRegulationUpdatePage.setDeckConditionIdInput('5'),
             mPvpRegulationUpdatePage.setRuleTutorialIdInput('5'),
-            mPvpRegulationUpdatePage.idSelectLastOption(),
+            mPvpRegulationUpdatePage.mmatchoptionSelectLastOption(),
         ]);
         expect(await mPvpRegulationUpdatePage.getStartAtInput()).to.eq('5', 'Expected startAt value to be equals to 5');
         expect(await mPvpRegulationUpdatePage.getEndAtInput()).to.eq('5', 'Expected endAt value to be equals to 5');

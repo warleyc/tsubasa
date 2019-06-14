@@ -118,7 +118,7 @@ public class MAction implements Serializable {
     @Column(name = "powerup_group")
     private Integer powerupGroup;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "maction")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetActionGroup> mTargetActionGroups = new HashSet<>();
 
@@ -428,13 +428,13 @@ public class MAction implements Serializable {
 
     public MAction addMTargetActionGroup(MTargetActionGroup mTargetActionGroup) {
         this.mTargetActionGroups.add(mTargetActionGroup);
-        mTargetActionGroup.setId(this);
+        mTargetActionGroup.setMaction(this);
         return this;
     }
 
     public MAction removeMTargetActionGroup(MTargetActionGroup mTargetActionGroup) {
         this.mTargetActionGroups.remove(mTargetActionGroup);
-        mTargetActionGroup.setId(null);
+        mTargetActionGroup.setMaction(null);
         return this;
     }
 

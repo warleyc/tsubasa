@@ -28,7 +28,7 @@
             <th jhiSortBy="gkUniformUpColor"><span>Gk Uniform Up Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="gkUniformBottomId"><span>Gk Uniform Bottom Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="gkUniformBottomColor"><span>Gk Uniform Bottom Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mnpcdeckId"><span>Mnpcdeck</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -49,8 +49,8 @@
                 <td>{{mDummyOpponent.gkUniformBottomId}}</td>
                 <td>{{mDummyOpponent.gkUniformBottomColor}}</td>
                 <td>
-                    <div *ngIf="mDummyOpponent.idId">
-                        <a [routerLink]="['../m-npc-deck', mDummyOpponent.idId , 'view' ]" >{{mDummyOpponent.idId}}</a>
+                    <div *ngIf="mDummyOpponent.mnpcdeckId">
+                        <a [routerLink]="['../m-npc-deck', mDummyOpponent.mnpcdeckId , 'view' ]" >{{mDummyOpponent.mnpcdeckId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

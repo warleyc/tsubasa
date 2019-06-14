@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MPlayableCardMapper.class})
 public interface MArousalMapper extends EntityMapper<MArousalDTO, MArousal> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mplayablecard.id", target = "mplayablecardId")
     MArousalDTO toDto(MArousal mArousal);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mplayablecardId", target = "mplayablecard")
     MArousal toEntity(MArousalDTO mArousalDTO);
 
     default MArousal fromId(Long id) {

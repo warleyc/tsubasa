@@ -45,7 +45,7 @@
             <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="shortName"><span>Short Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mtimeattackquestworldId"><span>Mtimeattackquestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -83,8 +83,8 @@
                 <td>{{mTimeattackQuestStage.deckConditionId}}</td>
                 <td>{{mTimeattackQuestStage.shortName}}</td>
                 <td>
-                    <div *ngIf="mTimeattackQuestStage.idId">
-                        <a [routerLink]="['../m-timeattack-quest-world', mTimeattackQuestStage.idId , 'view' ]" >{{mTimeattackQuestStage.idId}}</a>
+                    <div *ngIf="mTimeattackQuestStage.mtimeattackquestworldId">
+                        <a [routerLink]="['../m-timeattack-quest-world', mTimeattackQuestStage.mtimeattackquestworldId , 'view' ]" >{{mTimeattackQuestStage.mtimeattackquestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

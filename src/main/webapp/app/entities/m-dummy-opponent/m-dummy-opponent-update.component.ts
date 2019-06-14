@@ -35,7 +35,7 @@ export class MDummyOpponentUpdateComponent implements OnInit {
     gkUniformUpColor: [],
     gkUniformBottomId: [null, [Validators.required]],
     gkUniformBottomColor: [],
-    idId: [null, Validators.required]
+    mnpcdeckId: [null, Validators.required]
   });
 
   constructor(
@@ -78,7 +78,7 @@ export class MDummyOpponentUpdateComponent implements OnInit {
       gkUniformUpColor: mDummyOpponent.gkUniformUpColor,
       gkUniformBottomId: mDummyOpponent.gkUniformBottomId,
       gkUniformBottomColor: mDummyOpponent.gkUniformBottomColor,
-      idId: mDummyOpponent.idId
+      mnpcdeckId: mDummyOpponent.mnpcdeckId
     });
   }
 
@@ -145,7 +145,7 @@ export class MDummyOpponentUpdateComponent implements OnInit {
       gkUniformUpColor: this.editForm.get(['gkUniformUpColor']).value,
       gkUniformBottomId: this.editForm.get(['gkUniformBottomId']).value,
       gkUniformBottomColor: this.editForm.get(['gkUniformBottomColor']).value,
-      idId: this.editForm.get(['idId']).value
+      mnpcdeckId: this.editForm.get(['mnpcdeckId']).value
     };
     return entity;
   }

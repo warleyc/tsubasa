@@ -41,7 +41,7 @@
             <th jhiSortBy="conditionId"><span>Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="optionId"><span>Option Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="deckConditionId"><span>Deck Condition Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mguerillaquestworldId"><span>Mguerillaquestworld</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -75,8 +75,8 @@
                 <td>{{mGuerillaQuestStage.optionId}}</td>
                 <td>{{mGuerillaQuestStage.deckConditionId}}</td>
                 <td>
-                    <div *ngIf="mGuerillaQuestStage.idId">
-                        <a [routerLink]="['../m-guerilla-quest-world', mGuerillaQuestStage.idId , 'view' ]" >{{mGuerillaQuestStage.idId}}</a>
+                    <div *ngIf="mGuerillaQuestStage.mguerillaquestworldId">
+                        <a [routerLink]="['../m-guerilla-quest-world', mGuerillaQuestStage.mguerillaquestworldId , 'view' ]" >{{mGuerillaQuestStage.mguerillaquestworldId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

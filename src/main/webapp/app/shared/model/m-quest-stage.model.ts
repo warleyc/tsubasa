@@ -25,7 +25,7 @@ export interface IMQuestStage {
   conditionId?: number;
   optionId?: number;
   deckConditionId?: number;
-  idId?: number;
+  mquestworldId?: number;
 }
 
 export class MQuestStage implements IMQuestStage {
@@ -56,6 +56,6 @@ export class MQuestStage implements IMQuestStage {
     public conditionId?: number,
     public optionId?: number,
     public deckConditionId?: number,
-    public idId?: number
+    public mquestworldId?: number
   ) {}
 }

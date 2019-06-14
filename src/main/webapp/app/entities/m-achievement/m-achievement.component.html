@@ -19,7 +19,7 @@
             <th jhiSortBy="name"><span>Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="type"><span>Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="missionId"><span>Mission Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mmissionId"><span>Mmission</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -31,8 +31,8 @@
                 <td>{{mAchievement.type}}</td>
                 <td>{{mAchievement.missionId}}</td>
                 <td>
-                    <div *ngIf="mAchievement.idId">
-                        <a [routerLink]="['../m-mission', mAchievement.idId , 'view' ]" >{{mAchievement.idId}}</a>
+                    <div *ngIf="mAchievement.mmissionId">
+                        <a [routerLink]="['../m-mission', mAchievement.mmissionId , 'view' ]" >{{mAchievement.mmissionId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

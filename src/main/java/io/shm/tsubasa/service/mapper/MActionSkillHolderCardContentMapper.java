@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCharacterMapper.class})
 public interface MActionSkillHolderCardContentMapper extends EntityMapper<MActionSkillHolderCardContentDTO, MActionSkillHolderCardContent> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcharacter.id", target = "mcharacterId")
     MActionSkillHolderCardContentDTO toDto(MActionSkillHolderCardContent mActionSkillHolderCardContent);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcharacterId", target = "mcharacter")
     MActionSkillHolderCardContent toEntity(MActionSkillHolderCardContentDTO mActionSkillHolderCardContentDTO);
 
     default MActionSkillHolderCardContent fromId(Long id) {

@@ -80,7 +80,7 @@ public class MCardPowerupActionSkill implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mCardPowerupActionSkills")
-    private MCardThumbnailAssets id;
+    private MCardThumbnailAssets mcardthumbnailassets;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -260,17 +260,17 @@ public class MCardPowerupActionSkill implements Serializable {
         this.targetCharacterId = targetCharacterId;
     }
 
-    public MCardThumbnailAssets getId() {
-        return id;
+    public MCardThumbnailAssets getMcardthumbnailassets() {
+        return mcardthumbnailassets;
     }
 
-    public MCardPowerupActionSkill id(MCardThumbnailAssets mCardThumbnailAssets) {
-        this.id = mCardThumbnailAssets;
+    public MCardPowerupActionSkill mcardthumbnailassets(MCardThumbnailAssets mCardThumbnailAssets) {
+        this.mcardthumbnailassets = mCardThumbnailAssets;
         return this;
     }
 
-    public void setId(MCardThumbnailAssets mCardThumbnailAssets) {
-        this.id = mCardThumbnailAssets;
+    public void setMcardthumbnailassets(MCardThumbnailAssets mCardThumbnailAssets) {
+        this.mcardthumbnailassets = mCardThumbnailAssets;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MCardThumbnailAssetsMapper.class})
 public interface MCardPowerupActionSkillMapper extends EntityMapper<MCardPowerupActionSkillDTO, MCardPowerupActionSkill> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mcardthumbnailassets.id", target = "mcardthumbnailassetsId")
     MCardPowerupActionSkillDTO toDto(MCardPowerupActionSkill mCardPowerupActionSkill);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mcardthumbnailassetsId", target = "mcardthumbnailassets")
     MCardPowerupActionSkill toEntity(MCardPowerupActionSkillDTO mCardPowerupActionSkillDTO);
 
     default MCardPowerupActionSkill fromId(Long id) {

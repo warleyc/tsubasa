@@ -95,9 +95,9 @@ public class MTargetTriggerEffectGroupQueryService extends QueryService<MTargetT
             if (criteria.getTriggerEffectId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getTriggerEffectId(), MTargetTriggerEffectGroup_.triggerEffectId));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MTargetTriggerEffectGroup_.id, JoinType.LEFT).get(MTriggerEffectBase_.id)));
+            if (criteria.getMtriggereffectbaseId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMtriggereffectbaseId(),
+                    root -> root.join(MTargetTriggerEffectGroup_.mtriggereffectbase, JoinType.LEFT).get(MTriggerEffectBase_.id)));
             }
         }
         return specification;

@@ -28,7 +28,7 @@ export interface IMTicketQuestStage {
   conditionId?: number;
   optionId?: number;
   deckConditionId?: number;
-  idId?: number;
+  mticketquestworldId?: number;
 }
 
 export class MTicketQuestStage implements IMTicketQuestStage {
@@ -62,6 +62,6 @@ export class MTicketQuestStage implements IMTicketQuestStage {
     public conditionId?: number,
     public optionId?: number,
     public deckConditionId?: number,
-    public idId?: number
+    public mticketquestworldId?: number
   ) {}
 }

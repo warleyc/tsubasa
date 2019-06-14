@@ -17,7 +17,7 @@ public class MTargetCharacterGroupDTO implements Serializable {
     private Integer characterId;
 
 
-    private Long idId;
+    private Long mcharacterId;
 
     public Long getId() {
         return id;
@@ -43,12 +43,12 @@ public class MTargetCharacterGroupDTO implements Serializable {
         this.characterId = characterId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(Long mCharacterId) {
-        this.idId = mCharacterId;
+    public void setMcharacterId(Long mCharacterId) {
+        this.mcharacterId = mCharacterId;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class MTargetCharacterGroupDTO implements Serializable {
             "id=" + getId() +
             ", groupId=" + getGroupId() +
             ", characterId=" + getCharacterId() +
-            ", id=" + getIdId() +
+            ", mcharacter=" + getMcharacterId() +
             "}";
     }
 }

@@ -32,7 +32,7 @@ public class MTeam implements Serializable {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mteam")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTargetTeamGroup> mTargetTeamGroups = new HashSet<>();
 
@@ -69,13 +69,13 @@ public class MTeam implements Serializable {
 
     public MTeam addMTargetTeamGroup(MTargetTeamGroup mTargetTeamGroup) {
         this.mTargetTeamGroups.add(mTargetTeamGroup);
-        mTargetTeamGroup.setId(this);
+        mTargetTeamGroup.setMteam(this);
         return this;
     }
 
     public MTeam removeMTargetTeamGroup(MTargetTeamGroup mTargetTeamGroup) {
         this.mTargetTeamGroups.remove(mTargetTeamGroup);
-        mTargetTeamGroup.setId(null);
+        mTargetTeamGroup.setMteam(null);
         return this;
     }
 

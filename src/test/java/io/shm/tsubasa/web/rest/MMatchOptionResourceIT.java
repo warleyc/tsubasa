@@ -129,7 +129,7 @@ public class MMatchOptionResourceIT {
         } else {
             mPassiveEffectRange = TestUtil.findAll(em, MPassiveEffectRange.class).get(0);
         }
-        mMatchOption.setId(mPassiveEffectRange);
+        mMatchOption.setMpassiveeffectrange(mPassiveEffectRange);
         return mMatchOption;
     }
     /**
@@ -156,7 +156,7 @@ public class MMatchOptionResourceIT {
         } else {
             mPassiveEffectRange = TestUtil.findAll(em, MPassiveEffectRange.class).get(0);
         }
-        mMatchOption.setId(mPassiveEffectRange);
+        mMatchOption.setMpassiveeffectrange(mPassiveEffectRange);
         return mMatchOption;
     }
 
@@ -829,17 +829,17 @@ public class MMatchOptionResourceIT {
 
     @Test
     @Transactional
-    public void getAllMMatchOptionsByIdIsEqualToSomething() throws Exception {
+    public void getAllMMatchOptionsByMpassiveeffectrangeIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MPassiveEffectRange id = mMatchOption.getId();
+        MPassiveEffectRange mpassiveeffectrange = mMatchOption.getMpassiveeffectrange();
         mMatchOptionRepository.saveAndFlush(mMatchOption);
-        Long idId = id.getId();
+        Long mpassiveeffectrangeId = mpassiveeffectrange.getId();
 
-        // Get all the mMatchOptionList where id equals to idId
-        defaultMMatchOptionShouldBeFound("idId.equals=" + idId);
+        // Get all the mMatchOptionList where mpassiveeffectrange equals to mpassiveeffectrangeId
+        defaultMMatchOptionShouldBeFound("mpassiveeffectrangeId.equals=" + mpassiveeffectrangeId);
 
-        // Get all the mMatchOptionList where id equals to idId + 1
-        defaultMMatchOptionShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mMatchOptionList where mpassiveeffectrange equals to mpassiveeffectrangeId + 1
+        defaultMMatchOptionShouldNotBeFound("mpassiveeffectrangeId.equals=" + (mpassiveeffectrangeId + 1));
     }
 
 

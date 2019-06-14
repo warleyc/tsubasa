@@ -144,7 +144,7 @@ public class MGuildMissionResourceIT {
         } else {
             mMissionReward = TestUtil.findAll(em, MMissionReward.class).get(0);
         }
-        mGuildMission.setId(mMissionReward);
+        mGuildMission.setMmissionreward(mMissionReward);
         return mGuildMission;
     }
     /**
@@ -175,7 +175,7 @@ public class MGuildMissionResourceIT {
         } else {
             mMissionReward = TestUtil.findAll(em, MMissionReward.class).get(0);
         }
-        mGuildMission.setId(mMissionReward);
+        mGuildMission.setMmissionreward(mMissionReward);
         return mGuildMission;
     }
 
@@ -907,17 +907,17 @@ public class MGuildMissionResourceIT {
 
     @Test
     @Transactional
-    public void getAllMGuildMissionsByIdIsEqualToSomething() throws Exception {
+    public void getAllMGuildMissionsByMmissionrewardIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MMissionReward id = mGuildMission.getId();
+        MMissionReward mmissionreward = mGuildMission.getMmissionreward();
         mGuildMissionRepository.saveAndFlush(mGuildMission);
-        Long idId = id.getId();
+        Long mmissionrewardId = mmissionreward.getId();
 
-        // Get all the mGuildMissionList where id equals to idId
-        defaultMGuildMissionShouldBeFound("idId.equals=" + idId);
+        // Get all the mGuildMissionList where mmissionreward equals to mmissionrewardId
+        defaultMGuildMissionShouldBeFound("mmissionrewardId.equals=" + mmissionrewardId);
 
-        // Get all the mGuildMissionList where id equals to idId + 1
-        defaultMGuildMissionShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mGuildMissionList where mmissionreward equals to mmissionrewardId + 1
+        defaultMGuildMissionShouldNotBeFound("mmissionrewardId.equals=" + (mmissionrewardId + 1));
     }
 
     /**

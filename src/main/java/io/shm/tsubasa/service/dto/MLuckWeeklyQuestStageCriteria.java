@@ -74,7 +74,7 @@ public class MLuckWeeklyQuestStageCriteria implements Serializable, Criteria {
 
     private IntegerFilter luckId;
 
-    private LongFilter idId;
+    private LongFilter mluckweeklyquestworldId;
 
     public MLuckWeeklyQuestStageCriteria(){
     }
@@ -105,7 +105,7 @@ public class MLuckWeeklyQuestStageCriteria implements Serializable, Criteria {
         this.optionId = other.optionId == null ? null : other.optionId.copy();
         this.deckConditionId = other.deckConditionId == null ? null : other.deckConditionId.copy();
         this.luckId = other.luckId == null ? null : other.luckId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mluckweeklyquestworldId = other.mluckweeklyquestworldId == null ? null : other.mluckweeklyquestworldId.copy();
     }
 
     @Override
@@ -313,12 +313,12 @@ public class MLuckWeeklyQuestStageCriteria implements Serializable, Criteria {
         this.luckId = luckId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMluckweeklyquestworldId() {
+        return mluckweeklyquestworldId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMluckweeklyquestworldId(LongFilter mluckweeklyquestworldId) {
+        this.mluckweeklyquestworldId = mluckweeklyquestworldId;
     }
 
 
@@ -357,7 +357,7 @@ public class MLuckWeeklyQuestStageCriteria implements Serializable, Criteria {
             Objects.equals(optionId, that.optionId) &&
             Objects.equals(deckConditionId, that.deckConditionId) &&
             Objects.equals(luckId, that.luckId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mluckweeklyquestworldId, that.mluckweeklyquestworldId);
     }
 
     @Override
@@ -388,7 +388,7 @@ public class MLuckWeeklyQuestStageCriteria implements Serializable, Criteria {
         optionId,
         deckConditionId,
         luckId,
-        idId
+        mluckweeklyquestworldId
         );
     }
 
@@ -420,7 +420,7 @@ public class MLuckWeeklyQuestStageCriteria implements Serializable, Criteria {
                 (optionId != null ? "optionId=" + optionId + ", " : "") +
                 (deckConditionId != null ? "deckConditionId=" + deckConditionId + ", " : "") +
                 (luckId != null ? "luckId=" + luckId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mluckweeklyquestworldId != null ? "mluckweeklyquestworldId=" + mluckweeklyquestworldId + ", " : "") +
             "}";
     }
 

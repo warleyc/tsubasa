@@ -32,7 +32,7 @@ public class MTargetPlayableCardGroupCriteria implements Serializable, Criteria 
 
     private IntegerFilter isShowThumbnail;
 
-    private LongFilter idId;
+    private LongFilter mplayablecardId;
 
     public MTargetPlayableCardGroupCriteria(){
     }
@@ -42,7 +42,7 @@ public class MTargetPlayableCardGroupCriteria implements Serializable, Criteria 
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.cardId = other.cardId == null ? null : other.cardId.copy();
         this.isShowThumbnail = other.isShowThumbnail == null ? null : other.isShowThumbnail.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mplayablecardId = other.mplayablecardId == null ? null : other.mplayablecardId.copy();
     }
 
     @Override
@@ -82,12 +82,12 @@ public class MTargetPlayableCardGroupCriteria implements Serializable, Criteria 
         this.isShowThumbnail = isShowThumbnail;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMplayablecardId() {
+        return mplayablecardId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMplayablecardId(LongFilter mplayablecardId) {
+        this.mplayablecardId = mplayablecardId;
     }
 
 
@@ -105,7 +105,7 @@ public class MTargetPlayableCardGroupCriteria implements Serializable, Criteria 
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(cardId, that.cardId) &&
             Objects.equals(isShowThumbnail, that.isShowThumbnail) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mplayablecardId, that.mplayablecardId);
     }
 
     @Override
@@ -115,7 +115,7 @@ public class MTargetPlayableCardGroupCriteria implements Serializable, Criteria 
         groupId,
         cardId,
         isShowThumbnail,
-        idId
+        mplayablecardId
         );
     }
 
@@ -126,7 +126,7 @@ public class MTargetPlayableCardGroupCriteria implements Serializable, Criteria 
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (cardId != null ? "cardId=" + cardId + ", " : "") +
                 (isShowThumbnail != null ? "isShowThumbnail=" + isShowThumbnail + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mplayablecardId != null ? "mplayablecardId=" + mplayablecardId + ", " : "") +
             "}";
     }
 

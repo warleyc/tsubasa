@@ -46,7 +46,7 @@ public class MCardPowerupActionSkillCriteria implements Serializable, Criteria {
 
     private IntegerFilter targetCharacterId;
 
-    private LongFilter idId;
+    private LongFilter mcardthumbnailassetsId;
 
     public MCardPowerupActionSkillCriteria(){
     }
@@ -63,7 +63,7 @@ public class MCardPowerupActionSkillCriteria implements Serializable, Criteria {
         this.cardIllustAssetsId = other.cardIllustAssetsId == null ? null : other.cardIllustAssetsId.copy();
         this.targetActionCommandType = other.targetActionCommandType == null ? null : other.targetActionCommandType.copy();
         this.targetCharacterId = other.targetCharacterId == null ? null : other.targetCharacterId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcardthumbnailassetsId = other.mcardthumbnailassetsId == null ? null : other.mcardthumbnailassetsId.copy();
     }
 
     @Override
@@ -159,12 +159,12 @@ public class MCardPowerupActionSkillCriteria implements Serializable, Criteria {
         this.targetCharacterId = targetCharacterId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcardthumbnailassetsId() {
+        return mcardthumbnailassetsId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcardthumbnailassetsId(LongFilter mcardthumbnailassetsId) {
+        this.mcardthumbnailassetsId = mcardthumbnailassetsId;
     }
 
 
@@ -189,7 +189,7 @@ public class MCardPowerupActionSkillCriteria implements Serializable, Criteria {
             Objects.equals(cardIllustAssetsId, that.cardIllustAssetsId) &&
             Objects.equals(targetActionCommandType, that.targetActionCommandType) &&
             Objects.equals(targetCharacterId, that.targetCharacterId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcardthumbnailassetsId, that.mcardthumbnailassetsId);
     }
 
     @Override
@@ -206,7 +206,7 @@ public class MCardPowerupActionSkillCriteria implements Serializable, Criteria {
         cardIllustAssetsId,
         targetActionCommandType,
         targetCharacterId,
-        idId
+        mcardthumbnailassetsId
         );
     }
 
@@ -224,7 +224,7 @@ public class MCardPowerupActionSkillCriteria implements Serializable, Criteria {
                 (cardIllustAssetsId != null ? "cardIllustAssetsId=" + cardIllustAssetsId + ", " : "") +
                 (targetActionCommandType != null ? "targetActionCommandType=" + targetActionCommandType + ", " : "") +
                 (targetCharacterId != null ? "targetCharacterId=" + targetCharacterId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcardthumbnailassetsId != null ? "mcardthumbnailassetsId=" + mcardthumbnailassetsId + ", " : "") +
             "}";
     }
 

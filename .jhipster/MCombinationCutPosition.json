@@ -64,7 +64,7 @@
             "otherEntityName": "mCharacter",
             "otherEntityRelationshipName": "mCombinationCutPosition",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mcharacter",
             "otherEntityField": "id"
         }
     ],

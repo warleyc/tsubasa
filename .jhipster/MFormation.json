@@ -117,19 +117,19 @@
             "otherEntityName": "mPassiveEffectRange",
             "otherEntityRelationshipName": "mFormation",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mpassiveeffectrange",
             "otherEntityField": "id"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mNpcDeck",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mformation",
             "relationshipName": "mNpcDeck"
         },
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mTargetFormationGroup",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mformation",
             "relationshipName": "mTargetFormationGroup"
         }
     ],

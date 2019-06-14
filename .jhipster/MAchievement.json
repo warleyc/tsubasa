@@ -38,7 +38,7 @@
             "otherEntityName": "mMission",
             "otherEntityRelationshipName": "mAchievement",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mmission",
             "otherEntityField": "id"
         }
     ],

@@ -9,7 +9,7 @@ export interface IMTriggerEffectBase {
   targetCardParameter?: number;
   effectId?: number;
   description?: any;
-  idId?: number;
+  mtriggereffectrangeId?: number;
   mTargetTriggerEffectGroups?: IMTargetTriggerEffectGroup[];
 }
 
@@ -23,7 +23,7 @@ export class MTriggerEffectBase implements IMTriggerEffectBase {
     public targetCardParameter?: number,
     public effectId?: number,
     public description?: any,
-    public idId?: number,
+    public mtriggereffectrangeId?: number,
     public mTargetTriggerEffectGroups?: IMTargetTriggerEffectGroup[]
   ) {}
 }

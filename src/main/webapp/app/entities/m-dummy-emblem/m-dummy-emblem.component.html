@@ -23,7 +23,7 @@
             <th jhiSortBy="middleColor"><span>Middle Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="lowerId"><span>Lower Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="lowerColor"><span>Lower Color</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="idId"><span>Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="memblempartsId"><span>Memblemparts</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -39,8 +39,8 @@
                 <td>{{mDummyEmblem.lowerId}}</td>
                 <td>{{mDummyEmblem.lowerColor}}</td>
                 <td>
-                    <div *ngIf="mDummyEmblem.idId">
-                        <a [routerLink]="['../m-emblem-parts', mDummyEmblem.idId , 'view' ]" >{{mDummyEmblem.idId}}</a>
+                    <div *ngIf="mDummyEmblem.memblempartsId">
+                        <a [routerLink]="['../m-emblem-parts', mDummyEmblem.memblempartsId , 'view' ]" >{{mDummyEmblem.memblempartsId}}</a>
                     </div>
                 </td>
                 <td class="text-right">

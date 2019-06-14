@@ -23,7 +23,7 @@ public class MArousalDTO implements Serializable {
     private Integer materialGroupId;
 
 
-    private Long idId;
+    private Long mplayablecardId;
 
     public Long getId() {
         return id;
@@ -65,12 +65,12 @@ public class MArousalDTO implements Serializable {
         this.materialGroupId = materialGroupId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMplayablecardId() {
+        return mplayablecardId;
     }
 
-    public void setIdId(Long mPlayableCardId) {
-        this.idId = mPlayableCardId;
+    public void setMplayablecardId(Long mPlayableCardId) {
+        this.mplayablecardId = mPlayableCardId;
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MArousalDTO implements Serializable {
             ", afterId=" + getAfterId() +
             ", cost=" + getCost() +
             ", materialGroupId=" + getMaterialGroupId() +
-            ", id=" + getIdId() +
+            ", mplayablecard=" + getMplayablecardId() +
             "}";
     }
 }

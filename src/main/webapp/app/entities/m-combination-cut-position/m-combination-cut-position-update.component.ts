@@ -30,7 +30,7 @@ export class MCombinationCutPositionUpdateComponent implements OnInit {
     participantPosition3: [null, [Validators.required]],
     participantPosition4: [null, [Validators.required]],
     participantPosition5: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mcharacterId: [null, Validators.required]
   });
 
   constructor(
@@ -67,7 +67,7 @@ export class MCombinationCutPositionUpdateComponent implements OnInit {
       participantPosition3: mCombinationCutPosition.participantPosition3,
       participantPosition4: mCombinationCutPosition.participantPosition4,
       participantPosition5: mCombinationCutPosition.participantPosition5,
-      idId: mCombinationCutPosition.idId
+      mcharacterId: mCombinationCutPosition.mcharacterId
     });
   }
 
@@ -97,7 +97,7 @@ export class MCombinationCutPositionUpdateComponent implements OnInit {
       participantPosition3: this.editForm.get(['participantPosition3']).value,
       participantPosition4: this.editForm.get(['participantPosition4']).value,
       participantPosition5: this.editForm.get(['participantPosition5']).value,
-      idId: this.editForm.get(['idId']).value
+      mcharacterId: this.editForm.get(['mcharacterId']).value
     };
     return entity;
   }

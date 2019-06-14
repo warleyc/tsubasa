@@ -46,7 +46,7 @@ describe('MTargetCharacterGroup e2e test', () => {
         await promise.all([
             mTargetCharacterGroupUpdatePage.setGroupIdInput('5'),
             mTargetCharacterGroupUpdatePage.setCharacterIdInput('5'),
-            mTargetCharacterGroupUpdatePage.idSelectLastOption(),
+            mTargetCharacterGroupUpdatePage.mcharacterSelectLastOption(),
         ]);
         expect(await mTargetCharacterGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetCharacterGroupUpdatePage.getCharacterIdInput()).to.eq('5', 'Expected characterId value to be equals to 5');

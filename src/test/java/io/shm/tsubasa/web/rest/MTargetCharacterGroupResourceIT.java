@@ -107,7 +107,7 @@ public class MTargetCharacterGroupResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mTargetCharacterGroup.setId(mCharacter);
+        mTargetCharacterGroup.setMcharacter(mCharacter);
         return mTargetCharacterGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class MTargetCharacterGroupResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mTargetCharacterGroup.setId(mCharacter);
+        mTargetCharacterGroup.setMcharacter(mCharacter);
         return mTargetCharacterGroup;
     }
 
@@ -381,17 +381,17 @@ public class MTargetCharacterGroupResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTargetCharacterGroupsByIdIsEqualToSomething() throws Exception {
+    public void getAllMTargetCharacterGroupsByMcharacterIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCharacter id = mTargetCharacterGroup.getId();
+        MCharacter mcharacter = mTargetCharacterGroup.getMcharacter();
         mTargetCharacterGroupRepository.saveAndFlush(mTargetCharacterGroup);
-        Long idId = id.getId();
+        Long mcharacterId = mcharacter.getId();
 
-        // Get all the mTargetCharacterGroupList where id equals to idId
-        defaultMTargetCharacterGroupShouldBeFound("idId.equals=" + idId);
+        // Get all the mTargetCharacterGroupList where mcharacter equals to mcharacterId
+        defaultMTargetCharacterGroupShouldBeFound("mcharacterId.equals=" + mcharacterId);
 
-        // Get all the mTargetCharacterGroupList where id equals to idId + 1
-        defaultMTargetCharacterGroupShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTargetCharacterGroupList where mcharacter equals to mcharacterId + 1
+        defaultMTargetCharacterGroupShouldNotBeFound("mcharacterId.equals=" + (mcharacterId + 1));
     }
 
     /**

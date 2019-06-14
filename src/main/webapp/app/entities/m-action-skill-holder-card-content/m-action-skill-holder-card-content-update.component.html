@@ -78,15 +78,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mcharacter">Mcharacter</label>
+                    <select class="form-control" id="field_mcharacter" name="mcharacter" formControlName="mcharacterId">
+                        <option *ngIf="!editForm.get('mcharacter').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mCharacterOption.id" *ngFor="let mCharacterOption of mcharacters; trackBy: trackMCharacterById">{{mCharacterOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mcharacter').invalid && (editForm.get('mcharacter').dirty || editForm.get('mcharacter').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mcharacter').errors.required">
                         This field is required.
                     </small>
                 </div>

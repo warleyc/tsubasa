@@ -52,7 +52,7 @@ describe('MCombinationCutPosition e2e test', () => {
             mCombinationCutPositionUpdatePage.setParticipantPosition3Input('5'),
             mCombinationCutPositionUpdatePage.setParticipantPosition4Input('5'),
             mCombinationCutPositionUpdatePage.setParticipantPosition5Input('5'),
-            mCombinationCutPositionUpdatePage.idSelectLastOption(),
+            mCombinationCutPositionUpdatePage.mcharacterSelectLastOption(),
         ]);
         expect(await mCombinationCutPositionUpdatePage.getActionCutIdInput()).to.eq('5', 'Expected actionCutId value to be equals to 5');
         expect(await mCombinationCutPositionUpdatePage.getCharacterIdInput()).to.eq('5', 'Expected characterId value to be equals to 5');

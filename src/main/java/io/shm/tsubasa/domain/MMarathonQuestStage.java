@@ -132,7 +132,7 @@ public class MMarathonQuestStage implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mMarathonQuestStages")
-    private MMarathonQuestWorld id;
+    private MMarathonQuestWorld mmarathonquestworld;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -481,17 +481,17 @@ public class MMarathonQuestStage implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public MMarathonQuestWorld getId() {
-        return id;
+    public MMarathonQuestWorld getMmarathonquestworld() {
+        return mmarathonquestworld;
     }
 
-    public MMarathonQuestStage id(MMarathonQuestWorld mMarathonQuestWorld) {
-        this.id = mMarathonQuestWorld;
+    public MMarathonQuestStage mmarathonquestworld(MMarathonQuestWorld mMarathonQuestWorld) {
+        this.mmarathonquestworld = mMarathonQuestWorld;
         return this;
     }
 
-    public void setId(MMarathonQuestWorld mMarathonQuestWorld) {
-        this.id = mMarathonQuestWorld;
+    public void setMmarathonquestworld(MMarathonQuestWorld mMarathonQuestWorld) {
+        this.mmarathonquestworld = mMarathonQuestWorld;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MPassiveEffectRangeMapper.class})
 public interface MMatchOptionMapper extends EntityMapper<MMatchOptionDTO, MMatchOption> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mpassiveeffectrange.id", target = "mpassiveeffectrangeId")
     MMatchOptionDTO toDto(MMatchOption mMatchOption);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mpassiveeffectrangeId", target = "mpassiveeffectrange")
     @Mapping(target = "mLeagueRegulations", ignore = true)
     @Mapping(target = "mPvpRegulations", ignore = true)
     MMatchOption toEntity(MMatchOptionDTO mMatchOptionDTO);

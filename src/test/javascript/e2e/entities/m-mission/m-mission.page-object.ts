@@ -46,7 +46,7 @@ export class MMissionUpdatePage {
   sceneTransitionParamInput = element(by.id('field_sceneTransitionParam'));
   pickupInput = element(by.id('field_pickup'));
   orderNumInput = element(by.id('field_orderNum'));
-  idSelect = element(by.id('field_id'));
+  mmissionrewardSelect = element(by.id('field_mmissionreward'));
 
   async getPageTitle() {
     return this.pageTitle.getText();
@@ -212,23 +212,23 @@ export class MMissionUpdatePage {
     return await this.orderNumInput.getAttribute('value');
   }
 
-  async idSelectLastOption(timeout?: number) {
-    await this.idSelect
+  async mmissionrewardSelectLastOption(timeout?: number) {
+    await this.mmissionrewardSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async idSelectOption(option) {
-    await this.idSelect.sendKeys(option);
+  async mmissionrewardSelectOption(option) {
+    await this.mmissionrewardSelect.sendKeys(option);
   }
 
-  getIdSelect(): ElementFinder {
-    return this.idSelect;
+  getMmissionrewardSelect(): ElementFinder {
+    return this.mmissionrewardSelect;
   }
 
-  async getIdSelectedOption() {
-    return await this.idSelect.element(by.css('option:checked')).getText();
+  async getMmissionrewardSelectedOption() {
+    return await this.mmissionrewardSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

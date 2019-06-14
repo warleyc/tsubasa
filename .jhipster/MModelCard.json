@@ -95,7 +95,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mPlayableCard",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mmodelcard",
             "relationshipName": "mPlayableCard"
         }
     ],

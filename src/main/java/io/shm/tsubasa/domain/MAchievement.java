@@ -46,7 +46,7 @@ public class MAchievement implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mAchievements")
-    private MMission id;
+    private MMission mmission;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -109,17 +109,17 @@ public class MAchievement implements Serializable {
         this.missionId = missionId;
     }
 
-    public MMission getId() {
-        return id;
+    public MMission getMmission() {
+        return mmission;
     }
 
-    public MAchievement id(MMission mMission) {
-        this.id = mMission;
+    public MAchievement mmission(MMission mMission) {
+        this.mmission = mMission;
         return this;
     }
 
-    public void setId(MMission mMission) {
-        this.id = mMission;
+    public void setMmission(MMission mMission) {
+        this.mmission = mMission;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

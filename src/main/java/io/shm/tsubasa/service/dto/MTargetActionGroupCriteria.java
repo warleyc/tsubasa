@@ -30,7 +30,7 @@ public class MTargetActionGroupCriteria implements Serializable, Criteria {
 
     private IntegerFilter actionId;
 
-    private LongFilter idId;
+    private LongFilter mactionId;
 
     public MTargetActionGroupCriteria(){
     }
@@ -39,7 +39,7 @@ public class MTargetActionGroupCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.groupId = other.groupId == null ? null : other.groupId.copy();
         this.actionId = other.actionId == null ? null : other.actionId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mactionId = other.mactionId == null ? null : other.mactionId.copy();
     }
 
     @Override
@@ -71,12 +71,12 @@ public class MTargetActionGroupCriteria implements Serializable, Criteria {
         this.actionId = actionId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMactionId() {
+        return mactionId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMactionId(LongFilter mactionId) {
+        this.mactionId = mactionId;
     }
 
 
@@ -93,7 +93,7 @@ public class MTargetActionGroupCriteria implements Serializable, Criteria {
             Objects.equals(id, that.id) &&
             Objects.equals(groupId, that.groupId) &&
             Objects.equals(actionId, that.actionId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mactionId, that.mactionId);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MTargetActionGroupCriteria implements Serializable, Criteria {
         id,
         groupId,
         actionId,
-        idId
+        mactionId
         );
     }
 
@@ -112,7 +112,7 @@ public class MTargetActionGroupCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (groupId != null ? "groupId=" + groupId + ", " : "") +
                 (actionId != null ? "actionId=" + actionId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mactionId != null ? "mactionId=" + mactionId + ", " : "") +
             "}";
     }
 

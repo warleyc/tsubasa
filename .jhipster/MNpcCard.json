@@ -268,7 +268,7 @@
             "otherEntityName": "mCharacter",
             "otherEntityRelationshipName": "mNpcCard",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mcharacter",
             "otherEntityField": "id"
         }
     ],

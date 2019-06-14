@@ -113,9 +113,9 @@ public class MGuildMissionQueryService extends QueryService<MGuildMission> {
             if (criteria.getOrderNum() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getOrderNum(), MGuildMission_.orderNum));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MGuildMission_.id, JoinType.LEFT).get(MMissionReward_.id)));
+            if (criteria.getMmissionrewardId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMmissionrewardId(),
+                    root -> root.join(MGuildMission_.mmissionreward, JoinType.LEFT).get(MMissionReward_.id)));
             }
         }
         return specification;

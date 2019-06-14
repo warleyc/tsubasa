@@ -11,10 +11,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {MTriggerEffectBaseMapper.class})
 public interface MTargetTriggerEffectGroupMapper extends EntityMapper<MTargetTriggerEffectGroupDTO, MTargetTriggerEffectGroup> {
 
-    @Mapping(source = "id.id", target = "idId")
+    @Mapping(source = "mtriggereffectbase.id", target = "mtriggereffectbaseId")
     MTargetTriggerEffectGroupDTO toDto(MTargetTriggerEffectGroup mTargetTriggerEffectGroup);
 
-    @Mapping(source = "idId", target = "id")
+    @Mapping(source = "mtriggereffectbaseId", target = "mtriggereffectbase")
     MTargetTriggerEffectGroup toEntity(MTargetTriggerEffectGroupDTO mTargetTriggerEffectGroupDTO);
 
     default MTargetTriggerEffectGroup fromId(Long id) {

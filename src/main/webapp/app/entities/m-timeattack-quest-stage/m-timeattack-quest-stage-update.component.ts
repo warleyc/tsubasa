@@ -52,7 +52,7 @@ export class MTimeattackQuestStageUpdateComponent implements OnInit {
     optionId: [],
     deckConditionId: [],
     shortName: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mtimeattackquestworldId: [null, Validators.required]
   });
 
   constructor(
@@ -115,7 +115,7 @@ export class MTimeattackQuestStageUpdateComponent implements OnInit {
       optionId: mTimeattackQuestStage.optionId,
       deckConditionId: mTimeattackQuestStage.deckConditionId,
       shortName: mTimeattackQuestStage.shortName,
-      idId: mTimeattackQuestStage.idId
+      mtimeattackquestworldId: mTimeattackQuestStage.mtimeattackquestworldId
     });
   }
 
@@ -199,7 +199,7 @@ export class MTimeattackQuestStageUpdateComponent implements OnInit {
       optionId: this.editForm.get(['optionId']).value,
       deckConditionId: this.editForm.get(['deckConditionId']).value,
       shortName: this.editForm.get(['shortName']).value,
-      idId: this.editForm.get(['idId']).value
+      mtimeattackquestworldId: this.editForm.get(['mtimeattackquestworldId']).value
     };
     return entity;
   }

@@ -90,7 +90,7 @@ public class MGuerillaQuestStageDTO implements Serializable {
     private Integer deckConditionId;
 
 
-    private Long idId;
+    private Long mguerillaquestworldId;
 
     public Long getId() {
         return id;
@@ -308,12 +308,12 @@ public class MGuerillaQuestStageDTO implements Serializable {
         this.deckConditionId = deckConditionId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMguerillaquestworldId() {
+        return mguerillaquestworldId;
     }
 
-    public void setIdId(Long mGuerillaQuestWorldId) {
-        this.idId = mGuerillaQuestWorldId;
+    public void setMguerillaquestworldId(Long mGuerillaQuestWorldId) {
+        this.mguerillaquestworldId = mGuerillaQuestWorldId;
     }
 
     @Override
@@ -367,7 +367,7 @@ public class MGuerillaQuestStageDTO implements Serializable {
             ", conditionId=" + getConditionId() +
             ", optionId=" + getOptionId() +
             ", deckConditionId=" + getDeckConditionId() +
-            ", id=" + getIdId() +
+            ", mguerillaquestworld=" + getMguerillaquestworldId() +
             "}";
     }
 }

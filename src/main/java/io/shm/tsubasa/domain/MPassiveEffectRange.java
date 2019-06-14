@@ -74,15 +74,15 @@ public class MPassiveEffectRange implements Serializable {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mpassiveeffectrange")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MFormation> mFormations = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mpassiveeffectrange")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MMatchOption> mMatchOptions = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "mpassiveeffectrange")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<MTeamEffectBase> mTeamEffectBases = new HashSet<>();
 
@@ -262,13 +262,13 @@ public class MPassiveEffectRange implements Serializable {
 
     public MPassiveEffectRange addMFormation(MFormation mFormation) {
         this.mFormations.add(mFormation);
-        mFormation.setId(this);
+        mFormation.setMpassiveeffectrange(this);
         return this;
     }
 
     public MPassiveEffectRange removeMFormation(MFormation mFormation) {
         this.mFormations.remove(mFormation);
-        mFormation.setId(null);
+        mFormation.setMpassiveeffectrange(null);
         return this;
     }
 
@@ -287,13 +287,13 @@ public class MPassiveEffectRange implements Serializable {
 
     public MPassiveEffectRange addMMatchOption(MMatchOption mMatchOption) {
         this.mMatchOptions.add(mMatchOption);
-        mMatchOption.setId(this);
+        mMatchOption.setMpassiveeffectrange(this);
         return this;
     }
 
     public MPassiveEffectRange removeMMatchOption(MMatchOption mMatchOption) {
         this.mMatchOptions.remove(mMatchOption);
-        mMatchOption.setId(null);
+        mMatchOption.setMpassiveeffectrange(null);
         return this;
     }
 
@@ -312,13 +312,13 @@ public class MPassiveEffectRange implements Serializable {
 
     public MPassiveEffectRange addMTeamEffectBase(MTeamEffectBase mTeamEffectBase) {
         this.mTeamEffectBases.add(mTeamEffectBase);
-        mTeamEffectBase.setId(this);
+        mTeamEffectBase.setMpassiveeffectrange(this);
         return this;
     }
 
     public MPassiveEffectRange removeMTeamEffectBase(MTeamEffectBase mTeamEffectBase) {
         this.mTeamEffectBases.remove(mTeamEffectBase);
-        mTeamEffectBase.setId(null);
+        mTeamEffectBase.setMpassiveeffectrange(null);
         return this;
     }
 

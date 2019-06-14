@@ -36,7 +36,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mcharacter_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -65,7 +65,7 @@
             <column name="action_skill_exp" type="numeric"/>
             <column name="name" type="string"/>
             <column name="description" type="string"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mcharacter_id" type="numeric"/>
         </loadData>
     </changeSet>
 

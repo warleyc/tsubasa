@@ -364,15 +364,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" for="field_id">Id</label>
-                    <select class="form-control" id="field_id" name="id" formControlName="idId">
-                        <option *ngIf="!editForm.get('id').value" [ngValue]="null" selected></option>
+                    <label class="form-control-label" for="field_mluckweeklyquestworld">Mluckweeklyquestworld</label>
+                    <select class="form-control" id="field_mluckweeklyquestworld" name="mluckweeklyquestworld" formControlName="mluckweeklyquestworldId">
+                        <option *ngIf="!editForm.get('mluckweeklyquestworld').value" [ngValue]="null" selected></option>
                         <option [ngValue]="mLuckWeeklyQuestWorldOption.id" *ngFor="let mLuckWeeklyQuestWorldOption of mluckweeklyquestworlds; trackBy: trackMLuckWeeklyQuestWorldById">{{mLuckWeeklyQuestWorldOption.id}}</option>
                     </select>
                 </div>
-                <div *ngIf="editForm.get('id').invalid && (editForm.get('id').dirty || editForm.get('id').touched)">
+                <div *ngIf="editForm.get('mluckweeklyquestworld').invalid && (editForm.get('mluckweeklyquestworld').dirty || editForm.get('mluckweeklyquestworld').touched)">
                     <small class="form-text text-danger"
-                           *ngIf="editForm.get('id').errors.required">
+                           *ngIf="editForm.get('mluckweeklyquestworld').errors.required">
                         This field is required.
                     </small>
                 </div>

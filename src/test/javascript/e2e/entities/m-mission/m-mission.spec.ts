@@ -60,7 +60,7 @@ describe('MMission e2e test', () => {
             mMissionUpdatePage.setSceneTransitionParamInput('sceneTransitionParam'),
             mMissionUpdatePage.setPickupInput('5'),
             mMissionUpdatePage.setOrderNumInput('5'),
-            mMissionUpdatePage.idSelectLastOption(),
+            mMissionUpdatePage.mmissionrewardSelectLastOption(),
         ]);
         expect(await mMissionUpdatePage.getTermInput()).to.eq('5', 'Expected term value to be equals to 5');
         expect(await mMissionUpdatePage.getRoundNumInput()).to.eq('5', 'Expected roundNum value to be equals to 5');

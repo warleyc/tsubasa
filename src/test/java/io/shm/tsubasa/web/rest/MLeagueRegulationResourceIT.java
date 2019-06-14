@@ -119,7 +119,7 @@ public class MLeagueRegulationResourceIT {
         } else {
             mMatchOption = TestUtil.findAll(em, MMatchOption.class).get(0);
         }
-        mLeagueRegulation.setId(mMatchOption);
+        mLeagueRegulation.setMmatchoption(mMatchOption);
         return mLeagueRegulation;
     }
     /**
@@ -144,7 +144,7 @@ public class MLeagueRegulationResourceIT {
         } else {
             mMatchOption = TestUtil.findAll(em, MMatchOption.class).get(0);
         }
-        mLeagueRegulation.setId(mMatchOption);
+        mLeagueRegulation.setMmatchoption(mMatchOption);
         return mLeagueRegulation;
     }
 
@@ -660,17 +660,17 @@ public class MLeagueRegulationResourceIT {
 
     @Test
     @Transactional
-    public void getAllMLeagueRegulationsByIdIsEqualToSomething() throws Exception {
+    public void getAllMLeagueRegulationsByMmatchoptionIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MMatchOption id = mLeagueRegulation.getId();
+        MMatchOption mmatchoption = mLeagueRegulation.getMmatchoption();
         mLeagueRegulationRepository.saveAndFlush(mLeagueRegulation);
-        Long idId = id.getId();
+        Long mmatchoptionId = mmatchoption.getId();
 
-        // Get all the mLeagueRegulationList where id equals to idId
-        defaultMLeagueRegulationShouldBeFound("idId.equals=" + idId);
+        // Get all the mLeagueRegulationList where mmatchoption equals to mmatchoptionId
+        defaultMLeagueRegulationShouldBeFound("mmatchoptionId.equals=" + mmatchoptionId);
 
-        // Get all the mLeagueRegulationList where id equals to idId + 1
-        defaultMLeagueRegulationShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mLeagueRegulationList where mmatchoption equals to mmatchoptionId + 1
+        defaultMLeagueRegulationShouldNotBeFound("mmatchoptionId.equals=" + (mmatchoptionId + 1));
     }
 
     /**

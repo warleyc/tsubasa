@@ -161,9 +161,9 @@ public class MChallengeQuestStageQueryService extends QueryService<MChallengeQue
             if (criteria.getRoadNumber() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getRoadNumber(), MChallengeQuestStage_.roadNumber));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MChallengeQuestStage_.id, JoinType.LEFT).get(MChallengeQuestWorld_.id)));
+            if (criteria.getMchallengequestworldId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMchallengequestworldId(),
+                    root -> root.join(MChallengeQuestStage_.mchallengequestworld, JoinType.LEFT).get(MChallengeQuestWorld_.id)));
             }
         }
         return specification;

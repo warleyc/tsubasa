@@ -8,9 +8,9 @@
     -->
     <changeSet id="20190610225012-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="mformation_id"
                                  baseTableName="m_target_formation_group"
-                                 constraintName="fk_m_target_formation_group_id_id"
+                                 constraintName="fk_m_target_formation_group_mformation_id"
                                  referencedColumnNames="id"
                                  referencedTableName="m_formation"/>
 

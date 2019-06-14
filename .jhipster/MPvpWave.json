@@ -27,7 +27,7 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "mPvpRankingReward",
-            "otherEntityRelationshipName": "id",
+            "otherEntityRelationshipName": "mpvpwave",
             "relationshipName": "mPvpRankingReward"
         }
     ],

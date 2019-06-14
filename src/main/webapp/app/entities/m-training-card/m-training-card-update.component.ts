@@ -43,7 +43,7 @@ export class MTrainingCardUpdateComponent implements OnInit {
     plusCatching: [null, [Validators.required]],
     thumbnailAssetsId: [null, [Validators.required]],
     cardIllustAssetsId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mcardthumbnailassetsId: [null, Validators.required]
   });
 
   constructor(
@@ -97,7 +97,7 @@ export class MTrainingCardUpdateComponent implements OnInit {
       plusCatching: mTrainingCard.plusCatching,
       thumbnailAssetsId: mTrainingCard.thumbnailAssetsId,
       cardIllustAssetsId: mTrainingCard.cardIllustAssetsId,
-      idId: mTrainingCard.idId
+      mcardthumbnailassetsId: mTrainingCard.mcardthumbnailassetsId
     });
   }
 
@@ -172,7 +172,7 @@ export class MTrainingCardUpdateComponent implements OnInit {
       plusCatching: this.editForm.get(['plusCatching']).value,
       thumbnailAssetsId: this.editForm.get(['thumbnailAssetsId']).value,
       cardIllustAssetsId: this.editForm.get(['cardIllustAssetsId']).value,
-      idId: this.editForm.get(['idId']).value
+      mcardthumbnailassetsId: this.editForm.get(['mcardthumbnailassetsId']).value
     };
     return entity;
   }

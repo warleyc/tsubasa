@@ -35,7 +35,7 @@ export class MCardPowerupActionSkillUpdateComponent implements OnInit {
     cardIllustAssetsId: [null, [Validators.required]],
     targetActionCommandType: [],
     targetCharacterId: [],
-    idId: [null, Validators.required]
+    mcardthumbnailassetsId: [null, Validators.required]
   });
 
   constructor(
@@ -81,7 +81,7 @@ export class MCardPowerupActionSkillUpdateComponent implements OnInit {
       cardIllustAssetsId: mCardPowerupActionSkill.cardIllustAssetsId,
       targetActionCommandType: mCardPowerupActionSkill.targetActionCommandType,
       targetCharacterId: mCardPowerupActionSkill.targetCharacterId,
-      idId: mCardPowerupActionSkill.idId
+      mcardthumbnailassetsId: mCardPowerupActionSkill.mcardthumbnailassetsId
     });
   }
 
@@ -148,7 +148,7 @@ export class MCardPowerupActionSkillUpdateComponent implements OnInit {
       cardIllustAssetsId: this.editForm.get(['cardIllustAssetsId']).value,
       targetActionCommandType: this.editForm.get(['targetActionCommandType']).value,
       targetCharacterId: this.editForm.get(['targetCharacterId']).value,
-      idId: this.editForm.get(['idId']).value
+      mcardthumbnailassetsId: this.editForm.get(['mcardthumbnailassetsId']).value
     };
     return entity;
   }

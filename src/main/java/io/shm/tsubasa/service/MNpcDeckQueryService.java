@@ -152,9 +152,9 @@ public class MNpcDeckQueryService extends QueryService<MNpcDeck> {
             if (criteria.getTick() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getTick(), MNpcDeck_.tick));
             }
-            if (criteria.getIdId() != null) {
-                specification = specification.and(buildSpecification(criteria.getIdId(),
-                    root -> root.join(MNpcDeck_.id, JoinType.LEFT).get(MFormation_.id)));
+            if (criteria.getMformationId() != null) {
+                specification = specification.and(buildSpecification(criteria.getMformationId(),
+                    root -> root.join(MNpcDeck_.mformation, JoinType.LEFT).get(MFormation_.id)));
             }
             if (criteria.getMDummyOpponentId() != null) {
                 specification = specification.and(buildSpecification(criteria.getMDummyOpponentId(),

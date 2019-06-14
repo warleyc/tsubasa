@@ -81,7 +81,7 @@ public class MDummyOpponent implements Serializable {
     @ManyToOne(optional = false)
     @NotNull
     @JsonIgnoreProperties("mDummyOpponents")
-    private MNpcDeck id;
+    private MNpcDeck mnpcdeck;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -261,17 +261,17 @@ public class MDummyOpponent implements Serializable {
         this.gkUniformBottomColor = gkUniformBottomColor;
     }
 
-    public MNpcDeck getId() {
-        return id;
+    public MNpcDeck getMnpcdeck() {
+        return mnpcdeck;
     }
 
-    public MDummyOpponent id(MNpcDeck mNpcDeck) {
-        this.id = mNpcDeck;
+    public MDummyOpponent mnpcdeck(MNpcDeck mNpcDeck) {
+        this.mnpcdeck = mNpcDeck;
         return this;
     }
 
-    public void setId(MNpcDeck mNpcDeck) {
-        this.id = mNpcDeck;
+    public void setMnpcdeck(MNpcDeck mNpcDeck) {
+        this.mnpcdeck = mNpcDeck;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

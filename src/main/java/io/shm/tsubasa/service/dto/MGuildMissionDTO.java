@@ -44,7 +44,7 @@ public class MGuildMissionDTO implements Serializable {
     private Integer orderNum;
 
 
-    private Long idId;
+    private Long mmissionrewardId;
 
     public Long getId() {
         return id;
@@ -142,12 +142,12 @@ public class MGuildMissionDTO implements Serializable {
         this.orderNum = orderNum;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMmissionrewardId() {
+        return mmissionrewardId;
     }
 
-    public void setIdId(Long mMissionRewardId) {
-        this.idId = mMissionRewardId;
+    public void setMmissionrewardId(Long mMissionRewardId) {
+        this.mmissionrewardId = mMissionRewardId;
     }
 
     @Override
@@ -186,7 +186,7 @@ public class MGuildMissionDTO implements Serializable {
             ", pickup=" + getPickup() +
             ", triggerMissionId=" + getTriggerMissionId() +
             ", orderNum=" + getOrderNum() +
-            ", id=" + getIdId() +
+            ", mmissionreward=" + getMmissionrewardId() +
             "}";
     }
 }

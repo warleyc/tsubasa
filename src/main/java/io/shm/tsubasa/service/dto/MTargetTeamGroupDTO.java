@@ -17,7 +17,7 @@ public class MTargetTeamGroupDTO implements Serializable {
     private Integer teamId;
 
 
-    private Long idId;
+    private Long mteamId;
 
     public Long getId() {
         return id;
@@ -43,12 +43,12 @@ public class MTargetTeamGroupDTO implements Serializable {
         this.teamId = teamId;
     }
 
-    public Long getIdId() {
-        return idId;
+    public Long getMteamId() {
+        return mteamId;
     }
 
-    public void setIdId(Long mTeamId) {
-        this.idId = mTeamId;
+    public void setMteamId(Long mTeamId) {
+        this.mteamId = mTeamId;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class MTargetTeamGroupDTO implements Serializable {
             "id=" + getId() +
             ", groupId=" + getGroupId() +
             ", teamId=" + getTeamId() +
-            ", id=" + getIdId() +
+            ", mteam=" + getMteamId() +
             "}";
     }
 }

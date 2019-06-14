@@ -132,7 +132,7 @@ public class MDummyEmblemResourceIT {
         } else {
             mEmblemParts = TestUtil.findAll(em, MEmblemParts.class).get(0);
         }
-        mDummyEmblem.setId(mEmblemParts);
+        mDummyEmblem.setMemblemparts(mEmblemParts);
         return mDummyEmblem;
     }
     /**
@@ -160,7 +160,7 @@ public class MDummyEmblemResourceIT {
         } else {
             mEmblemParts = TestUtil.findAll(em, MEmblemParts.class).get(0);
         }
-        mDummyEmblem.setId(mEmblemParts);
+        mDummyEmblem.setMemblemparts(mEmblemParts);
         return mDummyEmblem;
     }
 
@@ -562,17 +562,17 @@ public class MDummyEmblemResourceIT {
 
     @Test
     @Transactional
-    public void getAllMDummyEmblemsByIdIsEqualToSomething() throws Exception {
+    public void getAllMDummyEmblemsByMemblempartsIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MEmblemParts id = mDummyEmblem.getId();
+        MEmblemParts memblemparts = mDummyEmblem.getMemblemparts();
         mDummyEmblemRepository.saveAndFlush(mDummyEmblem);
-        Long idId = id.getId();
+        Long memblempartsId = memblemparts.getId();
 
-        // Get all the mDummyEmblemList where id equals to idId
-        defaultMDummyEmblemShouldBeFound("idId.equals=" + idId);
+        // Get all the mDummyEmblemList where memblemparts equals to memblempartsId
+        defaultMDummyEmblemShouldBeFound("memblempartsId.equals=" + memblempartsId);
 
-        // Get all the mDummyEmblemList where id equals to idId + 1
-        defaultMDummyEmblemShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mDummyEmblemList where memblemparts equals to memblempartsId + 1
+        defaultMDummyEmblemShouldNotBeFound("memblempartsId.equals=" + (memblempartsId + 1));
     }
 
     /**

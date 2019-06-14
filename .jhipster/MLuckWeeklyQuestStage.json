@@ -188,7 +188,7 @@
             "otherEntityName": "mLuckWeeklyQuestWorld",
             "otherEntityRelationshipName": "mLuckWeeklyQuestStage",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mluckweeklyquestworld",
             "otherEntityField": "id"
         }
     ],

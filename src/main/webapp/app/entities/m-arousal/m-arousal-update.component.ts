@@ -26,7 +26,7 @@ export class MArousalUpdateComponent implements OnInit {
     afterId: [null, [Validators.required]],
     cost: [null, [Validators.required]],
     materialGroupId: [null, [Validators.required]],
-    idId: [null, Validators.required]
+    mplayablecardId: [null, Validators.required]
   });
 
   constructor(
@@ -59,7 +59,7 @@ export class MArousalUpdateComponent implements OnInit {
       afterId: mArousal.afterId,
       cost: mArousal.cost,
       materialGroupId: mArousal.materialGroupId,
-      idId: mArousal.idId
+      mplayablecardId: mArousal.mplayablecardId
     });
   }
 
@@ -85,7 +85,7 @@ export class MArousalUpdateComponent implements OnInit {
       afterId: this.editForm.get(['afterId']).value,
       cost: this.editForm.get(['cost']).value,
       materialGroupId: this.editForm.get(['materialGroupId']).value,
-      idId: this.editForm.get(['idId']).value
+      mplayablecardId: this.editForm.get(['mplayablecardId']).value
     };
     return entity;
   }

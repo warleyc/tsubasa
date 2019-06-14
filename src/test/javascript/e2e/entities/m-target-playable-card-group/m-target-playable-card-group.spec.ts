@@ -47,7 +47,7 @@ describe('MTargetPlayableCardGroup e2e test', () => {
             mTargetPlayableCardGroupUpdatePage.setGroupIdInput('5'),
             mTargetPlayableCardGroupUpdatePage.setCardIdInput('5'),
             mTargetPlayableCardGroupUpdatePage.setIsShowThumbnailInput('5'),
-            mTargetPlayableCardGroupUpdatePage.idSelectLastOption(),
+            mTargetPlayableCardGroupUpdatePage.mplayablecardSelectLastOption(),
         ]);
         expect(await mTargetPlayableCardGroupUpdatePage.getGroupIdInput()).to.eq('5', 'Expected groupId value to be equals to 5');
         expect(await mTargetPlayableCardGroupUpdatePage.getCardIdInput()).to.eq('5', 'Expected cardId value to be equals to 5');

@@ -155,7 +155,7 @@
             "otherEntityName": "mCardThumbnailAssets",
             "otherEntityRelationshipName": "mTrainingCard",
             "relationshipValidateRules": "required",
-            "relationshipName": "id",
+            "relationshipName": "mcardthumbnailassets",
             "otherEntityField": "id"
         }
     ],

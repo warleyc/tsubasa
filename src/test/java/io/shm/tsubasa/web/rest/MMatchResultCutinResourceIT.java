@@ -120,7 +120,7 @@ public class MMatchResultCutinResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mMatchResultCutin.setId(mCharacter);
+        mMatchResultCutin.setMcharacter(mCharacter);
         return mMatchResultCutin;
     }
     /**
@@ -145,7 +145,7 @@ public class MMatchResultCutinResourceIT {
         } else {
             mCharacter = TestUtil.findAll(em, MCharacter.class).get(0);
         }
-        mMatchResultCutin.setId(mCharacter);
+        mMatchResultCutin.setMcharacter(mCharacter);
         return mMatchResultCutin;
     }
 
@@ -491,17 +491,17 @@ public class MMatchResultCutinResourceIT {
 
     @Test
     @Transactional
-    public void getAllMMatchResultCutinsByIdIsEqualToSomething() throws Exception {
+    public void getAllMMatchResultCutinsByMcharacterIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MCharacter id = mMatchResultCutin.getId();
+        MCharacter mcharacter = mMatchResultCutin.getMcharacter();
         mMatchResultCutinRepository.saveAndFlush(mMatchResultCutin);
-        Long idId = id.getId();
+        Long mcharacterId = mcharacter.getId();
 
-        // Get all the mMatchResultCutinList where id equals to idId
-        defaultMMatchResultCutinShouldBeFound("idId.equals=" + idId);
+        // Get all the mMatchResultCutinList where mcharacter equals to mcharacterId
+        defaultMMatchResultCutinShouldBeFound("mcharacterId.equals=" + mcharacterId);
 
-        // Get all the mMatchResultCutinList where id equals to idId + 1
-        defaultMMatchResultCutinShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mMatchResultCutinList where mcharacter equals to mcharacterId + 1
+        defaultMMatchResultCutinShouldNotBeFound("mcharacterId.equals=" + (mcharacterId + 1));
     }
 
     /**

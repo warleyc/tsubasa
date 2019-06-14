@@ -104,7 +104,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="id_id" type="bigint">
+            <column name="mformation_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
@@ -150,7 +150,7 @@
             <column name="npc_card_id_10" type="numeric"/>
             <column name="npc_card_id_11" type="numeric"/>
             <column name="tick" type="numeric"/>
-            <column name="id_id" type="numeric"/>
+            <column name="mformation_id" type="numeric"/>
         </loadData>
     </changeSet>
 

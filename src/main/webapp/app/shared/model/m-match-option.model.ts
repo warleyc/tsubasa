@@ -10,7 +10,7 @@ export interface IMMatchOption {
   useStaminaMagnification?: number;
   isIgnoreTeamSkill?: number;
   staminaInfinityType?: number;
-  idId?: number;
+  mpassiveeffectrangeId?: number;
   mLeagueRegulations?: IMLeagueRegulation[];
   mPvpRegulations?: IMPvpRegulation[];
 }
@@ -25,7 +25,7 @@ export class MMatchOption implements IMMatchOption {
     public useStaminaMagnification?: number,
     public isIgnoreTeamSkill?: number,
     public staminaInfinityType?: number,
-    public idId?: number,
+    public mpassiveeffectrangeId?: number,
     public mLeagueRegulations?: IMLeagueRegulation[],
     public mPvpRegulations?: IMPvpRegulation[]
   ) {}

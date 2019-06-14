@@ -42,7 +42,7 @@ public class MCombinationCutPositionCriteria implements Serializable, Criteria {
 
     private IntegerFilter participantPosition5;
 
-    private LongFilter idId;
+    private LongFilter mcharacterId;
 
     public MCombinationCutPositionCriteria(){
     }
@@ -57,7 +57,7 @@ public class MCombinationCutPositionCriteria implements Serializable, Criteria {
         this.participantPosition3 = other.participantPosition3 == null ? null : other.participantPosition3.copy();
         this.participantPosition4 = other.participantPosition4 == null ? null : other.participantPosition4.copy();
         this.participantPosition5 = other.participantPosition5 == null ? null : other.participantPosition5.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mcharacterId = other.mcharacterId == null ? null : other.mcharacterId.copy();
     }
 
     @Override
@@ -137,12 +137,12 @@ public class MCombinationCutPositionCriteria implements Serializable, Criteria {
         this.participantPosition5 = participantPosition5;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMcharacterId() {
+        return mcharacterId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMcharacterId(LongFilter mcharacterId) {
+        this.mcharacterId = mcharacterId;
     }
 
 
@@ -165,7 +165,7 @@ public class MCombinationCutPositionCriteria implements Serializable, Criteria {
             Objects.equals(participantPosition3, that.participantPosition3) &&
             Objects.equals(participantPosition4, that.participantPosition4) &&
             Objects.equals(participantPosition5, that.participantPosition5) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mcharacterId, that.mcharacterId);
     }
 
     @Override
@@ -180,7 +180,7 @@ public class MCombinationCutPositionCriteria implements Serializable, Criteria {
         participantPosition3,
         participantPosition4,
         participantPosition5,
-        idId
+        mcharacterId
         );
     }
 
@@ -196,7 +196,7 @@ public class MCombinationCutPositionCriteria implements Serializable, Criteria {
                 (participantPosition3 != null ? "participantPosition3=" + participantPosition3 + ", " : "") +
                 (participantPosition4 != null ? "participantPosition4=" + participantPosition4 + ", " : "") +
                 (participantPosition5 != null ? "participantPosition5=" + participantPosition5 + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mcharacterId != null ? "mcharacterId=" + mcharacterId + ", " : "") +
             "}";
     }
 

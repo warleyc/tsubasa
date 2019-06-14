@@ -76,7 +76,7 @@ public class MTicketQuestStageCriteria implements Serializable, Criteria {
 
     private IntegerFilter deckConditionId;
 
-    private LongFilter idId;
+    private LongFilter mticketquestworldId;
 
     public MTicketQuestStageCriteria(){
     }
@@ -108,7 +108,7 @@ public class MTicketQuestStageCriteria implements Serializable, Criteria {
         this.conditionId = other.conditionId == null ? null : other.conditionId.copy();
         this.optionId = other.optionId == null ? null : other.optionId.copy();
         this.deckConditionId = other.deckConditionId == null ? null : other.deckConditionId.copy();
-        this.idId = other.idId == null ? null : other.idId.copy();
+        this.mticketquestworldId = other.mticketquestworldId == null ? null : other.mticketquestworldId.copy();
     }
 
     @Override
@@ -324,12 +324,12 @@ public class MTicketQuestStageCriteria implements Serializable, Criteria {
         this.deckConditionId = deckConditionId;
     }
 
-    public LongFilter getIdId() {
-        return idId;
+    public LongFilter getMticketquestworldId() {
+        return mticketquestworldId;
     }
 
-    public void setIdId(LongFilter idId) {
-        this.idId = idId;
+    public void setMticketquestworldId(LongFilter mticketquestworldId) {
+        this.mticketquestworldId = mticketquestworldId;
     }
 
 
@@ -369,7 +369,7 @@ public class MTicketQuestStageCriteria implements Serializable, Criteria {
             Objects.equals(conditionId, that.conditionId) &&
             Objects.equals(optionId, that.optionId) &&
             Objects.equals(deckConditionId, that.deckConditionId) &&
-            Objects.equals(idId, that.idId);
+            Objects.equals(mticketquestworldId, that.mticketquestworldId);
     }
 
     @Override
@@ -401,7 +401,7 @@ public class MTicketQuestStageCriteria implements Serializable, Criteria {
         conditionId,
         optionId,
         deckConditionId,
-        idId
+        mticketquestworldId
         );
     }
 
@@ -434,7 +434,7 @@ public class MTicketQuestStageCriteria implements Serializable, Criteria {
                 (conditionId != null ? "conditionId=" + conditionId + ", " : "") +
                 (optionId != null ? "optionId=" + optionId + ", " : "") +
                 (deckConditionId != null ? "deckConditionId=" + deckConditionId + ", " : "") +
-                (idId != null ? "idId=" + idId + ", " : "") +
+                (mticketquestworldId != null ? "mticketquestworldId=" + mticketquestworldId + ", " : "") +
             "}";
     }
 

@@ -152,7 +152,7 @@ public class MTeamEffectBaseResourceIT {
         } else {
             mPassiveEffectRange = TestUtil.findAll(em, MPassiveEffectRange.class).get(0);
         }
-        mTeamEffectBase.setId(mPassiveEffectRange);
+        mTeamEffectBase.setMpassiveeffectrange(mPassiveEffectRange);
         return mTeamEffectBase;
     }
     /**
@@ -185,7 +185,7 @@ public class MTeamEffectBaseResourceIT {
         } else {
             mPassiveEffectRange = TestUtil.findAll(em, MPassiveEffectRange.class).get(0);
         }
-        mTeamEffectBase.setId(mPassiveEffectRange);
+        mTeamEffectBase.setMpassiveeffectrange(mPassiveEffectRange);
         return mTeamEffectBase;
     }
 
@@ -1216,17 +1216,17 @@ public class MTeamEffectBaseResourceIT {
 
     @Test
     @Transactional
-    public void getAllMTeamEffectBasesByIdIsEqualToSomething() throws Exception {
+    public void getAllMTeamEffectBasesByMpassiveeffectrangeIsEqualToSomething() throws Exception {
         // Get already existing entity
-        MPassiveEffectRange id = mTeamEffectBase.getId();
+        MPassiveEffectRange mpassiveeffectrange = mTeamEffectBase.getMpassiveeffectrange();
         mTeamEffectBaseRepository.saveAndFlush(mTeamEffectBase);
-        Long idId = id.getId();
+        Long mpassiveeffectrangeId = mpassiveeffectrange.getId();
 
-        // Get all the mTeamEffectBaseList where id equals to idId
-        defaultMTeamEffectBaseShouldBeFound("idId.equals=" + idId);
+        // Get all the mTeamEffectBaseList where mpassiveeffectrange equals to mpassiveeffectrangeId
+        defaultMTeamEffectBaseShouldBeFound("mpassiveeffectrangeId.equals=" + mpassiveeffectrangeId);
 
-        // Get all the mTeamEffectBaseList where id equals to idId + 1
-        defaultMTeamEffectBaseShouldNotBeFound("idId.equals=" + (idId + 1));
+        // Get all the mTeamEffectBaseList where mpassiveeffectrange equals to mpassiveeffectrangeId + 1
+        defaultMTeamEffectBaseShouldNotBeFound("mpassiveeffectrangeId.equals=" + (mpassiveeffectrangeId + 1));
     }
 
     /**
